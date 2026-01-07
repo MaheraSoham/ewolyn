@@ -31,6 +31,7 @@ export default function NBFCPage() {
             </div>
           </div>
         </div>
+        {/* ...existing code... */}
 
         {/* Overview Section */}
         <div className="bg-white/90 rounded-xl shadow p-8 mb-10 flex flex-col md:flex-row gap-8 items-center">
