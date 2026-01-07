@@ -40,48 +40,45 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="card mt-10 grid gap-4 md:grid-cols-2 bg-white/80 shadow-lg animate-fade-in">
-          <div className="md:col-span-1">
-            <label className="mb-1 block text-sm font-medium text-ink" htmlFor="name">
-              Name
-            </label>
+        <form className="mt-10 w-full max-w-md mx-auto rounded-2xl bg-white/90 shadow-xl p-6 flex flex-col gap-5 animate-fade-in">
+          <h3 className="text-xl font-bold text-brand mb-2 text-center">Request a Free Consultation</h3>
+          <div className="flex flex-col gap-3">
             <input
               id="name"
               name="name"
               type="text"
               required
-              className="w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:border-brand focus:outline-none"
+              placeholder="Your Name"
+              className="w-full rounded-lg border border-slate-200 px-4 py-3 text-base focus:border-brand focus:outline-none bg-slate-50"
             />
-          </div>
-          <div className="md:col-span-1">
-            <label className="mb-1 block text-sm font-medium text-ink" htmlFor="email">
-              Email
-            </label>
             <input
               id="email"
               name="email"
               type="email"
               required
-              className="w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:border-brand focus:outline-none"
+              placeholder="Email Address"
+              className="w-full rounded-lg border border-slate-200 px-4 py-3 text-base focus:border-brand focus:outline-none bg-slate-50"
             />
-          </div>
-          <div className="md:col-span-2">
-            <label className="mb-1 block text-sm font-medium text-ink" htmlFor="message">
-              Message
-            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              placeholder="Phone Number"
+              className="w-full rounded-lg border border-slate-200 px-4 py-3 text-base focus:border-brand focus:outline-none bg-slate-50"
+            />
             <textarea
               id="message"
               name="message"
               rows={4}
               required
-              className="w-full rounded-md border border-slate-200 px-3 py-2 text-sm focus:border-brand focus:outline-none"
+              placeholder="Your Query / Business Stage"
+              className="w-full rounded-lg border border-slate-200 px-4 py-3 text-base focus:border-brand focus:outline-none bg-slate-50"
             />
           </div>
-          <div className="md:col-span-2">
-            <button type="submit" className="btn">
-              Send Message
-            </button>
-          </div>
+          <button type="submit" className="btn w-full py-3 text-lg font-semibold rounded-lg bg-brand text-white hover:bg-brand-dark transition">
+            Get Free Consultation
+          </button>
         </form>
       </div>
       <CTASection />

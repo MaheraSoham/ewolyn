@@ -10,9 +10,9 @@ export default function Footer() {
             <Image 
               src="/logo.jpg" 
               alt="Ewolyn - Evolving Indian StartUps & MSMEs" 
-              width={200} 
-              height={70} 
-              className="h-16 w-auto bg-white rounded p-1"
+              width={520} 
+              height={200} 
+              className="h-52 w-auto bg-white rounded p-2"
             />
           </div>
           <p className="text-sm text-slate-400">

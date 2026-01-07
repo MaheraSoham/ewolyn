@@ -126,9 +126,9 @@ export default function Navbar() {
             <Image 
               src="/logo.jpg" 
               alt="Ewolyn - Evolving Indian StartUps & MSMEs" 
-              width={160} 
-              height={50} 
-              className="h-12 w-auto"
+              width={200} 
+              height={70} 
+              className="h-14 w-auto"
               priority
             />
           </Link>
