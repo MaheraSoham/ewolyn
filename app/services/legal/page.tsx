@@ -123,7 +123,7 @@ export default function LegalPage() {
                 Get Legal Consultation →
               </Link>
               <a href="tel:+919737799937" className="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition">
-                📞 +91 97377 99937
+                📞 +91 98765 43210
               </a>
             </div>
           </div>
@@ -308,7 +308,7 @@ export default function LegalPage() {
               Schedule Legal Consultation
             </Link>
             <a href="tel:+919737799937" className="px-8 py-4 border-2 border-white rounded-lg hover:bg-white/10 transition">
-              Call Now: +91 97377 99937
+              Call Now: +91 98765 43210
             </a>
           </div>
         </div>

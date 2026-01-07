@@ -16,8 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function FundingPage() {
   return (
-    <main className="section">
-      <div className="container-max">
+    <main className="section bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen">
+      <div className="container-max py-10">
         <SectionHeading
           align="left"
           title={fundingContent.introTitle}
@@ -26,15 +26,15 @@ export default function FundingPage() {
 
         {/* Timeline Overview */}
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <div className="card border-l-4 border-l-brand">
-            <h3 className="text-lg font-semibold text-ink">Loan Assistance</h3>
+          <div className="card border-l-4 border-l-brand bg-white/80 shadow-lg animate-fade-in">
+            <h3 className="text-lg font-semibold text-blue-700 flex items-center gap-2">💸 Loan Assistance</h3>
             <p className="mt-2 text-sm text-muted">
               End-to-end support for business loans with compliant documentation and application tracking.
             </p>
             <p className="mt-3 text-sm font-medium text-brand">Timeline: 15–25 days</p>
           </div>
-          <div className="card border-l-4 border-l-green-500">
-            <h3 className="text-lg font-semibold text-ink">Grant Assistance</h3>
+          <div className="card border-l-4 border-l-green-500 bg-white/80 shadow-lg animate-fade-in">
+            <h3 className="text-lg font-semibold text-green-700 flex items-center gap-2">🏆 Grant Assistance</h3>
             <p className="mt-2 text-sm text-muted">
               Eligibility mapping and application support for government grants and schemes.
             </p>
@@ -45,8 +45,8 @@ export default function FundingPage() {
         {/* Government Schemes Section */}
         <div className="mt-16">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-ink">
-              Powerful <span className="text-brand">Government Schemes</span>
+            <h2 className="text-3xl font-bold text-brand">
+              Powerful <span className="text-blue-700">Government Schemes</span>
             </h2>
             <p className="section-subtitle mt-3">
               Leverage India&apos;s top government initiatives designed to accelerate MSME growth

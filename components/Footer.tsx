@@ -10,9 +10,9 @@ export default function Footer() {
             <Image 
               src="/logo.jpg" 
               alt="Ewolyn - Evolving Indian StartUps & MSMEs" 
-              width={140} 
-              height={45} 
-              className="h-10 w-auto bg-white rounded p-1"
+              width={200} 
+              height={70} 
+              className="h-16 w-auto bg-white rounded p-1"
             />
           </div>
           <p className="text-sm text-slate-400">
@@ -54,7 +54,7 @@ export default function Footer() {
               <span>📧</span> hello@ewolyn.co.in
             </li>
             <li className="flex items-center gap-2">
-              <span>📞</span> +91 97377 99937
+              <span>📞</span> +91 98765 43210
             </li>
             <li className="flex items-center gap-2">
               <span>🕐</span> Mon–Sat, 9 AM – 6 PM

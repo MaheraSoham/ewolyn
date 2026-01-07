@@ -18,21 +18,21 @@ const services = [
         description: "Non-repayable government funding for startups & MSMEs. Subsidies, innovation, export, sector schemes.", 
         icon: "🏛️", 
         iconBg: "bg-blue-50", 
-        href: "/funding?type=grants" 
+        href: "/services/grants" 
       },
       { 
         title: "Loans", 
         description: "Business loans for growth, working capital, expansion. Bank, NBFC, government schemes. Fast approval.", 
         icon: "🏦", 
         iconBg: "bg-green-50", 
-        href: "/funding?type=loans" 
+        href: "/services/loans" 
       },
       { 
         title: "NBFC", 
         description: "Quick, flexible business funding. Unsecured, revenue-based, equipment, supply chain loans. 24–72hr disbursement.", 
         icon: "💳", 
         iconBg: "bg-teal-50", 
-        href: "/funding?type=nbfc" 
+        href: "/services/nbfc" 
       },
     ]
   },
@@ -113,7 +113,7 @@ export default function Navbar() {
               📋 Track Application
             </Link>
             <a href="tel:+919737799937" className="bg-slate-800 px-3 py-1 rounded-full hover:bg-slate-700 flex items-center gap-1">
-              📞 +91 97377 99937
+              📞 +91 98765 43210
             </a>
           </div>
         </div>
@@ -183,19 +183,17 @@ export default function Navbar() {
                             {service.subItems ? (
                               <div className="grid grid-cols-3 gap-2">
                                 {service.subItems.map((subItem, subIndex) => (
-                                  <button
+                                  <Link
                                     key={subIndex}
-                                    className="flex flex-col items-center p-3 rounded-lg border border-gray-100 hover:border-brand hover:bg-red-50 transition text-center cursor-default"
-                                    type="button"
-                                    tabIndex={-1}
-                                    aria-disabled="true"
+                                    href={subItem.href}
+                                    className="flex flex-col items-center p-3 rounded-lg border border-gray-100 hover:border-brand hover:bg-red-50 transition text-center"
                                   >
                                     <div className={`w-8 h-8 rounded-lg ${subItem.iconBg} flex items-center justify-center text-lg mb-1`}>
                                       {subItem.icon}
                                     </div>
                                     <div className="font-medium text-sm text-gray-900">{subItem.title}</div>
                                     <div className="text-xs text-gray-500">{subItem.description}</div>
-                                  </button>
+                                  </Link>
                                 ))}
                               </div>
                             ) : (

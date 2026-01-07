@@ -133,7 +133,7 @@ export default function CertificationsPage() {
                 Get Free Consultation →
               </Link>
               <a href="tel:+919737799937" className="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition">
-                📞 +91 97377 99937
+                📞 +91 98765 43210
               </a>
             </div>
           </div>

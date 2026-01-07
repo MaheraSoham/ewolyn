@@ -13,8 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function ContactPage() {
   return (
-    <main className="section">
-      <div className="container-max">
+    <main className="section bg-gradient-to-br from-pink-50 via-white to-blue-50 min-h-screen">
+      <div className="container-max py-10">
         <SectionHeading
           align="left"
           title="Contact Us"
@@ -22,25 +22,25 @@ export default function ContactPage() {
         />
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Email</h3>
+          <div className="card border-l-4 border-blue-400 bg-white/80 shadow-lg animate-fade-in">
+            <h3 className="text-lg font-semibold text-blue-700 flex items-center gap-2">📧 Email</h3>
             <p className="mt-2 text-sm text-muted">{company.email}</p>
           </div>
-          <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Hours</h3>
+          <div className="card border-l-4 border-pink-400 bg-white/80 shadow-lg animate-fade-in">
+            <h3 className="text-lg font-semibold text-pink-700 flex items-center gap-2">⏰ Hours</h3>
             <p className="mt-2 text-sm text-muted">Monday – Saturday, 9 AM – 6 PM IST</p>
           </div>
-          <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Coverage</h3>
+          <div className="card border-l-4 border-green-400 bg-white/80 shadow-lg animate-fade-in">
+            <h3 className="text-lg font-semibold text-green-700 flex items-center gap-2">🌍 Coverage</h3>
             <p className="mt-2 text-sm text-muted">Pan-India, remote-first service</p>
           </div>
-          <div className="card">
-            <h3 className="text-lg font-semibold text-ink">Consultation Request</h3>
+          <div className="card border-l-4 border-yellow-400 bg-white/80 shadow-lg animate-fade-in">
+            <h3 className="text-lg font-semibold text-yellow-700 flex items-center gap-2">📝 Consultation Request</h3>
             <p className="mt-2 text-sm text-muted">Drop an email with your business stage, goal, and preferred time.</p>
           </div>
         </div>
 
-        <form className="card mt-10 grid gap-4 md:grid-cols-2">
+        <form className="card mt-10 grid gap-4 md:grid-cols-2 bg-white/80 shadow-lg animate-fade-in">
           <div className="md:col-span-1">
             <label className="mb-1 block text-sm font-medium text-ink" htmlFor="name">
               Name
