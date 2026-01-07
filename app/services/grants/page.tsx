@@ -30,9 +30,7 @@ export default function GrantsPage() {
               <div className="text-sm text-gray-300">Documentation Support</div>
             </div>
           </div>
-          <div className="mt-6">
-            <a href="https://enego.co.in/services/funding/grants" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-full shadow transition">Reference: Enego Grants Page</a>
-          </div>
+          {/* Reference: Enego Grants Page button removed as requested */}
         </div>
 
         {/* Overview Section */}

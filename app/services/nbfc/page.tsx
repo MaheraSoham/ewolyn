@@ -193,7 +193,7 @@ export default function NBFCPage() {
           </div>
           <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
             <a href="#" className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full shadow transition">Start Application</a>
-            <a href="tel:18005710607" className="inline-block bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-full shadow transition">Call: 1800 571 0607</a>
+            <a href="tel:+919737799937" className="inline-block bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-full shadow transition">Call: +91 97377 99937</a>
           </div>
         </div>
       </div>
