@@ -28,10 +28,7 @@ export default function HomePage() {
       <LogoGrid />
 
       {/* HOW EVOLYN WORKS (4 STEPS) */}
-      <section
-        className="section"
-        style={{ background: '#dbeafe' }}
-      >
+      <section className="section bg-process-section">
         <ProcessSteps />
       </section>
 

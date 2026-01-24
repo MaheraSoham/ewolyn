@@ -1,11 +1,16 @@
+/* Custom background for ProcessSteps section */
+.bg-process-section {
+  background: linear-gradient(120deg, #46618a 0%, #7a96b8 100%);
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 
+
 :root {
-  --bg: #FFFFFF;
+  --bg: #f1f5f9; /* Updated background color: light slate (Tailwind slate-100) */
   --fg: #0B3C5D;
   --primary: #0B3C5D;
   --secondary: #1FA2B1;

@@ -8,10 +8,10 @@ export default function CTASection() {
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
               <h3 className="text-3xl font-bold">Ready to Get Your Business Funded?</h3>
-              <p className="mt-2 text-lg text-red-100">
+              <p className="mt-2 text-lg text-blue-700">
                 Join 20,000+ MSMEs who got funding through Ewolyn. Free eligibility check in 30 seconds.
               </p>
-              <div className="mt-4 flex flex-wrap gap-4 text-sm">
+              <div className="mt-4 flex flex-wrap gap-4 text-sm text-blue-600">
                 <span className="flex items-center gap-1">✓ 48hrs Approval</span>
                 <span className="flex items-center gap-1">✓ Zero Collateral Options</span>
                 <span className="flex items-center gap-1">✓ 95% Success Rate</span>

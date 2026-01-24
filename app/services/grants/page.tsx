@@ -9,7 +9,7 @@ export default function GrantsPage() {
           <div className="mb-2">
             <span className="inline-block bg-gray-800 text-yellow-300 px-4 py-1 rounded-full text-xs font-semibold">Government Schemes • Non-Repayable Funding</span>
           </div>
-          <h1 className="text-4xl font-bold mb-2">Government Grants</h1>
+          <h1 className="text-4xl font-bold mb-2 text-blue-600">Government Grants</h1>
           <h2 className="text-2xl font-semibold text-orange-400 mb-4">MSME • Startup India • DPIIT • Sector-Specific Schemes</h2>
           <p className="mb-6 text-lg">Access non-repayable government funding with Ewolyn's specialized grants consultancy services covering scheme identification, eligibility assessment, application development, documentation support, and follow-up to maximize your chances of securing government financial assistance.</p>
           <div className="flex flex-wrap justify-center gap-6 mt-6">

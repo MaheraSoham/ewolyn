@@ -42,20 +42,20 @@ export default function Hero() {
           {/* Stats */}
           <div className="mt-8 grid grid-cols-4 gap-4">
             <div>
-              <p className="text-2xl font-bold">48hrs</p>
-              <p className="text-xs text-slate-400">Quick Approval</p>
+              <p className="text-2xl font-bold text-blue-700">48hrs</p>
+              <p className="text-xs text-blue-600">Quick Approval</p>
             </div>
             <div>
-              <p className="text-2xl font-bold">₹500Cr+</p>
-              <p className="text-xs text-slate-400">Funded</p>
+              <p className="text-2xl font-bold text-blue-700">₹500Cr+</p>
+              <p className="text-xs text-blue-600">Funded</p>
             </div>
             <div>
-              <p className="text-2xl font-bold">95%</p>
-              <p className="text-xs text-slate-400">Success Rate</p>
+              <p className="text-2xl font-bold text-blue-700">95%</p>
+              <p className="text-xs text-blue-600">Success Rate</p>
             </div>
             <div>
-              <p className="text-2xl font-bold">100%</p>
-              <p className="text-xs text-slate-400">Online Process</p>
+              <p className="text-2xl font-bold text-blue-700">100%</p>
+              <p className="text-xs text-blue-600">Online Process</p>
             </div>
           </div>
 
