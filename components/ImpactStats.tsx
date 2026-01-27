@@ -1,16 +1,18 @@
+import IndiaMap from "./IndiaMap";
+
 const stats = [
-  { value: "20K+", label: "MSMEs Registered", sublabel: "On Udyam Portal" },
-  { value: "₹500Cr+", label: "Credit Facilitated", sublabel: "Since 2020" },
+  { value: "47,700K+", label: "MSMEs Registered", sublabel: "On Udyam Portal" },
+  { value: "₹757Cr+", label: "Credit Facilitated", sublabel: "Since 2020" },
   { value: "95%", label: "Success Rate", sublabel: "Approval Rate" },
   { value: "28/36", label: "Pan India Coverage", sublabel: "States & UTs" },
 ];
 
 const topStates = [
-  { state: "Maharashtra", count: "82L+" },
-  { state: "Tamil Nadu", count: "49L+" },
-  { state: "Gujarat", count: "41L+" },
-  { state: "Uttar Pradesh", count: "39L+" },
-  { state: "Karnataka", count: "34L+" },
+  { state: "Maharashtra", count: "82L+", percentage: 100 },
+  { state: "Tamil Nadu", count: "49L+", percentage: 60 },
+  { state: "Gujarat", count: "41L+", percentage: 50 },
+  { state: "Uttar Pradesh", count: "39L+", percentage: 48 },
+  { state: "Karnataka", count: "34L+", percentage: 42 },
 ];
 
 const sectors = [
@@ -19,95 +21,154 @@ const sectors = [
   { name: "Services", percent: 33, icon: "💼" },
 ];
 
-const highlights = [
-  "₹4.14L Cr MUDRA loans",
-  "₹7,593 Cr SRI Fund invested",
-  "200+ RAMP proposals approved",
-  "20.5% Women-owned MSMEs",
-];
-
 export default function ImpactStats() {
   return (
-    <section className="section bg-slate-50">
-      <div className="container-max">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <span className="inline-block bg-brand/10 text-brand text-sm font-medium px-4 py-1 rounded-full mb-4">
-            Our Impact
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-ink">
-            Driving MSME Success <span className="text-brand">Across India</span>
-          </h2>
-          <p className="text-muted mt-3 max-w-2xl mx-auto">
-            4.77 crore MSMEs registered on Udyam portal, transforming India&apos;s economic landscape
-          </p>
-        </div>
-
-        {/* Main Stats */}
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4 mb-12">
-          {stats.map((s) => (
-            <div key={s.label} className="card text-center bg-white">
-              <div className="text-4xl font-extrabold text-brand">{s.value}</div>
-              <div className="mt-2 font-semibold text-ink">{s.label}</div>
-              <div className="text-sm text-muted">{s.sublabel}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Two Column Layout */}
-        <div className="grid gap-8 lg:grid-cols-2">
-          {/* Pan-India Presence */}
-          <div className="card bg-white">
-            <h3 className="text-xl font-bold text-ink mb-6">Pan-India Presence</h3>
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-slate-50 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-brand">28/36</div>
-                <div className="text-sm text-muted">Active States</div>
-              </div>
-              <div className="bg-slate-50 rounded-lg p-4 text-center">
-                <div className="text-2xl font-bold text-ink">West India</div>
-                <div className="text-sm text-muted">Top Region</div>
-              </div>
-            </div>
-            <h4 className="font-semibold text-ink mb-3">Top MSME States</h4>
-            <div className="space-y-2">
-              {topStates.map((item) => (
-                <div key={item.state} className="flex justify-between items-center py-2 border-b border-slate-100">
-                  <span className="text-muted">{item.state}</span>
-                  <span className="font-semibold text-ink">{item.count}</span>
+    <>
+      {/* Horizontal Stats Bar - Navy Background */}
+      <section className="section-navy py-12">
+        <div className="container-max">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+            {stats.map((s) => (
+              <div key={s.label} className="text-center group">
+                <div className="text-4xl md:text-5xl font-extrabold text-white group-hover:scale-110 transition-transform duration-300">
+                  {s.value}
                 </div>
-              ))}
-            </div>
+                <div className="mt-2 font-semibold text-white text-lg">{s.label}</div>
+                <div className="text-sm text-slate-300">{s.sublabel}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Map and Sector Distribution Section - Light Green */}
+      <section className="section section-light-green">
+        <div className="container-max">
+          {/* Section Header */}
+          <div className="text-center mb-12 animate-fade-in-up">
+            <span className="inline-block bg-cyan/10 text-cyan text-sm font-medium px-5 py-2 rounded-full mb-4 animate-pulse-glow">
+              Our Impact
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-ink">
+              Driving MSME Success <span className="gradient-text">Across India</span>
+            </h2>
+            <p className="text-muted mt-3 max-w-2xl mx-auto">
+              4.77 crore MSMEs registered on Udyam portal, transforming India&apos;s economic landscape
+            </p>
           </div>
 
-          {/* Sector Distribution */}
-          <div className="card bg-white">
-            <h3 className="text-xl font-bold text-ink mb-6">Sector Distribution</h3>
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              {sectors.map((sector) => (
-                <div key={sector.name} className="text-center">
-                  <div className="text-4xl mb-2">{sector.icon}</div>
-                  <div className="text-2xl font-bold text-brand">{sector.percent}%</div>
-                  <div className="text-sm text-muted">{sector.name}</div>
+          {/* Two Column Layout */}
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Pan-India Presence with Map */}
+            <div className="card bg-white" style={{ overflow: 'visible' }}>
+              <h3 className="text-xl font-bold text-ink mb-6">Pan-India Presence</h3>
+
+              {/* Interactive India Map */}
+              <div className="mb-6 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-4 border border-cyan/10" style={{ minHeight: '500px' }}>
+                <IndiaMap />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-gradient-to-br from-cyan/10 to-cyan/5 rounded-lg p-4 text-center border border-cyan/20 hover:shadow-cyan-glow transition-all duration-300">
+                  <div className="text-2xl font-bold text-cyan">28/36</div>
+                  <div className="text-sm text-muted">Active States</div>
                 </div>
-              ))}
-            </div>
-            
-            {/* Highlights */}
-            <div className="bg-slate-900 rounded-xl p-6 text-white">
-              <h4 className="font-semibold mb-4">Government Support Programs</h4>
-              <div className="grid grid-cols-2 gap-3">
-                {highlights.map((h) => (
-                  <div key={h} className="flex items-center gap-2 text-sm">
-                    <span className="text-brand">✓</span>
-                    <span className="text-slate-300">{h}</span>
+                <div className="bg-slate-50 rounded-lg p-4 text-center hover:shadow-lg transition-all duration-300">
+                  <div className="text-2xl font-bold text-ink">West India</div>
+                  <div className="text-sm text-muted">Top Region</div>
+                </div>
+              </div>
+
+              <h4 className="font-semibold text-ink mb-3">Top MSME States</h4>
+              <div className="space-y-3">
+                {topStates.map((item) => (
+                  <div key={item.state} className="space-y-1">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-muted font-medium">{item.state}</span>
+                      <span className="font-bold text-cyan">{item.count}</span>
+                    </div>
+                    <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+                      <div
+                        className="bg-gradient-cyan h-full rounded-full transition-all duration-500"
+                        style={{ width: `${item.percentage}%` }}
+                      ></div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Sector Distribution */}
+            <div className="card bg-white">
+              <h3 className="text-xl font-bold text-ink mb-6">Sector Distribution</h3>
+
+              {/* Circular Gauges */}
+              <div className="grid grid-cols-3 gap-6 mb-8">
+                {sectors.map((sector) => (
+                  <div key={sector.name} className="text-center group">
+                    {/* Circular Progress */}
+                    <div className="relative w-24 h-24 mx-auto mb-3">
+                      <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                        {/* Background circle */}
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="40"
+                          fill="none"
+                          stroke="#e2e8f0"
+                          strokeWidth="8"
+                        />
+                        {/* Progress circle */}
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="40"
+                          fill="none"
+                          stroke="#0BA5D8"
+                          strokeWidth="8"
+                          strokeDasharray={`${sector.percent * 2.51} 251`}
+                          strokeLinecap="round"
+                          className="transition-all duration-1000"
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-2xl font-bold text-cyan">{sector.percent}%</span>
+                      </div>
+                    </div>
+                    <div className="text-3xl mb-2 transform transition-transform group-hover:scale-125">
+                      {sector.icon}
+                    </div>
+                    <div className="text-sm font-medium text-muted">{sector.name}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Government Support Programs */}
+              <div className="bg-brand rounded-xl p-6 text-white shadow-glow">
+                <h4 className="font-semibold mb-4 text-lg">Government Support Programs</h4>
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-slate-200">₹4.14L Cr MUDRA loans disbursed</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-slate-200">₹7,593 Cr SRI Fund invested</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-slate-200">200+ RAMP proposals approved</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-slate-200">20.5% Women-owned MSMEs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

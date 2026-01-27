@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="section bg-slate-900">
+    <section className="section section-navy">
       <div className="container-max">
         <div className="rounded-2xl bg-gradient-to-r from-brand to-brand-dark p-10 text-white shadow-soft">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">

@@ -59,12 +59,12 @@ const fundingOptions = [
 
 export default function FundingOptions() {
   return (
-    <section className="section bg-slate-50">
+    <section className="section section-navy">
       <div className="container-max">
         {/* Section Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-ink">
-            Tailored <span className="text-brand">Funding Options</span>
+            Tailored <span className="gradient-text">Funding Options</span>
           </h2>
           <p className="text-muted mt-3 max-w-2xl mx-auto">
             Choose from India&apos;s leading MSME schemes—fast approvals, expert support, and minimal paperwork.
@@ -72,28 +72,28 @@ export default function FundingOptions() {
         </div>
 
         {/* Funding Cards Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 stagger-children">
           {fundingOptions.map((option) => (
             <div
               key={option.title}
-              className="card bg-white hover:shadow-lg transition-shadow relative"
+              className="card bg-white hover:shadow-glow hover:border-cyan/30 hover:scale-105 transition-all duration-300 relative"
             >
               {/* Popular Badge */}
               {option.popular && (
-                <div className="absolute -top-3 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                <div className="absolute -top-3 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
                   ⚡ Popular
                 </div>
               )}
 
-              <h3 className="text-lg font-bold text-ink">{option.title}</h3>
-              <p className="text-sm text-muted mt-2">{option.description}</p>
+              <h3 className="text-lg font-bold text-ink text-clamp-2">{option.title}</h3>
+              <p className="text-sm text-muted mt-2 text-clamp-3">{option.description}</p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {option.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-slate-100 text-slate-600 text-xs px-3 py-1 rounded-full"
+                    className="bg-cyan/10 text-cyan text-xs font-medium px-3 py-1 rounded-full"
                   >
                     {tag}
                   </span>
@@ -104,7 +104,7 @@ export default function FundingOptions() {
               <div className="flex items-center gap-6 mt-4 pt-4 border-t border-slate-100">
                 <div>
                   <p className="text-xs text-muted">Success</p>
-                  <p className="font-bold text-green-600">{option.success}</p>
+                  <p className="font-bold text-accent-green">{option.success}</p>
                 </div>
                 <div>
                   <p className="text-xs text-muted">Time</p>
@@ -112,7 +112,7 @@ export default function FundingOptions() {
                 </div>
                 <Link
                   href={option.href}
-                  className="ml-auto text-brand hover:text-brand-dark"
+                  className="ml-auto text-cyan hover:text-cyan-dark transition-colors"
                 >
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -127,10 +127,10 @@ export default function FundingOptions() {
         <div className="mt-10 text-center">
           <Link
             href="/funding"
-            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold px-8 py-4 rounded-lg transition"
+            className="btn"
           >
             Check Your Eligibility
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>

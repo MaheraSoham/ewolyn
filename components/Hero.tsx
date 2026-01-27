@@ -1,152 +1,138 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Hero() {
   const [businessStage, setBusinessStage] = useState("Early");
 
   return (
-    <section className="bg-slate-900 text-white py-16">
-      <div className="container-max grid items-start gap-10 lg:grid-cols-2">
-        {/* Left Side - Content */}
-        <div>
-          {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 bg-slate-800 rounded-full px-4 py-2 mb-6">
-            <span className="h-2 w-2 rounded-full bg-green-400" />
-            <span className="text-sm">Trusted by 20,000+ MSMEs</span>
-          </div>
+    <section className="hero-navy-gradient text-white py-24 relative overflow-hidden min-h-[90vh] flex items-center">
+      {/* Subtle grid pattern overlay */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+        backgroundSize: '50px 50px'
+      }}></div>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            Your Business Deserves
-            <br />
-            <span className="text-brand">Funding, Not Rejection</span>
-          </h1>
+      {/* Floating Abstract Shape - Top Right */}
+      <div className="absolute top-20 right-10 w-64 h-64 opacity-20 floating-shape hidden lg:block">
+        <Image
+          src="/abstract-shape.png"
+          alt=""
+          width={256}
+          height={256}
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-          {/* Hindi Tagline */}
-          <p className="mt-4 text-xl text-slate-300" style={{ fontFamily: 'system-ui' }}>
-            आपकी सफलता, हमारी ज़िम्मेदारी
-          </p>
+      {/* Floating Abstract Shape - Bottom Left */}
+      <div className="absolute bottom-20 left-10 w-48 h-48 opacity-15 floating-shape hidden lg:block" style={{ animationDelay: '2s' }}>
+        <Image
+          src="/abstract-shape.png"
+          alt=""
+          width={192}
+          height={192}
+          className="w-full h-full object-contain transform rotate-180"
+        />
+      </div>
 
-          {/* Description */}
-          <p className="mt-4 text-lg text-slate-400">
-            Get ₹5 Lakhs to ₹10 Crores with India&apos;s fastest MSME funding platform
-          </p>
+      <div className="container-max relative z-10">
+        {/* Split Layout: Content + Image */}
+        <div className="grid lg:grid-cols-[58%_42%] gap-12 items-center">
 
-          {/* Stats */}
-          <div className="mt-8 grid grid-cols-4 gap-4">
-            <div>
-              <p className="text-2xl font-bold">48hrs</p>
-              <p className="text-xs text-slate-400">Quick Approval</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">₹500Cr+</p>
-              <p className="text-xs text-slate-400">Funded</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">95%</p>
-              <p className="text-xs text-slate-400">Success Rate</p>
-            </div>
-            <div>
-              <p className="text-2xl font-bold">100%</p>
-              <p className="text-xs text-slate-400">Online Process</p>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/funding" className="btn">
-              Apply for Funding →
-            </Link>
-            <Link href="/funding" className="btn-dark">
-              View All Schemes
-            </Link>
-          </div>
-
-          {/* Feature Tags */}
-          <div className="mt-6 flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-1 bg-slate-800 text-green-400 text-sm px-3 py-1 rounded-full">
-              ✓ Zero Collateral
-            </span>
-            <span className="inline-flex items-center gap-1 bg-slate-800 text-green-400 text-sm px-3 py-1 rounded-full">
-              ✓ Minimal Docs
-            </span>
-            <span className="inline-flex items-center gap-1 bg-slate-800 text-green-400 text-sm px-3 py-1 rounded-full">
-              ✓ Expert Support
-            </span>
-          </div>
-        </div>
-
-        {/* Right Side - Eligibility Form */}
-        <div className="bg-slate-800 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold">Check Your Eligibility</h2>
-          <p className="text-slate-400 mt-1">Get instant funding options in 30 seconds</p>
-
-          <form className="mt-6 space-y-4">
-            {/* Business Type */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Business Type</label>
-              <select className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand focus:border-transparent">
-                <option>Select Business Type</option>
-                <option>Private Limited</option>
-                <option>LLP</option>
-                <option>Partnership</option>
-                <option>Proprietorship</option>
-                <option>NGO / Trust</option>
-              </select>
+          {/* Left Side - Content */}
+          <div className="animate-fade-in-up">
+            {/* Floating Success Badge */}
+            <div className="inline-flex items-center gap-2 bg-slate-800/60 backdrop-blur-sm rounded-full px-5 py-2.5 mb-6 animate-pulse-glow border border-accent-green/30">
+              <span className="h-2 w-2 rounded-full bg-accent-green animate-pulse" />
+              <span className="text-sm font-medium">
+                <span className="text-accent-green font-semibold">TechVision Solutions</span> got ₹45L PMEGP approval ✓
+              </span>
             </div>
 
-            {/* Funding Required */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Funding Required</label>
-              <select className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-brand focus:border-transparent">
-                <option>Select Amount</option>
-                <option>₹5 Lakh - ₹25 Lakh</option>
-                <option>₹25 Lakh - ₹1 Crore</option>
-                <option>₹1 Crore - ₹5 Crore</option>
-                <option>₹5 Crore - ₹10 Crore</option>
-                <option>Above ₹10 Crore</option>
-              </select>
+            {/* Hindi Tagline */}
+            <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'system-ui' }}>
+              <span className="text-accent-green">Humara Support</span>{" "}
+              <span className="text-white">Aapki Safalta</span>
+            </h2>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+              Get ₹10L to ₹5Cr
+              <br />
+              <span className="text-white">MSME Funding</span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-lg md:text-xl text-slate-300 mb-6">
+              Government schemes, company registration & business certifications
+            </p>
+
+            {/* Feature Bullets */}
+            <div className="flex flex-wrap items-center gap-6 text-sm md:text-base text-slate-300 mb-8">
+              <span className="flex items-center gap-2">
+                <span className="text-accent-green text-lg">✓</span> Expert guidance
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-accent-green text-lg">✓</span> Fast approvals
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-accent-green text-lg">✓</span> Transparent process
+              </span>
             </div>
 
-            {/* Business Stage */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Business Stage</label>
-              <div className="grid grid-cols-3 gap-2">
-                {["Idea", "Early", "Growth"].map((stage) => (
-                  <button
-                    key={stage}
-                    type="button"
-                    onClick={() => setBusinessStage(stage)}
-                    className={`py-3 rounded-lg font-medium transition ${
-                      businessStage === stage
-                        ? "bg-brand text-white"
-                        : "bg-slate-700 text-slate-300 hover:bg-slate-600"
-                    }`}
-                  >
-                    {stage}
-                  </button>
-                ))}
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 mb-10">
+              <Link href="/funding" className="btn-hero-green group">
+                <span>Apply for Funding</span>
+                <span className="ml-2 transform transition-transform group-hover:translate-x-1">→</span>
+              </Link>
+              <Link href="/services" className="btn-hero-outline">
+                Explore Services
+              </Link>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="stats-card text-center animate-fade-in-up animate-delay-100">
+                <p className="text-3xl md:text-4xl font-bold text-accent-green">48hrs</p>
+                <p className="text-xs text-slate-400 mt-1">Quick Approval</p>
+              </div>
+              <div className="stats-card text-center animate-fade-in-up animate-delay-200">
+                <p className="text-3xl md:text-4xl font-bold text-accent-green">₹500Cr+</p>
+                <p className="text-xs text-slate-400 mt-1">Funded</p>
+              </div>
+              <div className="stats-card text-center animate-fade-in-up animate-delay-300">
+                <p className="text-3xl md:text-4xl font-bold text-accent-green">95%</p>
+                <p className="text-xs text-slate-400 mt-1">Success Rate</p>
+              </div>
+              <div className="stats-card text-center animate-fade-in-up animate-delay-400">
+                <p className="text-3xl md:text-4xl font-bold text-accent-green">20K+</p>
+                <p className="text-xs text-slate-400 mt-1">Happy Clients</p>
               </div>
             </div>
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full bg-brand hover:bg-brand-dark text-white font-semibold py-4 rounded-lg transition"
-            >
-              Get Instant Report →
-            </button>
-          </form>
-
-          {/* Trust Indicators */}
-          <div className="mt-4 flex items-center justify-center gap-4 text-xs text-slate-400">
-            <span>✓ 100% Free</span>
-            <span>✓ No Spam</span>
-            <span>✓ Secure</span>
           </div>
+
+          {/* Right Side - Business Meeting Image */}
+          <div className="hidden lg:block animate-fade-in-up animate-delay-200">
+            <div className="relative">
+              {/* Main Image with Glow Effect */}
+              <div className="image-glow overflow-hidden rounded-2xl">
+                <Image
+                  src="/hero-business-meeting.png"
+                  alt="Professional business meeting - MSME funding consultation"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
+

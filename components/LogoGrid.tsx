@@ -19,36 +19,55 @@ const certifications = [
 
 export default function LogoGrid() {
   return (
-    <section className="section bg-white">
+    <section className="section section-light-green">
       <div className="container-max">
         {/* Trusted Network Badge */}
         <div className="flex justify-center mb-4">
-          <div className="inline-flex items-center gap-2 bg-red-50 rounded-full px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-brand" />
-            <span className="text-sm font-medium text-brand">Trusted Network</span>
+          <div className="inline-flex items-center gap-2 bg-cyan/10 rounded-full px-5 py-2.5 animate-pulse-glow">
+            <span className="h-2 w-2 rounded-full bg-cyan animate-pulse" />
+            <span className="text-sm font-medium text-cyan">Trusted Network</span>
           </div>
         </div>
 
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-4xl font-bold text-ink">
-          Our Strategic <span className="text-brand">Partners</span>
+          Our Strategic <span className="gradient-text">Partners</span>
         </h2>
         <p className="text-center text-muted mt-3">
           Collaborating with leaders to bring you the best funding solutions
         </p>
 
-        {/* Partner Logos Grid - Text Based */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {partners.map((partner) => (
-            <div
-              key={partner.name}
-              className="flex items-center justify-center p-6 bg-white border border-slate-200 rounded-xl hover:shadow-md hover:border-brand/30 transition"
-            >
-              <span className={`text-lg font-bold ${partner.color}`}>
-                {partner.name}
-              </span>
-            </div>
-          ))}
+        {/* Partner Logos Scrolling Carousel - Right to Left */}
+        <div className="mt-10 overflow-hidden relative">
+          {/* Gradient overlays for smooth fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+
+          {/* Scrolling container */}
+          <div className="flex animate-scroll-rtl">
+            {/* First set of logos */}
+            {partners.map((partner, index) => (
+              <div
+                key={`${partner.name}-1-${index}`}
+                className="flex-shrink-0 mx-4 flex items-center justify-center p-6 bg-white border border-slate-200 rounded-xl hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300 min-w-[200px]"
+              >
+                <span className={`text-lg font-bold ${partner.color}`}>
+                  {partner.name}
+                </span>
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {partners.map((partner, index) => (
+              <div
+                key={`${partner.name}-2-${index}`}
+                className="flex-shrink-0 mx-4 flex items-center justify-center p-6 bg-white border border-slate-200 rounded-xl hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300 min-w-[200px]"
+              >
+                <span className={`text-lg font-bold ${partner.color}`}>
+                  {partner.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Certifications & Recognitions */}
@@ -56,13 +75,13 @@ export default function LogoGrid() {
           <h3 className="text-center text-2xl font-bold text-ink mb-8">
             Certifications & Recognitions
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {certifications.map((cert) => (
               <div
                 key={cert.title}
-                className="flex items-center gap-4 p-6 bg-white border border-slate-200 rounded-xl"
+                className="flex items-center gap-4 p-6 bg-white border border-slate-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-600 text-xl font-bold">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-green/10 text-accent-green text-xl font-bold">
                   {cert.icon}
                 </div>
                 <div>
@@ -75,11 +94,11 @@ export default function LogoGrid() {
         </div>
 
         {/* Stats Banner */}
-        <div className="mt-12 bg-slate-900 rounded-2xl p-8 text-white text-center">
-          <p className="text-lg">
-            Facilitated over <span className="text-brand font-bold">₹500 Crore</span> in MSME funding through strategic partnerships
+        <div className="mt-12 animated-gradient rounded-2xl p-10 text-white text-center shadow-glow-lg">
+          <p className="text-xl font-medium">
+            Facilitated over <span className="gradient-text-green font-bold text-2xl">₹500 Crore</span> in MSME funding through strategic partnerships
           </p>
-          <p className="text-slate-400 mt-2">Trusted by 20,000+ businesses across India</p>
+          <p className="text-slate-300 mt-3 text-base">Trusted by 20,000+ businesses across India</p>
         </div>
       </div>
     </section>
