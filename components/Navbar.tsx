@@ -148,7 +148,7 @@ export default function Navbar() {
 
               {/* Services Dropdown */}
               <div
-                className="relative"
+                className="relative group/dropdown"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
@@ -166,47 +166,61 @@ export default function Navbar() {
 
                 {/* Dropdown Menu */}
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-[450px] bg-white rounded-xl shadow-2xl border border-gray-100 p-4">
-                    <div className="mb-3">
-                      <h3 className="text-lg font-semibold text-gray-900">Our Services</h3>
-                      <p className="text-sm text-gray-500">Comprehensive solutions for your business growth</p>
-                    </div>
-
-                    <div className="space-y-1">
-                      {services.map((service, index) => (
-                        <div key={index}>
-                          {service.subItems ? (
-                            <div className="grid grid-cols-3 gap-2">
-                              {service.subItems.map((subItem, subIndex) => (
-                                <Link
-                                  key={subIndex}
-                                  href={subItem.href}
-                                  className="flex flex-col items-center p-3 rounded-lg border border-gray-100 hover:border-accent-green hover:bg-green-50 transition text-center"
-                                >
-                                  <div className={`w-8 h-8 rounded-lg ${subItem.iconBg} flex items-center justify-center text-lg mb-1`}>
-                                    {subItem.icon}
-                                  </div>
-                                  <div className="font-medium text-sm text-gray-900">{subItem.title}</div>
-                                  <div className="text-xs text-gray-500">{subItem.description}</div>
-                                </Link>
-                              ))}
-                            </div>
-                          ) : (
-                            <Link
-                              href={service.href}
-                              className="flex items-center gap-3 p-3 rounded-lg transition hover:bg-gray-50"
-                            >
-                              <div className={`w-10 h-10 rounded-lg ${service.iconBg} flex items-center justify-center text-xl`}>
-                                {service.icon}
-                              </div>
-                              <div className="flex-1">
-                                <div className="font-medium text-gray-900">{service.title}</div>
-                                <div className="text-sm text-gray-500">{service.description}</div>
-                              </div>
-                            </Link>
-                          )}
+                  <div
+                    className="absolute top-full left-0 pt-2 z-50"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <div className="w-[620px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+                      {/* Header with View All Link */}
+                      <div className="flex items-start justify-between mb-5">
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-900">Our Services</h3>
+                          <p className="text-sm text-gray-500 mt-0.5">Comprehensive solutions for your business growth</p>
                         </div>
-                      ))}
+                        <Link
+                          href="/services"
+                          className="text-sm text-cyan hover:text-cyan-dark font-medium whitespace-nowrap flex items-center gap-1"
+                        >
+                          View All Services →
+                        </Link>
+                      </div>
+
+                      {/* Main Funding Services - Large Cards */}
+                      <div className="grid grid-cols-3 gap-3 mb-4">
+                        {services[0].subItems?.map((subItem, index) => (
+                          <Link
+                            key={index}
+                            href={subItem.href}
+                            className="flex flex-col items-center p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-cyan hover:bg-cyan/5 transition-all duration-200 text-center group"
+                          >
+                            <div className={`w-12 h-12 rounded-xl ${subItem.iconBg} flex items-center justify-center text-2xl mb-2 group-hover:scale-110 transition-transform`}>
+                              {subItem.icon}
+                            </div>
+                            <div className="font-semibold text-sm text-gray-900 mb-1.5">{subItem.title}</div>
+                            <div className="text-xs text-gray-500 leading-snug">{subItem.description}</div>
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Other Services - Compact Grid */}
+                      <div className="grid grid-cols-3 gap-2.5">
+                        {services.slice(1).map((service, index) => (
+                          <Link
+                            key={index}
+                            href={service.href}
+                            className="flex items-center gap-2.5 p-3 rounded-lg bg-gray-50 border border-gray-100 hover:border-cyan hover:bg-cyan/5 transition-all duration-200 group"
+                          >
+                            <div className={`w-10 h-10 rounded-lg ${service.iconBg} flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform`}>
+                              {service.icon}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="font-semibold text-xs text-gray-900 leading-tight">{service.title}</div>
+                              <div className="text-[11px] text-gray-500 mt-0.5 leading-tight">{service.description}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}

@@ -62,10 +62,10 @@ export default function GovernmentSchemes() {
             <Link
               key={scheme.title}
               href={scheme.href}
-              className="group card hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300"
+              className="group rounded-2xl border border-cyan/30 bg-gradient-to-br from-cyan/10 to-primary-cyan/5 p-6 shadow-soft transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-cyan/60 hover:scale-105 hover:from-cyan/20 hover:to-primary-cyan/10"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cyan/10 text-2xl group-hover:bg-gradient-cyan group-hover:text-white group-hover:shadow-glow transition-all duration-300">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cyan/20 text-2xl group-hover:bg-cyan group-hover:text-white group-hover:shadow-glow transition-all duration-300">
                   {scheme.icon}
                 </div>
                 <div>

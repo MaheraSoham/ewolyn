@@ -1,13 +1,15 @@
-// Strategic partners - text-based display
+import Image from "next/image";
+
+// Strategic partners - add your logo files to public/logos/
 const partners = [
-  { name: "SIDBI", color: "text-blue-700" },
-  { name: "Startup India", color: "text-orange-600" },
-  { name: "HDFC Bank", color: "text-blue-800" },
-  { name: "MUDRA", color: "text-green-700" },
-  { name: "NABARD", color: "text-green-800" },
-  { name: "SBI", color: "text-blue-600" },
-  { name: "Bank of Baroda", color: "text-orange-700" },
-  { name: "CGTMSE", color: "text-purple-700" },
+  { name: "SIDBI", logo: "/logos/sidbi.png" },
+  { name: "Startup India", logo: "/logos/startup-india.png" },
+  { name: "HDFC Bank", logo: "/logos/hdfc-bank.png" },
+  { name: "MUDRA", logo: "/logos/mudra.png" },
+  { name: "NABARD", logo: "/logos/nabard.png" },
+  { name: "SBI", logo: "/logos/sbi.png" },
+  { name: "Bank of Baroda", logo: "/logos/bank-of-baroda.png" },
+  { name: "CGTMSE", logo: "/logos/cgtmse.png" },
 ];
 
 const certifications = [
@@ -40,8 +42,8 @@ export default function LogoGrid() {
         {/* Partner Logos Scrolling Carousel - Right to Left */}
         <div className="mt-10 overflow-hidden relative">
           {/* Gradient overlays for smooth fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#f0fdf4] to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#f0fdf4] to-transparent z-10" />
 
           {/* Scrolling container */}
           <div className="flex animate-scroll-rtl">
@@ -49,22 +51,30 @@ export default function LogoGrid() {
             {partners.map((partner, index) => (
               <div
                 key={`${partner.name}-1-${index}`}
-                className="flex-shrink-0 mx-4 flex items-center justify-center p-6 bg-white border border-slate-200 rounded-xl hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300 min-w-[200px]"
+                className="flex-shrink-0 mx-3 flex items-center justify-center p-4 bg-white border border-slate-200 rounded-xl hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300 min-w-[160px] h-[80px]"
               >
-                <span className={`text-lg font-bold ${partner.color}`}>
-                  {partner.name}
-                </span>
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={120}
+                  height={45}
+                  className="object-contain max-w-full max-h-full"
+                />
               </div>
             ))}
             {/* Duplicate set for seamless loop */}
             {partners.map((partner, index) => (
               <div
                 key={`${partner.name}-2-${index}`}
-                className="flex-shrink-0 mx-4 flex items-center justify-center p-6 bg-white border border-slate-200 rounded-xl hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300 min-w-[200px]"
+                className="flex-shrink-0 mx-3 flex items-center justify-center p-4 bg-white border border-slate-200 rounded-xl hover:shadow-glow hover:border-cyan/50 hover:scale-105 transition-all duration-300 min-w-[160px] h-[80px]"
               >
-                <span className={`text-lg font-bold ${partner.color}`}>
-                  {partner.name}
-                </span>
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={120}
+                  height={45}
+                  className="object-contain max-w-full max-h-full"
+                />
               </div>
             ))}
           </div>

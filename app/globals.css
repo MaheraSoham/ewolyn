@@ -303,7 +303,7 @@ body {
 }
 
 .animate-scroll-rtl {
-  animation: scroll-rtl 30s linear infinite;
+  animation: scroll-rtl 15s linear infinite;
 }
 
 .animate-scroll-rtl:hover {
