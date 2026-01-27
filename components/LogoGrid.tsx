@@ -21,7 +21,7 @@ const certifications = [
 
 export default function LogoGrid() {
   return (
-    <section className="section section-light-green">
+    <section className="section bg-white">
       <div className="container-max">
         {/* Trusted Network Badge */}
         <div className="flex justify-center mb-4">

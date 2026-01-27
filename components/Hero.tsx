@@ -14,7 +14,7 @@ export default function Hero() {
         backgroundSize: '50px 50px'
       }}></div>
 
-      {/* Floating Abstract Shape - Top Right */}
+      {/* Floating Abstract Shapes */}
       <div className="absolute top-20 right-10 w-64 h-64 opacity-20 floating-shape hidden lg:block">
         <Image
           src="/abstract-shape.png"
@@ -25,7 +25,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Floating Abstract Shape - Bottom Left */}
       <div className="absolute bottom-20 left-10 w-48 h-48 opacity-15 floating-shape hidden lg:block" style={{ animationDelay: '2s' }}>
         <Image
           src="/abstract-shape.png"
@@ -37,7 +36,6 @@ export default function Hero() {
       </div>
 
       <div className="container-max relative z-10">
-        {/* Split Layout: Content + Image */}
         <div className="grid lg:grid-cols-[58%_42%] gap-12 items-center">
 
           {/* Left Side - Content */}
@@ -64,8 +62,9 @@ export default function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-slate-300 mb-6">
-              Government schemes, company registration & business certifications
+            <p className="text-lg md:text-xl text-slate-300 mb-8">
+              Government schemes, company registration & business certifications.
+              Get ₹5 Lakhs to ₹10 Crores with India&apos;s fastest MSME funding platform.
             </p>
 
             {/* Feature Bullets */}
@@ -92,40 +91,62 @@ export default function Hero() {
               </Link>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="stats-card text-center animate-fade-in-up animate-delay-100">
-                <p className="text-3xl md:text-4xl font-bold text-accent-green">48hrs</p>
-                <p className="text-xs text-slate-400 mt-1">Quick Approval</p>
-              </div>
-              <div className="stats-card text-center animate-fade-in-up animate-delay-200">
-                <p className="text-3xl md:text-4xl font-bold text-accent-green">₹500Cr+</p>
-                <p className="text-xs text-slate-400 mt-1">Funded</p>
-              </div>
-              <div className="stats-card text-center animate-fade-in-up animate-delay-300">
-                <p className="text-3xl md:text-4xl font-bold text-accent-green">95%</p>
-                <p className="text-xs text-slate-400 mt-1">Success Rate</p>
-              </div>
-              <div className="stats-card text-center animate-fade-in-up animate-delay-400">
-                <p className="text-3xl md:text-4xl font-bold text-accent-green">20K+</p>
-                <p className="text-xs text-slate-400 mt-1">Happy Clients</p>
-              </div>
+            {/* Feature Tags */}
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-1 bg-white/5 border border-white/10 text-accent-green text-sm px-3 py-1 rounded-full">
+                ✓ Zero Collateral
+              </span>
+              <span className="inline-flex items-center gap-1 bg-white/5 border border-white/10 text-accent-green text-sm px-3 py-1 rounded-full">
+                ✓ Minimal Docs
+              </span>
+              <span className="inline-flex items-center gap-1 bg-white/5 border border-white/10 text-accent-green text-sm px-3 py-1 rounded-full">
+                ✓ Expert Support
+              </span>
             </div>
           </div>
 
-          {/* Right Side - Business Meeting Image */}
-          <div className="hidden lg:block animate-fade-in-up animate-delay-200">
-            <div className="relative">
-              {/* Main Image with Glow Effect */}
-              <div className="image-glow overflow-hidden rounded-2xl">
-                <Image
-                  src="/hero-business-meeting.png"
-                  alt="Professional business meeting - MSME funding consultation"
-                  width={600}
-                  height={450}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
+          {/* Right Side - Form & Visuals */}
+          <div className="space-y-8 animate-fade-in-up animate-delay-200">
+            {/* Eligibility Form */}
+            <div className="bg-white rounded-2xl p-8 shadow-2xl text-slate-900 border border-white/20">
+              <h2 className="text-2xl font-bold">Check Your Eligibility</h2>
+              <p className="text-slate-500 mt-1">Get instant funding options in 30 seconds</p>
+
+              <form className="mt-6 space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-slate-700">Business Type</label>
+                  <select className="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-900 focus:ring-2 focus:ring-accent-green focus:border-transparent outline-none">
+                    <option>Select Business Type</option>
+                    <option>Private Limited</option>
+                    <option>LLP</option>
+                    <option>Partnership</option>
+                    <option>Proprietorship</option>
+                    <option>NGO / Trust</option>
+                  </select>
+                </div>
+                <button type="submit" className="w-full bg-accent-green text-white font-bold py-4 rounded-lg hover:bg-green-600 transition-colors shadow-lg shadow-green-200">
+                  Check Eligibility Now
+                </button>
+              </form>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="stats-card text-center">
+                <p className="text-2xl md:text-3xl font-bold text-accent-green">48hrs</p>
+                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Quick Approval</p>
+              </div>
+              <div className="stats-card text-center">
+                <p className="text-2xl md:text-3xl font-bold text-accent-green">₹500Cr+</p>
+                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Funded</p>
+              </div>
+              <div className="stats-card text-center">
+                <p className="text-2xl md:text-3xl font-bold text-accent-green">95%</p>
+                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Success Rate</p>
+              </div>
+              <div className="stats-card text-center">
+                <p className="text-2xl md:text-3xl font-bold text-accent-green">20K+</p>
+                <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">Happy Clients</p>
               </div>
             </div>
           </div>

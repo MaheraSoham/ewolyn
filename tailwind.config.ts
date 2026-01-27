@@ -38,6 +38,13 @@ const config: Config = {
           teal: '#0BA5D8',
           cyan: '#0BA5D8',
         },
+        evolyn: {
+          blue: '#1B4F8C',
+          teal: '#0BA5D8',
+          cyan: '#0BA5D8',
+          green: '#4CAF50',
+          charcoal: '#334155',
+        },
       },
       boxShadow: {
         soft: '0 10px 30px rgba(2, 6, 23, 0.08)',
