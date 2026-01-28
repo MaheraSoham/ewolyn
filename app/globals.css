@@ -46,6 +46,11 @@ html, body, :root {
   letter-spacing: 0.01em;
 }
 
+/* Scale down entire page */
+html {
+  font-size: 14px; /* Reduced from default 16px */
+}
+
 
 
 body {
@@ -142,17 +147,17 @@ a:hover {
 }
 
 .section {
-  @apply py-16 sm:py-20 lg:py-24;
+  @apply py-8 sm:py-10 lg:py-12;
   overflow-x: hidden;
   background: var(--bg);
 }
 
 .section-title {
-  @apply text-3xl font-bold tracking-tight text-evolyn-blue sm:text-4xl;
+  @apply text-2xl font-bold tracking-tight text-evolyn-blue sm:text-3xl;
 }
 
 .section-subtitle {
-  @apply mt-3 max-w-2xl text-base text-evolyn-charcoal;
+  @apply mt-2 max-w-2xl text-sm text-evolyn-charcoal;
 }
 
 /* Glassmorphism effect */
