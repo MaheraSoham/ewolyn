@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 type SubItem = {
   title: string;
@@ -115,6 +115,24 @@ export default function Navbar() {
   const pathname = usePathname();
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 200);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -160,8 +178,8 @@ export default function Navbar() {
               {/* Services Dropdown */}
               <div
                 className="relative group/dropdown"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 <button
                   className={`flex items-center gap-1 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-accent-green" : "text-white hover:text-accent-green"}`}
@@ -174,53 +192,59 @@ export default function Navbar() {
 
                 {/* Desktop Mega Menu Dropdown */}
                 {servicesOpen && (
-                  <div className="absolute top-full -left-64 mt-4 w-[900px] glass-navbar p-8 rounded-3xl shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden">
-                    <div className="grid grid-cols-12 gap-8 relative z-10">
-                      {/* Featured Section: Funding & Consultancy */}
-                      <div className="col-span-8">
-                        <div className="mb-6">
-                          <h3 className="text-white font-bold text-xl mb-1 flex items-center gap-2">
-                            <span>{services[0].icon}</span>
-                            {services[0].title}
-                          </h3>
-                          <p className="text-gray-400 text-sm">{services[0].description}</p>
+                  <div
+                    className="absolute top-full -left-64 w-[900px] pt-4"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="glass-navbar p-8 rounded-3xl shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden">
+                      <div className="grid grid-cols-12 gap-8 relative z-10">
+                        {/* Featured Section: Funding & Consultancy */}
+                        <div className="col-span-8">
+                          <div className="mb-6">
+                            <h3 className="text-white font-bold text-xl mb-1 flex items-center gap-2">
+                              <span>{services[0].icon}</span>
+                              {services[0].title}
+                            </h3>
+                            <p className="text-gray-400 text-sm">{services[0].description}</p>
+                          </div>
+                          <div className="grid grid-cols-3 gap-4">
+                            {services[0].subItems?.map((subItem, idx) => (
+                              <Link
+                                key={idx}
+                                href={subItem.href}
+                                className="group/item flex flex-col p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent-green/50 hover:bg-white/10 transition-all duration-300"
+                              >
+                                <div className={`w-10 h-10 rounded-xl ${subItem.iconBg} flex items-center justify-center text-xl mb-3 group-hover/item:scale-110 transition-transform`}>
+                                  {subItem.icon}
+                                </div>
+                                <div className="font-semibold text-white text-sm mb-1 group-hover/item:text-accent-green transition-colors">{subItem.title}</div>
+                                <div className="text-gray-400 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
-                        <div className="grid grid-cols-3 gap-4">
-                          {services[0].subItems?.map((subItem, idx) => (
-                            <Link
-                              key={idx}
-                              href={subItem.href}
-                              className="group/item flex flex-col p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent-green/50 hover:bg-white/10 transition-all duration-300"
-                            >
-                              <div className={`w-10 h-10 rounded-xl ${subItem.iconBg} flex items-center justify-center text-xl mb-3 group-hover/item:scale-110 transition-transform`}>
-                                {subItem.icon}
-                              </div>
-                              <div className="font-semibold text-white text-sm mb-1 group-hover/item:text-accent-green transition-colors">{subItem.title}</div>
-                              <div className="text-gray-400 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
 
-                      {/* Other Services Section */}
-                      <div className="col-span-4 border-l border-white/10 pl-8">
-                        <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
-                        <div className="flex flex-col gap-2">
-                          {services.slice(1).map((service, idx) => (
-                            <Link
-                              key={idx}
-                              href={service.href}
-                              className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/link"
-                            >
-                              <div className={`w-8 h-8 rounded-lg ${service.iconBg} flex items-center justify-center text-lg shrink-0 group-hover/link:scale-110 transition-transform`}>
-                                {service.icon}
-                              </div>
-                              <div>
-                                <div className="text-white text-sm font-medium group-hover/link:text-accent-green transition-colors">{service.title}</div>
-                                <div className="text-gray-400 text-[10px] line-clamp-1">{service.description}</div>
-                              </div>
-                            </Link>
-                          ))}
+                        {/* Other Services Section */}
+                        <div className="col-span-4 border-l border-white/10 pl-8">
+                          <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
+                          <div className="flex flex-col gap-2">
+                            {services.slice(1).map((service, idx) => (
+                              <Link
+                                key={idx}
+                                href={service.href}
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/link"
+                              >
+                                <div className={`w-8 h-8 rounded-lg ${service.iconBg} flex items-center justify-center text-lg shrink-0 group-hover/link:scale-110 transition-transform`}>
+                                  {service.icon}
+                                </div>
+                                <div>
+                                  <div className="text-white text-sm font-medium group-hover/link:text-accent-green transition-colors">{service.title}</div>
+                                  <div className="text-gray-400 text-[10px] line-clamp-1">{service.description}</div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -295,9 +319,9 @@ export default function Navbar() {
                 <Link href="/" onClick={() => setServicesOpen(false)} className={`px-4 py-3 rounded-xl text-lg font-medium transition-colors ${pathname === "/" ? "text-accent-green bg-white/5" : "text-white hover:bg-white/5"}`}>
                   Home
                 </Link>
-                
+
                 <div className="mt-4 mb-2 px-4 text-accent-green text-xs font-bold uppercase tracking-widest">Our Services</div>
-                
+
                 {services.map((service, index) => (
                   <div key={index} className="flex flex-col">
                     <Link
@@ -308,7 +332,7 @@ export default function Navbar() {
                       <span>{service.icon}</span>
                       <span className="font-medium">{service.title}</span>
                     </Link>
-                    
+
                     {/* If service has subitems, show them nested in mobile too */}
                     {service.subItems && (
                       <div className="ml-8 flex flex-col gap-1 border-l border-white/10 pl-4 py-1">

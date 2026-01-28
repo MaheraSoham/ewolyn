@@ -90,12 +90,9 @@ export default function ProcessSteps() {
           </p>
           <Link
             href="/funding"
-            className="btn inline-flex items-center"
+            className="flex items-center justify-center bg-cyan hover:bg-cyan-dark text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-cyan/20 transition-all duration-300 w-fit mx-auto"
           >
-            Start Your Funding Journey
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            Start Your Funding Journey →
           </Link>
         </div>
       </div>
