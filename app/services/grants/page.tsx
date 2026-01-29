@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 
 export default function GrantsPage() {
@@ -78,11 +79,11 @@ export default function GrantsPage() {
             <div className="bg-indigo-900/90 rounded-xl p-6 text-white">
               <h3 className="text-lg font-bold text-red-300 mb-2">Who Can Apply?</h3>
               <ul className="space-y-2 text-base">
-                <li>✔️ Startup India Seed Fund - Financial assistance for early-stage startups for proof of concept, prototype development, product trials</li>
-                <li>✔️ MSME Technology Upgradation Schemes - Capital subsidies for modernization and technology enhancement of manufacturing units</li>
-                <li>✔️ PMEGP (Prime Minister's Employment Generation Programme) - Subsidies for new manufacturing, services, or trading micro-enterprises</li>
-                <li>✔️ Export Promotion Capital Goods (EPCG) - Duty exemptions for capital goods imports for export-oriented businesses</li>
-                <li>✔️ Biotechnology Industry Research Assistance Council (BIRAC) Grants - Funding for biotech startups and innovation projects</li>
+                <li><Link href="/services/startup-seed-fund" className="hover:text-accent-green transition-colors">✔️ Startup India Seed Fund</Link> - Financial assistance for early-stage startups for proof of concept, prototype development, product trials</li>
+                <li><Link href="/services/clcs-tus-msme-champions" className="hover:text-accent-green transition-colors">✔️ MSME Technology Upgradation Schemes</Link> - Capital subsidies for modernization and technology enhancement of manufacturing units</li>
+                <li><Link href="/services/pm-employment-generation-programme" className="hover:text-accent-green transition-colors">✔️ PMEGP (Prime Minister's Employment Generation Programme)</Link> - Subsidies for new manufacturing, services, or trading micro-enterprises</li>
+                <li><Link href="/services/epcg-scheme" className="hover:text-accent-green transition-colors">✔️ Export Promotion Capital Goods (EPCG)</Link> - Duty exemptions for capital goods imports for export-oriented businesses</li>
+                <li><Link href="/services/birac-grants" className="hover:text-accent-green transition-colors">✔️ Biotechnology Industry Research Assistance Council (BIRAC) Grants</Link> - Funding for biotech startups and innovation projects</li>
               </ul>
             </div>
             <div className="bg-indigo-900/90 rounded-xl p-6 text-white">

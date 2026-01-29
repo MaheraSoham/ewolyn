@@ -345,7 +345,7 @@ export const governmentSchemes: Scheme[] = [
     ]
   },
   {
-    slug: "seed-fund",
+    slug: "startup-seed-fund",
     title: "Startup SEED Fund",
     shortDesc: "Early-stage capital support for innovative startups",
     highlight: "₹50L",

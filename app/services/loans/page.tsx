@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
 
 export default function LoansPage() {
@@ -64,7 +65,7 @@ export default function LoansPage() {
             <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🏆</span><b>MSME Priority Lending</b><p className="text-sm mt-1">Special financing options under priority sector lending for micro, small, and medium enterprises</p></div>
             <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🔓</span><b>Collateral-Free Financing</b><p className="text-sm mt-1">CGTMSE-backed and unsecured loan options for businesses without sufficient collateral assets</p></div>
             <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">📊</span><b>Project Financing</b><p className="text-sm mt-1">Specialized funding for specific projects with customized disbursement and repayment structures</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🏛️</span><b>Government Scheme Loans</b><p className="text-sm mt-1">Access to PMMY (Mudra), Stand-Up India, CLCSS, and other government-sponsored financing programs</p></div>
+            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🏛️</span><b>Government Scheme Loans</b><p className="text-sm mt-1">Access to <Link href="/services/pm-mudra-yojana" className="text-cyan font-bold hover:underline">PMMY (Mudra)</Link>, <Link href="/services/stand-up-india-scheme" className="text-cyan font-bold hover:underline">Stand-Up India</Link>, <Link href="/services/clcs-tus-msme-champions" className="text-cyan font-bold hover:underline">CLCSS</Link>, and other government-sponsored financing programs</p></div>
             <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🚀</span><b>Startup Financing</b><p className="text-sm mt-1">Specialized lending options for startups through venture debt and innovative financing structures</p></div>
             <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🌱</span><b>Business Expansion Loans</b><p className="text-sm mt-1">Tailored financing solutions for market expansion, capacity enhancement, and growth initiatives</p></div>
           </div>

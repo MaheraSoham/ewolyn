@@ -55,9 +55,10 @@ export default function FundingPage() {
 
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {governmentSchemes.map((scheme) => (
-              <div
+              <Link
                 key={scheme.slug}
-                className="card group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                href={`/services/${scheme.slug}`}
+                className="card group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block h-full"
               >
                 {/* Icon */}
                 <div className={`flex h-14 w-14 items-center justify-center rounded-xl text-2xl ${scheme.iconBg} text-white`}>
@@ -65,31 +66,27 @@ export default function FundingPage() {
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="mt-4 text-lg font-semibold text-ink">{scheme.title}</h3>
-                <p className="mt-2 text-sm text-muted">{scheme.shortDesc}</p>
+                <h3 className="mt-4 text-lg font-semibold text-ink group-hover:text-brand transition-colors">{scheme.title}</h3>
+                <p className="mt-2 text-sm text-muted line-clamp-3">{scheme.shortDesc}</p>
 
                 {/* Category Badge & View Details */}
                 <div className="mt-4 flex items-center justify-between">
-                  <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${
-                    scheme.category === "Loan" ? "bg-blue-100 text-blue-700" :
-                    scheme.category === "Grant" ? "bg-green-100 text-green-700" :
-                    scheme.category === "Subsidy" ? "bg-purple-100 text-purple-700" :
-                    scheme.category === "Tax Benefit" ? "bg-orange-100 text-orange-700" :
-                    "bg-slate-100 text-slate-700"
-                  }`}>
+                  <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${scheme.category === "Loan" ? "bg-blue-100 text-blue-700" :
+                      scheme.category === "Grant" ? "bg-green-100 text-green-700" :
+                        scheme.category === "Subsidy" ? "bg-purple-100 text-purple-700" :
+                          scheme.category === "Tax Benefit" ? "bg-orange-100 text-orange-700" :
+                            "bg-slate-100 text-slate-700"
+                    }`}>
                     {scheme.category}
                   </span>
-                  <Link
-                    href={`/services/${scheme.slug}`}
-                    className="flex items-center gap-1 text-sm font-medium text-muted hover:text-brand transition-colors"
-                  >
+                  <span className="flex items-center gap-1 text-sm font-medium text-muted group-hover:text-brand transition-colors">
                     View Details
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -16,7 +16,7 @@ const fundingOptions = [
     tags: ["Subsidy", "New venture"],
     success: "92%",
     time: "30-45 days",
-    href: "/funding",
+    href: "/services/pm-employment-generation-programme",
     popular: true,
   },
   {
@@ -25,7 +25,7 @@ const fundingOptions = [
     tags: ["Guarantee", "Collateral-free"],
     success: "95%",
     time: "15-20 days",
-    href: "/funding",
+    href: "/services/cgtmse-credit-guarantee",
     popular: false,
   },
   {
@@ -34,7 +34,7 @@ const fundingOptions = [
     tags: ["Technology", "Upgrade"],
     success: "84%",
     time: "45-60 days",
-    href: "/funding",
+    href: "/services/clcs-tus-msme-champions",
     popular: false,
   },
   {
@@ -43,7 +43,7 @@ const fundingOptions = [
     tags: ["Clusters", "Traditional"],
     success: "82%",
     time: "60-90 days",
-    href: "/funding",
+    href: "/services/sfurti-traditional-industries",
     popular: false,
   },
   {
@@ -52,7 +52,7 @@ const fundingOptions = [
     tags: ["Digital", "Quick approval"],
     success: "89%",
     time: "59 minutes*",
-    href: "/funding",
+    href: "/services/psb-loans-59-minutes",
     popular: false,
   },
 ];

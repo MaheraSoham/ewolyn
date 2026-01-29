@@ -10,31 +10,31 @@ const schemes = [
   {
     title: "NGO Elevation Program",
     description: "Financial & compliance support for NGOs and social enterprises.",
-    href: "/funding",
+    href: "/services/ngo-elevation-program",
     icon: "🤝",
   },
   {
     title: "SC / ST / OBC Scheme",
     description: "Special subsidies & capital assistance for reserved categories.",
-    href: "/funding",
+    href: "/services/sc-st-obc-scheme",
     icon: "👥",
   },
   {
     title: "Startup SEED Fund",
     description: "Early-stage capital support for innovative startups.",
-    href: "/funding",
+    href: "/services/startup-seed-fund",
     icon: "🌱",
   },
   {
     title: "Tax Exemption Benefits",
     description: "Income tax, GST & compliance exemptions for eligible businesses.",
-    href: "/funding",
+    href: "/services/tax-exemption-benefits",
     icon: "📋",
   },
   {
     title: "Venture Capital Support",
     description: "Equity & VC access for high-growth potential ventures.",
-    href: "/funding",
+    href: "/services/venture-capital-support",
     icon: "💼",
   },
 ];
