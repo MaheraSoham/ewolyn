@@ -84,12 +84,13 @@ export default function Hero() {
 
           {/* Right Side - Visuals */}
           <div className="relative animate-fade-in-up animate-delay-200 hidden lg:block">
-            <div className="relative z-10 rounded-xl overflow-hidden border-2 border-white/5 shadow-xl max-w-md ml-auto">
+            {/* Adjusted max-w to accommodate larger image */}
+            <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-white/5 shadow-2xl max-w-xl ml-auto transform transition-transform hover:scale-[1.02]">
               <Image
                 src="/hero-business-meeting.png"
                 alt="Business Meeting"
-                width={500}
-                height={375}
+                width={800}
+                height={600}
                 className="w-full h-auto object-cover"
                 priority
               />

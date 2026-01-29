@@ -1,203 +1,249 @@
 import SectionHeading from "@/components/SectionHeading";
 
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideUp,
+  SlideIn,
+  StaggerContainer,
+  StaggerItem,
+  ScaleOnHover,
+  ButtonHover
+} from "../../../components/ui/AnimationWrappers";
+
+const nbfcServices = [
+  { icon: "💸", title: "Express Loans", desc: "Quick-disbursement loans with minimal documentation and 24-48 hour processing for urgent needs." },
+  { icon: "💰", title: "Working Capital", desc: "Flexible short-term funding for operational expenses, inventory, and cash flow optimization." },
+  { icon: "🌱", title: "Expansion Capital", desc: "Growth-focused financing for market expansion and business scaling initiatives." },
+  { icon: "🔓", title: "Unsecured Funding", desc: "No-collateral financing options based on business performance rather than assets." },
+  { icon: "📈", title: "Revenue-Based", desc: "Innovative funding with repayments tied to revenue performance rather than fixed EMIs." },
+  { icon: "🛠️", title: "Equipment Finance", desc: "Specialized funding for machinery and technology with flexible repayment structures." },
+];
+
 export default function NBFCPage() {
   return (
-    <main className="section bg-gradient-to-br from-blue-50 via-white to-green-50 min-h-screen">
-      <div className="container-max max-w-5xl py-10">
-        {/* Hero Section */}
-        <div className="rounded-xl shadow-lg bg-gradient-to-r from-blue-900 via-green-900 to-indigo-900 p-8 text-center text-white mb-10">
-          <div className="mb-2">
-            <span className="inline-block bg-gray-800 text-yellow-300 px-4 py-1 rounded-full text-xs font-semibold">Alternative Financing • Flexible Funding</span>
-          </div>
-          <h1 className="text-4xl font-bold mb-2">NBFC Financing Solutions</h1>
-          <h2 className="text-2xl font-semibold text-orange-400 mb-4">Quick Disbursement • Flexible Eligibility • Specialized Products</h2>
-          <p className="mb-6 text-lg">Access alternative business funding through Ewolyn's NBFC financing services, offering faster processing, flexible eligibility criteria, and specialized lending products tailored for businesses with unique requirements or limited banking history.</p>
-          <div className="flex flex-wrap justify-center gap-6 mt-6">
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">24-72hrs</div>
-              <div className="text-sm text-gray-300">Disbursement Time</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">1Cr+</div>
-              <div className="text-sm text-gray-300">Maximum Funding</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">95%</div>
-              <div className="text-sm text-gray-300">Approval Rate</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">25+</div>
-              <div className="text-sm text-gray-300">NBFC Partners</div>
-            </div>
-          </div>
-        </div>
-        {/* ...existing code... */}
+    <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[85vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
+        {/* Glow Effects */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
 
-        {/* Overview Section */}
-        <div className="bg-white/90 rounded-xl shadow p-8 mb-10 flex flex-col md:flex-row gap-8 items-center">
-          <div className="flex-1">
-            <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Overview</span>
-            <h2 className="text-2xl font-bold mb-2">Why Consider NBFC Financing?</h2>
-            <p className="mb-4 text-gray-700">Non-Banking Financial Companies (NBFCs) offer essential alternatives to traditional bank financing, with unique advantages including faster processing, more flexible eligibility criteria, specialized sector-focused products, and innovative lending approaches for businesses with limited banking history or non-traditional requirements.</p>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Accelerated processing and disbursement compared to traditional banking</li>
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Flexible eligibility criteria with focus on business potential over historical metrics</li>
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Specialized financing solutions for specific industries and business models</li>
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Options for businesses with limited banking history or previous credit challenges</li>
-            </ul>
-          </div>
-          <div className="flex-1 grid grid-cols-2 gap-4">
-            <div className="bg-green-100 rounded-lg p-4 text-center font-semibold">🔒 Secure</div>
-            <div className="bg-blue-100 rounded-lg p-4 text-center font-semibold">⚡ Fast</div>
-            <div className="bg-yellow-100 rounded-lg p-4 text-center font-semibold">💡 Flexible</div>
-            <div className="bg-purple-100 rounded-lg p-4 text-center font-semibold">🏅 Trusted</div>
-          </div>
-        </div>
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full text-purple-100 text-sm font-bold mb-6 border border-purple-500/30">
+                <span className="animate-pulse">⚡</span>
+                Agile Alternative Financing
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
+                <span className="text-accent-green">Capital at the</span> <br />
+                <span className="text-white">Speed of Business</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+                Tired of slow banking bureaucracy? Our NBFC partnerships offer flexible eligibility,
+                specialized products, and disbursement in as little as 24 hours.
+              </p>
 
-        {/* NBFC Services */}
-        <div className="mb-10">
-          <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Services</span>
-          <h2 className="text-2xl font-bold mb-6">Our NBFC Financing Services</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">💸</span><b>Express Business Loans</b><p className="text-sm mt-1">Quick-disbursement loans with minimal documentation and 24-48 hour processing for urgent business requirements</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">💰</span><b>Working Capital Financing</b><p className="text-sm mt-1">Flexible short-term funding for operational expenses, inventory management, and cash flow optimization</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🌱</span><b>Business Expansion Loans</b><p className="text-sm mt-1">Growth-focused financing for market expansion, capacity enhancement, and business scaling initiatives</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🔓</span><b>Unsecured Business Loans</b><p className="text-sm mt-1">No-collateral financing options based on business performance and revenue potential rather than assets</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">📈</span><b>Revenue-Based Financing</b><p className="text-sm mt-1">Innovative funding with repayments tied to business revenue performance rather than fixed EMI structures</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">💳</span><b>Merchant Cash Advances</b><p className="text-sm mt-1">Upfront capital with repayment through percentage of daily card sales, ideal for retail and service businesses</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🛠️</span><b>Equipment Financing</b><p className="text-sm mt-1">Specialized funding for machinery, equipment, and technology purchases with flexible repayment structures</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🔗</span><b>Supply Chain Financing</b><p className="text-sm mt-1">Optimize cash flow through invoice discounting, purchase order financing, and vendor payment solutions</p></div>
-          </div>
-        </div>
+              <div className="flex flex-wrap gap-4 mb-12">
+                <ButtonHover>
+                  <Link href="/contact" className="btn-hero-green bg-blue-600 hover:bg-blue-700 text-white text-lg px-10">
+                    Get Instant Quote
+                  </Link>
+                </ButtonHover>
+                <ButtonHover>
+                  <a href="tel:+919737799937" className="btn-hero-outline text-lg px-10">
+                    Call: +91 97377 99937
+                  </a>
+                </ButtonHover>
+              </div>
 
-        {/* NBFC Eligibility */}
-        <div className="mb-10">
-          <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Eligibility</span>
-          <h2 className="text-2xl font-bold mb-6">NBFC Financing Eligibility</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-blue-900/90 rounded-xl p-6 text-white">
-              <h3 className="text-lg font-bold mb-2">Who Can Apply?</h3>
-              <ul className="space-y-2 text-base">
-                <li>✔️ Business operational history of at least 6-12 months (varies by product)</li>
-                <li>✔️ Consistent monthly revenue with clear cash flow patterns</li>
-                <li>✔️ Basic financial record keeping and business documentation</li>
-                <li>✔️ Clear business model with demonstrated market potential</li>
-                <li>✔️ Minimum credit score requirements (typically more flexible than banks)</li>
-              </ul>
-            </div>
-            <div className="bg-blue-900/90 rounded-xl p-6 text-white">
-              <h3 className="text-lg font-bold mb-2">Conditions</h3>
-              <ul className="space-y-2 text-base">
-                <li>🛡️ Valid business registration (any structure from Proprietorship to Private Limited)</li>
-                <li>🛡️ Active business bank account with transaction history</li>
-                <li>🛡️ KYC documentation for directors/partners/proprietors</li>
-                <li>🛡️ Basic financial statements (balance sheets, P&L statements)</li>
-                <li>🛡️ Industry-specific requirements based on NBFC specialization</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">24Hrs</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Fast Approval</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-400 mb-1">95%</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Approval Rate</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">25+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">NBFC Partners</div>
+                </div>
+              </div>
+            </FadeIn>
 
-        {/* NBFC Process */}
-        <div className="mb-10">
-          <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Process</span>
-          <h2 className="text-2xl font-bold mb-6">Our NBFC Financing Process</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">1</span><b>Requirement Analysis</b><p className="text-sm mt-1 text-center">Understand your funding needs, business model, and financial profile to identify suitable NBFC options</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">2</span><b>NBFC Matching</b><p className="text-sm mt-1 text-center">Select optimal NBFC partners based on your business sector, funding requirements, and eligibility factors</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">3</span><b>Application Preparation</b><p className="text-sm mt-1 text-center">Develop comprehensive application packages highlighting business strengths and addressing potential concerns</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">4</span><b>Fast-Track Submission</b><p className="text-sm mt-1 text-center">Submit applications through priority channels established with our NBFC partners for accelerated processing</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">5</span><b>Approval Facilitation</b><p className="text-sm mt-1 text-center">Coordinate with NBFC underwriters to address queries and expedite the approval decision process</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">6</span><b>Term Negotiation</b><p className="text-sm mt-1 text-center">Secure optimal interest rates, processing fees, and repayment terms through strategic negotiation</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">7</span><b>Rapid Disbursement</b><p className="text-sm mt-1 text-center">Complete documentation and procedural requirements to ensure quick fund release after approval</p></div>
+            <SlideIn direction="right">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                  <Image
+                    src="/nbfc_financing_hero_premium_1769686369877.png"
+                    alt="NBFC Speed Financing"
+                    width={800}
+                    height={800}
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                </div>
+              </div>
+            </SlideIn>
           </div>
         </div>
+      </section>
 
-        {/* Documentation Requirements */}
-        <div className="mb-10">
-          <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Documentation</span>
-          <h2 className="text-2xl font-bold mb-6">Documentation Requirements</h2>
-          <div className="bg-blue-900/90 rounded-xl p-6 text-white">
-            <h3 className="text-lg font-bold mb-4">Document Checklist</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <ul className="space-y-2 text-base">
-                <li>📄 Business registration proof (Incorporation Certificate, Partnership Deed, etc.)</li>
-                <li>📄 Recent business bank statements (typically last 6-12 months)</li>
-                <li>📄 Income Tax Returns for business and promoters (last 1-2 years)</li>
-                <li>📄 Basic financial statements (Balance Sheet, P&L statements)</li>
-                <li>📄 Proof of business premises (ownership/rental agreement)</li>
-              </ul>
-              <ul className="space-y-2 text-base">
-                <li>📄 KYC documents of directors/partners/proprietors (PAN, Aadhar, etc.)</li>
-                <li>📄 GST returns (where applicable) for the last 6-12 months</li>
-                <li>📄 Business profile and brief business plan</li>
-                <li>📄 Existing loan statements (if any)</li>
-                <li>📄 Industry-specific licenses and permits</li>
-              </ul>
-            </div>
-            <div className="mt-4 text-yellow-200 text-sm">Important: NBFC documentation requirements are typically more streamlined than traditional banks. The exact requirements vary based on loan product, amount, and specific NBFC policies. Our team provides customized checklists based on your selected financing option.</div>
+      {/* Overview Section - Two Column Grid */}
+      <section className="py-24 bg-white">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-slate-900 leading-tight">Beyond Traditional <br />Banking</h2>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                NBFCs often see what banks miss. We focus on your business potential, cash flow, and future
+                trajectory rather than just rigid historical metrics.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { title: "Asset Light", desc: "No collateral required for many products." },
+                  { title: "Flexi-Pay", desc: "Repayment cycles aligned with your revenue." },
+                  { title: "Digital First", desc: "Paperless processing for maximum speed." },
+                  { title: "High Limits", desc: "Capital up to ₹1 Crore for verified businesses." },
+                ].map((item, idx) => (
+                  <div key={idx} className="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-500/30 transition-colors">
+                    <h4 className="font-bold text-slate-950 mb-1">{item.title}</h4>
+                    <p className="text-sm text-slate-500">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+            <SlideIn direction="right">
+              <div className="relative aspect-square rounded-[3rem] bg-slate-100 overflow-hidden flex items-center justify-center border border-slate-200 shadow-inner p-12">
+                <div className="text-center">
+                  <div className="text-8xl mb-6">🚀</div>
+                  <div className="text-3xl font-bold text-slate-900 mb-2">Accelerated Growth</div>
+                  <p className="text-slate-500 italic text-sm">"Fueling the next generation of Indian enterprises."</p>
+                </div>
+                {/* Decorative circles */}
+                <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/5 rounded-full"></div>
+                <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/5 rounded-full"></div>
+              </div>
+            </SlideIn>
           </div>
         </div>
+      </section>
 
-        {/* FAQ Section */}
-        <div className="mb-10">
-          <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">FAQs</span>
-          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">How do NBFC loans differ from traditional bank loans?</summary>
-              <p className="mt-2 text-gray-700">NBFCs offer faster processing, more flexible eligibility, and specialized products for businesses with unique needs or limited banking history.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">What interest rates can I expect with NBFC financing?</summary>
-              <p className="mt-2 text-gray-700">Rates depend on your business profile, product, and NBFC partner. We help you secure the best terms.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">How quickly can I receive funds through NBFC financing?</summary>
-              <p className="mt-2 text-gray-700">Disbursement can be as fast as 24-72 hours for some products. We help expedite your application.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">Are there any disadvantages to choosing NBFC financing?</summary>
-              <p className="mt-2 text-gray-700">NBFCs may have higher interest rates or fees for some products, but offer greater flexibility and speed. We help you weigh all options.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">Can businesses with poor credit history qualify for NBFC financing?</summary>
-              <p className="mt-2 text-gray-700">Yes, NBFCs are often more flexible than banks. We help you find the right product and partner.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">What types of businesses benefit most from NBFC financing?</summary>
-              <p className="mt-2 text-gray-700">Businesses with urgent funding needs, limited banking history, or unique requirements often benefit most from NBFC solutions.</p>
-            </details>
+      {/* NBFC Services Grid */}
+      <section className="py-24 bg-slate-50">
+        <div className="container-max">
+          <div className="text-center mb-20">
+            <FadeIn>
+              <span className="text-blue-600 font-bold text-sm uppercase tracking-[0.2em] mb-4 block">Specialized Funding</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">Tailored NBFC Products</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
+                Choose from a range of innovative financial instruments designed for the modern economy.
+              </p>
+            </FadeIn>
           </div>
-        </div>
 
-        {/* Call to Action Section */}
-        <div className="rounded-xl shadow-lg bg-gradient-to-r from-blue-900 via-green-900 to-indigo-900 p-8 text-center text-white mb-10">
-          <div className="mb-2">
-            <span className="inline-block bg-gray-800 text-yellow-300 px-4 py-1 rounded-full text-xs font-semibold">Get Started Today</span>
-          </div>
-          <h2 className="text-3xl font-bold mb-2">Ready for Fast, Flexible Financing?</h2>
-          <p className="mb-6 text-lg">Connect with our NBFC financing specialists to identify optimal funding options, streamline your application, and secure quick disbursement for your business needs.</p>
-          <div className="flex flex-wrap justify-center gap-6 mt-6">
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">1Cr+</div>
-              <div className="text-sm text-gray-300">Funded</div>
+          <StaggerContainer>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {nbfcServices.map((service, index) => (
+                <StaggerItem key={index}>
+                  <ScaleOnHover>
+                    <div className="h-full bg-white rounded-3xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-500 group">
+                      <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-100 transition-colors">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">{service.title}</h3>
+                      <p className="text-slate-600 leading-relaxed mb-8">{service.desc}</p>
+                      <Link href="/contact" className="text-sm font-bold text-blue-600 flex items-center gap-1 group/link">
+                        Instant Eligibility
+                        <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </ScaleOnHover>
+                </StaggerItem>
+              ))}
             </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">20K+</div>
-              <div className="text-sm text-gray-300">Businesses</div>
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Documentation - Light Sidebar Style */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container-max relative z-10">
+          <div className="max-w-5xl mx-auto bg-slate-950 rounded-[4rem] overflow-hidden shadow-2xl flex flex-col md:flex-row border border-white/10">
+            <div className="p-12 md:p-16 flex-1 text-white border-b md:border-b-0 md:border-r border-white/10">
+              <FadeIn>
+                <h3 className="text-3xl font-bold mb-8">Ready to Launch</h3>
+                <ul className="space-y-6">
+                  {[
+                    "Last 6-12 Months Bank Statements",
+                    "GST Registration & Returns",
+                    "KYC of Directors/Partners",
+                    "Basic Audited Financials",
+                    "Brief Business Profile",
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-4 text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full shadow-[0_0_10px_#3b82f6]"></div>
+                      <span className="font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
             </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">95%</div>
-              <div className="text-sm text-gray-300">Success Rate</div>
+            <div className="p-12 md:p-16 flex-1 bg-gradient-to-br from-blue-900 to-navy-950 text-white flex flex-col justify-center">
+              <FadeIn delay={0.2}>
+                <div className="text-5xl mb-6">⏱️</div>
+                <h3 className="text-3xl font-bold mb-4">Express Processing</h3>
+                <p className="text-gray-300 leading-relaxed mb-8">
+                  Our strategic ties with leading NBFCs allow us to skip the queue and get your application processed on priority.
+                </p>
+                <div className="inline-block py-2 px-4 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-400 font-bold text-sm">
+                  100% Online Submission
+                </div>
+              </FadeIn>
             </div>
-          </div>
-          <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
-            <a href="#" className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-2 rounded-full shadow transition">Start Application</a>
-            <a href="tel:+919737799937" className="inline-block bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-full shadow transition">Call: +91 97377 99937</a>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 px-6">
+        <div className="container-max">
+          <div className="relative rounded-[3rem] overflow-hidden shadow-2xl section-navy p-12 md:p-20 text-center text-white">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] group-hover:scale-110 transition-transform duration-[20s]"></div>
+            <FadeIn>
+              <div className="max-w-3xl mx-auto relative z-10">
+                <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">Instant Capital for Instant Growth</h2>
+                <p className="text-xl text-gray-400 mb-12">
+                  Don't let rigid banking rules stop your momentum. Access agile NBFC financing
+                  with Ewolyn's expert guidance.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <ButtonHover>
+                    <Link href="/contact" className="btn-hero-green bg-blue-600 hover:bg-blue-700 text-white text-lg px-12 py-5">
+                      Start Your Application
+                    </Link>
+                  </ButtonHover>
+                  <ButtonHover>
+                    <a href="tel:+919737799937" className="btn-hero-outline text-lg px-12 py-5 border-white/20 text-white hover:bg-white/10">
+                      Talk to a Specialist
+                    </a>
+                  </ButtonHover>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
+

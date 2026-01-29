@@ -1,214 +1,288 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideUp,
+  SlideIn,
+  StaggerContainer,
+  StaggerItem,
+  ScaleOnHover,
+  ButtonHover
+} from "../../../components/ui/AnimationWrappers";
 
 const registrationServices = [
   {
     title: "Private Limited Company",
-    description: "Most preferred structure for startups seeking investment",
-    features: ["Limited liability protection", "Separate legal entity", "Easy to raise funds", "Perpetual succession"],
+    description: "Most preferred structure for startups seeking investment.",
+    features: ["Limited liability protection", "Separate legal entity", "Easy to raise funds"],
     timeline: "7-10 working days",
-    documents: ["PAN Card", "Aadhaar Card", "Passport size photo", "Address proof", "Registered office proof"],
   },
   {
-    title: "Limited Liability Partnership (LLP)",
-    description: "Ideal for professional services and small businesses",
-    features: ["Limited liability", "Lower compliance", "No minimum capital", "Flexibility in operations"],
+    title: "LLP",
+    description: "Ideal for professional services and small businesses.",
+    features: ["Limited liability", "Lower compliance", "No minimum capital"],
     timeline: "10-15 working days",
-    documents: ["PAN Card", "Aadhaar Card", "Address proof", "LLP Agreement draft"],
   },
   {
-    title: "One Person Company (OPC)",
-    description: "Perfect for solo entrepreneurs with limited liability",
-    features: ["Single member company", "Limited liability", "Easy to convert to Pvt Ltd", "Lower compliance"],
+    title: "One Person Company",
+    description: "Perfect for solo entrepreneurs with limited liability.",
+    features: ["Single member company", "Easy to convert", "Lower compliance"],
     timeline: "7-10 working days",
-    documents: ["PAN Card", "Aadhaar Card", "Nominee details", "Address proof"],
   },
   {
     title: "Sole Proprietorship",
-    description: "Simplest form of business for individual entrepreneurs",
-    features: ["Easy to start", "Complete control", "Minimal compliance", "Direct taxation"],
+    description: "Simplest form for individual entrepreneurs.",
+    features: ["Easy to start", "Complete control", "Minimal compliance"],
     timeline: "3-5 working days",
-    documents: ["PAN Card", "Aadhaar Card", "Business address proof"],
   },
   {
     title: "Partnership Firm",
-    description: "Traditional structure for multiple owners",
-    features: ["Easy to form", "Shared responsibilities", "Tax benefits", "Flexibility"],
+    description: "Traditional structure for multiple owners.",
+    features: ["Easy to form", "Shared responsibilities", "Tax benefits"],
     timeline: "5-7 working days",
-    documents: ["PAN Cards of partners", "Partnership deed", "Address proof"],
   },
   {
-    title: "Section 8 Company (NGO)",
-    description: "Non-profit organization for charitable purposes",
-    features: ["Tax exemptions", "Credibility", "Limited liability", "Government grants eligible"],
+    title: "Section 8 Company",
+    description: "Non-profit organization for charitable purposes.",
+    features: ["Tax exemptions", "High Credibility", "Grants eligible"],
     timeline: "20-30 working days",
-    documents: ["MOA & AOA", "Director documents", "Registered office proof"],
   },
 ];
 
 const complianceServices = [
   { title: "GST Registration", description: "Mandatory for businesses with turnover above ₹40L", icon: "📊" },
-  { title: "MSME/Udyam Registration", description: "Get benefits under MSME schemes", icon: "🏭" },
-  { title: "Import Export Code (IEC)", description: "Required for international trade", icon: "🌍" },
-  { title: "Shop & Establishment", description: "State-specific business license", icon: "🏪" },
-  { title: "Professional Tax", description: "Mandatory for employers", icon: "💼" },
-  { title: "FSSAI License", description: "Required for food businesses", icon: "🍽️" },
+  { title: "MSME/Udyam", description: "Get benefits under government MSME schemes", icon: "🏭" },
+  { title: "Import Export Code", description: "Required for all international trade", icon: "🌍" },
+  { title: "Trademark Reg.", description: "Protect your brand identity and logo", icon: "®️" },
+  { title: "Professional Tax", description: "Mandatory for all employers in India", icon: "💼" },
+  { title: "FSSAI License", description: "Required for all food-related businesses", icon: "🍽️" },
 ];
 
 export default function BusinessRegistrationPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
-        <div className="container-max">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full text-blue-300 text-sm mb-6">
-              <span>📋</span>
-              Business Registration Services
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Start Your Business with<br />
-              <span className="text-brand">Proper Legal Foundation</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              We help you choose the right business structure and handle all registration formalities. 
-              From company incorporation to compliance setup, we've got you covered.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn">
-                Get Free Consultation →
-              </Link>
-              <a href="tel:+919737799937" className="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition">
-                📞 +91 98765 43210
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="relative min-h-[85vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
+        {/* Glow Effects */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[120px]"></div>
 
-      {/* Stats */}
-      <section className="py-12 bg-white border-b">
-        <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">5000+</div>
-              <div className="text-gray-600">Companies Registered</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">98%</div>
-              <div className="text-gray-600">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">7 Days</div>
-              <div className="text-gray-600">Average Time</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-bold mb-8 shadow-xl">
+                <span>🚀</span>
+                Official Business Formation
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
+                <span className="text-accent-green">Scale from</span> <br />
+                <span className="text-white">Day One</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl font-light">
+                Launch your venture with the right legal foundation. We handle every detail of
+                your incorporation, so you can focus on building your vision.
+              </p>
 
-      {/* Registration Types */}
-      <section className="py-16">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Choose Your Business Structure</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Select the right legal structure based on your business needs, liability preferences, and growth plans.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {registrationServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition">
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                
-                <div className="mb-4">
-                  <div className="text-sm font-semibold text-gray-700 mb-2">Key Features:</div>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="text-green-500">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex items-center justify-between pt-4 border-t">
-                  <div className="text-sm">
-                    <span className="text-gray-500">Timeline:</span>
-                    <span className="font-semibold text-brand ml-1">{service.timeline}</span>
-                  </div>
-                  <Link href="/contact" className="text-sm font-semibold text-brand hover:underline">
-                    Get Started →
+              <div className="flex flex-wrap gap-4 mb-12">
+                <ButtonHover>
+                  <Link href="/contact" className="btn-hero-green">
+                    Start Registration
                   </Link>
-                </div>
+                </ButtonHover>
+                <ButtonHover>
+                  <a href="tel:18005710607" className="btn-hero-outline">
+                    Expert Consultation
+                  </a>
+                </ButtonHover>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Additional Compliance Services */}
-      <section className="py-16 bg-white">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Compliance & Registrations</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Essential registrations to keep your business compliant with all statutory requirements.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceServices.map((service, index) => (
-              <div key={index} className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition">
-                <div className="text-3xl">{service.icon}</div>
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
                 <div>
-                  <h3 className="font-bold mb-1">{service.title}</h3>
-                  <p className="text-sm text-gray-600">{service.description}</p>
+                  <div className="text-3xl font-bold text-white mb-1">5000+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Registered</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-accent-green mb-1">98%</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Success Rate</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">7 Days</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Avg. Timeline</div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </FadeIn>
 
-      {/* Process */}
-      <section className="py-16 bg-slate-900 text-white">
-        <div className="container-max">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Registration Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Consultation", desc: "Understand your business needs and recommend the right structure" },
-              { step: "02", title: "Documentation", desc: "Collect required documents and prepare application" },
-              { step: "03", title: "Filing", desc: "Submit application to relevant authorities" },
-              { step: "04", title: "Completion", desc: "Receive registration certificate and setup compliance" },
-            ].map((item, i) => (
-              <div key={i} className="text-center">
-                <div className="text-4xl font-bold text-brand mb-4">{item.step}</div>
-                <h3 className="font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm">{item.desc}</p>
+            <SlideIn direction="right">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-accent-green to-cyan-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                  <Image
+                    src="/business_registration_hero_premium_1769686804174.png"
+                    alt="Business Incorporation Success"
+                    width={800}
+                    height={800}
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                </div>
               </div>
-            ))}
+            </SlideIn>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-brand text-white">
-        <div className="container-max text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Register Your Business?</h2>
-          <p className="text-lg mb-8 opacity-90">Get expert guidance and hassle-free registration</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="px-8 py-4 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition">
-              Schedule Free Consultation
-            </Link>
-            <a href="tel:+919737799937" className="px-8 py-4 border-2 border-white rounded-lg hover:bg-white/10 transition">
-              Call Now: +91 97377 99937
-            </a>
+      {/* Trust Grid / Why Register */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <FadeIn>
+              <span className="text-accent-green font-bold text-sm uppercase tracking-[0.2em] mb-4 block">Strategic foundation</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Legitimacy built <br />for Growth</h2>
+              <div className="space-y-6">
+                {[
+                  { title: "Legal Recognition", desc: "Gain a separate legal entity status and build investor trust." },
+                  { title: "Asset Protection", desc: "Limit your personal liability and safeguard your private assets." },
+                  { title: "Funding Ready", desc: "Unlock doors to venture capital, angel investors, and bank loans." },
+                  { title: "Tax Efficiency", desc: "Access corporate tax benefits and government-backed MSME incentives." },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+                    <div className="w-6 h-6 rounded-full bg-accent-green/20 flex items-center justify-center shrink-0 mt-1">
+                      <span className="text-accent-green text-[10px]">✓</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900">{item.title}</h4>
+                      <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+            <SlideIn direction="right" className="relative">
+              <div className="bg-slate-100 rounded-[3rem] p-12 aspect-square flex items-center justify-center border border-slate-200 shadow-inner">
+                <div className="text-center group">
+                  <div className="text-9xl mb-8 group-hover:scale-110 transition-transform duration-500">📜</div>
+                  <div className="text-2xl font-bold text-slate-900 mb-2">Incorporation Specialist</div>
+                  <p className="text-slate-500 text-sm">Ensuring compliance at every milestone.</p>
+                </div>
+              </div>
+            </SlideIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Structure Grid */}
+      <section className="py-24 bg-slate-50">
+        <div className="container-max">
+          <div className="text-center mb-20">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">Choose Your Path</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+                Select the business structure that aligns with your operational goals and scalability needs.
+              </p>
+            </FadeIn>
+          </div>
+
+          <StaggerContainer>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {registrationServices.map((service, index) => (
+                <StaggerItem key={index}>
+                  <ScaleOnHover>
+                    <div className="h-full bg-white rounded-[2.5rem] p-8 shadow-sm border border-slate-200 hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-24 h-24 bg-accent-green/5 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-500"></div>
+
+                      <h3 className="text-2xl font-bold mb-3 text-slate-900 group-hover:text-accent-green transition-colors">{service.title}</h3>
+                      <p className="text-slate-500 text-sm leading-relaxed mb-6 font-light">{service.description}</p>
+
+                      <ul className="space-y-3 mb-8">
+                        {service.features.map((f, i) => (
+                          <li key={i} className="flex items-center gap-3 text-sm text-slate-700 font-medium">
+                            <span className="text-accent-green">✓</span>
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">Timeline</div>
+                          <div className="text-slate-900 font-bold text-sm tracking-tight">{service.timeline}</div>
+                        </div>
+                        <Link href="/contact" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-900 group-hover:bg-accent-green group-hover:text-white transition-all shadow-sm">
+                          →
+                        </Link>
+                      </div>
+                    </div>
+                  </ScaleOnHover>
+                </StaggerItem>
+              ))}
+            </div>
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Compliance Grid */}
+      <section className="py-24 section-navy text-white overflow-hidden relative">
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-3 gap-12">
+            <div className="lg:col-span-1">
+              <FadeIn>
+                <h2 className="text-4xl font-bold mb-6">Unified <br />Compliance</h2>
+                <p className="text-gray-400 text-lg leading-relaxed mb-10">
+                  Beyond incorporation, we manage the critical registrations required to make your
+                  operations fully functional and legal.
+                </p>
+                <Link href="/contact" className="inline-flex items-center gap-2 text-accent-green font-bold group">
+                  View All Registrations
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+              </FadeIn>
+            </div>
+
+            <div className="lg:col-span-2">
+              <div className="grid sm:grid-cols-2 gap-6">
+                {complianceServices.map((service, idx) => (
+                  <SlideUp key={idx} delay={idx * 0.1}>
+                    <div className="p-8 rounded-[2rem] bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/10 transition-all duration-300 group h-full">
+                      <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                      <h4 className="text-xl font-bold mb-2">{service.title}</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
+                    </div>
+                  </SlideUp>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 px-6">
+        <div className="container-max">
+          <div className="relative rounded-[3rem] overflow-hidden shadow-2xl section-navy p-12 md:p-20 text-center text-white">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+            <FadeIn>
+              <div className="max-w-3xl mx-auto relative z-10">
+                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Your Success <br />Starts Here</h2>
+                <p className="text-xl text-gray-400 mb-12">
+                  Avoid legal pitfalls and bureaucratic delays. Build your business
+                  on solid ground with Ewolyn's incorporation experts.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <ButtonHover>
+                    <Link href="/contact" className="btn-hero-green">
+                      Get Started Today
+                    </Link>
+                  </ButtonHover>
+                  <ButtonHover>
+                    <a href="tel:18005710607" className="btn-hero-outline">
+                      Talk to a Specialist
+                    </a>
+                  </ButtonHover>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

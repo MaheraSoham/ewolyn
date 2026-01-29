@@ -32,126 +32,133 @@ export default function SchemeDetailPage({ params }: Props) {
   }
 
   return (
-    <main className="section">
-      <div className="container-max">
-        {/* Breadcrumb */}
-        <nav className="mb-6 text-sm">
-          <Link href="/funding" className="text-muted hover:text-brand">
+    <main className="min-h-screen bg-slate-50">
+      {/* Hero Section */}
+      <section className="relative min-h-[50vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-green/10 rounded-full blur-[120px]"></div>
+
+        <div className="container-max relative z-10 w-full">
+          <Link href="/funding" className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm mb-8">
             ← Back to All Schemes
           </Link>
-        </nav>
-
-        {/* Header */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-          <div className="flex items-start gap-4">
-            <div className={`flex h-16 w-16 items-center justify-center rounded-xl text-3xl ${scheme.iconBg} text-white`}>
-              {scheme.icon}
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold mb-6 shadow-xl uppercase tracking-widest">
+              <span>{scheme.icon}</span>
+              {scheme.category}
             </div>
-            <div>
-              <span className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${
-                scheme.category === "Loan" ? "bg-amber-100 text-amber-700" :
-                scheme.category === "Grant" ? "bg-green-100 text-green-700" :
-                scheme.category === "Subsidy" ? "bg-purple-100 text-purple-700" :
-                scheme.category === "Tax Benefit" ? "bg-orange-100 text-orange-700" :
-                scheme.category === "Certification" ? "bg-cyan-100 text-cyan-700" :
-                scheme.category === "Registration" ? "bg-red-100 text-red-700" :
-                "bg-slate-100 text-slate-700"
-              }`}>
-                {scheme.category}
-              </span>
-              <h1 className="mt-2 text-3xl font-bold text-ink">{scheme.title}</h1>
-              <p className="mt-1 text-muted">{scheme.shortDesc}</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-brand">{scheme.highlight}</div>
-              <div className="text-xs text-muted">{scheme.highlightLabel}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-lg font-semibold text-ink">{scheme.timeline}</div>
-              <div className="text-xs text-muted">Timeline</div>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              {scheme.title}
+            </h1>
+            <p className="text-xl text-gray-300 leading-relaxed max-w-2xl font-light">
+              {scheme.shortDesc}
+            </p>
           </div>
         </div>
+      </section>
 
-        {/* Main Content */}
-        <div className="mt-10 grid gap-8 lg:grid-cols-3">
+      <div className="container-max py-20 relative z-10">
+        <div className="grid gap-8 lg:grid-cols-3">
           {/* Left Column - Main Info */}
-          <div className="lg:col-span-2 space-y-8">
-            {/* About */}
-            <div className="card">
-              <h2 className="text-xl font-semibold text-ink">About This Scheme</h2>
-              <p className="mt-4 text-muted leading-relaxed">{scheme.fullDescription}</p>
+          <div className="lg:col-span-2 space-y-12">
+            {/* Highlights Bar */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="card p-6 border-l-4 border-l-brand">
+                <div className="text-3xl font-black text-brand mb-1">{scheme.highlight}</div>
+                <div className="text-xs text-muted uppercase tracking-widest font-bold">{scheme.highlightLabel}</div>
+              </div>
+              <div className="card p-6 border-l-4 border-l-accent-green">
+                <div className="text-3xl font-black text-accent-green mb-1">{scheme.timeline}</div>
+                <div className="text-xs text-muted uppercase tracking-widest font-bold">Process Timeline</div>
+              </div>
             </div>
+
+            {/* About */}
+            <section>
+              <h2 className="text-2xl font-bold text-ink mb-6">About This Scheme</h2>
+              <div className="card bg-white p-8">
+                <p className="text-muted leading-relaxed text-lg">{scheme.fullDescription}</p>
+              </div>
+            </section>
 
             {/* Eligibility */}
-            <div className="card">
-              <h2 className="text-xl font-semibold text-ink">Eligibility Criteria</h2>
-              <ul className="mt-4 space-y-3">
-                {scheme.eligibility.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs">✓</span>
-                    <span className="text-muted">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <section>
+              <h2 className="text-2xl font-bold text-ink mb-6">Eligibility Criteria</h2>
+              <div className="card p-8">
+                <ul className="space-y-4">
+                  {scheme.eligibility.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-4">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600 text-xs font-bold mt-1">✓</span>
+                      <span className="text-muted leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
 
             {/* Benefits */}
-            <div className="card">
-              <h2 className="text-xl font-semibold text-ink">Key Benefits</h2>
-              <ul className="mt-4 space-y-3">
+            <section>
+              <h2 className="text-2xl font-bold text-ink mb-6">Key Benefits</h2>
+              <div className="grid gap-4 md:grid-cols-2">
                 {scheme.benefits.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-brand/10 text-brand text-xs">★</span>
-                    <span className="text-muted">{item}</span>
-                  </li>
+                  <div key={idx} className="card p-6 bg-slate-50 border-none group hover:bg-white hover:shadow-xl transition-all">
+                    <span className="text-brand text-xl font-bold flex items-center gap-2 mb-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand"></span>
+                      Benefit {idx + 1}
+                    </span>
+                    <span className="text-muted text-sm leading-relaxed">{item}</span>
+                  </div>
                 ))}
-              </ul>
-            </div>
+              </div>
+            </section>
 
             {/* Process */}
-            <div className="card">
-              <h2 className="text-xl font-semibold text-ink">Application Process</h2>
-              <div className="mt-4 space-y-4">
+            <section>
+              <h2 className="text-2xl font-bold text-ink mb-6">Application Process</h2>
+              <div className="space-y-6">
                 {scheme.process.map((step, idx) => (
-                  <div key={idx} className="flex items-start gap-4">
-                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-brand text-white text-sm font-bold">
+                  <div key={idx} className="flex items-start gap-6 group">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white text-lg font-black transition-transform group-hover:scale-110 shadow-lg">
                       {idx + 1}
                     </div>
-                    <div className="pt-1">
-                      <p className="text-muted">{step}</p>
+                    <div className="pt-2">
+                      <p className="text-muted leading-relaxed">{step}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           </div>
 
           {/* Right Column - Sidebar */}
-          <div className="space-y-6">
+          <aside className="space-y-8 lg:sticky lg:top-24 lg:self-start">
             {/* Apply CTA */}
-            <div className="card bg-gradient-to-br from-brand to-brand-dark text-white">
-              <h3 className="text-lg font-semibold">Ready to Apply?</h3>
-              <p className="mt-2 text-sm text-red-100">
-                Let our experts guide you through the application process and maximize your chances of approval.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-4 inline-block w-full rounded-lg bg-white px-4 py-3 text-center font-medium text-brand hover:bg-red-50 transition"
-              >
-                Start Application →
-              </Link>
+            <div className="card bg-slate-900 border-none p-10 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4">Ready to Apply?</h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-8 font-light">
+                  Let our experts guide you through the application process and maximize your chances of approval.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-block w-full rounded-xl bg-accent-green px-6 py-4 text-center font-bold text-slate-900 hover:bg-white hover:scale-105 transition-all shadow-xl shadow-accent-green/20"
+                >
+                  Start Application →
+                </Link>
+              </div>
             </div>
 
             {/* Documents Required */}
-            <div className="card">
-              <h3 className="text-lg font-semibold text-ink">Documents Required</h3>
-              <ul className="mt-4 space-y-2">
+            <div className="card p-8 border-slate-100 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <span className="text-brand">📄</span>
+                Required Docs
+              </h3>
+              <ul className="space-y-4">
                 {scheme.documents.map((doc, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-muted">
-                    <span className="text-brand">📄</span>
+                  <li key={idx} className="flex items-center gap-3 text-sm text-slate-600 font-medium">
+                    <span className="w-1 h-1 rounded-full bg-slate-300"></span>
                     {doc}
                   </li>
                 ))}
@@ -159,35 +166,20 @@ export default function SchemeDetailPage({ params }: Props) {
             </div>
 
             {/* Quick Info */}
-            <div className="card">
-              <h3 className="text-lg font-semibold text-ink">Quick Info</h3>
-              <div className="mt-4 space-y-3">
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted">Category</span>
-                  <span className="font-medium text-ink">{scheme.category}</span>
+            <div className="card p-8 border-slate-100 shadow-sm bg-slate-50">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Quick Overview</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-2 border-b border-slate-200">
+                  <span className="text-slate-500 text-sm">Category</span>
+                  <span className="font-bold text-slate-900 text-sm uppercase tracking-wider">{scheme.category}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted">Timeline</span>
-                  <span className="font-medium text-ink">{scheme.timeline}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-muted">{scheme.highlightLabel}</span>
-                  <span className="font-medium text-brand">{scheme.highlight}</span>
+                <div className="flex justify-between items-center py-2 border-b border-slate-200">
+                  <span className="text-slate-500 text-sm">Timeline</span>
+                  <span className="font-bold text-slate-900 text-sm uppercase tracking-wider">{scheme.timeline}</span>
                 </div>
               </div>
             </div>
-
-            {/* Need Help */}
-            <div className="card border-l-4 border-l-brand">
-              <h3 className="font-semibold text-ink">Need Help?</h3>
-              <p className="mt-2 text-sm text-muted">
-                Our team can help you understand eligibility, prepare documents, and submit your application.
-              </p>
-              <Link href="/contact" className="mt-3 inline-block text-sm font-medium text-brand hover:underline">
-                Contact Us →
-              </Link>
-            </div>
-          </div>
+          </aside>
         </div>
       </div>
       <CTASection />
