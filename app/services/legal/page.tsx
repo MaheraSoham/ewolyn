@@ -1,315 +1,217 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideUp,
+  SlideIn,
+  StaggerContainer,
+  StaggerItem,
+  ScaleOnHover,
+  ButtonHover
+} from "../../../components/ui/AnimationWrappers";
 
 const legalServices = [
   {
-    title: "Company Law & Corporate Affairs",
+    title: "Corporate Governance",
     icon: "🏢",
-    description: "Complete legal support for corporate compliance and governance.",
-    services: [
-      "Annual filings & compliances",
-      "Board meetings & resolutions",
-      "ROC filings",
-      "Corporate restructuring",
-      "Shareholder agreements",
-    ],
+    description: "End-to-end support for annual filings, board resolutions, and ROC compliance.",
+    services: ["Annual Filings", "Board Resolutions", "Restructuring"],
   },
   {
-    title: "Contract Drafting & Review",
+    title: "Contract Architecture",
     icon: "📝",
-    description: "Professional contract drafting to protect your business interests.",
-    services: [
-      "Service agreements",
-      "Employment contracts",
-      "Vendor agreements",
-      "NDA & confidentiality",
-      "Franchise agreements",
-    ],
+    description: "Iron-clad drafting for NDAs, service agreements, and shareholder contracts.",
+    services: ["Service Agreements", "NDA & Confidentiality", "Franchise Deals"],
   },
   {
-    title: "Labor & Employment Law",
+    title: "Employment Law",
     icon: "👷",
-    description: "Navigate employment regulations and protect your workforce.",
-    services: [
-      "Employment policies",
-      "POSH compliance",
-      "Labor law compliance",
-      "Employee disputes",
-      "Termination procedures",
-    ],
+    description: "Navigate labor regulations, POSH compliance, and workforce policies.",
+    services: ["POSH Compliance", "Labor Policies", "Employee Disputes"],
   },
   {
-    title: "Business Disputes & Litigation",
+    title: "Commercial Litigation",
     icon: "⚖️",
-    description: "Expert representation in commercial disputes and litigation.",
-    services: [
-      "Commercial litigation",
-      "Arbitration proceedings",
-      "Mediation services",
-      "Recovery proceedings",
-      "Consumer disputes",
-    ],
-  },
-];
-
-const complianceServices = [
-  {
-    title: "Statutory Compliances",
-    items: ["GST Returns", "TDS/TCS Filings", "Income Tax Returns", "Annual Returns", "ROC Filings"],
-    icon: "📊",
-  },
-  {
-    title: "Labor Law Compliances",
-    items: ["PF & ESI Registration", "Labor Welfare Fund", "Shops & Establishment", "Contract Labor Act", "Minimum Wages Act"],
-    icon: "👥",
-  },
-  {
-    title: "Industry Specific",
-    items: ["FSSAI Compliance", "Drug License", "Pollution Certificates", "Factory License", "Trade License"],
-    icon: "🏭",
+    description: "Expert representation in arbitration and commercial dispute resolution.",
+    services: ["Arbitration", "Commercial Disputes", "Mediation"],
   },
 ];
 
 const documentationServices = [
-  { title: "MOA & AOA Drafting", desc: "Company formation documents" },
-  { title: "Partnership Deed", desc: "Partnership agreements" },
-  { title: "LLP Agreement", desc: "LLP formation documents" },
-  { title: "Joint Venture Agreement", desc: "JV partnerships" },
-  { title: "Lease Agreements", desc: "Property & equipment leases" },
-  { title: "Investment Agreements", desc: "Funding documentation" },
-  { title: "Franchise Agreements", desc: "Franchise documentation" },
-  { title: "Licensing Agreements", desc: "IP & technology licenses" },
-];
-
-const faqs = [
-  {
-    question: "Do I need a lawyer for my startup?",
-    answer: "Yes, having legal support from the beginning helps avoid costly mistakes. A lawyer can help with company structure, contracts, IP protection, and compliance.",
-  },
-  {
-    question: "What compliances are mandatory for a Pvt Ltd company?",
-    answer: "Key compliances include annual ROC filings, board meetings, AGM, statutory audits, income tax returns, GST returns (if applicable), and other industry-specific compliances.",
-  },
-  {
-    question: "How can I protect my business idea?",
-    answer: "You can protect your idea through patents (for inventions), trademarks (for brand), copyrights (for content), NDAs (for confidentiality), and trade secrets policies.",
-  },
-  {
-    question: "What is POSH compliance?",
-    answer: "POSH (Prevention of Sexual Harassment) compliance is mandatory for organizations with 10+ employees. It requires forming an Internal Committee, conducting awareness sessions, and having a proper policy in place.",
-  },
+  { title: "MOA & AOA", desc: "Foundational Docs" },
+  { title: "Joint Ventures", desc: "Strategic Partnerships" },
+  { title: "Lease Deeds", desc: "Commercial Property" },
+  { title: "Investment", desc: "Equity Documentation" },
 ];
 
 export default function LegalPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
-        <div className="container-max">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-500/20 rounded-full text-slate-300 text-sm mb-6">
-              <span>⚖️</span>
-              Legal Consultancy Services
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Expert Legal Support for<br />
-              <span className="text-brand">Your Business Success</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              From company formation to complex litigation, our legal experts provide 
-              comprehensive support to protect and grow your business.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn">
-                Get Legal Consultation →
-              </Link>
-              <a href="tel:+919737799937" className="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition">
-                📞 +91 98765 43210
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="relative min-h-[85vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
+        {/* Cyan Glow Effect */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-500/10 rounded-full blur-[120px]"></div>
 
-      {/* Stats */}
-      <section className="py-12 bg-white border-b">
-        <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">1000+</div>
-              <div className="text-gray-600">Cases Handled</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">15+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">500+</div>
-              <div className="text-gray-600">Active Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">98%</div>
-              <div className="text-gray-600">Success Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-cyan-100 text-sm font-bold mb-8 shadow-xl">
+                <span>🛡️</span>
+                Legal Guardianship
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
+                <span className="text-accent-green">Safeguard Your</span> <br />
+                <span className="text-white">Enterprise</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl font-light">
+                In a world of complex regulations, clarity is your greatest asset.
+                We provide the legal framework for you to innovate without risk.
+              </p>
 
-      {/* Legal Services */}
-      <section className="py-16">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Legal Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive legal support tailored to your business needs.
-            </p>
-          </div>
+              <div className="flex flex-wrap gap-4 mb-12">
+                <ButtonHover>
+                  <Link href="/contact" className="btn-hero-green bg-slate-700 hover:bg-slate-800">
+                    Book Legal Audit
+                  </Link>
+                </ButtonHover>
+                <ButtonHover>
+                  <a href="tel:18005710607" className="btn-hero-outline">
+                    Expert Consultation
+                  </a>
+                </ButtonHover>
+              </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {legalServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="space-y-2">
-                  {service.services.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm">
-                      <span className="text-brand">✓</span>
-                      <span className="text-gray-700">{item}</span>
-                    </div>
-                  ))}
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">1000+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Cases Managed</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-1">15+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Years Experience</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">98%</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Success Rate</div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </FadeIn>
 
-      {/* Compliance Services */}
-      <section className="py-16 bg-white">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Compliance Management</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Stay compliant with all statutory and regulatory requirements.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {complianceServices.map((category, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6">
-                <div className="text-3xl mb-3">{category.icon}</div>
-                <h3 className="font-bold mb-4">{category.title}</h3>
-                <div className="space-y-2">
-                  {category.items.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
-                      <span className="text-green-500">✓</span>
-                      {item}
-                    </div>
-                  ))}
+            <SlideIn direction="right">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-slate-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                  <Image
+                    src="/legal_consultancy_hero_premium_1769687115697.png"
+                    alt="Legal Advisory and Justice"
+                    width={800}
+                    height={800}
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
                 </div>
               </div>
-            ))}
+            </SlideIn>
           </div>
         </div>
       </section>
 
-      {/* Documentation Services */}
-      <section className="py-16 bg-slate-900 text-white">
+      {/* Services Grid */}
+      <section className="py-24 bg-white">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Legal Documentation</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Professional drafting and review of all business documents.
-            </p>
+          <div className="text-center mb-20">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Expert Advocacy</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+                Navigating the intersection of law and modern business.
+              </p>
+            </FadeIn>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {documentationServices.map((doc, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur rounded-lg p-4 hover:bg-white/20 transition">
-                <h4 className="font-semibold mb-1">{doc.title}</h4>
-                <p className="text-sm text-gray-400">{doc.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Common questions about our legal services.
-            </p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <details key={index} className="bg-white rounded-lg border border-gray-200 group">
-                <summary className="p-6 cursor-pointer font-semibold flex items-center justify-between">
-                  {faq.question}
-                  <span className="text-brand group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <div className="px-6 pb-6 text-gray-600">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 bg-gray-100">
-        <div className="container-max">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Why Choose Our Legal Services?</h2>
-              <div className="space-y-4">
-                {[
-                  { title: "Experienced Team", desc: "Lawyers with 15+ years of corporate law experience" },
-                  { title: "Business Focus", desc: "We understand business needs, not just legal technicalities" },
-                  { title: "Cost-Effective", desc: "Transparent pricing with no hidden charges" },
-                  { title: "Quick Turnaround", desc: "Fast response times and efficient service delivery" },
-                  { title: "Ongoing Support", desc: "Retainer options for continuous legal support" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-brand text-xl">✓</span>
-                    <div>
-                      <h4 className="font-semibold">{item.title}</h4>
-                      <p className="text-sm text-gray-600">{item.desc}</p>
+          <StaggerContainer>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {legalServices.map((service, index) => (
+                <StaggerItem key={index}>
+                  <ScaleOnHover>
+                    <div className="h-full bg-slate-50 rounded-[2rem] p-8 border border-slate-100 transition-all duration-300 group hover:bg-white hover:shadow-2xl">
+                      <div className="text-5xl mb-6">{service.icon}</div>
+                      <h3 className="text-xl font-bold mb-3 text-slate-900">{service.title}</h3>
+                      <p className="text-slate-500 text-sm leading-relaxed mb-6 font-light">{service.description}</p>
+                      <ul className="space-y-2">
+                        {service.services.map((s, i) => (
+                          <li key={i} className="flex gap-2 items-center text-xs text-slate-700 font-medium">
+                            <span className="text-cyan-600">✓</span>
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
+                  </ScaleOnHover>
+                </StaggerItem>
+              ))}
+            </div>
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Documentation Strip */}
+      <section className="py-24 section-navy text-white relative overflow-hidden">
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <SlideIn direction="left">
+              <div className="grid grid-cols-2 gap-4">
+                {documentationServices.map((doc, i) => (
+                  <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all">
+                    <h4 className="font-bold text-cyan-400 mb-2">{doc.title}</h4>
+                    <p className="text-xs text-gray-400">{doc.desc}</p>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Need Legal Advice?</h3>
-              <p className="text-gray-600 mb-6">
-                Book a free 30-minute consultation with our legal experts to discuss 
-                your business requirements.
+            </SlideIn>
+
+            <FadeIn>
+              <h2 className="text-4xl font-bold mb-6">Precision <br />Documentation</h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-10">
+                Your legal standing depends on the quality of your contracts.
+                We provide institutional-grade drafting that minimizes exposure.
               </p>
-              <Link href="/contact" className="btn inline-flex">
-                Book Free Consultation →
+              <Link href="/contact" className="btn-hero-green bg-white text-navy-900 border-none hover:bg-gray-100">
+                Get Agreement Samples
               </Link>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-brand text-white">
-        <div className="container-max text-center">
-          <h2 className="text-3xl font-bold mb-4">Protect Your Business Today</h2>
-          <p className="text-lg mb-8 opacity-90">Get expert legal support for your business needs</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="px-8 py-4 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition">
-              Schedule Legal Consultation
-            </Link>
-            <a href="tel:+919737799937" className="px-8 py-4 border-2 border-white rounded-lg hover:bg-white/10 transition">
-              Call Now: +91 98765 43210
-            </a>
+      {/* Final CTA */}
+      <section className="py-24 px-6">
+        <div className="container-max">
+          <div className="relative rounded-[3rem] overflow-hidden shadow-2xl section-navy p-12 md:p-20 text-center text-white">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+            <FadeIn>
+              <div className="max-w-3xl mx-auto relative z-10">
+                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Secure Your Legacy</h2>
+                <p className="text-xl text-gray-400 mb-12">
+                  Don't leave your corporate future to chance. Build on a
+                  legally-sound foundation with Ewolyn's expert counsel.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <ButtonHover>
+                    <Link href="/contact" className="btn-hero-green bg-cyan-600 hover:bg-cyan-700">
+                      Talk to Legal Counsel
+                    </Link>
+                  </ButtonHover>
+                  <ButtonHover>
+                    <a href="tel:18005710607" className="btn-hero-outline">
+                      Expert Consultation
+                    </a>
+                  </ButtonHover>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>

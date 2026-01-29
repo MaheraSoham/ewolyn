@@ -48,7 +48,7 @@ export default function SchemeDetailPage({ params }: Props) {
           {/* Tags / Breadcrumb style */}
           <div className="flex items-center justify-center gap-3 mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-green animate-pulse" />
-            <span className="text-xs font-bold tracking-widest uppercase text-accent-green/90">
+            <span className="text-xs font-bold tracking-widest uppercase text-white">
               {scheme.tags.join(" • ")}
             </span>
           </div>

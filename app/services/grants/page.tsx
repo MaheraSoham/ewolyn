@@ -1,204 +1,310 @@
+"use client";
+
 import Link from "next/link";
-import SectionHeading from "@/components/SectionHeading";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideUp,
+  SlideIn,
+  StaggerContainer,
+  StaggerItem,
+  ScaleOnHover,
+  ButtonHover
+} from "../../../components/ui/AnimationWrappers";
+
+const grantServices = [
+  { icon: "🔍", title: "Scheme Identification", desc: "Research and identify relevant grant programs aligned with your business model, industry, and growth goals." },
+  { icon: "🧪", title: "Eligibility Assessment", desc: "Thorough evaluation of your business against scheme criteria to determine qualification potential." },
+  { icon: "🎯", title: "Strategic Planning", desc: "Develop application strategies that highlight alignment between your business and scheme priorities." },
+  { icon: "📝", title: "Proposal Development", desc: "Create compelling proposals including project plans, impact assessments, and implementation roadmaps." },
+  { icon: "📄", title: "Documentation", desc: "Prepare comprehensive application packages with all required forms, business plans, and evidence." },
+  { icon: "📊", title: "Compliance Support", desc: "Ensure adherence to grant terms, reporting requirements, and utilization guidelines post-approval." },
+];
 
 export default function GrantsPage() {
   return (
-    <main className="section bg-gradient-to-br from-blue-50 via-white to-pink-50 min-h-screen">
-      <div className="container-max max-w-5xl py-10">
-        {/* Hero Section */}
-        <div className="rounded-xl shadow-lg bg-gradient-to-r from-indigo-900 via-blue-900 to-purple-900 p-8 text-center text-white mb-10">
-          <div className="mb-2">
-            <span className="inline-block bg-gray-800 text-yellow-300 px-4 py-1 rounded-full text-xs font-semibold">Government Schemes • Non-Repayable Funding</span>
-          </div>
-          <h1 className="text-4xl font-bold mb-2 text-blue-600">Government Grants</h1>
-          <h2 className="text-2xl font-semibold text-orange-400 mb-4">MSME • Startup India • DPIIT • Sector-Specific Schemes</h2>
-          <p className="mb-6 text-lg">Access non-repayable government funding with Ewolyn's specialized grants consultancy services covering scheme identification, eligibility assessment, application development, documentation support, and follow-up to maximize your chances of securing government financial assistance.</p>
-          <div className="flex flex-wrap justify-center gap-6 mt-6">
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">₹500Cr+</div>
-              <div className="text-sm text-gray-300">Grants Secured</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">85%</div>
-              <div className="text-sm text-gray-300">Success Rate</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">50+</div>
-              <div className="text-sm text-gray-300">Schemes Covered</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-sm text-gray-300">Documentation Support</div>
-            </div>
-          </div>
-          {/* Reference: Enego Grants Page button removed as requested */}
-        </div>
+    <main className="min-h-screen bg-slate-50 overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[85vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-amber-500/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px]"></div>
 
-        {/* Overview Section */}
-        <div className="bg-white/90 rounded-xl shadow p-8 mb-10 flex flex-col md:flex-row gap-8 items-center">
-          <div className="flex-1">
-            <span className="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Overview</span>
-            <h2 className="text-2xl font-bold mb-2">Unlock Government Funding for Your Business</h2>
-            <p className="mb-4 text-gray-700">Government grants represent a valuable source of non-repayable funding that can significantly accelerate business growth without creating debt obligations. From startup subsidies and R&D support to manufacturing incentives and export promotion, various government schemes provide financial assistance to eligible businesses across sectors.</p>
-            <p className="mb-4 text-gray-700">Ewolyn specializes in connecting MSMEs and startups with suitable government grant schemes, navigating the complex application processes, and developing compelling proposals that align with scheme objectives. Our expertise improves your approval chances while ensuring compliance with all grant terms and conditions.</p>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Non-repayable funding without equity dilution or interest obligations</li>
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Sector-specific schemes with targeted support for priority industries</li>
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Subsidies for capital expenditure, technology upgradation, and infrastructure</li>
-              <li className="flex items-center gap-2 text-green-700"><span>✔️</span> Special focus on innovation, employment generation, and export promotion</li>
-            </ul>
-          </div>
-          <div className="flex-1 grid grid-cols-2 gap-4">
-            <div className="bg-pink-100 rounded-lg p-4 text-center font-semibold">🎯 Focused</div>
-            <div className="bg-blue-100 rounded-lg p-4 text-center font-semibold">🛡️ Secure</div>
-            <div className="bg-green-100 rounded-lg p-4 text-center font-semibold">⚡ Fast</div>
-            <div className="bg-purple-100 rounded-lg p-4 text-center font-semibold">🏅 Trusted</div>
-          </div>
-        </div>
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/20 rounded-full text-amber-100 text-sm font-bold mb-6 border border-amber-500/30">
+                <span className="animate-pulse">🏛️</span>
+                Government Incentives & Subsidies
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
+                <span className="text-accent-green">Non-Repayable</span> <br />
+                <span className="text-white">Capital Growth</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+                Access billions in government grants and subsidies. We navigate the complexity
+                of state and central schemes to secure the funding your innovation deserves—with zero equity dilution.
+              </p>
 
-        {/* Benefits / Consultancy Services */}
-        <div className="mb-10">
-          <span className="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Benefits</span>
-          <h2 className="text-2xl font-bold mb-6">Our Grants Consultancy Services</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🔍</span><b>Scheme Identification</b><p className="text-sm mt-1">Research and identify relevant grant programs aligned with your business model, industry, location, and growth objectives</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🧪</span><b>Eligibility Assessment</b><p className="text-sm mt-1">Conduct thorough evaluation of your business against scheme criteria to determine qualification and prepare compliance roadmap</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🎯</span><b>Strategic Application Planning</b><p className="text-sm mt-1">Develop application strategies that highlight alignment between your business objectives and scheme priorities</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">📝</span><b>Proposal Development</b><p className="text-sm mt-1">Create compelling proposals including project plans, impact assessments, and implementation roadmaps tailored to scheme requirements</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">📄</span><b>Documentation Support</b><p className="text-sm mt-1">Prepare comprehensive documentation packages including business plans, financial projections, and supporting evidence</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">📤</span><b>Application Submission</b><p className="text-sm mt-1">Handle timely submission with proper formatting, organization, and adherence to all procedural requirements</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">🗣️</span><b>Interview & Presentation Support</b><p className="text-sm mt-1">Prepare for and participate in evaluation interviews, presentations, and clarification sessions with funding authorities</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-start"><span className="text-2xl mb-2">📊</span><b>Post-Approval Compliance</b><p className="text-sm mt-1">Ensure adherence to grant terms, reporting requirements, and utilization guidelines to prevent complications</p></div>
-          </div>
-        </div>
+              <div className="flex flex-wrap gap-4 mb-12">
+                <ButtonHover>
+                  <Link href="/contact" className="btn-hero-green bg-amber-500 hover:bg-amber-600 text-slate-950 text-lg px-10">
+                    Check Grant Eligibility
+                  </Link>
+                </ButtonHover>
+                <ButtonHover>
+                  <a href="tel:18005710607" className="btn-hero-outline text-lg px-10">
+                    Expert Consultation
+                  </a>
+                </ButtonHover>
+              </div>
 
-        {/* Major Grant Categories */}
-        <div className="mb-10">
-          <h2 className="text-2xl font-bold mb-6">Major Grant Categories We Cover</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-indigo-900/90 rounded-xl p-6 text-white">
-              <h3 className="text-lg font-bold text-red-300 mb-2">Who Can Apply?</h3>
-              <ul className="space-y-2 text-base">
-                <li><Link href="/services/startup-seed-fund" className="hover:text-accent-green transition-colors">✔️ Startup India Seed Fund</Link> - Financial assistance for early-stage startups for proof of concept, prototype development, product trials</li>
-                <li><Link href="/services/clcs-tus-msme-champions" className="hover:text-accent-green transition-colors">✔️ MSME Technology Upgradation Schemes</Link> - Capital subsidies for modernization and technology enhancement of manufacturing units</li>
-                <li><Link href="/services/pm-employment-generation-programme" className="hover:text-accent-green transition-colors">✔️ PMEGP (Prime Minister's Employment Generation Programme)</Link> - Subsidies for new manufacturing, services, or trading micro-enterprises</li>
-                <li><Link href="/services/epcg-scheme" className="hover:text-accent-green transition-colors">✔️ Export Promotion Capital Goods (EPCG)</Link> - Duty exemptions for capital goods imports for export-oriented businesses</li>
-                <li><Link href="/services/birac-grants" className="hover:text-accent-green transition-colors">✔️ Biotechnology Industry Research Assistance Council (BIRAC) Grants</Link> - Funding for biotech startups and innovation projects</li>
-              </ul>
-            </div>
-            <div className="bg-indigo-900/90 rounded-xl p-6 text-white">
-              <h3 className="text-lg font-bold text-blue-300 mb-2">Conditions</h3>
-              <ul className="space-y-2 text-base">
-                <li>🛡️ Design-Led Manufacturing Scheme - Support for domestic manufacturing of telecom and networking products</li>
-                <li>🛡️ SIDBI Funds - Special focus on MSMEs in priority sectors including manufacturing and service enterprises</li>
-                <li>🛡️ National Initiative for Developing and Harnessing Innovations (NIDHI) - Support for tech-based startups and innovation</li>
-                <li>🛡️ Agriculture Processing and Rural Development Grants - Funding for food processing and agribusiness ventures</li>
-                <li>🛡️ Textile Sector Schemes - Support for technical textiles, apparel manufacturing, and textile park development</li>
-              </ul>
-            </div>
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">₹500Cr+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Grants Secured</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-amber-400 mb-1">85%</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Success Rate</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">50+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Active Schemes</div>
+                </div>
+              </div>
+            </FadeIn>
+
+            <SlideIn direction="right">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                  <Image
+                    src="/government_grants_hero_premium_1769686253475.png"
+                    alt="Government Grants Success"
+                    width={800}
+                    height={800}
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                </div>
+              </div>
+            </SlideIn>
           </div>
         </div>
+      </section>
 
-        {/* Application Process */}
-        <div className="mb-10">
-          <span className="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Process</span>
-          <h2 className="text-2xl font-bold mb-6">Our Grant Application Process</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">1</span><b>Initial Consultation</b><p className="text-sm mt-1 text-center">Understand your business model, objectives, and funding requirements through comprehensive discussion</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">2</span><b>Scheme Research</b><p className="text-sm mt-1 text-center">Identify all relevant government schemes and grants matching your business profile and requirements</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">3</span><b>Eligibility Analysis</b><p className="text-sm mt-1 text-center">Assess qualification potential for identified schemes and determine documentation needs</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">4</span><b>Application Strategy</b><p className="text-sm mt-1 text-center">Develop compelling narratives that align your business with scheme objectives and highlight potential impact</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">5</span><b>Documentation Preparation</b><p className="text-sm mt-1 text-center">Create comprehensive application packages with all required forms, business plans, and supporting documents</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">6</span><b>Submission & Follow-up</b><p className="text-sm mt-1 text-center">Submit applications with proper tracking and engage in strategic follow-up with authorities</p></div>
-            <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center"><span className="text-2xl mb-2">7</span><b>Post-Approval Support</b><p className="text-sm mt-1 text-center">Guide implementation, reporting, and compliance to ensure successful grant utilization</p></div>
+      {/* Grant Categories - Featured */}
+      <section className="py-24 bg-white">
+        <div className="container-max">
+          <div className="grid lg:grid-cols-2 gap-12 items-end mb-20">
+            <FadeIn>
+              <span className="text-amber-600 font-bold text-sm uppercase tracking-[0.2em] mb-4 block">Major Schemes</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                Empowering Every <br /> Business Stage
+              </h2>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <p className="text-slate-600 text-lg max-w-lg mb-2">
+                From early-stage seed funds to large-scale manufacturing incentives, we cover the entire spectrum of government financial aid.
+              </p>
+            </FadeIn>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Startup India Seed Fund",
+                desc: "Financial assistance for early-stage startups for proof of concept, prototype development, and product trials.",
+                link: "/services/startup-seed-fund",
+                color: "border-l-amber-400"
+              },
+              {
+                title: "MSME Technology Upgradation",
+                desc: "Capital subsidies for modernization and technology enhancement of manufacturing units.",
+                link: "/services/clcs-tus-msme-champions",
+                color: "border-l-blue-500"
+              },
+              {
+                title: "PMEGP Subsidies",
+                desc: "Massive subsidies for new manufacturing, services, or trading micro-enterprises across India.",
+                link: "/services/pm-employment-generation-programme",
+                color: "border-l-green-500"
+              },
+              {
+                title: "Export Promotion (EPCG)",
+                desc: "Significant duty exemptions for capital goods imports for export-oriented businesses.",
+                link: "/services/epcg-scheme",
+                color: "border-l-purple-500"
+              },
+            ].map((scheme, idx) => (
+              <SlideUp key={idx} delay={idx * 0.1}>
+                <div className={`p-8 rounded-3xl bg-slate-50 border border-slate-200 border-l-8 ${scheme.color} hover:shadow-xl transition-all group`}>
+                  <h3 className="text-2xl font-bold mb-4 text-slate-900 group-hover:text-amber-600 transition-colors">{scheme.title}</h3>
+                  <p className="text-slate-600 mb-6 leading-relaxed">{scheme.desc}</p>
+                  <Link href={scheme.link} className="inline-flex items-center gap-2 font-bold text-slate-900 hover:gap-3 transition-all">
+                    Explore Scheme
+                    <svg className="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </SlideUp>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Documentation Requirements */}
-        <div className="mb-10">
-          <span className="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">Documentation</span>
-          <h2 className="text-2xl font-bold mb-6">Documentation Requirements</h2>
-          <div className="bg-indigo-900/90 rounded-xl p-6 text-white">
-            <h3 className="text-lg font-bold mb-4">Document Checklist</h3>
-            <div className="grid md:grid-cols-2 gap-4">
-              <ul className="space-y-2 text-base">
-                <li>📄 Business registration certificates (Incorporation Certificate, MSME Registration, etc.)</li>
-                <li>📄 Financial statements for the past 2-3 years (as applicable)</li>
-                <li>📄 Cost estimates and quotations for proposed expenditures</li>
-                <li>📄 Industry-specific certifications and licenses</li>
-                <li>📄 Bank statements and existing financing documentation</li>
-              </ul>
-              <ul className="space-y-2 text-base">
-                <li>📄 PAN, GST registration, and other tax-related documents</li>
-                <li>📄 Detailed project report with implementation plan and timelines</li>
-                <li>📄 Land and building ownership/lease documents (where applicable)</li>
-                <li>📄 Promoter profiles with identification and address proofs</li>
-                <li>📄 Employment and skill development plans (for relevant schemes)</li>
-              </ul>
+      {/* Services Grid - Premium */}
+      <section className="py-24 bg-slate-50">
+        <div className="container-max">
+          <div className="text-center mb-20">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">How We Secure Your Grant</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                Our 360° approach ensures that your application is not just submitted, but positioned for high-impact approval.
+              </p>
+            </FadeIn>
+          </div>
+
+          <StaggerContainer>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {grantServices.map((service, index) => (
+                <StaggerItem key={index}>
+                  <ScaleOnHover>
+                    <div className="h-full bg-white rounded-3xl p-8 shadow-sm border border-slate-200 hover:shadow-xl transition-all duration-500 group">
+                      <div className="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl mb-6 group-hover:bg-amber-100 transition-colors">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold mb-3 text-slate-900 group-hover:text-amber-600 transition-colors">{service.title}</h3>
+                      <p className="text-slate-600 leading-relaxed mb-8 text-sm">{service.desc}</p>
+                    </div>
+                  </ScaleOnHover>
+                </StaggerItem>
+              ))}
             </div>
-            <div className="mt-4 text-yellow-200 text-sm">Important: Documentation requirements vary significantly between grant schemes. Our team provides customized checklists specific to your target schemes after initial assessment.</div>
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Process Section - Dark Mode feel */}
+      <section className="py-24 section-navy text-white overflow-hidden relative">
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8">Seamless Application Journey</h2>
+              <div className="space-y-12">
+                {[
+                  { step: "01", title: "Discovery", desc: "We analyze your business profile to find the most lucrative schemes matching your goals." },
+                  { step: "02", title: "Strategy", desc: "We build a narrative that aligns perfectly with government priorities for maximum approval odds." },
+                  { step: "03", title: "Submission", desc: "Our team handles the entire technical submission process, ensuring 100% compliance." },
+                  { step: "04", title: "Follow-up", desc: "We engage with authorities strategically to navigate evaluations and interviews." },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6 group">
+                    <div className="text-4xl font-black text-amber-400/20 group-hover:text-amber-400 transition-colors duration-500">
+                      {item.step}
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold mb-2 text-white">{item.title}</h4>
+                      <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
+            <div className="relative p-12 bg-white/5 backdrop-blur-3xl rounded-[3rem] border border-white/10 shadow-3xl">
+              <SlideIn direction="right">
+                <h3 className="text-2xl font-bold mb-8 text-amber-400">Essential Documentation</h3>
+                <ul className="space-y-4 mb-10">
+                  {[
+                    "MSME / Udyam Registration",
+                    "3 Years Financial Statements",
+                    "Detailed Project Report (DPR)",
+                    "Technology Readiness Proof",
+                    "Impact Assessment Plan",
+                  ].map((doc, idx) => (
+                    <li key={idx} className="flex items-center gap-4 text-gray-300">
+                      <div className="w-2 h-2 rounded-full bg-amber-400"></div>
+                      {doc}
+                    </li>
+                  ))}
+                </ul>
+                <div className="p-6 rounded-2xl bg-amber-500/10 border border-amber-400/30">
+                  <p className="text-sm font-bold text-amber-400 leading-relaxed">
+                    Note: Grant requirements change frequently. Our team provides an updated, customized checklist
+                    as soon as we identify your target schemes.
+                  </p>
+                </div>
+              </SlideIn>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* FAQ Section */}
-        <div className="mb-10">
-          <span className="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-2">FAQs</span>
-          <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+      {/* FAQ */}
+      <section className="py-24 bg-white">
+        <div className="container-max max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Grant FAQs</h2>
+            <p className="text-slate-600">Common questions about non-repayable government aid.</p>
+          </div>
+
           <div className="space-y-4">
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">Which businesses qualify for government grants in India?</summary>
-              <p className="mt-2 text-gray-700">Eligibility depends on the specific scheme, but typically includes startups, MSMEs, and businesses in priority sectors. Our team helps assess your fit for each program.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">How long does the government grant application process take?</summary>
-              <p className="mt-2 text-gray-700">Timelines vary by scheme, but can range from a few weeks to several months. We help you prepare and track your application for faster approval.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">What costs are typically covered by government grants?</summary>
-              <p className="mt-2 text-gray-700">Grants may cover capital expenditure, R&D, technology upgrades, export promotion, and more. We help you identify all eligible expenses.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">What are the common reasons for grant application rejection?</summary>
-              <p className="mt-2 text-gray-700">Common reasons include incomplete documentation, lack of alignment with scheme objectives, or missing eligibility criteria. Our experts help you avoid these pitfalls.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">Are there any obligations after receiving a government grant?</summary>
-              <p className="mt-2 text-gray-700">Yes, you must comply with reporting, utilization, and other requirements. We provide post-approval support to ensure compliance.</p>
-            </details>
-            <details className="bg-white rounded-xl shadow p-4">
-              <summary className="font-semibold cursor-pointer">Can Ewolyn guarantee grant approval?</summary>
-              <p className="mt-2 text-gray-700">No consultancy can guarantee approval, but our expertise maximizes your chances of success.</p>
-            </details>
+            {[
+              { q: "Is a grant different from a loan?", a: "Yes. Grants are non-repayable financial assistance provided for specific objectives. Unlike loans, you don't pay interest or return the principal amount." },
+              { q: "Do I have to give up equity for these grants?", a: "No. Most government grants are 'non-dilutive,' meaning you keep 100% of your company ownership while receiving the funds." },
+              { q: "What is the timeline for grant approval?", a: "Depending on the scheme, it can take anywhere from 8 to 24 weeks. We work to minimize this through proactive processing." },
+              { q: "What if my application is rejected?", a: "We analyze the reasons for rejection, fix the gaps, and help you resubmit or apply for alternative schemes that fit better." },
+            ].map((faq, idx) => (
+              <details key={idx} className="group bg-slate-50 rounded-2xl border border-slate-200 transition-all duration-300">
+                <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                  <span className="font-bold text-slate-900 group-open:text-amber-600 transition-colors">{faq.q}</span>
+                  <span className="transition-transform group-open:rotate-180">
+                    <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 text-slate-600">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Call to Action Section */}
-        <div className="rounded-xl shadow-lg bg-gradient-to-r from-indigo-900 via-blue-900 to-purple-900 p-8 text-center text-white mb-10">
-          <div className="mb-2">
-            <span className="inline-block bg-gray-800 text-yellow-300 px-4 py-1 rounded-full text-xs font-semibold">Get Started Today</span>
-          </div>
-          <h2 className="text-3xl font-bold mb-2">Ready to Access Government Funding?</h2>
-          <p className="mb-6 text-lg">Connect with our grants specialists to identify available schemes, assess your eligibility, and develop compelling applications to secure non-repayable funding for your business growth.</p>
-          <div className="flex flex-wrap justify-center gap-6 mt-6">
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">₹500Cr+</div>
-              <div className="text-sm text-gray-300">Funded</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">20K+</div>
-              <div className="text-sm text-gray-300">Businesses</div>
-            </div>
-            <div className="bg-gray-900/80 rounded-lg px-6 py-4 min-w-[120px]">
-              <div className="text-2xl font-bold text-white">95%</div>
-              <div className="text-sm text-gray-300">Success Rate</div>
-            </div>
-          </div>
-          <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
-            <a href="#" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-full shadow transition">Start Application</a>
-            <a href="tel:18005710607" className="inline-block bg-gray-700 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-full shadow transition">Call: 1800 571 0607</a>
+      {/* Final CTA */}
+      <section className="py-24 px-6">
+        <div className="container-max">
+          <div className="relative rounded-[3rem] bg-navy-950 overflow-hidden shadow-2xl section-navy p-12 md:p-20 text-center">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cross-stripes.png')] animate-pulse"></div>
+            <FadeIn>
+              <div className="relative z-10 max-w-3xl mx-auto">
+                <h2 className="text-4xl md:text-6xl font-bold mb-8 text-white">Scale Without Debt.</h2>
+                <p className="text-xl text-gray-400 mb-12 leading-relaxed">
+                  Join hundreds of MSMEs and Startups that have secured non-repayable capital with Ewolyn.
+                  Let's find the grants your business is eligible for today.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <ButtonHover>
+                    <Link href="/contact" className="btn-hero-green bg-amber-500 hover:bg-amber-600 text-slate-950 text-lg px-12 py-5">
+                      Start Your Application
+                    </Link>
+                  </ButtonHover>
+                  <ButtonHover>
+                    <a href="tel:18005710607" className="btn-hero-outline text-lg px-12 py-5">
+                      Request Expert Callback
+                    </a>
+                  </ButtonHover>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
+

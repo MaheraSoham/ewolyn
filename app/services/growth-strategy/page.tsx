@@ -1,269 +1,247 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideUp,
+  SlideIn,
+  StaggerContainer,
+  StaggerItem,
+  ScaleOnHover,
+  ButtonHover
+} from "../../../components/ui/AnimationWrappers";
 
 const growthStrategies = [
   {
-    title: "Market Expansion Strategy",
+    title: "Market Expansion",
     icon: "🌍",
-    description: "Expand your business to new markets, regions, and customer segments with data-driven strategies.",
-    services: [
-      "Market research & analysis",
-      "Target market identification",
-      "Entry strategy development",
-      "Competitive landscape mapping",
-      "Go-to-market planning",
-    ],
+    description: "Scale into new demographics and regions with data-backed entry plans.",
+    services: ["Target market analysis", "Go-to-market planning", "Competitive mapping"],
   },
   {
-    title: "Product Development",
+    title: "Product Evolution",
     icon: "💡",
-    description: "Develop new products or improve existing ones to meet market demands and stay competitive.",
-    services: [
-      "Product ideation workshops",
-      "MVP development strategy",
-      "Product-market fit analysis",
-      "Feature prioritization",
-      "Launch planning",
-    ],
+    description: "Refine your value proposition to achieve perfect product-market fit.",
+    services: ["MVP strategy", "Feature prioritization", "UX enhancement"],
   },
   {
     title: "Operational Excellence",
     icon: "⚙️",
-    description: "Optimize your operations to reduce costs, improve efficiency, and scale sustainably.",
-    services: [
-      "Process optimization",
-      "Cost reduction strategies",
-      "Supply chain management",
-      "Quality improvement",
-      "Automation advisory",
-    ],
+    description: "Streamline workflows and reduce overhead for sustainable scaling.",
+    services: ["Process automation", "Supply chain audit", "Cost optimization"],
   },
   {
-    title: "Financial Planning",
+    title: "Financial Engineering",
     icon: "📊",
-    description: "Develop robust financial plans to support your growth objectives and maintain healthy cash flow.",
-    services: [
-      "Financial modeling",
-      "Funding strategy",
-      "Cash flow management",
-      "Budget planning",
-      "Investment planning",
-    ],
+    description: "Structure your business for multi-round funding and exit readiness.",
+    services: ["Financial modeling", "Funding roadmap", "CAP table advisory"],
   },
 ];
 
 const businessPlans = [
   {
-    title: "Startup Business Plan",
-    description: "Comprehensive plan for new ventures seeking funding or market entry",
-    includes: ["Executive summary", "Market analysis", "Financial projections", "Funding requirements", "Growth roadmap"],
-    ideal: "Startups & New Ventures",
-  },
-  {
-    title: "Investor Pitch Deck",
-    description: "Compelling presentation to attract investors and secure funding",
-    includes: ["Problem-solution fit", "Market opportunity", "Business model", "Traction & metrics", "Team & vision"],
-    ideal: "Fundraising Startups",
-  },
-  {
     title: "DPR (Detailed Project Report)",
-    description: "Comprehensive report required for bank loans and government schemes",
-    includes: ["Project overview", "Technical feasibility", "Financial analysis", "Implementation plan", "Risk assessment"],
+    description: "Comprehensive technical-financial reports for bank loans.",
     ideal: "MSMEs & Manufacturers",
   },
   {
+    title: "Investor Pitch Deck",
+    description: "High-impact visual narratives to secure venture capital.",
+    ideal: "Fundraising Startups",
+  },
+  {
     title: "TEV Study",
-    description: "Techno-Economic Viability study for large project financing",
-    includes: ["Technical appraisal", "Market assessment", "Financial evaluation", "Sensitivity analysis", "Recommendations"],
-    ideal: "Large Projects",
-  },
-];
-
-const mentorshipPrograms = [
-  {
-    title: "1-on-1 Mentorship",
-    duration: "3 months",
-    sessions: "12 sessions",
-    features: ["Personal mentor", "Customized guidance", "Weekly calls", "Action planning"],
+    description: "Techno-Economic Viability studies for large projects.",
+    ideal: "Infrastructure & PSU",
   },
   {
-    title: "Group Mentorship",
-    duration: "6 months",
-    sessions: "24 sessions",
-    features: ["Peer learning", "Expert sessions", "Networking", "Resource sharing"],
-  },
-  {
-    title: "Accelerator Program",
-    duration: "12 weeks",
-    sessions: "Intensive",
-    features: ["Structured curriculum", "Investor access", "Demo day", "Funding support"],
+    title: "CMA Data",
+    description: "Detailed credit monitoring data for working capital.",
+    ideal: "Loan Applicants",
   },
 ];
 
 export default function GrowthStrategyPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
-        <div className="container-max">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-500/20 rounded-full text-rose-300 text-sm mb-6">
-              <span>📈</span>
-              Growth Strategy Services
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Scale Your Business with<br />
-              <span className="text-brand">Expert Growth Strategies</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              From market expansion to operational excellence, we help businesses develop and 
-              execute strategies that drive sustainable growth and competitive advantage.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn">
-                Get Growth Consultation →
-              </Link>
-              <a href="tel:+919737799937" className="px-6 py-3 border border-white/30 rounded-lg hover:bg-white/10 transition">
-                📞 +91 98765 43210
-              </a>
-            </div>
+      <section className="relative min-h-[85vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
+        {/* Rose Glow Effect */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rose-500/10 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px]"></div>
+
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-bold mb-8 shadow-xl">
+                <span>📈</span>
+                Strategic Advisory
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
+                <span className="text-accent-green">Engineer Your</span> <br />
+                <span className="text-white">Next Pivot</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl font-light">
+                Scaling a business requires more than just capital—it requires a roadmap.
+                We provide the data, strategy, and mentorship to navigate hyper-growth.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-12">
+                <ButtonHover>
+                  <Link href="/contact" className="btn-hero-green bg-rose-600 hover:bg-rose-700">
+                    Get Strategy Session
+                  </Link>
+                </ButtonHover>
+                <ButtonHover>
+                  <a href="tel:18005710607" className="btn-hero-outline">
+                    Expert Consultation
+                  </a>
+                </ButtonHover>
+              </div>
+
+              <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/10">
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">500+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Scaling Projects</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-rose-400 mb-1">3x</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Avg Growth</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white mb-1">₹500Cr+</div>
+                  <div className="text-xs text-gray-400 uppercase tracking-widest font-bold">Funding Facilitated</div>
+                </div>
+              </div>
+            </FadeIn>
+
+            <SlideIn direction="right">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-rose-500 to-indigo-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                  <Image
+                    src="/growth_strategy_hero_premium_1769686968239.png"
+                    alt="Strategic Growth Trajectory"
+                    width={800}
+                    height={800}
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
+                </div>
+              </div>
+            </SlideIn>
           </div>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 bg-white border-b">
+      {/* Strategy Grid */}
+      <section className="py-24 bg-white">
         <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">500+</div>
-              <div className="text-gray-600">Businesses Scaled</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">3x</div>
-              <div className="text-gray-600">Avg Revenue Growth</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">₹200Cr+</div>
-              <div className="text-gray-600">Funding Raised</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-brand">50+</div>
-              <div className="text-gray-600">Industry Experts</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Growth Strategies */}
-      <section className="py-16">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Growth Strategy Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive strategies tailored to your business goals and market conditions.
-            </p>
+          <div className="text-center mb-20">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">Frameworks for Success</h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed font-light">
+                We move beyond generic advice to provide executable business intelligence.
+              </p>
+            </FadeIn>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {growthStrategies.map((strategy, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition">
-                <div className="text-4xl mb-4">{strategy.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{strategy.title}</h3>
-                <p className="text-gray-600 mb-4">{strategy.description}</p>
-                <div className="space-y-2">
-                  {strategy.services.map((service, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm">
-                      <span className="text-brand">→</span>
-                      <span className="text-gray-700">{service}</span>
+          <StaggerContainer>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {growthStrategies.map((strategy, index) => (
+                <StaggerItem key={index}>
+                  <ScaleOnHover>
+                    <div className="h-full bg-slate-50 rounded-[2rem] p-8 border border-slate-100 hover:shadow-xl transition-all duration-300 group">
+                      <div className="text-5xl mb-6 group-hover:scale-110 transition-transform">{strategy.icon}</div>
+                      <h3 className="text-xl font-bold mb-3 text-slate-900">{strategy.title}</h3>
+                      <p className="text-slate-500 text-sm leading-relaxed mb-6 font-light">{strategy.description}</p>
+
+                      <ul className="space-y-2">
+                        {strategy.services.map((s, i) => (
+                          <li key={i} className="flex gap-2 items-center text-xs text-slate-700">
+                            <span className="text-rose-500">→</span>
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  ))}
-                </div>
-                <Link href="/contact" className="inline-flex items-center gap-2 mt-6 text-brand font-semibold hover:underline">
-                  Learn More →
-                </Link>
+                  </ScaleOnHover>
+                </StaggerItem>
+              ))}
+            </div>
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Reports / Documentation Section */}
+      <section className="py-24 section-navy text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-white/5 to-transparent"></div>
+        <div className="container-max relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <FadeIn>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">Institutional <br />Grade Documentation</h2>
+              <p className="text-gray-400 text-lg mb-10 leading-relaxed font-light">
+                Whether it's for a bank loan or a Silicon Valley investor, your
+                documentation defines your professional status. We produce reports
+                that stand up to the highest levels of scrutiny.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {businessPlans.map((plan, i) => (
+                  <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                    <h4 className="font-bold text-rose-300 mb-2">{plan.title}</h4>
+                    <p className="text-xs text-gray-400 leading-relaxed">{plan.description}</p>
+                    <div className="mt-4 text-[10px] uppercase tracking-widest text-gray-500 font-bold">{plan.ideal}</div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </FadeIn>
+
+            <SlideIn direction="right">
+              <div className="p-1 rounded-[3rem] bg-gradient-to-br from-rose-500/30 to-indigo-500/30">
+                <div className="bg-navy-900/50 backdrop-blur-xl rounded-[2.9rem] p-12 text-center">
+                  <div className="text-8xl mb-8">📊</div>
+                  <h3 className="text-2xl font-bold mb-4">Precision Reporting</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                    Our reports are currently accepted by 40+ scheduled banks and
+                    leading VC firms across India.
+                  </p>
+                  <Link href="/contact" className="inline-block px-8 py-3 bg-white text-navy-900 rounded-xl font-bold hover:scale-105 transition-transform">
+                    Sample Reports
+                  </Link>
+                </div>
+              </div>
+            </SlideIn>
           </div>
         </div>
       </section>
 
-      {/* Business Plans */}
-      <section className="py-16 bg-white">
+      {/* Final CTA */}
+      <section className="py-24 px-6">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Business Planning Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Professional business plans and reports that help you secure funding and guide your growth.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {businessPlans.map((plan, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition">
-                <h3 className="font-bold mb-2">{plan.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{plan.description}</p>
-                <div className="space-y-1 mb-4">
-                  {plan.includes.map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-gray-700">
-                      <span className="text-green-500">✓</span>
-                      {item}
-                    </div>
-                  ))}
-                </div>
-                <div className="pt-4 border-t">
-                  <span className="text-xs text-gray-500">Ideal for:</span>
-                  <span className="text-xs font-semibold text-brand ml-1">{plan.ideal}</span>
+          <div className="relative rounded-[3rem] overflow-hidden shadow-2xl section-navy p-12 md:p-20 text-center text-white">
+            <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+            <FadeIn>
+              <div className="max-w-3xl mx-auto relative z-10">
+                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Scale Without <br />Compromise</h2>
+                <p className="text-xl text-gray-400 mb-12">
+                  Building a great company is hard. Navigating the legal and
+                  financial maze shouldn't be. Let's build your growth roadmap.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <ButtonHover>
+                    <Link href="/contact" className="btn-hero-green bg-rose-600 hover:bg-rose-700">
+                      Book a Strategy Session
+                    </Link>
+                  </ButtonHover>
+                  <ButtonHover>
+                    <a href="tel:18005710607" className="btn-hero-outline">
+                      Talk to a Mentor
+                    </a>
+                  </ButtonHover>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mentorship Programs */}
-      <section className="py-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-        <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Mentorship Programs</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Learn from industry experts and successful entrepreneurs who've been there, done that.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {mentorshipPrograms.map((program, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <h3 className="text-xl font-bold mb-2">{program.title}</h3>
-                <div className="flex justify-center gap-4 mb-4 text-sm">
-                  <span className="px-3 py-1 bg-brand/20 rounded-full">{program.duration}</span>
-                  <span className="px-3 py-1 bg-white/10 rounded-full">{program.sessions}</span>
-                </div>
-                <div className="space-y-2">
-                  {program.features.map((feature, i) => (
-                    <div key={i} className="text-sm text-gray-300">• {feature}</div>
-                  ))}
-                </div>
-                <Link href="/contact" className="inline-block mt-6 px-6 py-2 bg-brand rounded-lg font-semibold hover:bg-red-700 transition">
-                  Enroll Now
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-brand text-white">
-        <div className="container-max text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Accelerate Your Growth?</h2>
-          <p className="text-lg mb-8 opacity-90">Let's create a customized growth strategy for your business</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="px-8 py-4 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition">
-              Schedule Strategy Session
-            </Link>
-            <a href="tel:+919737799937" className="px-8 py-4 border-2 border-white rounded-lg hover:bg-white/10 transition">
-              Call Now: +91 98765 43210
-            </a>
+            </FadeIn>
           </div>
         </div>
       </section>

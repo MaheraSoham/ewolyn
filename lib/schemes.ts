@@ -548,6 +548,167 @@ export const governmentSchemes: Scheme[] = [
       "Verification and approval",
       "Subsidy disbursement"
     ]
+  },
+  {
+    slug: "venture-capital-support",
+    title: "Venture Capital Support",
+    shortDesc: "Strategic equity funding for scaling startups to Series A & B",
+    highlight: "₹2Cr+",
+    highlightLabel: "Target Funding",
+    icon: "📈",
+    iconBg: "bg-rose-500",
+    category: "Equity",
+    timeline: "3-9 months",
+    fullDescription: "End-to-end support for startups reaching for Series A, B and beyond. We connect you with India's leading Angel networks and VC firms while optimizing your valuation and terms.",
+    eligibility: [
+      "Proven business model with scalability",
+      "Significant month-on-month growth",
+      "Strong tech or market moat",
+      "Clean Cap Table",
+      "Full-time expert founding team"
+    ],
+    benefits: [
+      "Access to 100+ Angel investors & VCs",
+      "Valuation optimization and Term Sheet advisory",
+      "Strategic mentorship and hiring support",
+      "Global networking opportunities",
+      "Product-Market Fit validation"
+    ],
+    documents: [
+      "Detailed Investment Deck",
+      "5-Year Financial Model",
+      "Unit Economics Sheet",
+      "Competitive Analysis",
+      "Founder CVs",
+      "Data Room preparation"
+    ],
+    process: [
+      "Investment readiness audit",
+      "Deck and Data Room preparation",
+      "Investor matching and roadshow",
+      "Term sheet negotiation",
+      "Closing and legal due diligence"
+    ]
+  },
+  {
+    slug: "psb-loans-59-minutes",
+    title: "PSB 59 Minute Loan",
+    shortDesc: "Digital in-principle approval for MSME loans up to ₹5 Crore",
+    highlight: "59 Min",
+    highlightLabel: "Approval Time",
+    icon: "⚡",
+    iconBg: "bg-amber-500",
+    category: "Loan",
+    timeline: "7–15 days",
+    fullDescription: "A digital platform providing contactless, fast, and transparent 'In-Principle' approval for business loans up to ₹5 Crore by analyzing digital footprints like GST and ITR.",
+    eligibility: [
+      "GST registered business units",
+      "Income Tax filers (last 3 years)",
+      "Active bank accounts with digital data",
+      "Valid Udyam certification",
+      "Clear credit history"
+    ],
+    benefits: [
+      "Fastest in-principle approval in under an hour",
+      "Contactless and paperless digital process",
+      "Access to multiple public and private banks",
+      "Integrated with CGTMSE for collateral-free options",
+      "Transparent fee structure"
+    ],
+    documents: [
+      "GST User ID & Password",
+      "Income Tax XML files (3 years)",
+      "Bank Statements (6 months PDF)",
+      "Director/Partner details",
+      "Udyam Certificate"
+    ],
+    process: [
+      "Register on official portal",
+      "Upload GST, ITR, and Bank data",
+      "Select bank and branch from generated offers",
+      "Pay convenience fee for approval letter",
+      "Sanction and disbursement by bank"
+    ]
+  },
+  {
+    slug: "clcs-tus-msme-champions",
+    title: "MSME Champions",
+    shortDesc: "15% capital subsidy for technology upgradation and modernization",
+    highlight: "15%",
+    highlightLabel: "Cap Subsidy",
+    icon: "⚙️",
+    iconBg: "bg-emerald-500",
+    category: "Subsidy",
+    timeline: "6-12 months",
+    fullDescription: "The MSME Champions scheme provides integrated support for technology upgradation (CLCSS), design, and quality certification to help MSMEs stay competitive globally.",
+    eligibility: [
+      "Registered MSMEs with Udyam",
+      "New and existing manufacturing units",
+      "Using approved 'Technical' machinery",
+      "Loan sourced from eligible PLIs",
+      "Specific sub-sectors approved by Ministry"
+    ],
+    benefits: [
+      "15% upfront capital subsidy on machinery cost",
+      "Max subsidy up to ₹15 Lakh",
+      "Reduced cost of technology modernization",
+      "Access to professional design consultants",
+      "Support for IP and ZED certification"
+    ],
+    documents: [
+      "Udyam Registration Certificate",
+      "Proforma Invoice for machinery",
+      "Bank Sanction Letter",
+      "Audited Financials (3 years)",
+      "Techno-Economic Viability Report"
+    ],
+    process: [
+      "Choose machinery from approved tech list",
+      "Apply for term loan with CLCSS mention",
+      "Bank uploads subsidy claim on portal",
+      "Machine inspection and verification",
+      "Subsidy release to loan account"
+    ]
+  },
+  {
+    slug: "sfurti-traditional-industries",
+    title: "SFURTI Scheme",
+    shortDesc: "Organizing traditional artisans into competitive industrial clusters",
+    highlight: "90%",
+    highlightLabel: "Grant Share",
+    icon: "🏺",
+    iconBg: "bg-blue-600",
+    category: "Grant",
+    timeline: "12-18 months",
+    fullDescription: "Scheme of Fund for Regeneration of Traditional Industries aims to organize traditional industries and artisans into clusters for better competitiveness and sustainable employment.",
+    eligibility: [
+      "NGOs with rural development experience",
+      "Statutory bodies like KVIC/KVIB",
+      "Minimum 250-500 artisans per cluster",
+      "Availability of land for CFC",
+      "Min 3 years experience in artisan sector"
+    ],
+    benefits: [
+      "Government grant up to 90% of project cost",
+      "Max grant up to ₹5 Crore for major clusters",
+      "Creation of Common Facility Centers (CFC)",
+      "Modern machinery and skills training",
+      "Market linkage and design support"
+    ],
+    documents: [
+      "NGO/Agency Registration docs",
+      "List of Artisans with Aadhaar",
+      "Land Records for CFC",
+      "Bye-laws of SPV",
+      "Diagnostic Study Report (DSR)"
+    ],
+    process: [
+      "Cluster mapping and artisan mobilization",
+      "Diagnostic Study Report (DSR) submission",
+      "Detailed Project Report (DPR) evaluation",
+      "SPV formation and CFC setup",
+      "Marketing and training intervention"
+    ]
   }
 ];
 
