@@ -39,11 +39,11 @@ export default function ImpactStats() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 className="text-center group"
               >
-                <div className="text-4xl md:text-5xl font-extrabold text-white group-hover:scale-110 transition-transform duration-300">
+                <div className="text-4xl md:text-5xl font-black text-white group-hover:scale-105 transition-transform duration-300 tracking-tight">
                   {s.value}
                 </div>
-                <div className="mt-2 font-semibold text-white text-lg">{s.label}</div>
-                <div className="text-sm text-slate-300">{s.sublabel}</div>
+                <div className="mt-2 font-black text-white text-base md:text-lg uppercase tracking-wider">{s.label}</div>
+                <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">{s.sublabel}</div>
               </motion.div>
             ))}
           </div>
@@ -64,11 +64,11 @@ export default function ImpactStats() {
             <span className="inline-block bg-cyan/10 text-cyan text-sm font-medium px-5 py-2 rounded-full mb-4 animate-pulse-glow">
               Our Impact
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-ink">
-              Driving MSME Success <span className="gradient-text">Across India</span>
+            <h2 className="text-4xl md:text-5xl font-black text-ink leading-tight">
+              Driving MSME Success <span className="text-accent-green">Across India</span>
             </h2>
-            <p className="text-muted mt-3 max-w-2xl mx-auto">
-              4.77 crore MSMEs registered on Udyam portal, transforming India&apos;s economic landscape
+            <p className="text-muted mt-5 text-lg max-w-2xl mx-auto font-medium">
+              Join the 4.77 crore MSMEs registered on the Udyam portal. We're here to unlock your growth potential.
             </p>
           </motion.div>
 
@@ -80,7 +80,7 @@ export default function ImpactStats() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="card bg-white"
+              className="bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-100"
               style={{ overflow: 'visible' }}
             >
               <h3 className="text-xl font-bold text-ink mb-6">Pan-India Presence</h3>
@@ -129,7 +129,7 @@ export default function ImpactStats() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="card bg-white"
+              className="bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-100"
             >
               <h3 className="text-xl font-bold text-ink mb-6">Sector Distribution</h3>
 

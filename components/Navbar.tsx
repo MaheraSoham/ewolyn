@@ -369,8 +369,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Spacer to prevent content from going under fixed navbar */}
-      <div className="h-24"></div>
+      {/* No spacer needed as Hero handles padding */}
 
     </>
   );
