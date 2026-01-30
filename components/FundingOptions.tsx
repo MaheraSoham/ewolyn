@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const fundingOptions = [
   {
@@ -57,26 +59,58 @@ const fundingOptions = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
 export default function FundingOptions() {
   return (
     <section className="section section-navy">
       <div className="container-max">
         {/* Section Header */}
-        <div className="text-center mb-10 animate-fade-in-up">
-          <h2 className="text-3xl md:text-4xl font-bold text-ink">
-            Tailored <span className="gradient-text">Funding Options</span>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-10"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Tailored <span className="gradient-text-light">Funding Options</span>
           </h2>
-          <p className="text-muted mt-3 max-w-2xl mx-auto">
+          <p className="text-slate-300 mt-3 max-w-2xl mx-auto">
             Choose from India&apos;s leading MSME schemes—fast approvals, expert support, and minimal paperwork.
           </p>
-        </div>
+        </motion.div>
 
         {/* Funding Cards Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 stagger-children">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
           {fundingOptions.map((option) => (
-            <div
+            <motion.div
               key={option.title}
-              className="card bg-white hover:shadow-glow hover:border-cyan/30 hover:scale-105 transition-all duration-300 relative"
+              variants={cardVariants}
+              whileHover={{
+                y: -10,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              }}
+              className="card bg-white border border-transparent hover:border-cyan/30 transition-all duration-300 relative"
             >
               {/* Popular Badge */}
               {option.popular && (
@@ -114,27 +148,38 @@ export default function FundingOptions() {
                   href={option.href}
                   className="ml-auto text-cyan hover:text-cyan-dark transition-colors"
                 >
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </motion.div>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Check Eligibility CTA */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/funding"
-            className="btn"
-          >
-            Check Your Eligibility
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-10 text-center"
+        >
+          <Link href="/funding">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn inline-flex items-center cursor-pointer"
+            >
+              Check Your Eligibility
+              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </motion.span>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

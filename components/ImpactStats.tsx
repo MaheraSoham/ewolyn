@@ -1,4 +1,6 @@
+"use client";
 import IndiaMap from "./IndiaMap";
+import { motion } from "framer-motion";
 
 const stats = [
   { value: "47,700K+", label: "MSMEs Registered", sublabel: "On Udyam Portal" },
@@ -28,14 +30,21 @@ export default function ImpactStats() {
       <section className="section-navy py-12">
         <div className="container-max">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center group">
+            {stats.map((s, index) => (
+              <motion.div
+                key={s.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className="text-center group"
+              >
                 <div className="text-4xl md:text-5xl font-extrabold text-white group-hover:scale-110 transition-transform duration-300">
                   {s.value}
                 </div>
                 <div className="mt-2 font-semibold text-white text-lg">{s.label}</div>
                 <div className="text-sm text-slate-300">{s.sublabel}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -45,7 +54,13 @@ export default function ImpactStats() {
       <section className="section section-light-green">
         <div className="container-max">
           {/* Section Header */}
-          <div className="text-center mb-12 animate-fade-in-up">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
             <span className="inline-block bg-cyan/10 text-cyan text-sm font-medium px-5 py-2 rounded-full mb-4 animate-pulse-glow">
               Our Impact
             </span>
@@ -55,12 +70,19 @@ export default function ImpactStats() {
             <p className="text-muted mt-3 max-w-2xl mx-auto">
               4.77 crore MSMEs registered on Udyam portal, transforming India&apos;s economic landscape
             </p>
-          </div>
+          </motion.div>
 
           {/* Two Column Layout */}
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Pan-India Presence with Map */}
-            <div className="card bg-white" style={{ overflow: 'visible' }}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="card bg-white"
+              style={{ overflow: 'visible' }}
+            >
               <h3 className="text-xl font-bold text-ink mb-6">Pan-India Presence</h3>
 
               {/* Interactive India Map */}
@@ -88,18 +110,27 @@ export default function ImpactStats() {
                       <span className="font-bold text-cyan">{item.count}</span>
                     </div>
                     <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
-                      <div
-                        className="bg-gradient-cyan h-full rounded-full transition-all duration-500"
-                        style={{ width: `${item.percentage}%` }}
-                      ></div>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${item.percentage}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                        className="bg-gradient-cyan h-full rounded-full"
+                      ></motion.div>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* Sector Distribution */}
-            <div className="card bg-white">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="card bg-white"
+            >
               <h3 className="text-xl font-bold text-ink mb-6">Sector Distribution</h3>
 
               {/* Circular Gauges */}
@@ -119,16 +150,18 @@ export default function ImpactStats() {
                           strokeWidth="8"
                         />
                         {/* Progress circle */}
-                        <circle
+                        <motion.circle
                           cx="50"
                           cy="50"
                           r="40"
                           fill="none"
                           stroke="#0BA5D8"
                           strokeWidth="8"
-                          strokeDasharray={`${sector.percent * 2.51} 251`}
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: sector.percent / 100 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1.5, ease: "easeOut" }}
                           strokeLinecap="round"
-                          className="transition-all duration-1000"
                         />
                       </svg>
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -149,23 +182,23 @@ export default function ImpactStats() {
                 <div className="grid grid-cols-1 gap-3">
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-accent-green text-lg">✓</span>
-                    <span className="text-slate-200">₹4.14L Cr MUDRA loans disbursed</span>
+                    <span className="text-slate-100">₹4.14L Cr MUDRA loans disbursed</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-accent-green text-lg">✓</span>
-                    <span className="text-slate-200">₹7,593 Cr SRI Fund invested</span>
+                    <span className="text-slate-100">₹7,593 Cr SRI Fund invested</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-accent-green text-lg">✓</span>
-                    <span className="text-slate-200">200+ RAMP proposals approved</span>
+                    <span className="text-slate-100">200+ RAMP proposals approved</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-accent-green text-lg">✓</span>
-                    <span className="text-slate-200">20.5% Women-owned MSMEs</span>
+                    <span className="text-slate-100">20.5% Women-owned MSMEs</span>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

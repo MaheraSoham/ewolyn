@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const schemes = [
   {
@@ -39,12 +41,33 @@ const schemes = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export default function GovernmentSchemes() {
   return (
     <section className="section section-light-green">
       <div className="container-max">
         {/* Section Header */}
-        <div className="text-center mb-12 animate-fade-in-up">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <span className="inline-block bg-cyan/10 text-cyan text-sm font-medium px-5 py-2 rounded-full mb-4 animate-pulse-glow">
             50+ Funding Solutions
           </span>
@@ -54,49 +77,75 @@ export default function GovernmentSchemes() {
           <p className="text-muted mt-3 max-w-2xl mx-auto">
             Unlock 50+ verified government funding, subsidy & tax benefit programs with expert handling.
           </p>
-        </div>
+        </motion.div>
 
         {/* Schemes Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 stagger-children">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        >
           {schemes.map((scheme) => (
-            <Link
-              key={scheme.title}
-              href={scheme.href}
-              className="group rounded-2xl border border-cyan/30 bg-gradient-to-br from-cyan/10 to-primary-cyan/5 p-6 shadow-soft transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-cyan/60 hover:scale-105 hover:from-cyan/20 hover:to-primary-cyan/10"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cyan/20 text-2xl group-hover:bg-cyan group-hover:text-white group-hover:shadow-glow transition-all duration-300">
-                  {scheme.icon}
+            <motion.div key={scheme.title} variants={cardVariants}>
+              <Link
+                href={scheme.href}
+                className="block h-full group rounded-2xl border border-cyan/30 bg-gradient-to-br from-cyan/10 to-primary-cyan/5 p-6 shadow-soft transition-all duration-300 hover:shadow-xl"
+              >
+                <div className="flex items-start gap-4">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cyan/20 text-2xl group-hover:bg-cyan group-hover:text-white group-hover:shadow-glow transition-all duration-300"
+                  >
+                    {scheme.icon}
+                  </motion.div>
+                  <div>
+                    <h3 className="text-lg font-bold text-ink group-hover:text-cyan transition-colors text-clamp-2">
+                      {scheme.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted text-clamp-3">{scheme.description}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-cyan">
+                      View Details
+                      <motion.svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        animate={{ x: 0 }}
+                        whileHover={{ x: 4 }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </motion.svg>
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-ink group-hover:text-cyan transition-colors text-clamp-2">
-                    {scheme.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted text-clamp-3">{scheme.description}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-cyan">
-                    View Details
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* View All Button */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/funding"
-            className="btn-dark"
-          >
-            Explore All 50+ Schemes
-            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-10 text-center"
+        >
+          <Link href="/funding">
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-dark inline-flex items-center cursor-pointer"
+            >
+              Explore All 50+ Schemes
+              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </motion.span>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
