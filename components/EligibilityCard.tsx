@@ -1,20 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-export default function EligibilityCard() {
+interface EligibilityCardProps {
+    defaultEntityType?: string;
+    defaultAmount?: string;
+    defaultStage?: string;
+}
+
+export default function EligibilityCard({
+    defaultEntityType = "Private Limited",
+    defaultAmount = "10L",
+    defaultStage = "Early"
+}: EligibilityCardProps) {
     const router = useRouter();
-    const [stage, setStage] = useState("Early");
+    const [stage, setStage] = useState(defaultStage);
     const [loading, setLoading] = useState(false);
+
+    // Sync state if props change (e.g. user lands on a results page via deep link)
+    useEffect(() => {
+        setStage(defaultStage);
+    }, [defaultStage]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        setTimeout(() => {
-            router.push("/eligibility-results");
-        }, 1200);
+
+        const formData = new FormData(e.target as HTMLFormElement);
+        const entityType = formData.get("entityType");
+        const amount = formData.get("amount");
+
+        const queryParams = new URLSearchParams({
+            entityType: entityType as string,
+            amount: amount as string,
+            stage: stage
+        });
+
+        // Fast navigation for instant feedback
+        router.push(`/eligibility-results?${queryParams.toString()}`);
+
+        // Reset loading shortly after navigation starts
+        setTimeout(() => setLoading(false), 2000);
     };
 
     return (
@@ -52,11 +80,15 @@ export default function EligibilityCard() {
                     <div className="space-y-2">
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Entity Type</label>
                         <div className="relative">
-                            <select className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-accent-green focus:ring-4 focus:ring-accent-green/5 focus:outline-none transition-all cursor-pointer">
-                                <option>Private Limited Company</option>
-                                <option>Proprietorship Firm</option>
-                                <option>LLP / Partnership</option>
-                                <option>Trust / NGO</option>
+                            <select
+                                name="entityType"
+                                defaultValue={defaultEntityType}
+                                className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-accent-green focus:ring-4 focus:ring-accent-green/5 focus:outline-none transition-all cursor-pointer"
+                            >
+                                <option value="Private Limited">Private Limited Company</option>
+                                <option value="Proprietorship">Proprietorship Firm</option>
+                                <option value="LLP">LLP / Partnership</option>
+                                <option value="NGO">Trust / NGO</option>
                             </select>
                             <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-accent-green">
                                 <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>
@@ -68,12 +100,16 @@ export default function EligibilityCard() {
                     <div className="space-y-2">
                         <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Funding Required</label>
                         <div className="relative">
-                            <select className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-accent-green focus:ring-4 focus:ring-accent-green/5 focus:outline-none transition-all cursor-pointer">
-                                <option>Below ₹10 Lakhs</option>
-                                <option>₹10L - ₹50L</option>
-                                <option>₹50L - ₹2Cr</option>
-                                <option>₹2Cr - ₹10Cr</option>
-                                <option>Above ₹10 Crores</option>
+                            <select
+                                name="amount"
+                                defaultValue={defaultAmount}
+                                className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-accent-green focus:ring-4 focus:ring-accent-green/5 focus:outline-none transition-all cursor-pointer"
+                            >
+                                <option value="10L">Below ₹10 Lakhs</option>
+                                <option value="50L">₹10L - ₹50L</option>
+                                <option value="2Cr">₹50L - ₹2Cr</option>
+                                <option value="10Cr">₹2Cr - ₹10Cr</option>
+                                <option value="Above 10Cr">Above ₹10 Crores</option>
                             </select>
                             <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-accent-green">
                                 <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>
@@ -112,11 +148,11 @@ export default function EligibilityCard() {
                                 {loading ? (
                                     <>
                                         <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                                        Analyzing...
+                                        Analyzing Profile...
                                     </>
                                 ) : (
                                     <>
-                                        Get Report Now
+                                        Update Analysis
                                         <svg className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                                     </>
                                 )}
