@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 // Strategic partners - add your logo files to public/logos/
 const partners = [
@@ -24,23 +26,41 @@ export default function LogoGrid() {
     <section className="section bg-white">
       <div className="container-max">
         {/* Trusted Network Badge */}
-        <div className="flex justify-center mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-4"
+        >
           <div className="inline-flex items-center gap-2 bg-cyan/10 rounded-full px-5 py-2.5 animate-pulse-glow">
             <span className="h-2 w-2 rounded-full bg-cyan animate-pulse" />
             <span className="text-sm font-medium text-cyan">Trusted Network</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-4xl font-bold text-ink">
-          Our Strategic <span className="gradient-text">Partners</span>
-        </h2>
-        <p className="text-center text-muted mt-3">
-          Collaborating with leaders to bring you the best funding solutions
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <h2 className="text-center text-3xl md:text-4xl font-bold text-ink">
+            Our Strategic <span className="gradient-text">Partners</span>
+          </h2>
+          <p className="text-center text-muted mt-3">
+            Collaborating with leaders to bring you the best funding solutions
+          </p>
+        </motion.div>
 
         {/* Partner Logos Scrolling Carousel - Right to Left */}
-        <div className="mt-10 overflow-hidden relative">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="mt-10 overflow-hidden relative"
+        >
           {/* Gradient overlays for smooth fade effect */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#f0fdf4] to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#f0fdf4] to-transparent z-10" />
@@ -78,18 +98,42 @@ export default function LogoGrid() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Certifications & Recognitions */}
         <div className="mt-16">
-          <h3 className="text-center text-2xl font-bold text-ink mb-8">
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center text-2xl font-bold text-ink mb-8"
+          >
             Certifications & Recognitions
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          </motion.h3>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.1
+                }
+              }
+            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {certifications.map((cert) => (
-              <div
+              <motion.div
                 key={cert.title}
-                className="flex items-center gap-4 p-6 bg-white border border-slate-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" }}
+                className="flex items-center gap-4 p-6 bg-white border border-slate-200 rounded-xl transition-all duration-300"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-green/10 text-accent-green text-xl font-bold">
                   {cert.icon}
@@ -98,18 +142,24 @@ export default function LogoGrid() {
                   <h4 className="font-semibold text-ink">{cert.title}</h4>
                   <p className="text-sm text-muted">{cert.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Stats Banner */}
-        <div className="mt-12 animated-gradient rounded-2xl p-10 text-white text-center shadow-glow-lg">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-12 animated-gradient rounded-2xl p-10 text-white text-center shadow-glow-lg"
+        >
           <p className="text-xl font-medium">
             Facilitated over <span className="gradient-text-green font-bold text-2xl">₹500 Crore</span> in MSME funding through strategic partnerships
           </p>
           <p className="text-slate-300 mt-3 text-base">Trusted by 20,000+ businesses across India</p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

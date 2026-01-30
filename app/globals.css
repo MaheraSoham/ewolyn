@@ -192,6 +192,14 @@ a:hover {
   background-clip: text;
 }
 
+.gradient-text-light {
+  background: linear-gradient(135deg, #22D3EE 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(34, 211, 238, 0.3);
+}
+
 .gradient-text-green {
   background: linear-gradient(135deg, #4CAF50 0%, #0BA5D8 100%);
   -webkit-background-clip: text;
