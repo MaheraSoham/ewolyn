@@ -2,14 +2,16 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import EligibilityCard from "@/components/EligibilityCard";
 
-const matchedSchemes = [
+const baseSchemes = [
     {
+        id: "pmegp",
         title: "PMEGP (Government Grant)",
-        matchScore: 98,
         amount: "Up to ₹50 Lakhs",
         subsidy: "15% to 35%",
         tenure: "7 Years",
@@ -20,12 +22,11 @@ const matchedSchemes = [
             "Minimal personal contribution",
             "No third-party guarantee"
         ],
-        isPopular: true,
         icon: "🏦"
     },
     {
+        id: "mudra",
         title: "MUDRA Loan Scheme",
-        matchScore: 95,
         amount: "Up to ₹10 Lakhs",
         interest: "8.05% onwards",
         tenure: "5-7 Years",
@@ -39,8 +40,8 @@ const matchedSchemes = [
         icon: "📋"
     },
     {
+        id: "cgtmse",
         title: "CGTMSE Guarantee",
-        matchScore: 88,
         amount: "Up to ₹5 Crores",
         guarantee: "75% to 85%",
         tenure: "Flexible",
@@ -54,8 +55,8 @@ const matchedSchemes = [
         icon: "🛡️"
     },
     {
+        id: "startup-india",
         title: "Startup India Seed Fund",
-        matchScore: 82,
         amount: "Up to ₹50 Lakhs",
         type: "Equity / Grant",
         stage: "Early Stage",
@@ -70,21 +71,85 @@ const matchedSchemes = [
     }
 ];
 
-export default function EligibilityResults() {
+function ResultsContent() {
+    const searchParams = useSearchParams();
     const [loading, setLoading] = useState(true);
     const [showConfetti, setShowConfetti] = useState(false);
     const [selectedScheme, setSelectedScheme] = useState<any>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [dynamicSchemes, setDynamicSchemes] = useState<any[]>([]);
 
     useEffect(() => {
+        setLoading(true); // Trigger loading screen for UX on change
+        const amount = searchParams.get("amount") || "10L";
+        const stage = searchParams.get("stage") || "Early";
+        const entityType = searchParams.get("entityType") || "Private Limited";
+
+        const processed = baseSchemes.map(scheme => {
+            let score = 80;
+            let reason = "Standard government matching criteria applied.";
+
+            if (scheme.id === "startup-india") {
+                if (stage === "Idea" || stage === "Early") {
+                    score += 18;
+                    reason = "High score due to early-stage innovation profile.";
+                }
+                if (entityType === "Proprietorship") {
+                    score -= 45;
+                    reason = "Proprietorships have limited eligibility for this specific seed fund.";
+                }
+                if (amount === "2Cr" || amount === "10Cr" || amount === "Above 10Cr") score -= 20;
+            }
+
+            if (scheme.id === "mudra") {
+                if (amount === "10L") {
+                    score += 18;
+                    reason = "Perfect match for micro-funding requirements.";
+                } else if (amount === "50L") {
+                    score -= 30;
+                    reason = "Amount exceeds standard MUDRA Shishu/Kishore limits.";
+                } else {
+                    score = 20;
+                    reason = "Ineligible: Loan amount exceeds MUDRA statutory cap of ₹10L.";
+                }
+            }
+
+            if (scheme.id === "cgtmse") {
+                if (amount === "2Cr" || amount === "10Cr") {
+                    score += 15;
+                    reason = "Ideal for collateral-free expansion capital.";
+                }
+                if (stage === "Idea") score -= 20;
+            }
+
+            if (scheme.id === "pmegp") {
+                if (stage === "Idea" || stage === "Early") score += 12;
+                if (amount === "2Cr" || amount === "10Cr" || amount === "Above 10Cr") {
+                    score = 15;
+                    reason = "Ineligible: PMEGP project cost cap is ₹50 Lakhs.";
+                }
+            }
+
+            return {
+                ...scheme,
+                matchScore: Math.min(Math.max(score, 10), 98),
+                isPopular: score >= 90,
+                matchReason: reason
+            };
+        })
+            .filter(s => s.matchScore >= 50)
+            .sort((a, b) => b.matchScore - a.matchScore);
+
+        setDynamicSchemes(processed);
+
         const timer = setTimeout(() => {
             setLoading(false);
             setShowConfetti(true);
-        }, 1800);
+        }, 1200);
         return () => clearTimeout(timer);
-    }, []);
+    }, [searchParams]);
 
     const openModal = (scheme: any) => {
         setSelectedScheme(scheme);
@@ -110,13 +175,11 @@ export default function EligibilityResults() {
         const company = formData.get("company") as string;
         const requirements = formData.get("requirements") as string;
 
-        // WhatsApp number and message formatting
         const whatsappNumber = "919876543210";
         const message = `Hello Ewolyn Team, I would like to apply for *${selectedScheme.title}*.\n\n*My Details:*\n👤 *Name:* ${name}\n📱 *Mobile:* ${phone}\n📧 *Email:* ${email}\n🏢 *Company:* ${company || 'N/A'}\n📝 *Requirements:* ${requirements || 'N/A'}\n\nPlease guide me with the further process.`;
 
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-        // Simulate a brief loading state before redirect
         setTimeout(() => {
             setIsSubmitting(false);
             setIsSubmitted(true);
@@ -162,15 +225,13 @@ export default function EligibilityResults() {
 
     return (
         <div className="min-h-screen bg-brand-dark-deep text-white selection:bg-accent-green/30">
-            <Navbar />
-
             <main className="pb-24">
                 <section className="hero-navy-gradient pt-32 pb-20 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
                     <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-green/10 rounded-full blur-[120px]"></div>
 
                     <div className="container-max relative z-10">
-                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="grid lg:grid-cols-2 gap-12 items-start">
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -182,21 +243,36 @@ export default function EligibilityResults() {
                                     className="inline-flex items-center gap-2 bg-accent-green/10 text-accent-green px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest border border-accent-green/20"
                                 >
                                     <span className="w-1.5 h-1.5 bg-accent-green rounded-full animate-pulse" />
-                                    Eligibility Verified ✓
+                                    Eligibility Analysis Active ✓
                                 </motion.div>
 
                                 <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tighter">
-                                    <span className="text-accent-green">Congratulations!</span><br />
-                                    <span className="text-white">You're Eligible</span>
+                                    <span className="text-white">Congratulations!</span><br />
+                                    <span className="text-accent-green">You're Eligible</span>
                                 </h1>
 
-                                <p className="text-gray-300 text-xl leading-relaxed max-w-xl">
-                                    Our AI matching engine has identified <span className="text-accent-green font-bold">{matchedSchemes.length} priority schemes</span> that match your business profile perfectly.
-                                </p>
+                                <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
+                                    <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.2em] mb-4">AI Analysis For Current Profile:</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {[
+                                            { label: "Stage", val: searchParams.get("stage") || "Early" },
+                                            { label: "Entity", val: searchParams.get("entityType") || "Private Limited" },
+                                            { label: "Amount", val: searchParams.get("amount") || "10L" }
+                                        ].map((p, i) => (
+                                            <div key={i} className="px-3 py-1.5 bg-white/10 rounded-lg border border-white/5 text-[11px] font-bold">
+                                                <span className="text-white/50 mr-2">{p.label}:</span>
+                                                <span className="text-accent-green">{p.val}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <p className="mt-6 text-blue-100/80 text-sm leading-relaxed">
+                                        Our AI engine has identified <span className="text-accent-green font-bold">{dynamicSchemes.length} priority schemes</span> that match your specific business parameters perfectly.
+                                    </p>
+                                </div>
 
                                 <div className="flex flex-wrap gap-3">
                                     {["Bank Linkage", "Subsidy Focus", "Zero Upfront Fee"].map(tag => (
-                                        <span key={tag} className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg text-[11px] font-bold text-slate-300 border border-white/10">
+                                        <span key={tag} className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg text-[11px] font-bold text-blue-100/70 border border-white/10">
                                             <svg className="w-3.5 h-3.5 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                                             {tag}
                                         </span>
@@ -206,35 +282,47 @@ export default function EligibilityResults() {
                                 <div className="pt-4">
                                     <Link href="#personalized-options">
                                         <motion.button
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            className="btn-hero-green"
+                                            whileHover={{ scale: 1.02, y: -2 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            className="px-8 py-4 bg-[#E31E24] hover:bg-[#c41a1f] text-white rounded-[1.25rem] flex items-center gap-4 group transition-all shadow-xl shadow-red-900/20"
                                         >
-                                            View Matched Options
+                                            <svg className="w-6 h-6 opacity-90" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M20 12v10H4V12M2 7h20v5H2V7zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zm0 0h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
+                                            </svg>
+                                            <span className="font-bold text-lg tracking-tight">View Your Funding Options</span>
+                                            <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                            </svg>
                                         </motion.button>
                                     </Link>
                                 </div>
                             </motion.div>
 
-                            <div className="grid grid-cols-2 gap-5">
-                                {[
-                                    { label: "High Match", val: "4", icon: "🟢", color: "from-accent-green/20 to-accent-green/5", border: "border-accent-green/20" },
-                                    { label: "Max Funding", val: "₹5Cr", icon: "💰", color: "from-blue-500/20 to-blue-500/5", border: "border-blue-500/20" },
-                                    { label: "Direct Approval", val: "48hrs", icon: "⚡", color: "from-cyan-500/20 to-cyan-500/5", border: "border-cyan-500/20" },
-                                    { label: "Active Support", val: "24/7", icon: "🤝", color: "from-purple-500/20 to-purple-500/5", border: "border-purple-500/20" }
-                                ].map((stat, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.3 + i * 0.1 }}
-                                        className={`bg-gradient-to-br ${stat.color} ${stat.border} border rounded-[2rem] p-8 backdrop-blur-md relative overflow-hidden group`}
-                                    >
-                                        <div className="text-3xl mb-4 group-hover:scale-110 transition-transform w-fit">{stat.icon}</div>
-                                        <div className="text-3xl font-bold mb-1 text-white">{stat.val}</div>
-                                        <div className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
-                                    </motion.div>
-                                ))}
+                            <div className="space-y-8">
+                                <div className="scale-90 origin-top-right">
+                                    <EligibilityCard
+                                        defaultAmount={searchParams.get("amount") || "10L"}
+                                        defaultStage={searchParams.get("stage") || "Early"}
+                                        defaultEntityType={searchParams.get("entityType") || "Private Limited"}
+                                    />
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    {[
+                                        { label: "Matches Found", val: dynamicSchemes.length.toString(), icon: "🟢", color: "from-accent-green/20 to-accent-green/5", border: "border-accent-green/20" },
+                                        { label: "Max Potential", val: dynamicSchemes.length > 0 ? (dynamicSchemes.some(s => s.id === 'cgtmse') ? '₹5Cr' : '₹50L') : 'N/A', icon: "💰", color: "from-blue-500/20 to-blue-500/5", border: "border-blue-500/20" },
+                                    ].map((stat, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            className={`bg-gradient-to-br ${stat.color} ${stat.border} border rounded-2xl p-6 backdrop-blur-md relative overflow-hidden group`}
+                                        >
+                                            <div className="text-2xl mb-2">{stat.icon}</div>
+                                            <div className="text-2xl font-bold mb-1 text-white">{stat.val}</div>
+                                            <div className="text-[10px] text-white/50 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -270,7 +358,7 @@ export default function EligibilityResults() {
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6">
-                                {matchedSchemes.map((scheme, idx) => (
+                                {dynamicSchemes.map((scheme: any, idx: number) => (
                                     <motion.div
                                         key={idx}
                                         initial={{ opacity: 0, y: 30 }}
@@ -293,8 +381,8 @@ export default function EligibilityResults() {
                                             </div>
                                             <div className="flex-1">
                                                 <h3 className="text-lg font-bold mb-1 leading-tight text-brand-navy">{scheme.title}</h3>
-                                                <div className="inline-flex items-center gap-2 bg-accent-green/10 text-accent-green text-[8px] font-black px-2 py-0.5 rounded-md border border-accent-green/20">
-                                                    ELITE MATCH
+                                                <div className={`inline-flex items-center gap-2 ${scheme.matchScore >= 90 ? 'bg-accent-green/10 text-accent-green border-accent-green/20' : 'bg-orange-500/10 text-orange-600 border-orange-500/20'} text-[8px] font-black px-2 py-0.5 rounded-md border`}>
+                                                    {scheme.matchScore}% MATCH
                                                 </div>
                                             </div>
                                         </div>
@@ -319,8 +407,17 @@ export default function EligibilityResults() {
                                         </div>
 
                                         <div className="mb-6 flex-1">
+                                            <div className="mb-4 p-3 bg-slate-50 border border-slate-100 rounded-xl">
+                                                <p className="text-[10px] font-black text-brand-navy uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                                                    <span className="w-1.5 h-1.5 bg-accent-green rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
+                                                    Why this match?
+                                                </p>
+                                                <p className="text-[11px] text-slate-600 font-medium leading-relaxed italic">
+                                                    "{scheme.matchReason}"
+                                                </p>
+                                            </div>
                                             <ul className="space-y-2">
-                                                {scheme.benefits.map((benefit, bidx) => (
+                                                {scheme.benefits.map((benefit: string, bidx: number) => (
                                                     <li key={bidx} className="flex items-start gap-2 text-[11px] text-slate-600 leading-tight font-semibold">
                                                         <div className="mt-1 w-1 h-1 rounded-full bg-accent-green" />
                                                         {benefit}
@@ -548,7 +645,6 @@ export default function EligibilityResults() {
                 )}
             </AnimatePresence>
 
-            <Footer />
 
             <AnimatePresence>
                 {showConfetti && (
@@ -575,5 +671,29 @@ export default function EligibilityResults() {
                 )}
             </AnimatePresence>
         </div>
+    );
+}
+
+function ResultsWrapper() {
+    const searchParams = useSearchParams();
+    // Unique key forces a clean re-render of the Content when parameters change
+    const uniqueKey = searchParams.toString();
+
+    return <ResultsContent key={uniqueKey} />;
+}
+
+export default function EligibilityResults() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-brand-navy flex flex-col items-center justify-center relative overflow-hidden">
+                <div className="relative w-20 h-20 mx-auto mb-8">
+                    <div className="absolute inset-0 border-4 border-white/10 rounded-full"></div>
+                    <div className="absolute inset-0 border-4 border-accent-green border-t-transparent rounded-full animate-spin"></div>
+                </div>
+                <h2 className="text-white font-bold text-2xl mb-2 tracking-tight">Initializing Engine...</h2>
+            </div>
+        }>
+            <ResultsWrapper />
+        </Suspense>
     );
 }
