@@ -18,7 +18,7 @@ const fundingOptions = [
     tags: ["Subsidy", "New venture"],
     success: "92%",
     time: "30-45 days",
-    href: "/services/pm-employment-generation-programme",
+    href: "/services/pmegp",
     popular: true,
   },
   {
@@ -27,7 +27,7 @@ const fundingOptions = [
     tags: ["Guarantee", "Collateral-free"],
     success: "95%",
     time: "15-20 days",
-    href: "/services/cgtmse-credit-guarantee",
+    href: "/services/cgtmse",
     popular: false,
   },
   {
@@ -110,51 +110,50 @@ export default function FundingOptions() {
                 y: -10,
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
-              className="card bg-white border border-transparent hover:border-cyan/30 transition-all duration-300 relative"
+              className="card bg-white border border-transparent hover:border-cyan/30 transition-all duration-300 relative p-0 overflow-hidden"
             >
-              {/* Popular Badge */}
-              {option.popular && (
-                <div className="absolute -top-3 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
-                  ⚡ Popular
-                </div>
-              )}
+              <Link href={option.href} className="block w-full h-full p-6">
+                {/* Popular Badge */}
+                {option.popular && (
+                  <div className="absolute -top-3 right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+                    ⚡ Popular
+                  </div>
+                )}
 
-              <h3 className="text-lg font-bold text-ink text-clamp-2">{option.title}</h3>
-              <p className="text-sm text-muted mt-2 text-clamp-3">{option.description}</p>
+                <h3 className="text-lg font-bold text-ink text-clamp-2">{option.title}</h3>
+                <p className="text-sm text-muted mt-2 text-clamp-3">{option.description}</p>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {option.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-cyan/10 text-cyan text-xs font-medium px-3 py-1 rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {option.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-cyan/10 text-cyan text-xs font-medium px-3 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-              {/* Stats */}
-              <div className="flex items-center gap-6 mt-4 pt-4 border-t border-slate-100">
-                <div>
-                  <p className="text-xs text-muted">Success</p>
-                  <p className="font-bold text-accent-green">{option.success}</p>
+                {/* Stats */}
+                <div className="flex items-center gap-6 mt-4 pt-4 border-t border-slate-100">
+                  <div>
+                    <p className="text-xs text-muted">Success</p>
+                    <p className="font-bold text-accent-green">{option.success}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted">Time</p>
+                    <p className="font-bold text-ink">{option.time}</p>
+                  </div>
+                  <div className="ml-auto text-cyan hover:text-cyan-dark transition-colors">
+                    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </motion.div>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs text-muted">Time</p>
-                  <p className="font-bold text-ink">{option.time}</p>
-                </div>
-                <Link
-                  href={option.href}
-                  className="ml-auto text-cyan hover:text-cyan-dark transition-colors"
-                >
-                  <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </motion.div>
-                </Link>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

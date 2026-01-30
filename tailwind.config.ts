@@ -13,6 +13,7 @@ const config: Config = {
           dark: '#0f172a',
           light: '#2563A3',
           navy: '#1B4F8C',
+          secondary: '#F0FDF4', // Light desaturated green from client
         },
         crimson: {
           DEFAULT: '#c11e2f', // Crimson red from Enego
@@ -35,6 +36,7 @@ const config: Config = {
         accent: {
           green: '#4CAF50',
           'green-dark': '#388E3C',
+          'green-light': '#F0FDF4',
           teal: '#0BA5D8',
           cyan: '#0BA5D8',
         },

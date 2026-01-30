@@ -14,10 +14,12 @@
   --fg: #0f172a;
   --brand-navy: #1B4F8C;
   --brand-blue: #1B4F8C;
+  --brand-secondary: #F0FDF4;
   --primary-cyan: #0BA5D8;
   --primary-cyan-dark: #0891B2;
   --accent-green: #4CAF50;
   --accent-green-dark: #388E3C;
+  --accent-green-light: #F0FDF4;
 }
 
 html,
@@ -368,9 +370,9 @@ a:hover {
   animation-play-state: paused;
 }
 
-/* Hero Navy Gradient Background */
+/* Hero Navy Gradient Background - Updated to Brighter Corporate Blue */
 .hero-navy-gradient {
-  background: linear-gradient(135deg, #0a192f 0%, #1a2f4f 50%, #0a192f 100%);
+  background: linear-gradient(135deg, #1B4F8C 0%, #2672cf 100%);
   background-size: 200% 200%;
   animation: gradientShift 15s ease infinite;
 }
@@ -409,10 +411,10 @@ a:hover {
 
 /* Stats Card with Glassmorphism */
 .stats-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
   padding: 2.5rem 2rem;
   min-width: 140px;
@@ -420,10 +422,10 @@ a:hover {
 }
 
 .stats-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(76, 175, 80, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* Fade In Up Animation */
@@ -462,7 +464,7 @@ a:hover {
 
 /* Alternating Section Backgrounds */
 .section-navy {
-  background: linear-gradient(135deg, #0a192f 0%, #1a2f4f 50%, #0a192f 100%);
+  background: linear-gradient(135deg, #1B4F8C 0%, #2563A3 100%);
   background-size: 200% 200%;
   animation: gradientShift 15s ease infinite;
   color: white;
