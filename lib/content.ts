@@ -29,6 +29,7 @@ export const serviceGroups = [
       "Startup India Seed Fund",
       "CGTMSE Credit Guarantee",
       "Mudra Yojana (PMMY)",
+      "Tax Exemption Benefits",
     ],
   },
   {
