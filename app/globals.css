@@ -479,3 +479,26 @@ a:hover {
 section {
   transition: background-color 0.3s ease;
 }
+
+/* Footer Logo Shadow Animation */
+@keyframes logo-shadow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(27, 79, 140, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(27, 79, 140, 0.7);
+    transform: scale(1.02);
+  }
+}
+
+.animate-logo-shadow {
+  animation: logo-shadow-pulse 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.animate-logo-shadow:hover {
+  animation-play-state: paused;
+  box-shadow: 0 0 45px rgba(27, 79, 140, 0.9);
+  transform: scale(1.05);
+}

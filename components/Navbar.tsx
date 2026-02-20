@@ -168,7 +168,7 @@ export default function Navbar() {
                 alt="Ewolyn - Evolving Indian StartUps & MSMEs"
                 width={isScrolled ? 140 : 180}
                 height={isScrolled ? 40 : 56}
-                className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-14'} w-auto`}
+                className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-14'} w-auto rounded-2xl`}
                 priority
               />
             </Link>

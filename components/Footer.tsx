@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="container-max grid gap-10 py-12 md:grid-cols-4">
         <div>
           <div className="mb-4">
-            <Image 
-              src="/logo.jpg" 
-              alt="Ewolyn - Evolving Indian StartUps & MSMEs" 
-              width={520} 
-              height={200} 
-              className="h-52 w-auto bg-white rounded p-2"
+            <Image
+              src="/logo.jpg"
+              alt="Ewolyn - Evolving Indian StartUps & MSMEs"
+              width={520}
+              height={200}
+              className="h-52 w-auto bg-white rounded-2xl p-2 animate-logo-shadow"
             />
           </div>
           <p className="text-sm text-slate-400">
