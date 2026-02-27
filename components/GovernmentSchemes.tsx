@@ -28,12 +28,6 @@ const schemes = [
     icon: "🌱",
   },
   {
-    title: "Tax Exemption Benefits",
-    description: "Income tax, GST & compliance exemptions for eligible businesses.",
-    href: "/services/tax-exemption-benefits",
-    icon: "📋",
-  },
-  {
     title: "Venture Capital Support",
     description: "Equity & VC access for high-growth potential ventures.",
     href: "/services/venture-capital-support",

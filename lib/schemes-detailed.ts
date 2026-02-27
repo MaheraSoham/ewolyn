@@ -2084,6 +2084,534 @@ export const detailedSchemes: DetailedScheme[] = [
       ctaTitle: "Elevate Your Impact",
       ctaDescription: "Let's review your NGO's compliance and build your path to CSR funding."
     }
+  },
+  {
+    slug: "pm-employment-generation-programme",
+    title: "PM Employment Generation Programme (PMEGP)",
+    subtitle: "Complete Guide to Subsidy, Eligibility & Application",
+    tags: ["Subsidy", "Employment", "MSME", "Manufacturing"],
+    heroDescription: "Prime Minister's Employment Generation Programme (PMEGP) is a flagship credit-linked subsidy scheme that provides margin money subsidies of 15–35% to first-generation entrepreneurs to set up new micro-enterprises in manufacturing and service sectors.",
+    heroStats: [
+      { value: "35%", label: "Max Subsidy" },
+      { value: "₹50L", label: "Manufacturing Limit" },
+      { value: "₹20L", label: "Service Limit" },
+      { value: "30-45", label: "Days Approval" }
+    ],
+    readTime: "10 min read",
+    lastUpdated: "February 10, 2026",
+    author: "Ewolyn Team",
+
+    tableOfContents: [
+      { id: "introduction", title: "Introduction" },
+      { id: "what-is-pm-employment-generation-programme", title: "What is PMEGP?" },
+      { id: "eligibility", title: "Eligibility" },
+      { id: "eligible-projects", title: "Eligible Projects" },
+      { id: "key-benefits", title: "Key Benefits" },
+      { id: "application-process", title: "Application Process" },
+      { id: "documents-required", title: "Documents Required" },
+      { id: "common-mistakes", title: "Common Mistakes" },
+      { id: "faqs", title: "FAQs" },
+      { id: "conclusion", title: "Conclusion" }
+    ],
+
+    introduction: {
+      paragraphs: [
+        "The Prime Minister's Employment Generation Programme (PMEGP) is one of India's most impactful credit-linked subsidy schemes, administered by the Ministry of MSME through KVIC (Khadi and Village Industries Commission), KVIB at the state level, and District Industries Centres (DICs).",
+        "Launched to address the twin objectives of generating sustainable employment and enabling first-generation entrepreneurs to realize their business dreams, PMEGP bridges the gap between aspiration and access to capital.",
+        "Unlike a direct grant, PMEGP works as a margin money subsidy—it reduces the promoter's own contribution requirement, making it significantly easier to secure bank financing even without extensive collateral."
+      ],
+      quote: "PMEGP has enabled over 8 lakh micro-enterprises and generated 68 lakh employment opportunities since its inception, making it one of the most successful MSME programs in India."
+    },
+
+    whatIs: {
+      title: "What is the PM Employment Generation Programme (PMEGP)?",
+      paragraphs: [
+        "PMEGP is a credit-linked subsidy scheme that merges two older schemes—PMRY (Prime Minister's Rojgar Yojana) and REGP (Rural Employment Generation Programme). It provides a one-time margin money subsidy to help new entrepreneurs cover the promoter's contribution needed to secure bank loans.",
+        "The subsidy ranges from 15% to 35% of the total project cost, depending on the category of the beneficiary (general vs. special) and the location of the unit (urban vs. rural). The project cost covers both fixed capital investment (machinery, land, building) and working capital.",
+        "The scheme is available for manufacturing projects up to ₹50 lakh and service/trading projects up to ₹20 lakh. The entire subsidy amount is kept in a Term Deposit Receipt (TDR) linked to the loan account and is adjusted after a 3-year lock-in period upon successful performance."
+      ]
+    },
+
+    eligibility: {
+      intro: "PMEGP targets first-time entrepreneurs across various demographic groups across India:",
+      entities: [
+        {
+          title: "Individuals (18+ Years)",
+          description: "Any Indian citizen above 18 years of age. For projects above ₹10 lakh in manufacturing and ₹5 lakh in services, minimum 8th standard pass is required."
+        },
+        {
+          title: "Self-Help Groups (SHGs)",
+          description: "Even those who have not availed benefits under any other scheme. SHGs from Below Poverty Line (BPL) families are also eligible."
+        },
+        {
+          title: "Institutions Registered Under Societies Registration Act, 1860",
+          description: "Charitable trusts, co-operative societies, and production co-operatives eligible under PMEGP."
+        },
+        {
+          title: "Special Category Beneficiaries",
+          description: "SC/ST, OBC, minorities, women, ex-servicemen, physically handicapped, NER residents, hill and border areas entrepreneurs receive higher subsidy rates."
+        },
+        {
+          title: "Existing PMEGP/MUDRA Units",
+          description: "Units that have successfully run for 3 years under PMEGP or MUDRA can apply for a second loan of up to ₹1 crore for upgradation under PMEGP."
+        }
+      ],
+      checklist: [
+        "Only new projects are eligible—no expansion of existing businesses.",
+        "Applicant should not be a defaulter with any nationalized bank or NBFC.",
+        "Units that have already received government subsidy under any other scheme are not eligible (except for tie-ups with NABARD and NHB).",
+        "Minimum 8th pass qualification for projects above threshold amounts."
+      ]
+    },
+
+    eligibleProjects: {
+      intro: "PMEGP covers a wide range of manufacturing and service sector activities across 36+ approved clusters:",
+      projects: [
+        {
+          title: "Food Processing & Agro-based",
+          description: "Pickle, papad, jam, juice, flour mill, rice milling, spice grinding, and other agro-processing units.",
+          icon: "🌾"
+        },
+        {
+          title: "Textile & Garments",
+          description: "Handloom/powerloom weaving, readymade garments, embroidery, knitting, and khadi products manufacturing.",
+          icon: "🧵"
+        },
+        {
+          title: "Wood & Furniture",
+          description: "Wooden furniture, bamboo articles, cane products, and carpentry workshops.",
+          icon: "🪑"
+        },
+        {
+          title: "Service Sector",
+          description: "Beauty salons, repairs shops, laundry, tailoring, digital printing, photography studios, and similar services.",
+          icon: "✂️"
+        },
+        {
+          title: "Minerals & Chemicals",
+          description: "Chalk, candles, detergents, phenyl, agarbatti, plastic products, and construction materials.",
+          icon: "⚗️"
+        },
+        {
+          title: "Handmade Paper & Packaging",
+          description: "Eco-friendly packaging, handmade paper products, and stationery manufacturing.",
+          icon: "📦"
+        }
+      ]
+    },
+
+    benefits: {
+      highlights: [
+        {
+          value: "35%",
+          label: "Max Subsidy (Rural, Special)",
+          description: "Special category beneficiaries in rural areas receive the highest margin money subsidy of 35% of project cost.",
+          icon: "💰"
+        },
+        {
+          value: "25%",
+          label: "Subsidy (Rural, General)",
+          description: "General category applicants in rural areas receive 25% margin money subsidy.",
+          icon: "🏘️"
+        },
+        {
+          value: "25%",
+          label: "Subsidy (Urban, Special)",
+          description: "Special category beneficiaries in urban areas receive 25% of project cost as subsidy.",
+          icon: "🏙️"
+        },
+        {
+          value: "15%",
+          label: "Subsidy (Urban, General)",
+          description: "General category applicants in urban areas receive 15% of project cost as margin money subsidy.",
+          icon: "📍"
+        }
+      ],
+      lendingInstitutions: [
+        "Nationalized Banks (SBI, PNB, Bank of Baroda, etc.)",
+        "Regional Rural Banks (RRBs)",
+        "Co-operative Banks",
+        "Small Industries Development Bank of India (SIDBI)",
+        "Micro Finance Institutions (MFIs) linked to NABARD"
+      ]
+    },
+
+    applicationProcess: {
+      steps: [
+        {
+          title: "Register on the PMEGP E-portal",
+          description: "Create an account at kviconline.gov.in/pmegpeportal and select your implementing agency (KVIC / KVIB / DIC based on your project type and location).",
+          cta: "Need help registering? Contact us"
+        },
+        {
+          title: "Fill the Online Application",
+          description: "Provide business details, project description, employment generation numbers, promoter contribution, and bank preference."
+        },
+        {
+          title: "Submit Project Report",
+          description: "Prepare and upload a Detailed Project Report covering machinery list, land/building details, working capital needs, and market assessment."
+        },
+        {
+          title: "Interview & Screening by Task Force",
+          description: "The District-Level Task Force Committee (DLTFC) evaluates your application, verifies documents, and shortlists candidates for bank linkage."
+        },
+        {
+          title: "Bank Appraisal & Loan Sanction",
+          description: "The selected bank appraises the project, verifies the margin money contribution (5-10% from the applicant), and sanctions the composite loan."
+        },
+        {
+          title: "Subsidy Disbursement & Lock-in",
+          description: "The subsidy amount is placed in a TDR (Term Deposit Receipt) linked to the loan account. After 3 years of successful project operation, the subsidy is adjusted against the principal outstanding."
+        }
+      ],
+      timeline: "The entire PMEGP application process from submission to first disbursement typically takes 30 to 60 days, depending on state administration efficiency and bank processing."
+    },
+
+    documents: {
+      list: [
+        "PMEGP E-portal Application Form (online)",
+        "Project Report / Detailed Project Report (DPR)",
+        "Identity Proof: Aadhaar Card, PAN Card, Voter ID",
+        "Address Proof: Utility Bill, Aadhaar, Rent Agreement",
+        "Educational Qualification Certificate (8th Pass Marksheet)",
+        "Caste / Special Category Certificate (SC/ST/OBC/Minority/Women/Ex-Servicemen)",
+        "EDP (Entrepreneurship Development Programme) Training Certificate",
+        "Passport Size Photographs (3–4)",
+        "Bank Account Statement (6 months)",
+        "Quotations for Machinery and Equipment"
+      ],
+      note: "The EDP training certificate is mandatory before final loan disbursement. Many applicants miss this step. Ewolyn helps you identify accredited EDP training centers in your area."
+    },
+
+    commonMistakes: [
+      {
+        title: "Applying for Expansion Instead of New Unit",
+        description: "PMEGP is strictly for new micro-enterprises. Applying with an existing business address or machinery causes immediate rejection."
+      },
+      {
+        title: "Unrealistic Project Cost",
+        description: "Quoting an inflated or too-low project cost without proper quotations raises red flags during bank appraisal."
+      },
+      {
+        title: "Missing EDP Training Certificate",
+        description: "Many applicants forget to complete the mandatory Entrepreneurship Development Programme (EDP) training, which delays final subsidy linkage."
+      },
+      {
+        title: "No Market Survey / Demand Analysis",
+        description: "A DPR without any reference to local market demand or competition analysis is often viewed unfavorably by the Task Force Committee."
+      },
+      {
+        title: "Bank Selection Mismatch",
+        description: "Choosing a bank that is not familiar with the PMEGP loan process leads to delays. Nationalized banks or RRBs with dedicated MSME desks are recommended."
+      }
+    ],
+
+    faqs: [
+      {
+        question: "What is the maximum project cost eligible under PMEGP?",
+        answer: "The maximum project cost for manufacturing is ₹50 lakh and for service and business/trading sector is ₹20 lakh."
+      },
+      {
+        question: "What is the beneficiary's own contribution in PMEGP?",
+        answer: "For general category: 10% of project cost. For special category (SC/ST/OBC/women/minorities/ex-servicemen): only 5% of the project cost."
+      },
+      {
+        question: "Can I apply for PMEGP online?",
+        answer: "Yes, applications are submitted online at kviconline.gov.in/pmegpeportal. The entire process including document upload is done digitally."
+      },
+      {
+        question: "Is working capital included in the project cost?",
+        answer: "Yes, working capital up to one cycle (maximum 25% of the total project cost) can be included in the project cost for PMEGP calculation."
+      },
+      {
+        question: "What happens to the subsidy after the 3-year lock-in period?",
+        answer: "After 3 years of satisfactory repayment and project performance, the subsidy (in TDR form) is released and adjusted against the outstanding principal loan amount."
+      },
+      {
+        question: "Can I get a second PMEGP loan?",
+        answer: "Yes. Existing PMEGP/MUDRA beneficiaries who have successfully operated their unit for 3 years can apply for a second loan up to ₹1 crore for unit upgradation with 15% subsidy."
+      },
+      {
+        question: "Which industries are NOT eligible under PMEGP?",
+        answer: "Industries using fossil fuels (except for some agro-processing), meat processing, tobacco, liquor-related businesses, and highly polluting units are not eligible."
+      }
+    ],
+
+    conclusion: {
+      paragraphs: [
+        "PMEGP remains one of the most powerful tools for first-generation entrepreneurs to launch their micro-enterprise with minimal personal investment. The combination of bank credit and government margin money subsidy dramatically lowers the financial barrier to entrepreneurship.",
+        "However, successful navigation of PMEGP requires meticulous documentation, a well-prepared DPR, correct project category classification, and timely EDP training. Missing any one of these elements can lead to delays or rejection.",
+        "At Ewolyn, we specialize in end-to-end PMEGP consulting—from project ideation and DPR preparation to follow-up with Task Force Committees and bank coordination. We ensure your PMEGP application is processed at the fastest possible pace."
+      ],
+      ctaTitle: "Apply for PMEGP with Expert Guidance",
+      ctaDescription: "Let our certified consultants handle your PMEGP application from DPR to subsidy disbursal—with 92%+ approval rate."
+    }
+  },
+  {
+    slug: "epcg-scheme",
+    title: "EPCG Scheme (Export Promotion Capital Goods)",
+    subtitle: "Complete Guide to Duty Savings, Eligibility & Compliance",
+    tags: ["Export", "Capital Goods", "Duty Exemption", "DGFT"],
+    heroDescription: "The Export Promotion Capital Goods (EPCG) Scheme allows exporters to import capital goods for pre-production, production, and post-production at zero customs duty, subject to an export obligation of 6 times the duty saved over 6 years.",
+    heroStats: [
+      { value: "0%", label: "Customs Duty" },
+      { value: "6X", label: "Export Obligation" },
+      { value: "6 Yrs", label: "EO Period" },
+      { value: "DGFT", label: "Authority" }
+    ],
+    readTime: "12 min read",
+    lastUpdated: "February 15, 2026",
+    author: "Ewolyn Team",
+
+    tableOfContents: [
+      { id: "introduction", title: "Introduction" },
+      { id: "what-is-epcg-scheme", title: "What is EPCG?" },
+      { id: "eligibility", title: "Eligibility" },
+      { id: "eligible-projects", title: "Eligible Capital Goods" },
+      { id: "key-benefits", title: "Key Benefits" },
+      { id: "application-process", title: "Application Process" },
+      { id: "documents-required", title: "Documents Required" },
+      { id: "common-mistakes", title: "Common Mistakes" },
+      { id: "faqs", title: "FAQs" },
+      { id: "conclusion", title: "Conclusion" }
+    ],
+
+    introduction: {
+      paragraphs: [
+        "The Export Promotion Capital Goods (EPCG) Scheme is a flagship export incentive scheme administered by the Directorate General of Foreign Trade (DGFT) under the Ministry of Commerce & Industry, Government of India.",
+        "The scheme addresses one of the biggest competitive challenges for Indian exporters—the high cost of modern machinery and technology. By allowing import of capital goods at zero customs duty, EPCG provides an immediate cost benefit that directly improves export competitiveness.",
+        "In exchange for this duty concession, the EPCG license holder commits to fulfilling a specified Export Obligation (EO)—a commitment to export goods or services worth at least 6 times the duty saved, within 6 years from the date of issue of the EPCG authorization."
+      ],
+      quote: "The EPCG scheme is a strategic tool for export-oriented MSMEs and large enterprises alike—transforming duty savings into a competitive edge in global markets."
+    },
+
+    whatIs: {
+      title: "What is the EPCG (Export Promotion Capital Goods) Scheme?",
+      paragraphs: [
+        "The EPCG Scheme permits import of capital goods—machinery, equipment, components, and spares—required for manufacturing export products, at nil customs duty (i.e., Basic Customs Duty + IGST exemption). This is a significant benefit given that heavy machinery can attract duties of 18–28%.",
+        "The scheme is governed by Chapter 5 of the Foreign Trade Policy (FTP) of India. An EPCG Authorization is issued by the relevant Regional Authority (RA) of DGFT, and the importer must obtain this authorization before placing the import order.",
+        "The Export Obligation (EO) is calculated as 6 times the duty saved (FOB value). For example, if the duty saved on imported machinery is ₹1 crore, the exporter must export goods worth ₹6 crore over 6 years. EPCG authorizations also carry a 'Specific EO'—achieving 50% of the EO in the first 4 years."
+      ]
+    },
+
+    eligibility: {
+      intro: "The EPCG Scheme is available to a wide range of manufacturers and service exporters:",
+      entities: [
+        {
+          title: "Manufacturer Exporters",
+          description: "Companies that manufacture goods in India and export them in their own name. EPCG capital goods must be used in production of the exported product."
+        },
+        {
+          title: "Merchant Exporters",
+          description: "Exporters who purchase goods from manufacturers and export them. Can apply for EPCG with a tie-up with a supporting manufacturer."
+        },
+        {
+          title: "Service Exporters",
+          description: "Hotels, hospitals, software companies, and other service providers who earn foreign exchange are eligible for EPCG. EO is fulfilled through foreign exchange earnings."
+        },
+        {
+          title: "Common Service Providers (CSPs)",
+          description: "SEZ units, EPZs, and recognized Common Service Providers (like testing labs for exporters) may also be eligible."
+        },
+        {
+          title: "Status Holders",
+          description: "Star Export Houses (One to Five Star) have relaxed conditions and concessional Export Obligation norms under EPCG."
+        }
+      ],
+      checklist: [
+        "Must have an Import Export Code (IEC) from DGFT.",
+        "Must have GST registration.",
+        "The capital goods must be directly related to the export product/service.",
+        "Annual Average Export Obligation (AAEO) must meet the calculated threshold.",
+        "EPCG authorization must be obtained BEFORE importing the capital goods."
+      ]
+    },
+
+    eligibleProjects: {
+      intro: "EPCG covers import of capital goods across the following categories for export production:",
+      projects: [
+        {
+          title: "Plant & Machinery",
+          description: "Complete manufacturing lines, CNC machines, injection molding, auto-components, textile machinery, and any production equipment.",
+          icon: "⚙️"
+        },
+        {
+          title: "Spares & Accessories",
+          description: "Spares and accessories up to 10% of the CIF value of the capital goods are permissible under the EPCG authorization.",
+          icon: "🔩"
+        },
+        {
+          title: "Technology Upgrades",
+          description: "Computer systems, servers, testing equipment, laboratory instruments, and other technology-driven production upgrades.",
+          icon: "💻"
+        },
+        {
+          title: "Service Sector Capital Goods",
+          description: "Equipment for hotels (kitchen, laundry), hospitals (medical devices, scanners), IT companies (servers, networking), and other service exporters.",
+          icon: "🏢"
+        },
+        {
+          title: "Pre & Post Production Equipment",
+          description: "Goods used in pre-production activities (R&D, quality testing) or post-production (packaging, logistics) directly linked to export goods are also covered.",
+          icon: "📦"
+        },
+        {
+          title: "Domestically Sourced Capital Goods",
+          description: "EPCG also allows procurement of capital goods from domestic manufacturers at concessional GST rate (equivalent to import duty benefit), promoting Make in India.",
+          icon: "🇮🇳"
+        }
+      ]
+    },
+
+    benefits: {
+      highlights: [
+        {
+          value: "0%",
+          label: "Customs Duty on Import",
+          description: "Complete exemption from Basic Customs Duty and IGST on capital goods imported under EPCG authorization—often saving 18–28% of machinery cost.",
+          icon: "💰"
+        },
+        {
+          value: "6X",
+          label: "Export Obligation (EO)",
+          description: "Fulfill exports worth 6 times the duty saved over 6 years. Status holders and MSME units get relaxed EO norms.",
+          icon: "📈"
+        },
+        {
+          value: "20%",
+          label: "EO Reduction for Domestic Sourcing",
+          description: "If capital goods are sourced domestically instead of imported, the Export Obligation is reduced by 20%.",
+          icon: "🏭"
+        },
+        {
+          value: "25%",
+          label: "Offset via Agri Exports",
+          description: "Export of agricultural products, handicrafts, and other specified items can offset up to 25% of the EO through FTP provisions.",
+          icon: "🌾"
+        }
+      ],
+      lendingInstitutions: [
+        "DGFT Regional Offices (Application Authority)",
+        "Customs Authorities (Duty Exemption at Port)",
+        "ECGC (for export credit insurance)",
+        "EXIM Bank (for pre/post-shipment finance)"
+      ]
+    },
+
+    applicationProcess: {
+      steps: [
+        {
+          title: "Obtain Import Export Code (IEC)",
+          description: "If not already done, apply for IEC from DGFT online portal (dgft.gov.in). This is the basic prerequisite for any export/import authorization.",
+          cta: "Need IEC registration? Contact us"
+        },
+        {
+          title: "Prepare the EPCG Authorization Application",
+          description: "File the application online on DGFT e-portal (dgft.gov.in) along with Aayaat Niryaat Form ANF 5A. Specify the capital goods to import, CIF value, and export product details."
+        },
+        {
+          title: "Pay Application Fee",
+          description: "Pay the applicable EPCG application fee based on the CIF value of the capital goods (typically 0.5% of CIF value, subject to a minimum of ₹5,000)."
+        },
+        {
+          title: "DGFT Review & EPCG License Issuance",
+          description: "DGFT Regional Authority reviews the application. Upon approval, the EPCG Authorization (License) is issued, specifying duty saved, export obligation, and validity period."
+        },
+        {
+          title: "Register with Customs & Import Machinery",
+          description: "Register the EPCG Authorization at the port of import with Customs. Import the capital goods duty-free within the authorization's validity period (24 months)."
+        },
+        {
+          title: "Install & Commence Production",
+          description: "Install the capital goods and obtain a Chartered Engineer Certificate confirming installation and commissioning for export production."
+        },
+        {
+          title: "Fulfill Export Obligation & Redemption",
+          description: "Export products worth 6X the duty saved within 6 years. Submit export documents (shipping bills, bank realization certificates) to DGFT to get the EPCG obligation 'redeemed' or closed."
+        }
+      ],
+      timeline: "EPCG Authorization is typically issued within 3–10 working days if the application is complete. Importing the capital goods can take 30–90 days depending on the vendor country and shipping."
+    },
+
+    documents: {
+      list: [
+        "Import Export Code (IEC) Certificate",
+        "Aayaat Niryaat Form ANF 5A (Online Application)",
+        "Proforma Invoice / Purchase Order for Capital Goods (in USD/foreign currency)",
+        "Technical brochure of the capital goods to be imported",
+        "Self-certified CA Certificate for Annual Average Export (last 3 years)",
+        "Copy of GST Registration Certificate",
+        "Copy of last 3 years' ITR or Audited Balance Sheet",
+        "Bank Realization Certificates (BRC) for past export performance",
+        "Industrial Entrepreneur Memorandum (IEM) / Udyam Registration (for manufacturing units)",
+        "Any existing EPCG Authorizations (if second license is being applied for)"
+      ],
+      note: "The proforma invoice from the foreign supplier and the list of capital goods must be specific (with HS Codes) and match the manufacturing process of the export product. Mismatched HS codes are the most common cause of EPCG application rejection."
+    },
+
+    commonMistakes: [
+      {
+        title: "Importing Before Obtaining EPCG Authorization",
+        description: "The EPCG license must be obtained BEFORE importing the machinery. Importing first and then applying for EPCG is not permitted and will result in full duty payment."
+      },
+      {
+        title: "Incorrect HS Code Classification",
+        description: "Using wrong HS codes for capital goods in the application leads to mismatch with customs records and difficulties in redemption."
+      },
+      {
+        title: "Not Maintaining Export Proof",
+        description: "Failure to maintain and submit Shipping Bills, BRCs, and eBRC records leads to inability to prove export obligation fulfillment."
+      },
+      {
+        title: "Missing Annual EO Redemption Filings",
+        description: "EPCG holders must file annual reports with DGFT to track EO fulfillment. Missing filings can result in penalties under Foreign Trade (Development & Regulation) Act."
+      },
+      {
+        title: "Using Capital Goods for Non-Export Production",
+        description: "EPCG capital goods must be exclusively used for export production. Using them in domestic production is a violation and may result in demand of duty with interest."
+      }
+    ],
+
+    faqs: [
+      {
+        question: "What is the Export Obligation under EPCG?",
+        answer: "The Export Obligation (EO) is 6 times the duty saved on imported capital goods, to be fulfilled within 6 years. For specific categories (like Status Holders), the EO can be reduced."
+      },
+      {
+        question: "Can I use EPCG for second-hand machinery?",
+        answer: "Yes, second-hand capital goods not older than 10 years can be imported under EPCG, subject to a certificate of residual life from an Chartered Engineer."
+      },
+      {
+        question: "What happens if I cannot fulfill the Export Obligation?",
+        answer: "If EO is not fulfilled within the specified time, you must pay the full customs duty along with interest (15% per annum) for the shortfall. Extensions can be applied for from DGFT."
+      },
+      {
+        question: "Can domestic procurement of capital goods be covered under EPCG?",
+        answer: "Yes. Capital goods procured domestically qualify under EPCG with an equivalent benefit (tax refund/concession equivalent to duty saved), but the EO is reduced by 20% compared to the import model."
+      },
+      {
+        question: "Can service sector companies use EPCG?",
+        answer: "Yes, hotels, hospitals, software/IT companies, and other service exporters earning foreign exchange are fully eligible for EPCG. EO is tracked via Foreign Exchange Earnings (FEE)."
+      },
+      {
+        question: "What is the validity of an EPCG Authorization for importing the machinery?",
+        answer: "The EPCG authorization is valid for 24 months from the date of its issue for importing capital goods. An extension can be applied for from DGFT if needed."
+      },
+      {
+        question: "How do I get the EPCG obligation 'redeemed'?",
+        answer: "Submit shipping bills, eBRCs (Bank Realization Certificates), and CA certificates for export turnover to the DGFT Regional Authority to get the EPCG obligation redeemed (closed) once EO is fulfilled."
+      }
+    ],
+
+    conclusion: {
+      paragraphs: [
+        "The EPCG Scheme is one of the most financially significant export promotion tools available to Indian businesses. The zero-duty import of capital goods provides an immediate 18–28% cost reduction on machinery, which directly improves product quality, production efficiency, and export competitiveness.",
+        "However, the scheme comes with strict compliance requirements—accurate HS classification, exclusive export use of capital goods, annual EO reporting, and timely redemption filings. Non-compliance can lead to significant penalties under the FEMA and Foreign Trade Act.",
+        "Ewolyn's dedicated export compliance team specializes in end-to-end EPCG management—from authorization application to EO fulfillment tracking and final redemption filing—ensuring you capture the full benefit of the scheme without any compliance risk."
+      ],
+      ctaTitle: "Apply for EPCG Certification with Zero Compliance Risk",
+      ctaDescription: "Our export consultants handle your EPCG authorization, import compliance, and export obligation tracking from day one."
+    }
   }
 ];
 

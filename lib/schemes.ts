@@ -709,6 +709,91 @@ export const governmentSchemes: Scheme[] = [
       "SPV formation and CFC setup",
       "Marketing and training intervention"
     ]
+  },
+  {
+    slug: "pm-employment-generation-programme",
+    title: "PM Employment Generation Programme (PMEGP)",
+    shortDesc: "15–35% margin money subsidy for new micro-enterprises in manufacturing & service sectors",
+    highlight: "35%",
+    highlightLabel: "Max Subsidy",
+    icon: "🏥",
+    iconBg: "bg-orange-500",
+    category: "Subsidy",
+    timeline: "30–45 days",
+    fullDescription: "Prime Minister's Employment Generation Programme (PMEGP) is a flagship credit-linked subsidy scheme providing margin money subsidies of 15–35% to first-generation entrepreneurs setting up new micro-enterprises. The scheme is administered through KVIC, KVIB, and DICs.",
+    eligibility: [
+      "Any Indian citizen above 18 years of age",
+      "Minimum 8th pass for projects above ₹10 lakh (manufacturing) / ₹5 lakh (service)",
+      "Only new projects are eligible—no expansion of existing businesses",
+      "Self Help Groups, Charitable Trusts, and Cooperative Societies",
+      "SC/ST, OBC, women, ex-servicemen receive higher subsidy rates"
+    ],
+    benefits: [
+      "35% subsidy for special categories in rural areas",
+      "25% subsidy for general category in rural areas",
+      "25% subsidy for special categories in urban areas",
+      "15% subsidy for general category in urban areas",
+      "Project cost up to ₹50 lakh for manufacturing, ₹20 lakh for services"
+    ],
+    documents: [
+      "PMEGP E-portal Application Form (online)",
+      "Project Report / Detailed Project Report (DPR)",
+      "Identity Proof: Aadhaar Card, PAN Card, Voter ID",
+      "Educational Qualification Certificate (8th Pass Marksheet)",
+      "Caste / Special Category Certificate (if applicable)",
+      "EDP Training Certificate",
+      "Bank Account Statement (6 months)",
+      "Quotations for Machinery and Equipment"
+    ],
+    process: [
+      "Register on PMEGP E-portal (kviconline.gov.in/pmegpeportal)",
+      "Fill online application and submit DPR",
+      "Screening by District-Level Task Force Committee (DLTFC)",
+      "Bank appraisal and loan sanction",
+      "Subsidy disbursement and 3-year lock-in period"
+    ]
+  },
+  {
+    slug: "epcg-scheme",
+    title: "EPCG Scheme",
+    shortDesc: "Zero customs duty on capital goods import for exporters with 6X export obligation",
+    highlight: "0%",
+    highlightLabel: "Customs Duty",
+    icon: "😢",
+    iconBg: "bg-blue-600",
+    category: "Export Benefit",
+    timeline: "3–10 days",
+    fullDescription: "The Export Promotion Capital Goods (EPCG) Scheme allows exporters to import capital goods for pre-production, production, and post-production at zero customs duty, subject to an export obligation of 6 times the duty saved over 6 years, administered by DGFT.",
+    eligibility: [
+      "Manufacturer exporters with valid IEC",
+      "Merchant exporters with tie-up with supporting manufacturer",
+      "Service exporters (hotels, hospitals, IT companies, etc.)",
+      "Common Service Providers in SEZs/EPZs",
+      "Star Export Houses with relaxed EO norms"
+    ],
+    benefits: [
+      "0% customs duty (Basic Customs Duty + IGST exemption) on capital goods",
+      "Export Obligation of 6X duty saved over 6 years",
+      "20% EO reduction for domestic sourcing of capital goods",
+      "Second-hand capital goods (up to 10 years old) also eligible",
+      "Up to 25% EO offset through agricultural/handicraft exports"
+    ],
+    documents: [
+      "Import Export Code (IEC) Certificate",
+      "Aayaat Niryaat Form ANF 5A (Online Application)",
+      "Proforma Invoice for Capital Goods (in foreign currency)",
+      "CA Certificate for Annual Average Export (last 3 years)",
+      "GST Registration Certificate",
+      "ITR or Audited Balance Sheet (last 3 years)",
+      "Bank Realization Certificates (BRC) for past exports"
+    ],
+    process: [
+      "Obtain IEC from DGFT portal (dgft.gov.in)",
+      "Apply online using Form ANF 5A before importing machinery",
+      "Pay EPCG application fee (0.5% of CIF value)",
+      "Receive EPCG Authorization from DGFT Regional Authority",
+      "Import machinery duty-free and fulfill export obligation over 6 years"
+    ]
   }
 ];
 

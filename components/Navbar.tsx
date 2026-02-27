@@ -52,13 +52,6 @@ const services: Service[] = [
         iconBg: "bg-teal-50",
         href: "/services/nbfc"
       },
-      {
-        title: "Tax Exemption",
-        description: "100% Tax Holiday (80-IAC) & Angel Tax Exemption for DPIIT recognized startups.",
-        icon: "💸",
-        iconBg: "bg-purple-50",
-        href: "/services/tax-exemption-benefits"
-      },
     ]
   },
   {
