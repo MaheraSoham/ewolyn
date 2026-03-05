@@ -80,8 +80,7 @@ export default function ImpactStats() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-100"
-              style={{ overflow: 'visible' }}
+              className="bg-white rounded-[2.5rem] p-5 md:p-10 shadow-2xl border border-slate-100"
             >
               <h3 className="text-xl font-bold text-ink mb-6">Pan-India Presence</h3>
 
@@ -129,12 +128,12 @@ export default function ImpactStats() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-100"
+              className="bg-white rounded-[2.5rem] p-5 md:p-10 shadow-2xl border border-slate-100"
             >
               <h3 className="text-xl font-bold text-ink mb-6">Sector Distribution</h3>
 
               {/* Circular Gauges */}
-              <div className="grid grid-cols-3 gap-6 mb-8">
+              <div className="grid grid-cols-3 gap-3 md:gap-6 mb-8">
                 {sectors.map((sector) => (
                   <div key={sector.name} className="text-center group">
                     {/* Circular Progress */}

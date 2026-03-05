@@ -29,12 +29,12 @@ export default function ContactCTA() {
     };
 
     return (
-        <section className="bg-[#113670] py-20">
+        <section className="bg-[#113670] py-12 sm:py-20">
             <div className="container-max max-w-6xl">
                 <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-stretch">
 
                     {/* ----- LEFT: Direct Connectivity ----- */}
-                    <div className="lg:col-span-5 bg-[#0f2d5f] rounded-3xl p-8 lg:p-10 flex flex-col justify-between shadow-xl border border-white/5">
+                    <div className="lg:col-span-5 bg-[#0f2d5f] rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between shadow-xl border border-white/5">
                         <div>
                             <h2 className="text-3xl font-black text-white mb-3 tracking-tight">Direct Connectivity</h2>
                             <p className="text-base text-blue-100/80 mb-10 leading-relaxed">
@@ -106,7 +106,7 @@ export default function ContactCTA() {
                     </div>
 
                     {/* ----- RIGHT: Request Expert Callback Form ----- */}
-                    <div className="lg:col-span-7 bg-white rounded-3xl p-8 lg:p-12 shadow-2xl flex flex-col justify-between">
+                    <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl flex flex-col justify-between">
                         <div>
                             <h2 className="text-3xl font-black text-[#113670] mb-2 tracking-tight">Request Expert Callback</h2>
                             <p className="text-sm font-medium text-slate-500 mb-10">
@@ -169,7 +169,7 @@ export default function ContactCTA() {
                         </div>
 
                         {/* Bottom trust indicators */}
-                        <div className="flex justify-center gap-8 text-[11px] font-black text-slate-400 mt-10 tracking-widest uppercase">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[11px] font-black text-slate-400 mt-10 tracking-widest uppercase">
                             <span className="flex items-center gap-1.5">
                                 <svg className="w-4 h-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

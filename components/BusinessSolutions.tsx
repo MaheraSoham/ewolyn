@@ -128,19 +128,18 @@ export default function BusinessSolutions() {
                             whileHover={{ y: -5 }}
                             className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative overflow-hidden"
                         >
-                            {/* Badge */}
-                            {"badge" in sol && sol.badge && (
-                                <span className="absolute top-4 right-4 text-[9px] font-black uppercase tracking-widest bg-orange-500 text-white px-3 py-1 rounded-full">
-                                    {sol.badge}
-                                </span>
-                            )}
-                            {/* Top row: icon + stat */}
+                            {/* Top row: icon + stat + optional badge */}
                             <div className="flex items-start justify-between mb-4">
-                                <div className={`w-12 h-12 rounded-xl ${sol.iconBg} flex items-center justify-center text-white text-xl`}>
+                                <div className={`w-12 h-12 rounded-xl ${sol.iconBg} flex items-center justify-center text-white text-xl shrink-0`}>
                                     {sol.icon}
                                 </div>
-                                <div className="text-right">
-                                    <p className="text-lg font-black text-[#0a1628]">{sol.stat}</p>
+                                <div className="text-right flex flex-col items-end gap-1">
+                                    {"badge" in sol && sol.badge && (
+                                        <span className="text-[9px] font-black uppercase tracking-widest bg-orange-500 text-white px-2.5 py-0.5 rounded-full">
+                                            {sol.badge}
+                                        </span>
+                                    )}
+                                    <p className="text-lg font-black text-[#0a1628] leading-tight">{sol.stat}</p>
                                     <p className="text-[10px] text-slate-400 uppercase tracking-wider">{sol.statLabel}</p>
                                 </div>
                             </div>

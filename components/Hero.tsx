@@ -47,7 +47,7 @@ export default function Hero() {
     <>
       {/* ── HERO SECTION ── */}
       <section
-        className="relative min-h-[88vh] flex items-center overflow-hidden pt-28 pb-16"
+        className="relative min-h-[88vh] flex items-center overflow-hidden pt-20 sm:pt-28 pb-10 sm:pb-16"
         style={{
           background: "linear-gradient(135deg, #0d2f57 0%, #1B4F8C 45%, #2eb85c 100%)",
           backgroundSize: "200% 200%",
@@ -350,7 +350,7 @@ export default function Hero() {
               border: "1px solid rgba(46,184,92,0.20)",
             }}
           >
-            <div className="grid grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               {heroStats.map((s) => (
                 <div key={s.label} className="flex items-center gap-3 justify-center">
                   <div
@@ -377,17 +377,17 @@ export default function Hero() {
               EWOLYN PRIVATE LIMITED
             </p>
             <div
-              className="mt-4 inline-flex items-center gap-0 rounded-full overflow-hidden"
+              className="mt-4 inline-flex flex-wrap justify-center items-center gap-0 rounded-full overflow-hidden mx-auto"
               style={{ border: "1px solid rgba(46,184,92,0.30)" }}
             >
               <span
-                className="px-5 py-2 text-sm font-bold text-white"
+                className="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold text-white"
                 style={{ background: "rgba(13,47,87,0.80)" }}
               >
                 Real Success Stories
               </span>
               <span
-                className="px-5 py-2 text-sm font-black"
+                className="px-4 sm:px-5 py-2 text-xs sm:text-sm font-black"
                 style={{ background: "#2eb85c", color: "#0d2f57" }}
               >
                 1000+ MSMEs funded successfully

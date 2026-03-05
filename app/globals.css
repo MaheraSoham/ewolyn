@@ -337,6 +337,7 @@ a:hover { color: var(--green-600); }
 
 /* ── Utility Classes ──────────────────────────────────────────── */
 .animate-fade-in-up   { animation: fadeInUp 0.8s ease-out forwards; }
+.animate-float        { animation: float 6s ease-in-out infinite; }
 .animate-delay-100 { animation-delay: 0.1s; }
 .animate-delay-200 { animation-delay: 0.2s; }
 .animate-delay-300 { animation-delay: 0.3s; }

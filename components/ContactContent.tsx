@@ -136,7 +136,7 @@ export default function ContactContent() {
   return (
     <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* ═══════════════ HERO ═══════════════ */}
-      <section className="relative pt-32 pb-28 hero-navy-gradient text-white overflow-hidden">
+      <section className="relative pt-20 sm:pt-32 pb-16 sm:pb-28 hero-navy-gradient text-white overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full opacity-10 bg-[url('/consulting_team_premium.png')] bg-cover bg-center mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-[#0a1628]/90 to-transparent" />
         <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px]" />
@@ -163,7 +163,7 @@ export default function ContactContent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             Let&apos;s Start Your <br />
             <span className="text-accent-green">Success Story</span>

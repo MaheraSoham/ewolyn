@@ -12,7 +12,7 @@ export default function Footer() {
               alt="Ewolyn - Evolving Indian StartUps & MSMEs"
               width={520}
               height={200}
-              className="h-52 w-auto bg-white rounded-2xl p-2 animate-logo-shadow"
+              className="h-28 md:h-52 w-auto bg-white rounded-2xl p-2 animate-logo-shadow"
             />
           </div>
           <p className="text-sm text-slate-400">
