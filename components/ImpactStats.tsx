@@ -3,10 +3,10 @@ import IndiaMap from "./IndiaMap";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "47,700K+", label: "MSMEs Registered", sublabel: "On Udyam Portal" },
-  { value: "₹757Cr+", label: "Credit Facilitated", sublabel: "Since 2020" },
-  { value: "95%", label: "Success Rate", sublabel: "Approval Rate" },
-  { value: "28/36", label: "Pan India Coverage", sublabel: "States & UTs" },
+  { value: "₹10L–₹5Cr", label: "Funding Range", sublabel: "Government Schemes" },
+  { value: "7–45 Days", label: "Processing Time", sublabel: "Scheme Dependent" },
+  { value: "85%", label: "CGTMSE Coverage", sublabel: "Collateral Guarantee" },
+  { value: "15–35%", label: "PMEGP Subsidy", sublabel: "Category Based" },
 ];
 
 const topStates = [

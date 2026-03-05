@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import { fundingContent } from "@/lib/content";
 import { governmentSchemes } from "@/lib/schemes";
+import SchemeComparator from "@/components/SchemeComparator";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -62,7 +63,7 @@ export default function FundingPage() {
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
               {["₹750Cr+ Facilitated", "95% Application Success", "25+ Active Schemes"].map((tag) => (
-                <span key={tag} className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold text-white/50 uppercase tracking-widest">
+                <span key={tag} className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold text-white/80 uppercase tracking-widest">
                   {tag}
                 </span>
               ))}
@@ -172,9 +173,14 @@ export default function FundingPage() {
             ))}
           </motion.div>
         </div>
+      </div>
 
+      {/* ── Scheme Comparator ── */}
+      <SchemeComparator />
+
+      <div className="container-max py-24 relative z-10">
         {/* How to Apply - Animated Process */}
-        <div className="pt-24 pb-32">
+        <div className="pt-0 pb-32">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

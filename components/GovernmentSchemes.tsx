@@ -1,47 +1,126 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { usePopup } from "./PopupContext";
+
+const statsRow = [
+  { icon: "₹", value: "₹10L-₹5Cr", label: "Funding Range", sub: "Government schemes" },
+  { icon: "⏱", value: "7-45 Days", label: "Processing Time", sub: "Scheme dependent" },
+  { icon: "✓", value: "85%", label: "CGTMSE Coverage", sub: "Collateral guarantee" },
+  { icon: "%", value: "15-35%", label: "PMEGP Subsidy", sub: "Category based" },
+];
 
 const schemes = [
   {
-    title: "NAIFF Funding",
-    description: "Government-backed funding support to scale MSMEs and startups.",
-    href: "/services/naif-scheme",
-    icon: "🏛️",
+    title: "PMEGP",
+    full: "Prime Minister Employment Generation Programme",
+    loanLabel: "MAX SUBSIDY",
+    loanAmount: "35%",
+    benefitLabel: "Loan Amount:",
+    keyBenefit: "Up to ₹50L",
+    type: "SUBSIDY",
+    icon: "🏭",
+    iconBg: "bg-blue-100",
+    href: "/funding/pmegp",
   },
   {
-    title: "NGO Elevation Program",
-    description: "Financial & compliance support for NGOs and social enterprises.",
-    href: "/services/ngo-elevation-program",
-    icon: "🤝",
+    title: "PM MUDRA Yojana",
+    full: "Up to ₹10 Lakh loan without collateral for small businesses",
+    loanLabel: "MAX LOAN",
+    loanAmount: "₹10L",
+    benefitLabel: "Key Benefit:",
+    keyBenefit: "No collateral",
+    type: "LOAN",
+    icon: "💰",
+    iconBg: "bg-yellow-100",
+    href: "/funding/pm-mudra-yojana",
   },
   {
-    title: "SC / ST / OBC Scheme",
-    description: "Special subsidies & capital assistance for reserved categories.",
-    href: "/services/sc-st-obc-scheme",
-    icon: "👥",
+    title: "CGTMSE",
+    full: "Credit guarantee up to ₹5 Crore without third-party guarantee",
+    loanLabel: "COVERAGE",
+    loanAmount: "₹5Cr",
+    benefitLabel: "Key Benefit:",
+    keyBenefit: "No collateral",
+    type: "LOAN",
+    icon: "🛡️",
+    iconBg: "bg-blue-50",
+    href: "/funding/cgtmse",
   },
   {
-    title: "Startup SEED Fund",
-    description: "Early-stage capital support for innovative startups.",
-    href: "/services/startup-seed-fund",
+    title: "Stand-Up India",
+    full: "Bank loans for SC/ST and women entrepreneurs",
+    loanLabel: "MAX LOAN",
+    loanAmount: "₹1Cr",
+    benefitLabel: "Category:",
+    keyBenefit: "Special category",
+    type: "LOAN",
+    icon: "👩‍💼",
+    iconBg: "bg-purple-100",
+    href: "/funding/stand-up-india",
+  },
+  {
+    title: "NAIF Scheme",
+    full: "Affordable financing for agricultural infrastructure with 3% interest subvention",
+    loanLabel: "MAX LOAN",
+    loanAmount: "₹2Cr",
+    benefitLabel: "Key Benefit:",
+    keyBenefit: "3% subvention",
+    type: "LOAN",
     icon: "🌱",
+    iconBg: "bg-emerald-100",
+    href: "/funding/naif-scheme",
   },
   {
-    title: "Venture Capital Support",
-    description: "Equity & VC access for high-growth potential ventures.",
-    href: "/services/venture-capital-support",
-    icon: "💼",
+    title: "Startup India",
+    full: "Tax benefits & funding support for DPIIT registered startups",
+    loanLabel: "TAX EXEMPTION",
+    loanAmount: "80%",
+    benefitLabel: "Category:",
+    keyBenefit: "DPIIT Recognition",
+    type: "RECOGNITION",
+    icon: "🚀",
+    iconBg: "bg-indigo-100",
+    href: "/funding/startup-india",
   },
+  {
+    title: "GeM Registration",
+    full: "Access ₹3L+ Crore government procurement marketplace",
+    loanLabel: "MARKET SIZE",
+    loanAmount: "₹3L Cr",
+    benefitLabel: "Key Benefit:",
+    keyBenefit: "Free registration",
+    type: "REGISTRATION",
+    icon: "🏪",
+    iconBg: "bg-red-100",
+    href: "/funding/gem-registration",
+  },
+  {
+    title: "NSIC Certification",
+    full: "Single point registration for government tenders priority",
+    loanLabel: "EMD EXEMPT",
+    loanAmount: "100%",
+    benefitLabel: "Key Benefit:",
+    keyBenefit: "Tender priority",
+    type: "CERTIFICATION",
+    icon: "📋",
+    iconBg: "bg-teal-100",
+    href: "/funding/nsic-certification",
+  },
+];
+
+const trustBadges = [
+  "MSME Registered",
+  "Pan India Service",
+  "Expert Consultants",
+  "Transparent Process",
 ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
@@ -51,96 +130,138 @@ const cardVariants = {
 };
 
 export default function GovernmentSchemes() {
+  const { openEligibilityPopup } = usePopup();
   return (
-    <section className="section section-light-green">
-      <div className="container-max">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <span className="inline-block bg-cyan/10 text-cyan text-sm font-medium px-5 py-2 rounded-full mb-4 animate-pulse-glow">
-            50+ Funding Solutions
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-ink">
-            Powerful <span className="gradient-text">Government Schemes</span>
-          </h2>
-          <p className="text-muted mt-3 max-w-2xl mx-auto">
-            Unlock 50+ verified government funding, subsidy & tax benefit programs with expert handling.
-          </p>
-        </motion.div>
+    <>
+      {/* Section 1: Dark BG with heading + stat cards */}
+      <section className="bg-[#0a1628] py-16">
+        <div className="container-max">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <p className="text-sm font-bold text-accent-green mb-3">Government Schemes We Facilitate</p>
+            <h2 className="text-3xl md:text-4xl font-black text-white">
+              Helping MSMEs Access{" "}
+              <span className="text-accent-green">Government Support</span>
+            </h2>
+            <p className="mt-3 text-sm text-slate-400 max-w-xl mx-auto">
+              Expert guidance for PMEGP, CGTMSE, Mudra & other MSME schemes across India
+            </p>
+          </div>
 
-        {/* Schemes Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {schemes.map((scheme) => (
-            <motion.div key={scheme.title} variants={cardVariants}>
-              <Link
-                href={scheme.href}
-                className="block h-full group rounded-2xl border border-cyan/30 bg-gradient-to-br from-cyan/10 to-primary-cyan/5 p-6 shadow-soft transition-all duration-300 hover:shadow-xl"
+          {/* 4 Stat Cards — dark navy cards with green icons */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            {statsRow.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-2xl bg-[#0d1f3c] border border-white/10 p-6 text-center"
               >
-                <div className="flex items-start gap-4">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cyan/20 text-2xl group-hover:bg-cyan group-hover:text-white group-hover:shadow-glow transition-all duration-300"
-                  >
-                    {scheme.icon}
-                  </motion.div>
-                  <div>
-                    <h3 className="text-lg font-bold text-ink group-hover:text-cyan transition-colors text-clamp-2">
-                      {scheme.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted text-clamp-3">{scheme.description}</p>
-                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-cyan">
-                      View Details
-                      <motion.svg
-                        className="w-4 h-4 ml-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        animate={{ x: 0 }}
-                        whileHover={{ x: 4 }}
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </motion.svg>
-                    </span>
-                  </div>
+                <div className="w-10 h-10 rounded-full bg-accent-green/20 text-accent-green flex items-center justify-center text-lg font-bold mx-auto mb-3">
+                  {s.icon}
                 </div>
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+                <p className="text-2xl font-black text-white">{s.value}</p>
+                <p className="text-xs font-semibold text-white/80 mt-1">{s.label}</p>
+                <p className="text-[10px] text-slate-300 italic">{s.sub}</p>
+              </div>
+            ))}
+          </div>
 
-        {/* View All Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-10 text-center"
-        >
-          <Link href="/funding">
-            <motion.span
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-dark inline-flex items-center cursor-pointer"
-            >
-              Explore All 50+ Schemes
-              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </motion.span>
-          </Link>
-        </motion.div>
-      </div>
-    </section>
+          {/* Government Schemes We Support heading */}
+          <h3 className="text-center text-xl font-black text-white mb-8">
+            Government Schemes We Support
+          </h3>
+        </div>
+      </section>
+
+      {/* Section 2: White BG with scheme detail cards */}
+      <section className="bg-white py-12">
+        <div className="container-max">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {schemes.map((sc) => (
+              <motion.div
+                key={sc.title}
+                variants={cardVariants}
+                whileHover={{ y: -5 }}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+              >
+                {/* Icon */}
+                <div className={`w-12 h-12 rounded-xl ${sc.iconBg} flex items-center justify-center text-2xl mb-4`}>
+                  {sc.icon}
+                </div>
+
+                {/* Stat label + big value */}
+                <p className="text-[10px] font-black uppercase tracking-widest text-accent-green mb-1">
+                  {sc.loanLabel}
+                </p>
+                <p className="text-3xl font-black text-[#0a1628] mb-1">{sc.loanAmount}</p>
+
+                {/* Title */}
+                <h4 className="text-base font-black text-accent-green mb-2">{sc.title}</h4>
+
+                {/* Description */}
+                <p className="text-xs text-slate-500 leading-relaxed flex-grow mb-4">{sc.full}</p>
+
+                {/* Footer: type + view link */}
+                <div className="flex items-center justify-between pt-3 border-t border-slate-100">
+                  <span className="text-[9px] font-black uppercase tracking-widest text-slate-400">
+                    {sc.type}
+                  </span>
+                  <button
+                    onClick={() => openEligibilityPopup(sc.title)}
+                    className="text-xs font-black text-accent-green hover:text-[#1B4F8C] transition-colors flex items-center gap-1"
+                  >
+                    View →
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Trust Badges Bar */}
+          <div className="mt-10 rounded-xl bg-accent-green/5 border border-accent-green/20 py-4 px-6">
+            <div className="flex flex-wrap justify-center gap-8">
+              {trustBadges.map((b) => (
+                <div key={b} className="flex items-center gap-2">
+                  <svg className="w-5 h-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-sm font-medium text-slate-600">{b}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-center text-xs text-slate-400">
+              Serving MSMEs across 28+ States in India
+            </p>
+          </div>
+
+          {/* View More Link */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="mt-8 text-center"
+          >
+            <Link href="/schemes">
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-2 border-2 border-accent-green text-accent-green font-bold py-3 px-8 rounded-lg hover:bg-accent-green hover:text-white transition-all cursor-pointer text-sm"
+              >
+                View More Government Schemes
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.span>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 }

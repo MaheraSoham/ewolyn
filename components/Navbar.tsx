@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -24,7 +24,7 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: "Business Funding & Financial Consultancy",
+    title: "MSME & Startup Funding Support",
     description: "Access grants, loans, and NBFC solutions",
     icon: "💰",
     iconBg: "bg-red-50",
@@ -33,21 +33,21 @@ const services: Service[] = [
     subItems: [
       {
         title: "Grants",
-        description: "Non-repayable government funding for startups & MSMEs. Subsidies, innovation, export, sector schemes.",
+        description: "Non-repayable government funding for startups & MSMEs. PMEGP, subsidies, sector-specific schemes.",
         icon: "🏛️",
         iconBg: "bg-blue-50",
         href: "/services/grants"
       },
       {
         title: "Loans",
-        description: "Business loans for growth, working capital, expansion. Bank, NBFC, government schemes. Fast approval.",
+        description: "Business loans up to ₹5Cr. CGTMSE, MUDRA, bank & government schemes. Fast approval.",
         icon: "🏦",
         iconBg: "bg-green-50",
         href: "/services/loans"
       },
       {
         title: "NBFC",
-        description: "Quick, flexible business funding. Unsecured, revenue-based, equipment, supply chain loans. 24–72hr disbursement.",
+        description: "Quick, flexible business funding. Unsecured, revenue-based, equipment & supply chain loans. 24-72hr disbursement.",
         icon: "💳",
         iconBg: "bg-teal-50",
         href: "/services/nbfc"
@@ -57,7 +57,7 @@ const services: Service[] = [
   {
     title: "Business Registration",
     description: "Company formation & compliance",
-    icon: "📋",
+    icon: "🏢",
     iconBg: "bg-blue-50",
     iconColor: "text-blue-500",
     href: "/services/business-registration",
@@ -65,7 +65,7 @@ const services: Service[] = [
   {
     title: "Certifications & IP",
     description: "ISO, patents & trademarks",
-    icon: "🏆",
+    icon: "✅",
     iconBg: "bg-amber-50",
     iconColor: "text-amber-500",
     href: "/services/certifications",
@@ -79,12 +79,20 @@ const services: Service[] = [
     href: "/services/growth-strategy",
   },
   {
-    title: "M&A Advisory",
-    description: "Merger & acquisition support",
-    icon: "🤝",
-    iconBg: "bg-purple-50",
-    iconColor: "text-purple-500",
-    href: "/services/ma-advisory",
+    title: "Tax & Compliance",
+    description: "GST, income tax & TDS returns",
+    icon: "📊",
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-500",
+    href: "/services/tax-exemption-benefits",
+  },
+  {
+    title: "Legal Services",
+    description: "Legal advice & documentation",
+    icon: "⚖️",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-600",
+    href: "/services/legal",
   },
   {
     title: "Marketing & Branding",
@@ -95,21 +103,23 @@ const services: Service[] = [
     href: "/services/marketing",
   },
   {
-    title: "Legal Consultancy",
-    description: "Legal advice & documentation",
-    icon: "⚖️",
-    iconBg: "bg-slate-100",
-    iconColor: "text-slate-600",
-    href: "/services/legal",
+    title: "CIBIL Assistance",
+    description: "Credit score improvement & disputes",
+    icon: "💳",
+    iconBg: "bg-purple-50",
+    iconColor: "text-purple-500",
+    href: "/services/cibil-assistance",
   },
 ];
 
 const nav = [
   { href: "/", label: "Home", icon: "🏠" },
-  { href: "/funding", label: "Blogs", icon: "📝" },
+  { href: "/blogs", label: "Blogs", icon: "📝" },
+  { href: "/schemes", label: "Schemes", icon: "📜" },
   { href: "/brochure", label: "Brochure", icon: "📄" },
+  { href: "/success-stories", label: "Success Stories", icon: "🏆" },
   { href: "/about", label: "About Us", icon: "👥" },
-  { href: "/contact", label: "Contact Us", icon: "✉️" },
+  { href: "/contact", label: "Contact", icon: "✉️" },
 ];
 
 export default function Navbar() {
@@ -171,7 +181,7 @@ export default function Navbar() {
               {/* Home Link */}
               <Link
                 href="/"
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${pathname === "/" ? "text-accent-green" : "text-white hover:text-accent-green"}`}
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === "/" ? "text-[#2eb85c]" : "text-white hover:text-[#2eb85c]"}`}
               >
                 Home
               </Link>
@@ -183,7 +193,7 @@ export default function Navbar() {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-accent-green" : "text-white hover:text-accent-green"}`}
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-[#2eb85c]" : "text-white hover:text-[#2eb85c]"}`}
                 >
                   Services
                   <svg className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,7 +268,7 @@ export default function Navbar() {
                 <Link
                   key={n.href}
                   href={n.href}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${pathname === n.href ? "text-accent-green" : "text-white hover:text-accent-green"}`}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === n.href ? "text-[#2eb85c]" : "text-white hover:text-[#2eb85c]"}`}
                 >
                   {n.label}
                 </Link>
@@ -269,7 +279,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-4">
               {/* Business Hours */}
               <div className="text-white text-xs mr-2">
-                <div className="font-medium text-accent-green">9:30 AM - 6:00 PM</div>
+                <div className="font-semibold text-[#2eb85c]">9:30 AM - 6:00 PM</div>
                 <div className="text-gray-400">Monday - Saturday</div>
               </div>
 
@@ -317,11 +327,11 @@ export default function Navbar() {
           {servicesOpen && (
             <div className="lg:hidden mt-2 glass-navbar p-6 rounded-2xl animate-in slide-in-from-top-4 duration-300 max-h-[80vh] overflow-y-auto">
               <div className="flex flex-col gap-1">
-                <Link href="/" onClick={() => setServicesOpen(false)} className={`px-4 py-3 rounded-xl text-lg font-medium transition-colors ${pathname === "/" ? "text-accent-green bg-white/5" : "text-white hover:bg-white/5"}`}>
+                <Link href="/" onClick={() => setServicesOpen(false)} className={`px-4 py-3 rounded-xl text-lg font-medium transition-colors ${pathname === "/" ? "text-[#2eb85c] bg-white/5" : "text-white hover:bg-white/5"}`}>
                   Home
                 </Link>
 
-                <div className="mt-4 mb-2 px-4 text-accent-green text-xs font-bold uppercase tracking-widest">Our Services</div>
+                <div className="mt-4 mb-2 px-4 text-[#2eb85c] text-xs font-bold uppercase tracking-widest">Our Services</div>
 
                 {services.map((service, index) => (
                   <div key={index} className="flex flex-col">
@@ -342,7 +352,7 @@ export default function Navbar() {
                             key={sIdx}
                             href={sub.href}
                             onClick={() => setServicesOpen(false)}
-                            className="py-2 text-sm text-gray-400 hover:text-accent-green transition-colors"
+                            className="py-2 text-sm text-gray-400 hover:text-[#2eb85c] transition-colors"
                           >
                             {sub.title}
                           </Link>
@@ -359,7 +369,7 @@ export default function Navbar() {
                     key={n.href}
                     href={n.href}
                     onClick={() => setServicesOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-lg font-medium transition-colors ${pathname === n.href ? "text-accent-green bg-white/5" : "text-white hover:bg-white/5"}`}
+                    className={`px-4 py-3 rounded-xl text-lg font-medium transition-colors ${pathname === n.href ? "text-[#2eb85c] bg-white/5" : "text-white hover:bg-white/5"}`}
                   >
                     {n.label}
                   </Link>

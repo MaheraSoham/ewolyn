@@ -252,7 +252,7 @@ function ResultsContent() {
                                 </h1>
 
                                 <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
-                                    <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.2em] mb-4">AI Analysis For Current Profile:</p>
+                                    <p className="text-white/80 text-[10px] font-black uppercase tracking-[0.2em] mb-4">AI Analysis For Current Profile:</p>
                                     <div className="flex flex-wrap gap-2">
                                         {[
                                             { label: "Stage", val: searchParams.get("stage") || "Early" },
@@ -260,7 +260,7 @@ function ResultsContent() {
                                             { label: "Amount", val: searchParams.get("amount") || "10L" }
                                         ].map((p, i) => (
                                             <div key={i} className="px-3 py-1.5 bg-white/10 rounded-lg border border-white/5 text-[11px] font-bold">
-                                                <span className="text-white/50 mr-2">{p.label}:</span>
+                                                <span className="text-white/75 mr-2">{p.label}:</span>
                                                 <span className="text-accent-green">{p.val}</span>
                                             </div>
                                         ))}
@@ -319,7 +319,7 @@ function ResultsContent() {
                                         >
                                             <div className="text-2xl mb-2">{stat.icon}</div>
                                             <div className="text-2xl font-bold mb-1 text-white">{stat.val}</div>
-                                            <div className="text-[10px] text-white/50 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
+                                            <div className="text-[10px] text-white/75 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -350,7 +350,7 @@ function ResultsContent() {
                                     <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
                                         Your <span className="text-accent-green">Custom</span> Funding Plan
                                     </h2>
-                                    <p className="text-gray-400 text-lg">Detailed analysis of matched government initiatives</p>
+                                    <p className="text-gray-600 text-lg">Detailed analysis of matched government initiatives</p>
                                 </div>
                                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-white/5 px-4 py-2 rounded-full border border-white/10">
                                     <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" /> Live Analysis
@@ -469,7 +469,7 @@ function ResultsContent() {
                                     </div>
                                     <div className="text-left">
                                         <div className="text-[10px] text-accent-green font-black uppercase tracking-widest">Trusted MSMEs</div>
-                                        <div className="text-[9px] text-white/50 font-bold uppercase tracking-tight">Across 28+ Industries</div>
+                                        <div className="text-[9px] text-white/75 font-bold uppercase tracking-tight">Across 28+ Industries</div>
                                     </div>
                                 </div>
                             </div>

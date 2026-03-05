@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 bg-slate-900 text-white">
+    <footer className="bg-[#0a1628] text-white">
       <div className="container-max grid gap-10 py-12 md:grid-cols-4">
         <div>
           <div className="mb-4">
@@ -51,7 +51,7 @@ export default function Footer() {
               <span>B-304/2 Gopal Palace, Near Shiromani Complex, opposite Ocean Park, Nehru Nagar, Ahmedabad-380015</span>
             </li>
             <li className="flex items-center gap-2">
-              <span>📧</span> hello@ewolyn.co.in
+              <span>📧</span> info@ewolyn.co.in
             </li>
             <li className="flex items-center gap-2">
               <span>📞</span> +91 98765 43210
@@ -69,9 +69,9 @@ export default function Footer() {
         <div className="container-max flex flex-col items-center justify-between gap-3 text-xs text-slate-500 md:flex-row">
           <p>© {new Date().getFullYear()} Ewolyn. All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="#" className="hover:text-slate-300 transition">Privacy Policy</Link>
-            <Link href="#" className="hover:text-slate-300 transition">Terms of Service</Link>
-            <Link href="#" className="hover:text-slate-300 transition">Refund Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-slate-300 transition">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="hover:text-slate-300 transition">Terms &amp; Conditions</Link>
+            <Link href="/refund-policy" className="hover:text-slate-300 transition">Refund Policy</Link>
           </div>
         </div>
       </div>

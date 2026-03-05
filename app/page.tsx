@@ -1,45 +1,51 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import LogoGrid from "@/components/LogoGrid";
-import CTASection from "@/components/CTASection";
-import ProcessSteps from "@/components/ProcessSteps";
-import ImpactStats from "@/components/ImpactStats";
 import GovernmentSchemes from "@/components/GovernmentSchemes";
 import FundingOptions from "@/components/FundingOptions";
+import BusinessSolutions from "@/components/BusinessSolutions";
+import ProcessSteps from "@/components/ProcessSteps";
 import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import DigitalServices from "@/components/DigitalServices";
+import ContactCTA from "@/components/ContactCTA";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "MSME Funding & Startup Enablement | Ewolyn",
+    title: "MSME Funding Made Easy | Ewolyn",
     description:
-      "Get ₹5 Lakhs to ₹10 Crores with India's fastest MSME funding platform. 48hrs approval, 95% success rate, 100% online process.",
+      "Government schemes, company registration & business certifications. Expert guidance for PMEGP, CGTMSE, Mudra & other MSME schemes across India.",
   };
 }
 
 export default function HomePage() {
   return (
     <main>
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO + Stats Bar + Success Stories */}
       <Hero />
 
-      {/* 2. TRUST & CREDIBILITY BAR (LogoGrid) */}
-      <LogoGrid />
-
-      {/* 3. IMPACT METRICS (ImpactStats) */}
-      <ImpactStats />
-
-      {/* 4. GOVERNMENT SCHEMES */}
+      {/* 2. Government Schemes (Dark stats + White cards) */}
       <GovernmentSchemes />
 
-      {/* 5. FUNDING OPTIONS */}
+      {/* 3. Find Your Funding Match (Comparison Table) */}
       <FundingOptions />
 
-      {/* 6. HOW EVOLYN WORKS (ProcessSteps) */}
+      {/* 4. Complete Business Solutions (6 cards) */}
+      <BusinessSolutions />
+
+      {/* 5. Scale Your Business Digitally (8 cards) */}
+      <DigitalServices />
+
+      {/* 6. From Application to Approval (Horizontal Steps) */}
       <ProcessSteps />
 
-      {/* 7. FINAL CTA SECTION (CTASection) */}
-      <CTASection />
+      {/* 7. Real Businesses, Real Results (Testimonials) */}
+      <Testimonials />
+
+      {/* 8. Frequently Asked Questions (Accordion) */}
+      <FAQ />
+
+      {/* 9. Let's Discuss Your Business Needs (Contact CTA) */}
+      <ContactCTA />
     </main>
   );
 }
