@@ -247,7 +247,7 @@ export default function TaxCompliancePage() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-accent-green to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                   <Image
-                    src="/business_registration_hero_premium_1769686804174.png"
+                    src="/tax_compliance_hero_premium.png"
                     alt="Tax & Compliance Services"
                     width={800}
                     height={800}
@@ -455,9 +455,8 @@ export default function TaxCompliancePage() {
                     {faq.question}
                   </h3>
                   <svg
-                    className={`w-5 h-5 text-accent-green shrink-0 transition-transform duration-300 ${
-                      openFaq === idx ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-accent-green shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

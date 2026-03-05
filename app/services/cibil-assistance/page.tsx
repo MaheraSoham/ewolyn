@@ -238,7 +238,7 @@ export default function CibilAssistancePage() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-accent-green to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                   <Image
-                    src="/business_loans_hero_premium_1769686161627.png"
+                    src="/cibil_assistance_hero_premium.png"
                     alt="CIBIL Assistance"
                     width={800}
                     height={800}
