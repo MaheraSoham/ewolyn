@@ -343,7 +343,7 @@ export default function ConsultationPopup() {
                 {/* ── Footer ── */}
                 <div className="bg-[#0d2f57] flex items-center justify-between px-5 py-2.5">
                     <p className="text-white font-black text-[12px]">
-                        Humara Support. <span className="text-[#2eb85c]">Aapki Safalta.</span>
+                        Evolving Indian StartUps &amp; MSMEs
                     </p>
                     <div className="flex gap-1.5">
                         {["⭐", "⭐", "⭐", "⭐", "⭐"].map((s, i) => (

@@ -6,6 +6,7 @@ import BusinessSolutions from "@/components/BusinessSolutions";
 import ProcessSteps from "@/components/ProcessSteps";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import GoogleReviews from "@/components/GoogleReviews";
 import DigitalServices from "@/components/DigitalServices";
 import ContactCTA from "@/components/ContactCTA";
 
@@ -40,6 +41,9 @@ export default function HomePage() {
 
       {/* 7. Real Businesses, Real Results (Testimonials) */}
       <Testimonials />
+
+      {/* 7b. Google Reviews Carousel */}
+      <GoogleReviews />
 
       {/* 8. Frequently Asked Questions (Accordion) */}
       <FAQ />
