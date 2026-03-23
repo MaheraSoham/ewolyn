@@ -87,7 +87,7 @@ export default function ContactCTA() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                 </div>
-                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">EMAIL US</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">EMAIL US</p>
                                 <p className="text-xs font-black text-[#113670] mb-0.5">info@ewolyn.co.in</p>
                                 <p className="text-[10px] text-slate-500 font-medium">Detailed Inquiry</p>
                             </div>
@@ -98,7 +98,7 @@ export default function ContactCTA() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
-                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1">LOCATION</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">LOCATION</p>
                                 <p className="text-xs font-black text-[#113670] mb-0.5">Ahmedabad, Gujarat</p>
                                 <p className="text-[10px] text-slate-500 font-medium">Serving Pan India</p>
                             </div>
@@ -169,7 +169,7 @@ export default function ContactCTA() {
                         </div>
 
                         {/* Bottom trust indicators */}
-                        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[11px] font-black text-slate-400 mt-10 tracking-widest uppercase">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[11px] font-black text-slate-500 mt-10 tracking-widest uppercase">
                             <span className="flex items-center gap-1.5">
                                 <svg className="w-4 h-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

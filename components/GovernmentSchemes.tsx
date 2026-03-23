@@ -141,9 +141,9 @@ export default function GovernmentSchemes() {
             <p className="text-sm font-bold text-white/90 mb-3">Government Schemes We Facilitate</p>
             <h2 className="text-3xl md:text-4xl font-black text-white">
               Helping MSMEs Access{" "}
-              <span className="text-[#1B4F8C]">Government Support</span>
+              <span className="text-white">Government Support</span>
             </h2>
-            <p className="mt-3 text-sm text-slate-400 max-w-xl mx-auto">
+            <p className="mt-3 text-sm text-slate-100 max-w-xl mx-auto">
               Expert guidance for PMEGP, CGTMSE, Mudra & other MSME schemes across India
             </p>
           </div>

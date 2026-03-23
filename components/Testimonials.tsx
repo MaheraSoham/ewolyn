@@ -65,7 +65,7 @@ export default function Testimonials() {
             Real Businesses,{" "}
             <span className="gradient-text-light">Real Results</span>
           </h2>
-          <p className="mt-3 mx-auto max-w-xl text-sm text-slate-300">
+          <p className="mt-3 mx-auto max-w-xl text-sm text-slate-200 leading-relaxed">
             Discover how we&apos;ve helped businesses like yours secure funding
             and achieve their goals
           </p>
@@ -104,7 +104,7 @@ export default function Testimonials() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-black text-white truncate">{v.name}</p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 truncate">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-200 truncate">
                     {v.role}
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function Testimonials() {
               className="text-center rounded-xl bg-white/5 border border-white/10 py-4 px-3"
             >
               <p className="text-2xl font-black text-white">{s.value}</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-1">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-200 mt-1">
                 {s.label}
               </p>
             </div>

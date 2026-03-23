@@ -140,7 +140,7 @@ export default function BusinessSolutions() {
                                         </span>
                                     )}
                                     <p className="text-lg font-black text-[#1B4F8C] leading-tight">{sol.stat}</p>
-                                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">{sol.statLabel}</p>
+                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">{sol.statLabel}</p>
                                 </div>
                             </div>
 
@@ -166,7 +166,7 @@ export default function BusinessSolutions() {
                             {/* Tags */}
                             <div className="flex flex-wrap gap-1.5 mb-4">
                                 {sol.tags.map((tag) => (
-                                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-0.5 rounded">
+                                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
                                         {tag}
                                     </span>
                                 ))}

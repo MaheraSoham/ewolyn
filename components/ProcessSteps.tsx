@@ -103,7 +103,7 @@ export default function ProcessSteps() {
               </div>
 
               {/* Step label */}
-              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">STEP {s.step}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-200 mb-1">STEP {s.step}</p>
 
               {/* Title */}
               <h3 className="text-sm font-black text-[#1B4F8C] mb-2 max-w-[160px]">{s.title}</h3>

@@ -177,7 +177,7 @@ export default function IndiaMap() {
               <div className="font-bold text-base text-cyan-300">{hoveredState.name}</div>
             </div>
             <div className="text-sm text-white font-medium">{hoveredState.msmeCount}</div>
-            <div className="text-xs text-slate-400 mt-2">Click for details</div>
+            <div className="text-xs text-slate-300 mt-2">Click for details</div>
           </div>
         </div>
       )}

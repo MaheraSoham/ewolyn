@@ -163,7 +163,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                                 <div className="mb-6">
                                     <span className="inline-block text-xs font-bold text-[#2eb85c] bg-[#2eb85c]/10 rounded-full px-3 py-1 mb-3">Free Consultation</span>
                                     <h2 className="text-2xl font-black text-[#1B4F8C] mb-1">Check Your Eligibility</h2>
-                                    <p className="text-sm text-slate-400">Our expert will contact you within 2 hours.</p>
+                                    <p className="text-sm text-slate-500 font-medium">Our expert will contact you within 2 hours.</p>
                                     {service && (
                                         <div className="mt-3 flex items-center gap-2 text-xs text-slate-500 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5">
                                             <span className="w-2 h-2 rounded-full bg-[#2eb85c]" />
@@ -178,7 +178,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                                         { label: "Mobile Number", type: "tel", placeholder: "10-digit mobile number", key: "phone", Icon: IconPhone },
                                     ].map(({ label, type, placeholder, key, Icon }) => (
                                         <div key={key}>
-                                            <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5 block">{label} <span className="text-red-400">*</span></label>
+                                            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">{label} <span className="text-red-400">*</span></label>
                                             <div className="relative">
                                                 <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300"><Icon size={16} /></div>
                                                 <input
@@ -197,7 +197,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                                             ? <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto" />
                                             : "Get Free Consultation →"}
                                     </button>
-                                    <p className="text-center text-[11px] text-slate-400 flex items-center justify-center gap-1.5 mt-1">
+                                    <p className="text-center text-[11px] text-slate-500 font-medium flex items-center justify-center gap-1.5 mt-1">
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                                         100% Private. No spam guaranteed.
                                     </p>
@@ -310,7 +310,7 @@ export default function ConsultationPopup() {
                                     <h4 className="text-[11px] font-black text-[#1B4F8C] leading-tight mb-0.5 group-hover:text-[#1B4F8C] transition-colors">
                                         {card.title}
                                     </h4>
-                                    <p className="text-[9px] text-slate-400 leading-tight line-clamp-2">{card.desc}</p>
+                                    <p className="text-[9px] text-slate-500 font-medium leading-tight line-clamp-2">{card.desc}</p>
                                 </div>
 
                                 {/* Arrow on hover */}
@@ -327,7 +327,7 @@ export default function ConsultationPopup() {
                             <span className="text-xl">🚀</span>
                             <div>
                                 <p className="text-[11px] font-black text-[#1B4F8C]">Not sure where to start?</p>
-                                <p className="text-[10px] text-slate-400">Talk to an expert for free</p>
+                                <p className="text-[10px] text-slate-500 font-medium">Talk to an expert for free</p>
                             </div>
                         </div>
                         <button

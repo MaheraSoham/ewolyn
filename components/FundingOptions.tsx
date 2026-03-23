@@ -123,7 +123,7 @@ export default function FundingOptions() {
           <h2 className="text-3xl md:text-4xl font-black text-white">
             Find Your Perfect Funding Match
           </h2>
-          <p className="mt-3 text-sm text-slate-400 max-w-md mx-auto">
+          <p className="mt-3 text-sm text-slate-100 max-w-md mx-auto">
             Compare government schemes side-by-side to make an informed decision
           </p>
         </div>

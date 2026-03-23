@@ -339,7 +339,7 @@ export default function GoogleReviews() {
                                 <span className="text-2xl font-black text-[#1B4F8C]">{overallRating}</span>
                                 <Stars />
                             </div>
-                            <p className="text-[10px] text-slate-400 font-medium mt-0.5">Based on {totalRatings} Google Reviews</p>
+                            <p className="text-[10px] text-slate-500 font-semibold mt-0.5">Based on {totalRatings} Google Reviews</p>
                         </div>
                     </div>
                     <a

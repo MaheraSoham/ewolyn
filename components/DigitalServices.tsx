@@ -210,7 +210,7 @@ export default function DigitalServices() {
                     <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
                         Scale Your Business <span className="text-white">Digitally</span>
                     </h2>
-                    <p className="text-base text-white/80 max-w-xl mx-auto">
+                    <p className="text-base text-white/95 max-w-xl mx-auto">
                         End-to-end digital solutions designed to improve brand visibility and customer acquisition for MSMEs.
                     </p>
                 </div>
@@ -237,7 +237,7 @@ export default function DigitalServices() {
                                 </div>
                                 <div className="text-right">
                                     <p className={`text-2xl font-black tracking-tighter ${svc.statColor} leading-none mb-1`}>{svc.stat}</p>
-                                    <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">{svc.statLabel}</p>
+                                    <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">{svc.statLabel}</p>
                                 </div>
                             </div>
 
@@ -245,12 +245,12 @@ export default function DigitalServices() {
                             <h3 className="text-xl font-black text-[#1B4F8C] leading-tight mb-1">
                                 {svc.title}
                             </h3>
-                            <p className="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-4">
+                            <p className="text-[9px] font-bold uppercase tracking-widest text-slate-500 mb-4">
                                 {svc.subtitle}
                             </p>
 
                             {/* Description */}
-                            <p className="text-xs text-slate-500 leading-relaxed mb-6 font-medium">
+                            <p className="text-xs text-slate-600 leading-relaxed mb-6 font-medium">
                                 {svc.desc}
                             </p>
 

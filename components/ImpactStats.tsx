@@ -43,7 +43,7 @@ export default function ImpactStats() {
                   {s.value}
                 </div>
                 <div className="mt-2 font-black text-white text-base md:text-lg uppercase tracking-wider">{s.label}</div>
-                <div className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">{s.sublabel}</div>
+                <div className="text-[10px] md:text-xs font-bold text-slate-200 uppercase tracking-widest">{s.sublabel}</div>
               </motion.div>
             ))}
           </div>

@@ -196,7 +196,7 @@ export default function ContactContent() {
                 {card.icon}
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-1">{card.title}</h3>
-              <p className="text-xs text-slate-400 uppercase tracking-wider mb-3">{card.sub}</p>
+              <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-3">{card.sub}</p>
               <p className="text-sm font-bold text-slate-700 mb-4">{card.val}</p>
               <span className="inline-flex items-center gap-1 text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
                 {card.btn}
@@ -241,21 +241,21 @@ export default function ContactContent() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Full Name</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Full Name</label>
                     <input type="text" name="name" required placeholder="Enter your name" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-slate-900 font-medium" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Phone Number</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone Number</label>
                     <input type="tel" name="phone" required placeholder="10-digit mobile" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-slate-900 font-medium" />
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Email Address</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Address</label>
                     <input type="email" name="email" required placeholder="your@email.com" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-slate-900 font-medium" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Inquiry Type</label>
+                    <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Inquiry Type</label>
                     <select name="type" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-slate-900 font-medium appearance-none">
                       <option>Funding &amp; Loans</option>
                       <option>Business Registration</option>
@@ -266,7 +266,7 @@ export default function ContactContent() {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-400">Your Message</label>
+                  <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Your Message</label>
                   <textarea rows={5} name="message" required placeholder="Tell us how we can help your business grow..." className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-slate-900 font-medium resize-none" />
                 </div>
                 <button
@@ -342,11 +342,11 @@ export default function ContactContent() {
                 </p>
                 <div className="space-y-3 pt-6 border-t border-white/10">
                   <div className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
-                    <span className="text-xs text-gray-400">WhatsApp</span>
+                    <span className="text-xs text-emerald-100/70">WhatsApp</span>
                     <span className="text-sm font-bold text-white">+91 98765 43210</span>
                   </div>
                   <div className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
-                    <span className="text-xs text-gray-400">Support</span>
+                    <span className="text-xs text-emerald-100/70">Support</span>
                     <span className="text-sm font-bold text-white">info@ewolyn.co.in</span>
                   </div>
                 </div>

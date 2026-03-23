@@ -208,7 +208,7 @@ export default function SchemesPage() {
             </p>
           </FadeIn>
 
-          <StaggerContainer>
+          <StaggerContainer key={activeCategory}>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
               {filtered.map((scheme) => {
                 const meta = categoryMeta[scheme.category];

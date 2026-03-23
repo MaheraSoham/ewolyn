@@ -98,7 +98,7 @@ function QuickCompare() {
             <table className="w-full text-sm">
                 <thead>
                     <tr>
-                        <th className="text-left text-slate-400 font-semibold pb-4 pr-6 text-xs uppercase tracking-wider w-32">
+                        <th className="text-left text-slate-500 font-semibold pb-4 pr-6 text-xs uppercase tracking-wider w-32">
                             Feature
                         </th>
                         {compareSchemes.map((s) => (
@@ -116,7 +116,7 @@ function QuickCompare() {
                 <tbody className="divide-y divide-slate-100">
                     {rows.map(({ label, key }) => (
                         <tr key={key} className="hover:bg-slate-50 transition-colors">
-                            <td className="py-3 pr-6 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                            <td className="py-3 pr-6 text-xs font-semibold text-slate-500 uppercase tracking-wider">
                                 {label}
                             </td>
                             {compareSchemes.map((s) => (

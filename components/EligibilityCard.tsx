@@ -70,7 +70,7 @@ export default function EligibilityCard({
                     >
                         Check <span className="text-primary">Eligibility</span>
                     </motion.h3>
-                    <p className="mt-2 text-[10px] font-black text-slate-400 uppercase tracking-[0.25em]">Instant Funding Analysis</p>
+                    <p className="mt-2 text-[10px] font-black text-slate-500 uppercase tracking-[0.25em]">Instant Funding Analysis</p>
                 </div>
 
                 {/* Form Section */}
@@ -78,7 +78,7 @@ export default function EligibilityCard({
 
                     {/* Business Selection */}
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Entity Type</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-500 ml-1">Entity Type</label>
                         <div className="relative">
                             <select
                                 name="entityType"
@@ -98,7 +98,7 @@ export default function EligibilityCard({
 
                     {/* Funding Amount */}
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Funding Required</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-500 ml-1">Funding Required</label>
                         <div className="relative">
                             <select
                                 name="amount"
@@ -119,7 +119,7 @@ export default function EligibilityCard({
 
                     {/* Stage Selection - Modern Pill Toggle */}
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Growth Stage</label>
+                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-500 ml-1">Growth Stage</label>
                         <div className="flex p-1.5 bg-slate-100/50 rounded-2xl border border-slate-100">
                             {["Idea", "Early", "Growth"].map((s) => (
                                 <button
@@ -168,7 +168,7 @@ export default function EligibilityCard({
                                 <div key={i} className="w-5 h-5 rounded-full border-2 border-white bg-slate-200 shadow-sm overflow-hidden flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-300 text-[8px] font-bold text-slate-500 italic">EB</div>
                             ))}
                         </div>
-                        <p className="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">
+                        <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
                             Joined by <span className="text-brand-navy">20,000+</span> Founders
                         </p>
                     </div>

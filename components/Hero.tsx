@@ -103,8 +103,7 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="text-[11px] font-black uppercase tracking-[0.35em] mb-3"
-                style={{ color: "rgba(167,243,208,0.70)" }}
+                className="text-[11px] font-black uppercase tracking-[0.35em] mb-3 text-emerald-300"
               >
                 Ewolyn Services Pvt Ltd
               </motion.p>
@@ -269,12 +268,12 @@ export default function Hero() {
                   <div className="w-[58%] bg-white p-7 flex flex-col justify-center">
                     <span className="inline-block text-xs font-bold text-[#2eb85c] bg-[#2eb85c]/10 rounded-full px-3 py-1 mb-3 w-fit">Free Consultation</span>
                     <h3 className="text-xl font-black text-[#1B4F8C] mb-1">Check Your Eligibility</h3>
-                    <p className="text-xs text-slate-400 mb-5">Our expert will contact you within 2 hours.</p>
+                    <p className="text-xs text-slate-500 mb-5 font-medium">Our expert will contact you within 2 hours.</p>
 
                     {!heroSubmitted ? (
                       <form onSubmit={handleHeroSubmit} className="space-y-3.5">
                         <div>
-                          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 block">Full Name <span className="text-red-400">*</span></label>
+                          <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">Full Name <span className="text-red-400">*</span></label>
                           <div className="relative">
                             <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300">
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
@@ -285,7 +284,7 @@ export default function Hero() {
                           </div>
                         </div>
                         <div>
-                          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5 block">Phone Number <span className="text-red-400">*</span></label>
+                          <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">Phone Number <span className="text-red-400">*</span></label>
                           <div className="relative">
                             <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300">
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
@@ -302,7 +301,7 @@ export default function Hero() {
                             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto" />
                           ) : "Get Free Consultation →"}
                         </button>
-                        <p className="text-center text-[10px] text-slate-400 flex items-center justify-center gap-1">
+                        <p className="text-center text-[10px] text-slate-500 font-medium flex items-center justify-center gap-1">
                           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                           100% Private. No spam guaranteed.
                         </p>
@@ -370,10 +369,10 @@ export default function Hero() {
 
           {/* Strip */}
           <div className="mt-8 text-center">
-            <p className="text-sm font-semibold" style={{ color: "rgba(167,243,208,0.70)" }}>
+            <p className="text-sm font-semibold text-emerald-300/90">
               MSME Funding and Business Registration Services
             </p>
-            <p className="text-[10px] uppercase tracking-widest mt-1" style={{ color: "rgba(255,255,255,0.35)" }}>
+            <p className="text-[10px] uppercase tracking-widest mt-1 text-white/60">
               Ewolyn Services Pvt Ltd
             </p>
             <div
