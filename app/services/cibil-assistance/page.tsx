@@ -170,7 +170,7 @@ export default function CibilAssistancePage() {
     <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
-        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px] floating-shape"></div>
+        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] floating-shape"></div>
         <div
           className="absolute bottom-10 left-[-5%] w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] floating-shape"
           style={{ animationDelay: "2s" }}
@@ -179,12 +179,12 @@ export default function CibilAssistancePage() {
         <div className="container-max relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-green/20 rounded-full text-white text-sm font-bold mb-6 border border-accent-green/30">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full text-white text-sm font-bold mb-6 border border-primary/30">
                 <span className="animate-pulse">💳</span>
                 Better Loan Eligibility
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
-                <span className="text-accent-green">Fix Your</span> <br />
+                <span className="text-primary">Fix Your</span> <br />
                 <span className="text-white">CIBIL Score</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
@@ -222,7 +222,7 @@ export default function CibilAssistancePage() {
               <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
                 {stats.map((s) => (
                   <div key={s.label}>
-                    <p className="text-3xl font-bold text-accent-green">
+                    <p className="text-3xl font-bold text-primary">
                       {s.value}
                     </p>
                     <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">
@@ -235,7 +235,7 @@ export default function CibilAssistancePage() {
 
             <SlideIn direction="right">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent-green to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                   <Image
                     src="/cibil_assistance_hero_premium.png"
@@ -257,11 +257,11 @@ export default function CibilAssistancePage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 Our CIBIL Services
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Complete Credit <span className="text-accent-green">Repair Solutions</span>
+                Complete Credit <span className="text-primary">Repair Solutions</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-2xl mx-auto">
                 From error correction to strategic score improvement — we handle
@@ -275,7 +275,7 @@ export default function CibilAssistancePage() {
               {cibilServices.map((service) => (
                 <StaggerItem key={service.title}>
                   <ScaleOnHover>
-                    <div className="h-full bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-accent-green/30 transition-all duration-300 flex flex-col">
+                    <div className="h-full bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">
                         {service.title}
@@ -289,7 +289,7 @@ export default function CibilAssistancePage() {
                             key={b}
                             className="flex items-start gap-2 text-sm text-slate-600"
                           >
-                            <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-accent-green" />
+                            <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                             {b}
                           </li>
                         ))}
@@ -298,7 +298,7 @@ export default function CibilAssistancePage() {
                         <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                           Timeline
                         </span>
-                        <span className="text-sm font-bold text-accent-green">
+                        <span className="text-sm font-bold text-primary">
                           {service.timeline}
                         </span>
                       </div>
@@ -316,11 +316,11 @@ export default function CibilAssistancePage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 How It Works
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Our <span className="text-accent-green">4-Step</span> Process
+                Our <span className="text-primary">4-Step</span> Process
               </h2>
             </div>
           </FadeIn>
@@ -329,10 +329,10 @@ export default function CibilAssistancePage() {
             {process.map((p) => (
               <SlideUp key={p.step}>
                 <div className="relative bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                  <span className="text-6xl font-black text-accent-green/10 absolute top-4 right-6">
+                  <span className="text-6xl font-black text-primary/10 absolute top-4 right-6">
                     {p.step}
                   </span>
-                  <div className="w-12 h-12 rounded-2xl bg-accent-green/10 flex items-center justify-center text-accent-green font-bold text-lg mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary font-bold text-lg mb-5">
                     {p.step}
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-3">
@@ -353,11 +353,11 @@ export default function CibilAssistancePage() {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 Why Choose Us
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                Why Businesses <span className="text-accent-green">Trust Us</span> with Credit Repair
+                Why Businesses <span className="text-primary">Trust Us</span> with Credit Repair
               </h2>
               <p className="text-lg text-slate-500 mb-10">
                 Our credit repair experts have helped 500+ businesses improve their scores and unlock better financing opportunities.
@@ -365,8 +365,8 @@ export default function CibilAssistancePage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {whyChooseUs.map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-green/10">
-                      <svg className="h-3 w-3 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <svg className="h-3 w-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -380,9 +380,9 @@ export default function CibilAssistancePage() {
                 {/* Score Gauge */}
                 <div className="relative w-64 h-32 overflow-hidden">
                   <div className="absolute inset-0 rounded-t-full border-[16px] border-slate-200"></div>
-                  <div className="absolute inset-0 rounded-t-full border-[16px] border-transparent border-t-accent-green border-l-accent-green border-r-yellow-400" style={{ transform: "rotate(0deg)" }}></div>
+                  <div className="absolute inset-0 rounded-t-full border-[16px] border-transparent border-t-primary border-l-primary border-r-yellow-400" style={{ transform: "rotate(0deg)" }}></div>
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center">
-                    <p className="text-4xl font-black text-accent-green">750+</p>
+                    <p className="text-4xl font-black text-primary">750+</p>
                     <p className="text-xs text-slate-500 font-medium">Target Score</p>
                   </div>
                 </div>
@@ -390,7 +390,7 @@ export default function CibilAssistancePage() {
                 <div className="flex justify-between w-64 mt-3 px-2">
                   <span className="text-xs font-bold text-red-400">300</span>
                   <span className="text-xs font-bold text-yellow-500">500</span>
-                  <span className="text-xs font-bold text-accent-green">750+</span>
+                  <span className="text-xs font-bold text-primary">750+</span>
                   <span className="text-xs font-bold text-emerald-600">900</span>
                 </div>
                 {/* Stats below gauge */}
@@ -401,7 +401,7 @@ export default function CibilAssistancePage() {
                     { value: "85%", label: "Dispute Win" },
                   ].map((s) => (
                     <div key={s.label} className="bg-slate-100 rounded-xl p-4 text-center">
-                      <p className="text-xl font-bold text-accent-green">{s.value}</p>
+                      <p className="text-xl font-bold text-primary">{s.value}</p>
                       <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">{s.label}</p>
                     </div>
                   ))}
@@ -417,11 +417,11 @@ export default function CibilAssistancePage() {
         <div className="container-max max-w-4xl">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 FAQs
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Frequently Asked <span className="text-accent-green">Questions</span>
+                Frequently Asked <span className="text-primary">Questions</span>
               </h2>
             </div>
           </FadeIn>
@@ -434,7 +434,7 @@ export default function CibilAssistancePage() {
                     className="w-full flex items-center justify-between p-6 text-left"
                   >
                     <span className="text-lg font-semibold text-slate-900 pr-4">{faq.q}</span>
-                    <span className={`text-accent-green text-2xl font-bold transition-transform duration-300 shrink-0 ${openFaq === i ? "rotate-45" : ""}`}>+</span>
+                    <span className={`text-primary text-2xl font-bold transition-transform duration-300 shrink-0 ${openFaq === i ? "rotate-45" : ""}`}>+</span>
                   </button>
                   {openFaq === i && (
                     <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
@@ -453,7 +453,7 @@ export default function CibilAssistancePage() {
         <div className="container-max text-center">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to <span className="text-accent-green">Fix Your Credit?</span>
+              Ready to <span className="text-primary">Fix Your Credit?</span>
             </h2>
             <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
               Don&apos;t let a low CIBIL score hold your business back. Get a

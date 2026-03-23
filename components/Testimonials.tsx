@@ -99,7 +99,7 @@ export default function Testimonials() {
 
               {/* ── Card Footer ── */}
               <div className="flex items-center gap-3 px-4 py-3 border-t border-white/10">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#1B4F8C] to-[#2eb85c] flex items-center justify-center text-white text-xs font-black shrink-0">
+                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#1B4F8C] to-[#1B4F8C] flex items-center justify-center text-white text-xs font-black shrink-0">
                   {v.name.split(" ").map((n) => n[0]).join("")}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -108,7 +108,7 @@ export default function Testimonials() {
                     {v.role}
                   </p>
                 </div>
-                <span className="text-[10px] font-black text-accent-green bg-accent-green/10 border border-accent-green/20 rounded-full px-2.5 py-1 shrink-0">
+                <span className="text-[10px] font-black text-primary bg-primary/10 border border-primary/20 rounded-full px-2.5 py-1 shrink-0">
                   {v.result}
                 </span>
               </div>

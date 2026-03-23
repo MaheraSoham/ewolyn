@@ -14,7 +14,7 @@ export default function ServicesClient() {
             <section className="relative min-h-[70vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-green/10 rounded-full blur-[120px]"></div>
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]"></div>
 
                 <div className="container-max relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -24,7 +24,7 @@ export default function ServicesClient() {
                                 Enterprise Scale Solutions
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
-                                <span className="text-accent-green">Comprehensive</span> <br />
+                                <span className="text-primary">Comprehensive</span> <br />
                                 <span className="text-white">Business Ecosystem</span>
                             </h1>
                             <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
@@ -47,7 +47,7 @@ export default function ServicesClient() {
 
                         <SlideIn direction="right">
                             <div className="relative group">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-accent-green to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
                                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                                     <Image
                                         src="/success-celebration.png"

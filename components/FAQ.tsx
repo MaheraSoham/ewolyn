@@ -34,15 +34,15 @@ export default function FAQ() {
       <div className="container-max max-w-3xl">
         {/* Header */}
         <div className="text-center mb-10">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-accent-green mb-2">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold text-primary mb-2">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             Common Queries
           </span>
-          <h2 className="text-3xl md:text-4xl font-black text-[#0a1628]">
+          <h2 className="text-3xl md:text-4xl font-black text-[#1B4F8C]">
             Frequently Asked{" "}
-            <span className="text-accent-green">Questions</span>
+            <span className="text-primary">Questions</span>
           </h2>
           <p className="mt-3 text-sm text-slate-500 max-w-lg mx-auto">
             Everything you need to know about our services, funding process, and eligibility criteria. Can&apos;t find the answer you&apos;re looking for? Feel free to contact us.
@@ -55,7 +55,7 @@ export default function FAQ() {
             <div
               key={idx}
               className={`rounded-xl border transition-all duration-300 ${openIndex === idx
-                  ? "border-accent-green/30 bg-accent-green/5 shadow-sm"
+                  ? "border-primary/30 bg-primary/5 shadow-sm"
                   : "border-slate-200 bg-white hover:border-slate-300"
                 }`}
             >
@@ -63,13 +63,13 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
                 className="w-full flex items-center justify-between p-5 text-left"
               >
-                <span className={`text-sm font-bold ${openIndex === idx ? "text-accent-green" : "text-[#0a1628]"}`}>
+                <span className={`text-sm font-bold ${openIndex === idx ? "text-primary" : "text-[#1B4F8C]"}`}>
                   {faq.q}
                 </span>
                 <motion.div
                   animate={{ rotate: openIndex === idx ? 45 : 0 }}
                   transition={{ duration: 0.2 }}
-                  className={`shrink-0 ml-4 w-6 h-6 rounded-full flex items-center justify-center ${openIndex === idx ? "bg-accent-green text-white" : "bg-slate-100 text-slate-400"}`}
+                  className={`shrink-0 ml-4 w-6 h-6 rounded-full flex items-center justify-center ${openIndex === idx ? "bg-primary text-white" : "bg-slate-100 text-slate-400"}`}
                 >
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
@@ -100,7 +100,7 @@ export default function FAQ() {
           <p className="text-sm text-slate-500 mb-3">Still have questions? We&apos;re here to help!</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#0a1628] text-white px-6 py-3 text-sm font-bold hover:bg-accent-green hover:text-[#0a1628] transition-all"
+            className="inline-flex items-center gap-2 rounded-lg bg-[rgba(115,150,121,0.92)] text-white px-6 py-3 text-sm font-bold hover:bg-primary hover:text-[#1B4F8C] transition-all"
           >
             Contact Support
           </Link>

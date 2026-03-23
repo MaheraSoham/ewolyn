@@ -179,7 +179,7 @@ export default function MarketingBrandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideIn direction="left">
               <div>
-                <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green font-semibold text-sm mb-6">
+                <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6">
                   📢 Marketing &amp; Branding
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -206,7 +206,7 @@ export default function MarketingBrandingPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {stats.map((stat, i) => (
                     <div key={i} className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-accent-green">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">
                         {stat.value}
                       </div>
                       <div className="text-sm text-gray-400">{stat.label}</div>
@@ -261,13 +261,13 @@ export default function MarketingBrandingPage() {
                             key={j}
                             className="flex items-start gap-2 text-sm text-gray-700"
                           >
-                            <span className="text-accent-green mt-0.5">✓</span>
+                            <span className="text-primary mt-0.5">✓</span>
                             {feature}
                           </li>
                         ))}
                       </ul>
                       <div className="pt-4 border-t border-gray-100">
-                        <span className="text-sm font-semibold text-accent-green">
+                        <span className="text-sm font-semibold text-primary">
                           ⏱ Timeline: {service.timeline}
                         </span>
                       </div>
@@ -300,7 +300,7 @@ export default function MarketingBrandingPage() {
                   >
                     <span className="text-3xl block mb-2">{platform.icon}</span>
                     <p className="text-sm font-bold text-slate-700">{platform.name}</p>
-                    <div className="mt-2 h-1 w-8 bg-accent-green/40 rounded-full mx-auto"></div>
+                    <div className="mt-2 h-1 w-8 bg-primary/40 rounded-full mx-auto"></div>
                   </div>
                 ))}
               </div>
@@ -314,9 +314,9 @@ export default function MarketingBrandingPage() {
                   {whyChooseUs.map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-3 p-3 rounded-xl bg-accent-green/10"
+                      className="flex items-start gap-3 p-3 rounded-xl bg-primary/10"
                     >
-                      <span className="text-accent-green font-bold text-lg">
+                      <span className="text-primary font-bold text-lg">
                         ✓
                       </span>
                       <span className="text-gray-800 font-medium">{item}</span>
@@ -348,7 +348,7 @@ export default function MarketingBrandingPage() {
               {processSteps.map((step, i) => (
                 <StaggerItem key={i}>
                   <div className="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center h-full">
-                    <div className="text-5xl font-extrabold text-accent-green/20 mb-4">
+                    <div className="text-5xl font-extrabold text-primary/20 mb-4">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -388,7 +388,7 @@ export default function MarketingBrandingPage() {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-accent-green text-xl flex-shrink-0 transition-transform duration-300 ${
+                      className={`text-primary text-xl flex-shrink-0 transition-transform duration-300 ${
                         openFaq === i ? "rotate-45" : ""
                       }`}
                     >

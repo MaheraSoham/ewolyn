@@ -179,7 +179,7 @@ export default function TaxCompliancePage() {
     <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* ═══════════════ Hero ═══════════════ */}
       <section className="relative min-h-[80vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
-        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px] floating-shape" />
+        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px] floating-shape" />
         <div
           className="absolute bottom-10 left-[-5%] w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] floating-shape"
           style={{ animationDelay: "2s" }}
@@ -188,12 +188,12 @@ export default function TaxCompliancePage() {
         <div className="container-max relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-green/20 rounded-full text-white text-sm font-bold mb-6 border border-accent-green/30">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 rounded-full text-white text-sm font-bold mb-6 border border-primary/30">
                 <span className="animate-pulse">📊</span>
                 Tax &amp; Compliance
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
-                <span className="text-accent-green">Save 100% Tax</span> <br />
+                <span className="text-primary">Save 100% Tax</span> <br />
                 <span className="text-white">for 3 Years</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
@@ -231,7 +231,7 @@ export default function TaxCompliancePage() {
               <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
                 {heroStats.map((s) => (
                   <div key={s.label}>
-                    <p className="text-3xl font-bold text-accent-green">
+                    <p className="text-3xl font-bold text-primary">
                       {s.value}
                     </p>
                     <p className="text-xs text-gray-400 uppercase tracking-wider mt-1">
@@ -244,7 +244,7 @@ export default function TaxCompliancePage() {
 
             <SlideIn direction="right">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent-green to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
                 <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
                   <Image
                     src="/tax_compliance_hero_premium.png"
@@ -266,11 +266,11 @@ export default function TaxCompliancePage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 Our Services
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                Our <span className="text-accent-green">Services</span>
+                Our <span className="text-primary">Services</span>
               </h2>
               <p className="text-lg text-slate-500 max-w-2xl mx-auto">
                 Comprehensive tax filing, planning, and compliance solutions for
@@ -284,7 +284,7 @@ export default function TaxCompliancePage() {
               {services.map((svc) => (
                 <StaggerItem key={svc.title}>
                   <ScaleOnHover>
-                    <div className="h-full bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-accent-green/30 transition-all duration-300 flex flex-col">
+                    <div className="h-full bg-white rounded-3xl border border-slate-200 p-8 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col">
                       <div className="text-4xl mb-4">{svc.icon}</div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">
                         {svc.title}
@@ -298,7 +298,7 @@ export default function TaxCompliancePage() {
                             key={f}
                             className="flex items-start gap-2 text-sm text-slate-600"
                           >
-                            <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-accent-green" />
+                            <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                             {f}
                           </li>
                         ))}
@@ -307,7 +307,7 @@ export default function TaxCompliancePage() {
                         <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                           Timeline
                         </span>
-                        <span className="text-sm font-bold text-accent-green">
+                        <span className="text-sm font-bold text-primary">
                           {svc.timeline}
                         </span>
                       </div>
@@ -325,11 +325,11 @@ export default function TaxCompliancePage() {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 Why Choose Us
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
-                Why Choose <span className="text-accent-green">Us</span>
+                Why Choose <span className="text-primary">Us</span>
               </h2>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -338,9 +338,9 @@ export default function TaxCompliancePage() {
                     key={item}
                     className="flex items-center gap-3 bg-white rounded-xl p-4 border border-slate-200 shadow-sm"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-accent-green/10 flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <svg
-                        className="w-4 h-4 text-accent-green"
+                        className="w-4 h-4 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -364,7 +364,7 @@ export default function TaxCompliancePage() {
             <SlideIn direction="right">
               <div className="space-y-4">
                 {[
-                  { icon: "🏆", text: "3-Year Tax Holiday", sub: "Under Section 80IAC for DPIIT startups", accent: "border-accent-green" },
+                  { icon: "🏆", text: "3-Year Tax Holiday", sub: "Under Section 80IAC for DPIIT startups", accent: "border-primary" },
                   { icon: "💰", text: "₹25L+ Avg. Annual Savings", sub: "Across income tax, GST, and compliance costs", accent: "border-blue-400" },
                   { icon: "🚀", text: "Angel Tax Exempt", sub: "Section 56(2)(viib) exemption for eligible startups", accent: "border-purple-400" },
                   { icon: "🛡️", text: "Full Compliance Shield", sub: "Zero penalty record across 1000+ filings", accent: "border-orange-400" },
@@ -378,7 +378,7 @@ export default function TaxCompliancePage() {
                       <p className="font-bold text-slate-900">{item.text}</p>
                       <p className="text-xs text-slate-500 mt-0.5">{item.sub}</p>
                     </div>
-                    <svg className="w-5 h-5 text-accent-green ml-auto shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-primary ml-auto shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -394,11 +394,11 @@ export default function TaxCompliancePage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 How It Works
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                How It <span className="text-accent-green">Works</span>
+                How It <span className="text-primary">Works</span>
               </h2>
             </div>
           </FadeIn>
@@ -407,10 +407,10 @@ export default function TaxCompliancePage() {
             {processSteps.map((p) => (
               <SlideUp key={p.step}>
                 <div className="relative bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                  <span className="text-6xl font-black text-accent-green/10 absolute top-4 right-6">
+                  <span className="text-6xl font-black text-primary/10 absolute top-4 right-6">
                     {p.step}
                   </span>
-                  <div className="w-12 h-12 rounded-2xl bg-accent-green/10 flex items-center justify-center text-accent-green font-bold text-lg mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary font-bold text-lg mb-5">
                     {p.step}
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-3">
@@ -431,12 +431,12 @@ export default function TaxCompliancePage() {
         <div className="container-max max-w-3xl">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block text-accent-green font-bold text-sm uppercase tracking-widest mb-3">
+              <span className="inline-block text-primary font-bold text-sm uppercase tracking-widest mb-3">
                 FAQ
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
                 Frequently Asked{" "}
-                <span className="text-accent-green">Questions</span>
+                <span className="text-primary">Questions</span>
               </h2>
             </div>
           </FadeIn>
@@ -455,7 +455,7 @@ export default function TaxCompliancePage() {
                     {faq.question}
                   </h3>
                   <svg
-                    className={`w-5 h-5 text-accent-green shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""
+                    className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${openFaq === idx ? "rotate-180" : ""
                       }`}
                     fill="none"
                     stroke="currentColor"
@@ -488,7 +488,7 @@ export default function TaxCompliancePage() {
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to{" "}
-              <span className="text-accent-green">Get Started?</span>
+              <span className="text-primary">Get Started?</span>
             </h2>
             <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
               Let our experts guide you through the process. Schedule a free

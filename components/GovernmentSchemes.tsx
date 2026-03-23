@@ -134,14 +134,14 @@ export default function GovernmentSchemes() {
   return (
     <>
       {/* Section 1: Dark BG with heading + stat cards */}
-      <section className="bg-[#0a1628] py-16">
+      <section className="bg-[rgba(115,150,121,0.92)] py-16">
         <div className="container-max">
           {/* Header */}
           <div className="text-center mb-10">
-            <p className="text-sm font-bold text-accent-green mb-3">Government Schemes We Facilitate</p>
+            <p className="text-sm font-bold text-white/90 mb-3">Government Schemes We Facilitate</p>
             <h2 className="text-3xl md:text-4xl font-black text-white">
               Helping MSMEs Access{" "}
-              <span className="text-accent-green">Government Support</span>
+              <span className="text-[#1B4F8C]">Government Support</span>
             </h2>
             <p className="mt-3 text-sm text-slate-400 max-w-xl mx-auto">
               Expert guidance for PMEGP, CGTMSE, Mudra & other MSME schemes across India
@@ -155,7 +155,7 @@ export default function GovernmentSchemes() {
                 key={s.label}
                 className="rounded-2xl bg-[#0d1f3c] border border-white/10 p-6 text-center"
               >
-                <div className="w-10 h-10 rounded-full bg-accent-green/20 text-accent-green flex items-center justify-center text-lg font-bold mx-auto mb-3">
+                <div className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center text-lg font-bold mx-auto mb-3">
                   {s.icon}
                 </div>
                 <p className="text-2xl font-black text-white">{s.value}</p>
@@ -195,13 +195,13 @@ export default function GovernmentSchemes() {
                 </div>
 
                 {/* Stat label + big value */}
-                <p className="text-[10px] font-black uppercase tracking-widest text-accent-green mb-1">
+                <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">
                   {sc.loanLabel}
                 </p>
-                <p className="text-3xl font-black text-[#0a1628] mb-1">{sc.loanAmount}</p>
+                <p className="text-3xl font-black text-[#1B4F8C] mb-1">{sc.loanAmount}</p>
 
                 {/* Title */}
-                <h4 className="text-base font-black text-accent-green mb-2">{sc.title}</h4>
+                <h4 className="text-base font-black text-primary mb-2">{sc.title}</h4>
 
                 {/* Description */}
                 <p className="text-xs text-slate-500 leading-relaxed flex-grow mb-4">{sc.full}</p>
@@ -213,7 +213,7 @@ export default function GovernmentSchemes() {
                   </span>
                   <button
                     onClick={() => openEligibilityPopup(sc.title)}
-                    className="text-xs font-black text-accent-green hover:text-[#1B4F8C] transition-colors flex items-center gap-1"
+                    className="text-xs font-black text-primary hover:text-[#1B4F8C] transition-colors flex items-center gap-1"
                   >
                     View →
                   </button>
@@ -223,11 +223,11 @@ export default function GovernmentSchemes() {
           </motion.div>
 
           {/* Trust Badges Bar */}
-          <div className="mt-10 rounded-xl bg-accent-green/5 border border-accent-green/20 py-4 px-6">
+          <div className="mt-10 rounded-xl bg-primary/5 border border-primary/20 py-4 px-6">
             <div className="flex flex-wrap justify-center gap-8">
               {trustBadges.map((b) => (
                 <div key={b} className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-sm font-medium text-slate-600">{b}</span>
@@ -251,7 +251,7 @@ export default function GovernmentSchemes() {
               <motion.span
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 border-2 border-accent-green text-accent-green font-bold py-3 px-8 rounded-lg hover:bg-accent-green hover:text-white transition-all cursor-pointer text-sm"
+                className="inline-flex items-center gap-2 border-2 border-primary text-primary font-bold py-3 px-8 rounded-lg hover:bg-primary hover:text-white transition-all cursor-pointer text-sm"
               >
                 View More Government Schemes
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

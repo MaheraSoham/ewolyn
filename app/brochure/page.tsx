@@ -12,14 +12,14 @@ export default function BrochurePage() {
             {/* Hero strip */}
             <section className="hero-navy-gradient text-white pt-28 pb-16 text-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-cyan/5 rounded-full blur-[100px] -z-10" />
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-green/5 rounded-full blur-[100px] -z-10" />
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10" />
 
                 <div className="container-max relative z-10">
-                    <span className="inline-block bg-accent-green/20 text-accent-green text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                    <span className="inline-block bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
                         Company Brochure
                     </span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
-                        <span className="text-accent-green">Ewolyn</span>{" "}
+                        <span className="text-primary">Ewolyn</span>{" "}
                         <span className="text-white">Services Brochure</span>
                     </h1>
                     <p className="text-slate-300/90 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
@@ -44,7 +44,7 @@ export default function BrochurePage() {
                             href="/brochure.pdf"
                             download="Ewolyn_Brochure.pdf"
                             target="_blank"
-                            className="inline-flex items-center gap-2 bg-accent-green hover:bg-green-600 text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-green-500/20"
+                            className="inline-flex items-center gap-2 bg-primary hover:bg-primary text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-green-500/20"
                         >
                             <svg
                                 className="w-5 h-5"
@@ -77,7 +77,7 @@ export default function BrochurePage() {
                         >
                             <p className="p-8 text-center">
                                 Your browser does not support PDFs.
-                                <a href="/brochure.pdf" className="text-accent-green font-bold underline ml-1">Download the brochure</a>
+                                <a href="/brochure.pdf" className="text-primary font-bold underline ml-1">Download the brochure</a>
                                 to view it.
                             </p>
                         </iframe>

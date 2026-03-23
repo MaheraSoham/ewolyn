@@ -65,7 +65,7 @@ export default function ImpactStats() {
               Our Impact
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-ink leading-tight">
-              Driving MSME Success <span className="text-accent-green">Across India</span>
+              Driving MSME Success <span className="text-primary">Across India</span>
             </h2>
             <p className="text-muted mt-5 text-lg max-w-2xl mx-auto font-medium">
               Join the 4.77 crore MSMEs registered on the Udyam portal. We're here to unlock your growth potential.
@@ -180,19 +180,19 @@ export default function ImpactStats() {
                 <h4 className="font-semibold mb-4 text-lg">Government Support Programs</h4>
                 <div className="grid grid-cols-1 gap-3">
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-primary text-lg">✓</span>
                     <span className="text-slate-100">₹4.14L Cr MUDRA loans disbursed</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-primary text-lg">✓</span>
                     <span className="text-slate-100">₹7,593 Cr SRI Fund invested</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-primary text-lg">✓</span>
                     <span className="text-slate-100">200+ RAMP proposals approved</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <span className="text-accent-green text-lg">✓</span>
+                    <span className="text-primary text-lg">✓</span>
                     <span className="text-slate-100">20.5% Women-owned MSMEs</span>
                   </div>
                 </div>

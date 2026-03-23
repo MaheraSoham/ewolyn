@@ -197,7 +197,7 @@ const cardVariants = {
 export default function DigitalServices() {
     const { openEligibilityPopup } = usePopup();
     return (
-        <section className="bg-[#0a1628] py-20 pb-24">
+        <section className="bg-[rgba(115,150,121,0.92)] py-20 pb-24">
             <div className="container-max">
                 {/* Header */}
                 <div className="text-center mb-16">
@@ -210,7 +210,7 @@ export default function DigitalServices() {
                     <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
                         Scale Your Business <span className="text-white">Digitally</span>
                     </h2>
-                    <p className="text-base text-slate-300 max-w-xl mx-auto">
+                    <p className="text-base text-white/80 max-w-xl mx-auto">
                         End-to-end digital solutions designed to improve brand visibility and customer acquisition for MSMEs.
                     </p>
                 </div>
@@ -242,7 +242,7 @@ export default function DigitalServices() {
                             </div>
 
                             {/* Title & Subtitle */}
-                            <h3 className="text-xl font-black text-[#0a1628] leading-tight mb-1">
+                            <h3 className="text-xl font-black text-[#1B4F8C] leading-tight mb-1">
                                 {svc.title}
                             </h3>
                             <p className="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-4">
@@ -259,7 +259,7 @@ export default function DigitalServices() {
                                 {svc.features.map((f, i) => (
                                     <li key={i} className="flex items-start gap-2">
                                         <svg
-                                            className="w-3.5 h-3.5 text-[#0a1628] shrink-0 mt-0.5"
+                                            className="w-3.5 h-3.5 text-[#1B4F8C] shrink-0 mt-0.5"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -267,7 +267,7 @@ export default function DigitalServices() {
                                         >
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                         </svg>
-                                        <span className="text-[11px] font-black text-[#0a1628] leading-tight">{f}</span>
+                                        <span className="text-[11px] font-black text-[#1B4F8C] leading-tight">{f}</span>
                                     </li>
                                 ))}
                             </ul>

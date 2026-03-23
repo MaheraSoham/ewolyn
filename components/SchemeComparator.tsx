@@ -120,7 +120,7 @@ function QuickCompare() {
                                 {label}
                             </td>
                             {compareSchemes.map((s) => (
-                                <td key={s.slug} className="py-3 px-3 text-center font-bold text-[#0a1628] text-sm">
+                                <td key={s.slug} className="py-3 px-3 text-center font-bold text-[#1B4F8C] text-sm">
                                     {s[key]}
                                 </td>
                             ))}
@@ -190,7 +190,7 @@ function DetailedView() {
                             ].map(({ label, value }) => (
                                 <div key={label} className="flex justify-between items-center text-xs">
                                     <span className="text-slate-400 font-semibold uppercase tracking-wider">{label}</span>
-                                    <span className="font-bold text-[#0a1628] text-right">{value}</span>
+                                    <span className="font-bold text-[#1B4F8C] text-right">{value}</span>
                                 </div>
                             ))}
                         </div>
@@ -248,7 +248,7 @@ export default function SchemeComparator() {
     const [view, setView] = useState<"quick" | "detailed">("quick");
 
     return (
-        <section className="py-20" style={{ background: "#0f1e3c" }}>
+        <section className="py-20" style={{ background: "rgba(115, 150, 121, 0.92)" }}>
             <div className="container-max">
                 {/* Header */}
                 <div className="text-center mb-10">
@@ -258,7 +258,7 @@ export default function SchemeComparator() {
                         <button
                             onClick={() => setView("quick")}
                             className={`px-5 py-2 rounded-full transition-all duration-300 ${view === "quick"
-                                    ? "bg-white text-[#0f1e3c] shadow"
+                                    ? "bg-white text-[#1B4F8C] shadow"
                                     : "text-white/80 hover:text-white"
                                 }`}
                         >

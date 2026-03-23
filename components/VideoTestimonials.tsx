@@ -74,7 +74,7 @@ function VideoCard({
                             />
                         ) : (
                             /* Placeholder gradient when no real ID yet */
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-cyan to-accent-green flex items-center justify-center">
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-cyan to-primary flex items-center justify-center">
                                 <span className="text-white/40 text-xs font-mono uppercase tracking-widest">
                                     Video coming soon
                                 </span>

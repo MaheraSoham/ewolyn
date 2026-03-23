@@ -135,7 +135,7 @@ export default function LogoGrid() {
                 whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)" }}
                 className="flex items-center gap-4 p-6 bg-white border border-slate-200 rounded-xl transition-all duration-300"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-green/10 text-accent-green text-xl font-bold">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary text-xl font-bold">
                   {cert.icon}
                 </div>
                 <div>

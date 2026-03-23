@@ -27,7 +27,7 @@
   --navy-500:  #1B4F8C;   /* SECONDARY */
   --navy-600:  #1d4ed8;
   --navy-700:  #0d2f57;
-  --navy-900:  #0a1628;
+  --navy-900:  rgba(115, 150, 121, 0.92);
 
   /* Accent */
   --orange:  #f47c20;
@@ -222,7 +222,7 @@ a:hover { color: var(--green-600); }
 
 /* ── Navbar ───────────────────────────────────────────────────── */
 .glass-navbar {
-  background: rgba(13, 47, 87, 0.85); /* Dark Navy */
+  background: rgba(115, 150, 121, 0.92); /* Primary Navy */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(46, 184, 92, 0.25); /* Green border */
@@ -231,13 +231,13 @@ a:hover { color: var(--green-600); }
 
 /* ── Animated Backgrounds ────────────────────────────────────── */
 .hero-navy-gradient {
-  background: linear-gradient(135deg, #0d2f57 0%, #1B4F8C 40%, #2eb85c 100%);
+  background: linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%);
   background-size: 200% 200%;
   animation: gradientShift 12s ease infinite;
 }
 
 .animated-gradient {
-  background: linear-gradient(135deg, #0d2f57 0%, #1B4F8C 50%, #2eb85c 100%);
+  background: linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%);
   background-size: 200% 200%;
   animation: gradientShift 8s ease infinite;
 }

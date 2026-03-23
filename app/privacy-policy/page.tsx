@@ -192,7 +192,7 @@ export default function PrivacyPolicyPage() {
     <main className="min-h-screen bg-white overflow-x-hidden">
       {/* HERO */}
       <section className="relative pt-32 pb-20 hero-navy-gradient text-white overflow-hidden">
-        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px]" />
+        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-10 left-[-5%] w-72 h-72 bg-blue-500/10 rounded-full blur-[100px]" />
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -204,7 +204,7 @@ export default function PrivacyPolicyPage() {
         <div className="container-max relative z-10">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-            <Link href="/" className="hover:text-accent-green transition-colors flex items-center gap-1">
+            <Link href="/" className="hover:text-primary transition-colors flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
@@ -217,27 +217,27 @@ export default function PrivacyPolicyPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-green/15 backdrop-blur-sm rounded-full text-sm font-bold mb-6 border border-accent-green/25">
-              <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-6 border border-primary/25">
+              <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
-              <span className="text-accent-green">Your Privacy Matters</span>
+              <span className="text-primary">Your Privacy Matters</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Privacy <span className="text-accent-green">Policy</span>
+              Privacy <span className="text-primary">Policy</span>
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
               This policy explains how Ewolyn collects, uses, and protects your personal information. We are committed to safeguarding your data in full compliance with the Information Technology Act, 2000 and other applicable Indian laws.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 Last updated: March 2026
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -251,18 +251,18 @@ export default function PrivacyPolicyPage() {
       {/* TABLE OF CONTENTS */}
       <section className="py-12 bg-slate-50 border-b border-slate-200">
         <div className="container-max">
-          <p className="text-xs font-bold text-accent-green uppercase tracking-widest mb-4">Quick Navigation</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Quick Navigation</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {sections.map((s, i) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-accent-green/30 hover:shadow-sm transition-all duration-200 group"
+                className="flex items-center gap-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-primary/30 hover:shadow-sm transition-all duration-200 group"
               >
-                <div className="w-7 h-7 rounded-lg bg-slate-100 group-hover:bg-accent-green/10 flex items-center justify-center text-slate-400 group-hover:text-accent-green transition-colors flex-shrink-0">
+                <div className="w-7 h-7 rounded-lg bg-slate-100 group-hover:bg-primary/10 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors flex-shrink-0">
                   {s.icon}
                 </div>
-                <span className="text-sm text-slate-600 group-hover:text-accent-green transition-colors leading-snug">{s.title}</span>
+                <span className="text-sm text-slate-600 group-hover:text-primary transition-colors leading-snug">{s.title}</span>
               </a>
             ))}
           </div>
@@ -273,8 +273,8 @@ export default function PrivacyPolicyPage() {
       <section className="py-14">
         <div className="container-max">
           <div className="max-w-3xl mx-auto">
-            <div className="bg-gradient-to-r from-accent-green/5 to-transparent border-l-4 border-accent-green rounded-r-2xl p-6 mb-10">
-              <p className="text-xs font-bold text-accent-green uppercase tracking-widest mb-2 flex items-center gap-1.5">
+            <div className="bg-gradient-to-r from-primary/5 to-transparent border-l-4 border-primary rounded-r-2xl p-6 mb-10">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1.5">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -289,11 +289,11 @@ export default function PrivacyPolicyPage() {
             {sections.map((section, idx) => (
               <div key={section.id} id={section.id} className="mb-14 scroll-mt-24">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                     {section.icon}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
                   </div>
                 </div>
@@ -316,16 +316,16 @@ export default function PrivacyPolicyPage() {
       <section className="py-20 hero-navy-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="container-max text-center relative z-10">
-          <div className="w-14 h-14 mx-auto bg-accent-green/15 rounded-2xl flex items-center justify-center mb-6">
-            <svg className="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-14 h-14 mx-auto bg-primary/15 rounded-2xl flex items-center justify-center mb-6">
+            <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
           <h2 className="text-3xl font-bold mb-3">
-            Questions About Your <span className="text-accent-green">Privacy?</span>
+            Questions About Your <span className="text-primary">Privacy?</span>
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-            Write to us at <a href="mailto:info@ewolyn.co.in" className="text-accent-green hover:underline">info@ewolyn.co.in</a> or call us at <a href="tel:+919876543210" className="text-accent-green hover:underline">+91 98765 43210</a>.
+            Write to us at <a href="mailto:info@ewolyn.co.in" className="text-primary hover:underline">info@ewolyn.co.in</a> or call us at <a href="tel:+919876543210" className="text-primary hover:underline">+91 98765 43210</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-hero-green">Contact Us →</Link>

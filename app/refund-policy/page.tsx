@@ -12,7 +12,7 @@ export default function RefundPolicyPage() {
     <main className="min-h-screen bg-white overflow-x-hidden">
       {/* HERO */}
       <section className="relative pt-32 pb-20 hero-navy-gradient text-white overflow-hidden">
-        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px]" />
+        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-10 left-[-5%] w-72 h-72 bg-blue-500/10 rounded-full blur-[100px]" />
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -24,7 +24,7 @@ export default function RefundPolicyPage() {
         <div className="container-max relative z-10">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-gray-300 mb-8">
-            <Link href="/" className="hover:text-accent-green transition-colors flex items-center gap-1">
+            <Link href="/" className="hover:text-primary transition-colors flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
@@ -37,27 +37,27 @@ export default function RefundPolicyPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-green/15 backdrop-blur-sm rounded-full text-sm font-bold mb-6 border border-accent-green/25">
-              <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-6 border border-primary/25">
+              <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
               </svg>
-              <span className="text-accent-green">Refund &amp; Cancellation</span>
+              <span className="text-primary">Refund &amp; Cancellation</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Refund <span className="text-accent-green">Policy</span>
+              Refund <span className="text-primary">Policy</span>
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">
               We are committed to delivering quality consultancy services. This policy outlines the circumstances under which refunds may apply, and our cancellation procedures.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 Last updated: March 2026
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
                 </svg>
                 Refunds processed in 7–10 business days
@@ -79,7 +79,7 @@ export default function RefundPolicyPage() {
             ].map((item) => (
               <div key={item.label} className="bg-white rounded-xl p-5 border border-slate-200 text-center">
                 <div className="text-2xl mb-2">{item.icon}</div>
-                <p className="text-base font-bold text-accent-green">{item.value}</p>
+                <p className="text-base font-bold text-primary">{item.value}</p>
                 <p className="text-xs text-slate-500 mt-1">{item.label}</p>
               </div>
             ))}
@@ -94,13 +94,13 @@ export default function RefundPolicyPage() {
             {/* Section 1 */}
             <div id="nature" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">01</span>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">01</span>
                   <h2 className="text-2xl font-bold text-slate-900">Nature of Our Services</h2>
                 </div>
               </div>
@@ -121,13 +121,13 @@ export default function RefundPolicyPage() {
             {/* Section 2 — Refund eligibility */}
             <div id="when-refunds-apply" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-primary flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">02</span>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">02</span>
                   <h2 className="text-2xl font-bold text-slate-900">When Refunds Apply</h2>
                 </div>
               </div>
@@ -154,7 +154,7 @@ export default function RefundPolicyPage() {
                   ].map((item) => (
                     <div key={item.title} className="flex gap-4 p-4 bg-green-50 border border-green-100 rounded-xl">
                       <div className="flex-shrink-0 mt-0.5">
-                        <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                        <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
                           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
@@ -179,7 +179,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">03</span>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">03</span>
                   <h2 className="text-2xl font-bold text-slate-900">Non-Refundable Cases</h2>
                 </div>
               </div>
@@ -215,13 +215,13 @@ export default function RefundPolicyPage() {
             {/* Section 4 — Cancellation */}
             <div id="cancellation" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">04</span>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">04</span>
                   <h2 className="text-2xl font-bold text-slate-900">Cancellation Policy</h2>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function RefundPolicyPage() {
                 <h3 className="text-base font-semibold text-slate-800">How to Cancel</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   To cancel an engagement, you must send a written cancellation request to{" "}
-                  <a href="mailto:info@ewolyn.co.in" className="text-accent-green font-medium hover:underline">info@ewolyn.co.in</a>{" "}
+                  <a href="mailto:info@ewolyn.co.in" className="text-primary font-medium hover:underline">info@ewolyn.co.in</a>{" "}
                   with the subject line <strong>"Cancellation Request — [Your Business Name]"</strong>. Please include your contact number, the service you wish to cancel, and the reason for cancellation.
                 </p>
 
@@ -252,7 +252,7 @@ export default function RefundPolicyPage() {
                       ].map(([timing, refund], i) => (
                         <tr key={i} className="hover:bg-slate-50">
                           <td className="px-4 py-3 text-slate-600">{timing}</td>
-                          <td className={`px-4 py-3 font-medium ${refund.startsWith("100") ? "text-green-600" : refund.startsWith("No") ? "text-red-500" : "text-amber-600"}`}>{refund}</td>
+                          <td className={`px-4 py-3 font-medium ${refund.startsWith("100") ? "text-primary" : refund.startsWith("No") ? "text-red-500" : "text-amber-600"}`}>{refund}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -264,13 +264,13 @@ export default function RefundPolicyPage() {
             {/* Section 5 — Refund Process */}
             <div id="refund-process" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">05</span>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">05</span>
                   <h2 className="text-2xl font-bold text-slate-900">Refund Process</h2>
                 </div>
               </div>
@@ -299,7 +299,7 @@ export default function RefundPolicyPage() {
                     },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
-                      <div className="flex-shrink-0 w-9 h-9 rounded-full bg-accent-green/10 border-2 border-accent-green/20 flex items-center justify-center text-xs font-bold text-accent-green">
+                      <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center text-xs font-bold text-primary">
                         {item.step}
                       </div>
                       <div className="pb-4 border-b border-slate-100 flex-1">
@@ -315,19 +315,19 @@ export default function RefundPolicyPage() {
             {/* Section 6 — Dispute Resolution */}
             <div id="dispute" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">06</span>
+                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">06</span>
                   <h2 className="text-2xl font-bold text-slate-900">Dispute Resolution</h2>
                 </div>
               </div>
               <div className="pl-[52px] space-y-4">
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  If you are not satisfied with Ewolyn's response to your refund request, you may escalate the matter by writing to our senior management at <a href="mailto:info@ewolyn.co.in" className="text-accent-green font-medium hover:underline">info@ewolyn.co.in</a> with the subject <strong>"Escalation — Refund Dispute"</strong>. We are committed to resolving all disputes within 15 business days.
+                  If you are not satisfied with Ewolyn's response to your refund request, you may escalate the matter by writing to our senior management at <a href="mailto:info@ewolyn.co.in" className="text-primary font-medium hover:underline">info@ewolyn.co.in</a> with the subject <strong>"Escalation — Refund Dispute"</strong>. We are committed to resolving all disputes within 15 business days.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   Any unresolved disputes shall be subject to the jurisdiction of courts in Ahmedabad, Gujarat, India, as per the governing law provisions in our Terms & Conditions. You also retain your rights under the Consumer Protection Act, 2019 and may approach the appropriate consumer forum.
@@ -336,19 +336,19 @@ export default function RefundPolicyPage() {
             </div>
 
             {/* Contact box */}
-            <div className="bg-gradient-to-r from-accent-green/5 to-transparent border border-accent-green/20 rounded-2xl p-6">
+            <div className="bg-gradient-to-r from-primary/5 to-transparent border border-primary/20 rounded-2xl p-6">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Questions About a Refund?</h3>
               <p className="text-slate-600 text-sm mb-4">
                 Our support team is available Monday to Saturday, 9 AM – 6 PM IST. Don't hesitate to reach out with any questions about this policy.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="mailto:info@ewolyn.co.in" className="inline-flex items-center gap-2 text-sm text-accent-green font-semibold hover:underline">
+                <a href="mailto:info@ewolyn.co.in" className="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                   info@ewolyn.co.in
                 </a>
-                <a href="tel:+919876543210" className="inline-flex items-center gap-2 text-sm text-accent-green font-semibold hover:underline">
+                <a href="tel:+919876543210" className="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -370,13 +370,13 @@ export default function RefundPolicyPage() {
           }}
         />
         <div className="container-max text-center relative z-10">
-          <div className="w-14 h-14 mx-auto bg-accent-green/15 rounded-2xl flex items-center justify-center mb-6">
-            <svg className="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-14 h-14 mx-auto bg-primary/15 rounded-2xl flex items-center justify-center mb-6">
+            <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
             </svg>
           </div>
           <h2 className="text-3xl font-bold mb-3">
-            Need Help Before <span className="text-accent-green">You Start?</span>
+            Need Help Before <span className="text-primary">You Start?</span>
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
             Have a question about our services, pricing, or what to expect? Talk to our team before engaging — we're transparent about everything.

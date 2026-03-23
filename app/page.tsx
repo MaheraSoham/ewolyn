@@ -15,6 +15,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "MSME Funding Made Easy | Ewolyn",
     description:
       "Government schemes, company registration & business certifications. Expert guidance for PMEGP, CGTMSE, Mudra & other MSME schemes across India.",
+    icons: {
+      icon: "/logo.png",
+    },
   };
 }
 

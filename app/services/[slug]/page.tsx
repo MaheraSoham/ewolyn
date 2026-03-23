@@ -42,12 +42,12 @@ export default function SchemeDetailPage({ params }: Props) {
       <section className="hero-navy-gradient text-white py-20 relative overflow-hidden">
         {/* Subtle decorative background glow */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan/5 rounded-full blur-[100px] -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-green/5 rounded-full blur-[100px] -z-10" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10" />
 
         <div className="container-max relative z-10">
           {/* Tags / Breadcrumb style */}
           <div className="flex items-center justify-center gap-3 mb-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-green animate-pulse" />
+            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
             <span className="text-xs font-bold tracking-widest uppercase text-white">
               {scheme.tags.join(" • ")}
             </span>
@@ -55,7 +55,7 @@ export default function SchemeDetailPage({ params }: Props) {
 
           {/* Title & Subtitle */}
           <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-accent-green">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary">
               {scheme.title}
             </h1>
             <p className="text-xl md:text-2xl font-medium text-white max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ export default function SchemeDetailPage({ params }: Props) {
           </div>
 
           {/* Decorative Divider */}
-          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-accent-green to-transparent mx-auto mt-8" />
+          <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-8" />
 
           {/* Description */}
           <p className="text-center text-slate-300/90 mt-8 max-w-3xl mx-auto text-lg leading-relaxed">
@@ -75,7 +75,7 @@ export default function SchemeDetailPage({ params }: Props) {
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {scheme.heroStats.map((stat) => (
               <div key={stat.label} className="stats-card text-center group">
-                <div className="text-3xl md:text-4xl font-black text-accent-green group-hover:scale-110 transition-transform duration-300">
+                <div className="text-3xl md:text-4xl font-black text-primary group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
                 <div className="text-[10px] uppercase tracking-widest text-slate-400 mt-2 font-bold">
@@ -258,7 +258,7 @@ export default function SchemeDetailPage({ params }: Props) {
                     <ul className="space-y-2">
                       {scheme.benefits.lendingInstitutions.map((inst, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-sm text-muted">
-                          <span className="text-green-500">✓</span>
+                          <span className="text-primary">✓</span>
                           {inst}
                         </li>
                       ))}

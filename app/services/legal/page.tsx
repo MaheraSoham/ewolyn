@@ -194,7 +194,7 @@ export default function LegalServicesPage() {
                     { value: "50+", label: "IP Registrations" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <p className="text-2xl md:text-3xl font-bold text-accent-green">
+                      <p className="text-2xl md:text-3xl font-bold text-primary">
                         {stat.value}
                       </p>
                       <p className="text-xs text-white/70 mt-1">
@@ -271,13 +271,13 @@ export default function LegalServicesPage() {
                           key={feature}
                           className="flex items-start gap-2 text-sm text-gray-700"
                         >
-                          <span className="text-accent-green mt-0.5">✓</span>
+                          <span className="text-primary mt-0.5">✓</span>
                           {feature}
                         </li>
                       ))}
                     </ul>
                     <div className="pt-4 border-t border-gray-100">
-                      <span className="inline-block bg-accent-green/10 text-accent-green text-xs font-semibold px-3 py-1 rounded-full">
+                      <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">
                         Timeline: {service.timeline}
                       </span>
                     </div>
@@ -302,7 +302,7 @@ export default function LegalServicesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {whyChooseUs.map((item) => (
                     <div key={item} className="flex items-start gap-3">
-                      <span className="text-accent-green text-lg mt-0.5">
+                      <span className="text-primary text-lg mt-0.5">
                         ✓
                       </span>
                       <span className="text-gray-700">{item}</span>
@@ -322,13 +322,13 @@ export default function LegalServicesPage() {
                 ].map((pillar) => (
                   <div
                     key={pillar.label}
-                    className="flex items-center gap-5 bg-gradient-to-r from-[#0a1628] to-[#0d2f57] rounded-2xl p-6 shadow-lg border border-white/5"
+                    className="flex items-center gap-5 bg-gradient-to-r from-[rgba(115,150,121,0.92)] to-[#0d2f57] rounded-2xl p-6 shadow-lg border border-white/5"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-accent-green/15 flex items-center justify-center text-2xl shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center text-2xl shrink-0">
                       {pillar.icon}
                     </div>
                     <div>
-                      <p className="text-2xl font-black text-accent-green">{pillar.value}</p>
+                      <p className="text-2xl font-black text-primary">{pillar.value}</p>
                       <p className="text-sm font-bold text-white">{pillar.label}</p>
                       <p className="text-xs text-gray-400 mt-0.5">{pillar.desc}</p>
                     </div>
@@ -360,11 +360,11 @@ export default function LegalServicesPage() {
               <StaggerItem key={step.step}>
                 <ScaleOnHover>
                   <div className="relative bg-white border border-gray-100 rounded-2xl p-8 shadow-sm text-center h-full">
-                    <span className="text-5xl font-extrabold text-accent-green/10 absolute top-4 right-6 select-none">
+                    <span className="text-5xl font-extrabold text-primary/10 absolute top-4 right-6 select-none">
                       {step.step}
                     </span>
-                    <div className="w-14 h-14 rounded-full bg-accent-green/10 flex items-center justify-center mx-auto mb-5">
-                      <span className="text-accent-green font-bold text-lg">
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                      <span className="text-primary font-bold text-lg">
                         {step.step}
                       </span>
                     </div>
@@ -411,7 +411,7 @@ export default function LegalServicesPage() {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-accent-green text-xl transition-transform duration-300 ${
+                      className={`text-primary text-xl transition-transform duration-300 ${
                         openFaq === index ? "rotate-45" : ""
                       }`}
                     >

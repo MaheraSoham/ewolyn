@@ -50,7 +50,7 @@ const steps = [
     title: "Delivery of Final Draft",
     desc: "Hand over the completed solution — ready to implement and grow.",
     icon: "🚀",
-    color: "bg-green-500",
+    color: "bg-primary",
   },
 ];
 
@@ -66,10 +66,10 @@ export default function ProcessSteps() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block rounded-full bg-accent-green/10 border border-accent-green/20 px-4 py-1.5 text-xs font-bold text-accent-green mb-3">
+          <span className="inline-block rounded-full bg-primary/10 border border-primary/20 px-4 py-1.5 text-xs font-bold text-primary mb-3">
             ● Our 7-Step Process
           </span>
-          <h2 className="text-3xl md:text-4xl font-black text-[#0a1628]">
+          <h2 className="text-3xl md:text-4xl font-black text-[#1B4F8C]">
             Ewolyn&apos;s Process
           </h2>
           <p className="text-sm text-slate-500 mt-3 max-w-xl mx-auto">
@@ -95,7 +95,7 @@ export default function ProcessSteps() {
                   {s.icon}
                 </div>
                 {/* Green checkmark */}
-                <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent-green flex items-center justify-center border-2 border-white">
+                <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center border-2 border-white">
                   <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -106,7 +106,7 @@ export default function ProcessSteps() {
               <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">STEP {s.step}</p>
 
               {/* Title */}
-              <h3 className="text-sm font-black text-[#0a1628] mb-2 max-w-[160px]">{s.title}</h3>
+              <h3 className="text-sm font-black text-[#1B4F8C] mb-2 max-w-[160px]">{s.title}</h3>
 
               {/* Description */}
               <p className="text-xs text-slate-500 max-w-[180px] leading-relaxed">{s.desc}</p>
@@ -124,7 +124,7 @@ export default function ProcessSteps() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-accent-green text-[#0a1628] px-8 py-3 text-sm font-bold hover:bg-[#0a1628] hover:text-white transition-all"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary text-[#1B4F8C] px-8 py-3 text-sm font-bold hover:bg-[rgba(115,150,121,0.92)] hover:text-white transition-all"
           >
             Start Your Application →
           </Link>

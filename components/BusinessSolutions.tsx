@@ -38,7 +38,7 @@ const solutions = [
         features: ["CRM & automation", "Digital marketing", "Website & app development"],
         tags: ["CRM SOFTWARE", "SEO", "SOCIAL MEDIA", "+1 MORE"],
         href: "/services",
-        iconBg: "bg-green-600",
+        iconBg: "bg-primary",
         icon: "💻",
     },
     {
@@ -62,7 +62,7 @@ const solutions = [
         features: ["Company incorporation", "GST & MSME registration", "License & permits"],
         tags: ["PVT LTD", "LLP", "OPC", "+1 MORE"],
         href: "/services/business-registration",
-        iconBg: "bg-green-500",
+        iconBg: "bg-primary",
         icon: "📋",
     },
     {
@@ -100,15 +100,15 @@ export default function BusinessSolutions() {
                 {/* Header */}
                 <div className="text-center mb-10">
                     <p className="text-xs font-bold uppercase tracking-[0.3em] text-orange-500 mb-2">OUR EXPERTISE</p>
-                    <h2 className="text-3xl md:text-4xl font-black text-[#0a1628]">
+                    <h2 className="text-3xl md:text-4xl font-black text-[#1B4F8C]">
                         Complete Business Solutions
                     </h2>
                     <p className="mt-3 text-sm text-slate-500 max-w-lg mx-auto">
                         Strategic guidance and end-to-end support for Indian MSMEs and Startups
                     </p>
                     {/* Disbursed badge */}
-                    <div className="mt-4 inline-flex items-center gap-2 bg-accent-green/10 border border-accent-green/20 rounded-full px-5 py-2">
-                        <span className="text-xl font-black text-accent-green">₹45Cr+</span>
+                    <div className="mt-4 inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2">
+                        <span className="text-xl font-black text-primary">₹45Cr+</span>
                         <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">DISBURSED</span>
                     </div>
                 </div>
@@ -139,13 +139,13 @@ export default function BusinessSolutions() {
                                             {sol.badge}
                                         </span>
                                     )}
-                                    <p className="text-lg font-black text-[#0a1628] leading-tight">{sol.stat}</p>
+                                    <p className="text-lg font-black text-[#1B4F8C] leading-tight">{sol.stat}</p>
                                     <p className="text-[10px] text-slate-400 uppercase tracking-wider">{sol.statLabel}</p>
                                 </div>
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-lg font-black text-[#0a1628]">{sol.title}</h3>
+                            <h3 className="text-lg font-black text-[#1B4F8C]">{sol.title}</h3>
                             <p className="text-[10px] font-bold uppercase tracking-wider text-orange-500 mb-2">{sol.subtitle}</p>
 
                             {/* Description */}
@@ -155,7 +155,7 @@ export default function BusinessSolutions() {
                             <ul className="space-y-1.5 mb-4 flex-grow">
                                 {sol.features.map((f) => (
                                     <li key={f} className="flex items-center gap-2 text-xs text-slate-600">
-                                        <svg className="w-3.5 h-3.5 text-accent-green shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                        <svg className="w-3.5 h-3.5 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                         </svg>
                                         {f}
@@ -175,7 +175,7 @@ export default function BusinessSolutions() {
                             {/* Learn More */}
                             <button
                                 onClick={() => openEligibilityPopup(sol.title)}
-                                className="inline-flex items-center gap-1 rounded-lg bg-[#0a1628] text-white px-5 py-2.5 text-xs font-bold hover:bg-accent-green hover:text-[#0a1628] transition-all w-fit"
+                                className="inline-flex items-center gap-1 rounded-lg bg-[rgba(115,150,121,0.92)] text-white px-5 py-2.5 text-xs font-bold hover:bg-primary hover:text-[#1B4F8C] transition-all w-fit"
                             >
                                 LEARN MORE →
                             </button>
@@ -184,14 +184,14 @@ export default function BusinessSolutions() {
                 </motion.div>
 
                 {/* Need Help Bar */}
-                <div className="mt-10 rounded-2xl bg-gradient-to-r from-[#0a1628] to-[#162240] p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="mt-10 rounded-2xl bg-gradient-to-r from-[rgba(115,150,121,0.92)] to-[#162240] p-6 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
                         <h3 className="text-lg font-black text-white">Need Help Choosing?</h3>
-                        <p className="text-xs text-slate-400 mt-1">Our experts will guide you to the best solution for your business.</p>
+                        <p className="text-xs text-white/80 mt-1">Our experts will guide you to the best solution for your business.</p>
                     </div>
                     <button
                         onClick={() => openEligibilityPopup()}
-                        className="inline-flex items-center gap-2 rounded-lg bg-accent-green text-[#0a1628] px-6 py-3 text-sm font-bold hover:bg-white transition-all shrink-0"
+                        className="inline-flex items-center gap-2 rounded-lg bg-white text-primary px-6 py-3 text-sm font-bold hover:bg-[#1B4F8C] hover:text-white transition-all shrink-0"
                     >
                         🎯 Get Free Consultation
                     </button>
@@ -201,7 +201,7 @@ export default function BusinessSolutions() {
                 <div className="mt-6 text-center">
                     <Link
                         href="/services"
-                        className="inline-flex items-center gap-2 border-2 border-slate-300 text-slate-600 font-semibold py-2.5 px-6 rounded-lg hover:border-[#0a1628] hover:text-[#0a1628] transition-all text-sm"
+                        className="inline-flex items-center gap-2 border-2 border-slate-300 text-slate-600 font-semibold py-2.5 px-6 rounded-lg hover:border-[rgba(115,150,121,0.92)] hover:text-[#1B4F8C] transition-all text-sm"
                     >
                         View All Professional Services →
                     </Link>

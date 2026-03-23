@@ -269,7 +269,7 @@ export default function GoogleReviews() {
                         <GoogleIcon />
                         Verified Google Reviews
                     </span>
-                    <h2 className="text-3xl font-bold text-[#0a1628] sm:text-4xl">
+                    <h2 className="text-3xl font-bold text-[#1B4F8C] sm:text-4xl">
                         What Our Clients{" "}
                         <span className="text-[#2eb85c]">Say</span>
                     </h2>
@@ -336,7 +336,7 @@ export default function GoogleReviews() {
                         <GoogleIcon />
                         <div>
                             <div className="flex items-center gap-1.5">
-                                <span className="text-2xl font-black text-[#0a1628]">{overallRating}</span>
+                                <span className="text-2xl font-black text-[#1B4F8C]">{overallRating}</span>
                                 <Stars />
                             </div>
                             <p className="text-[10px] text-slate-400 font-medium mt-0.5">Based on {totalRatings} Google Reviews</p>

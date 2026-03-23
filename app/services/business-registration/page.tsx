@@ -177,7 +177,7 @@ export default function BusinessRegistrationPage() {
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Launch Your Business with{" "}
-                <span className="text-accent-green">
+                <span className="text-primary">
                   Complete Legal Compliance
                 </span>
               </h1>
@@ -196,7 +196,7 @@ export default function BusinessRegistrationPage() {
                   { value: "50+", label: "Entity Types" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center lg:text-left">
-                    <p className="text-2xl md:text-3xl font-bold text-accent-green">
+                    <p className="text-2xl md:text-3xl font-bold text-primary">
                       {stat.value}
                     </p>
                     <p className="text-sm text-slate-400">{stat.label}</p>
@@ -240,7 +240,7 @@ export default function BusinessRegistrationPage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block bg-green-50 text-accent-green text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="inline-block bg-green-50 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
                 Our Services
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -271,7 +271,7 @@ export default function BusinessRegistrationPage() {
                           className="flex items-start gap-2 text-slate-700"
                         >
                           <svg
-                            className="w-5 h-5 text-accent-green flex-shrink-0 mt-0.5"
+                            className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -289,7 +289,7 @@ export default function BusinessRegistrationPage() {
                     </ul>
 
                     <div className="pt-4 border-t border-slate-100">
-                      <span className="text-sm font-semibold text-accent-green">
+                      <span className="text-sm font-semibold text-primary">
                         ⏱ Timeline: {service.timeline}
                       </span>
                     </div>
@@ -307,12 +307,12 @@ export default function BusinessRegistrationPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <span className="inline-block bg-green-50 text-accent-green text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+                <span className="inline-block bg-green-50 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
                   Why Choose Us
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                   Everything You Need for a{" "}
-                  <span className="text-accent-green">Hassle-Free</span>{" "}
+                  <span className="text-primary">Hassle-Free</span>{" "}
                   Registration
                 </h2>
                 <p className="text-lg text-slate-600 mb-10">
@@ -327,7 +327,7 @@ export default function BusinessRegistrationPage() {
                   <StaggerItem key={item}>
                     <div className="flex items-start gap-3">
                       <svg
-                        className="w-5 h-5 text-accent-green flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -356,10 +356,10 @@ export default function BusinessRegistrationPage() {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-gradient-to-br from-[#0a1628] to-[#1B4F8C] rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/5"
+                    className="bg-gradient-to-br from-[rgba(115,150,121,0.92)] to-[#1B4F8C] rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/5"
                   >
                     <span className="text-3xl mb-3 block">{stat.icon}</span>
-                    <p className="text-3xl font-black text-accent-green mb-1">{stat.value}</p>
+                    <p className="text-3xl font-black text-primary mb-1">{stat.value}</p>
                     <p className="text-xs text-gray-300 uppercase tracking-wider font-medium">{stat.label}</p>
                   </div>
                 ))}
@@ -374,7 +374,7 @@ export default function BusinessRegistrationPage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block bg-green-50 text-accent-green text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="inline-block bg-green-50 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
                 How It Works
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -391,11 +391,11 @@ export default function BusinessRegistrationPage() {
             {processSteps.map((step, idx) => (
               <SlideUp key={step.step} delay={idx * 0.15}>
                 <div className="relative bg-slate-50 rounded-2xl p-8 text-center h-full">
-                  <span className="text-5xl font-extrabold text-accent-green/20 absolute top-4 right-6">
+                  <span className="text-5xl font-extrabold text-primary/20 absolute top-4 right-6">
                     {step.step}
                   </span>
-                  <div className="w-14 h-14 bg-accent-green/10 rounded-xl flex items-center justify-center mx-auto mb-5">
-                    <span className="text-accent-green font-bold text-lg">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-5">
+                    <span className="text-primary font-bold text-lg">
                       {step.step}
                     </span>
                   </div>
@@ -415,7 +415,7 @@ export default function BusinessRegistrationPage() {
         <div className="container-max max-w-3xl">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block bg-green-50 text-accent-green text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+              <span className="inline-block bg-green-50 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
                 FAQ
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -440,7 +440,7 @@ export default function BusinessRegistrationPage() {
                       {faq.question}
                     </span>
                     <svg
-                      className={`w-5 h-5 text-accent-green flex-shrink-0 transition-transform duration-300 ${
+                      className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
                         openFaq === idx ? "rotate-180" : ""
                       }`}
                       fill="none"

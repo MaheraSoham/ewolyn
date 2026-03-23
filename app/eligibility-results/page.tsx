@@ -193,7 +193,7 @@ function ResultsContent() {
                 {[...Array(6)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute w-1.5 h-1.5 bg-accent-green/40 rounded-full"
+                        className="absolute w-1.5 h-1.5 bg-primary/40 rounded-full"
                         animate={{
                             y: [0, -600],
                             opacity: [0, 1, 0],
@@ -211,7 +211,7 @@ function ResultsContent() {
                     <div className="relative w-20 h-20 mx-auto mb-8">
                         <div className="absolute inset-0 border-4 border-white/10 rounded-full"></div>
                         <motion.div
-                            className="absolute inset-0 border-4 border-accent-green border-t-transparent rounded-full"
+                            className="absolute inset-0 border-4 border-primary border-t-transparent rounded-full"
                             animate={{ rotate: 360 }}
                             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                         ></motion.div>
@@ -224,11 +224,11 @@ function ResultsContent() {
     }
 
     return (
-        <div className="min-h-screen bg-brand-dark-deep text-white selection:bg-accent-green/30">
+        <div className="min-h-screen bg-brand-dark-deep text-white selection:bg-primary/30">
             <main className="pb-24">
                 <section className="hero-navy-gradient pt-32 pb-20 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
-                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-green/10 rounded-full blur-[120px]"></div>
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]"></div>
 
                     <div className="container-max relative z-10">
                         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -240,15 +240,15 @@ function ResultsContent() {
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="inline-flex items-center gap-2 bg-accent-green/10 text-accent-green px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest border border-accent-green/20"
+                                    className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest border border-primary/20"
                                 >
-                                    <span className="w-1.5 h-1.5 bg-accent-green rounded-full animate-pulse" />
+                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
                                     Eligibility Analysis Active ✓
                                 </motion.div>
 
                                 <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tighter">
                                     <span className="text-white">Congratulations!</span><br />
-                                    <span className="text-accent-green">You're Eligible</span>
+                                    <span className="text-primary">You're Eligible</span>
                                 </h1>
 
                                 <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
@@ -261,19 +261,19 @@ function ResultsContent() {
                                         ].map((p, i) => (
                                             <div key={i} className="px-3 py-1.5 bg-white/10 rounded-lg border border-white/5 text-[11px] font-bold">
                                                 <span className="text-white/75 mr-2">{p.label}:</span>
-                                                <span className="text-accent-green">{p.val}</span>
+                                                <span className="text-primary">{p.val}</span>
                                             </div>
                                         ))}
                                     </div>
                                     <p className="mt-6 text-blue-100/80 text-sm leading-relaxed">
-                                        Our AI engine has identified <span className="text-accent-green font-bold">{dynamicSchemes.length} priority schemes</span> that match your specific business parameters perfectly.
+                                        Our AI engine has identified <span className="text-primary font-bold">{dynamicSchemes.length} priority schemes</span> that match your specific business parameters perfectly.
                                     </p>
                                 </div>
 
                                 <div className="flex flex-wrap gap-3">
                                     {["Bank Linkage", "Subsidy Focus", "Zero Upfront Fee"].map(tag => (
                                         <span key={tag} className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg text-[11px] font-bold text-blue-100/70 border border-white/10">
-                                            <svg className="w-3.5 h-3.5 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
+                                            <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                                             {tag}
                                         </span>
                                     ))}
@@ -308,7 +308,7 @@ function ResultsContent() {
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
                                     {[
-                                        { label: "Matches Found", val: dynamicSchemes.length.toString(), icon: "🟢", color: "from-accent-green/20 to-accent-green/5", border: "border-accent-green/20" },
+                                        { label: "Matches Found", val: dynamicSchemes.length.toString(), icon: "🟢", color: "from-primary/20 to-primary/5", border: "border-primary/20" },
                                         { label: "Max Potential", val: dynamicSchemes.length > 0 ? (dynamicSchemes.some(s => s.id === 'cgtmse') ? '₹5Cr' : '₹50L') : 'N/A', icon: "💰", color: "from-blue-500/20 to-blue-500/5", border: "border-blue-500/20" },
                                     ].map((stat, i) => (
                                         <motion.div
@@ -333,27 +333,27 @@ function ResultsContent() {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="bg-brand-navy border border-accent-green/20 rounded-2xl p-6 mb-20 flex flex-col md:flex-row items-center justify-center gap-4 text-center"
+                            className="bg-brand-navy border border-primary/20 rounded-2xl p-6 mb-20 flex flex-col md:flex-row items-center justify-center gap-4 text-center"
                         >
                             <div className="flex items-center gap-3">
                                 <span className="text-2xl">📢</span>
                                 <p className="text-sm font-semibold">
-                                    <span className="text-accent-green">Priority Window Open:</span> <span className="text-white">Our panel of experts can fast-track your PMEGP/MSME application today.</span>
+                                    <span className="text-primary">Priority Window Open:</span> <span className="text-white">Our panel of experts can fast-track your PMEGP/MSME application today.</span>
                                 </p>
                             </div>
-                            <Link href="/contact" className="text-accent-green font-black text-sm hover:underline">Book Free Call →</Link>
+                            <Link href="/contact" className="text-primary font-black text-sm hover:underline">Book Free Call →</Link>
                         </motion.div>
 
                         <div id="personalized-options" className="scroll-mt-32">
                             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                                 <div>
                                     <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-                                        Your <span className="text-accent-green">Custom</span> Funding Plan
+                                        Your <span className="text-primary">Custom</span> Funding Plan
                                     </h2>
                                     <p className="text-gray-600 text-lg">Detailed analysis of matched government initiatives</p>
                                 </div>
                                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-white/5 px-4 py-2 rounded-full border border-white/10">
-                                    <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse" /> Live Analysis
+                                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" /> Live Analysis
                                 </div>
                             </div>
 
@@ -365,23 +365,23 @@ function ResultsContent() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.4 + idx * 0.1 }}
                                         onClick={() => openModal(scheme)}
-                                        className="bg-white rounded-[1.5rem] p-6 relative group border-2 border-slate-100 hover:border-accent-green hover:shadow-xl transition-all flex flex-col h-full overflow-hidden shadow-lg cursor-pointer"
+                                        className="bg-white rounded-[1.5rem] p-6 relative group border-2 border-slate-100 hover:border-primary hover:shadow-xl transition-all flex flex-col h-full overflow-hidden shadow-lg cursor-pointer"
                                     >
-                                        <div className="absolute top-0 right-0 w-24 h-24 bg-accent-green/5 rounded-full blur-2xl -z-10"></div>
+                                        <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full blur-2xl -z-10"></div>
 
                                         {scheme.isPopular && (
-                                            <div className="absolute top-5 right-6 bg-accent-green text-white text-[7px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest shadow-md">
+                                            <div className="absolute top-5 right-6 bg-primary text-white text-[7px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest shadow-md">
                                                 Best Match
                                             </div>
                                         )}
 
                                         <div className="flex gap-4 mb-5">
-                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-2xl border border-slate-200 group-hover:bg-accent-green group-hover:text-white group-hover:border-accent-green transition-all duration-500">
+                                            <div className="w-12 h-12 rounded-xl bg-slate-50 flex items-center justify-center text-2xl border border-slate-200 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-500">
                                                 {scheme.icon}
                                             </div>
                                             <div className="flex-1">
                                                 <h3 className="text-lg font-bold mb-1 leading-tight text-brand-navy">{scheme.title}</h3>
-                                                <div className={`inline-flex items-center gap-2 ${scheme.matchScore >= 90 ? 'bg-accent-green/10 text-accent-green border-accent-green/20' : 'bg-orange-500/10 text-orange-600 border-orange-500/20'} text-[8px] font-black px-2 py-0.5 rounded-md border`}>
+                                                <div className={`inline-flex items-center gap-2 ${scheme.matchScore >= 90 ? 'bg-primary/10 text-primary border-primary/20' : 'bg-orange-500/10 text-orange-600 border-orange-500/20'} text-[8px] font-black px-2 py-0.5 rounded-md border`}>
                                                     {scheme.matchScore}% MATCH
                                                 </div>
                                             </div>
@@ -402,14 +402,14 @@ function ResultsContent() {
                                             </div>
                                             <div>
                                                 <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest mb-1">Advantage</div>
-                                                <div className="text-sm font-black text-accent-green">{scheme.special}</div>
+                                                <div className="text-sm font-black text-primary">{scheme.special}</div>
                                             </div>
                                         </div>
 
                                         <div className="mb-6 flex-1">
                                             <div className="mb-4 p-3 bg-slate-50 border border-slate-100 rounded-xl">
                                                 <p className="text-[10px] font-black text-brand-navy uppercase tracking-widest mb-1 flex items-center gap-1.5">
-                                                    <span className="w-1.5 h-1.5 bg-accent-green rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
                                                     Why this match?
                                                 </p>
                                                 <p className="text-[11px] text-slate-600 font-medium leading-relaxed italic">
@@ -419,7 +419,7 @@ function ResultsContent() {
                                             <ul className="space-y-2">
                                                 {scheme.benefits.map((benefit: string, bidx: number) => (
                                                     <li key={bidx} className="flex items-start gap-2 text-[11px] text-slate-600 leading-tight font-semibold">
-                                                        <div className="mt-1 w-1 h-1 rounded-full bg-accent-green" />
+                                                        <div className="mt-1 w-1 h-1 rounded-full bg-primary" />
                                                         {benefit}
                                                     </li>
                                                 ))}
@@ -430,7 +430,7 @@ function ResultsContent() {
                                             <motion.button
                                                 whileHover={{ y: -3 }}
                                                 whileTap={{ scale: 0.98 }}
-                                                className="w-full bg-brand-navy hover:bg-accent-green text-white py-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2"
+                                                className="w-full bg-brand-navy hover:bg-primary text-white py-3 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2"
                                             >
                                                 Enroll Now
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
@@ -448,7 +448,7 @@ function ResultsContent() {
                             className="mt-24 p-12 md:p-16 bg-brand-navy rounded-[3rem] shadow-[0_20px_50px_rgba(27,79,140,0.3)] flex flex-col md:flex-row items-center justify-between gap-10 border border-white/10"
                         >
                             <div className="space-y-4 text-center md:text-left">
-                                <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">Ready to take the <br /><span className="text-accent-green">next step?</span></h3>
+                                <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">Ready to take the <br /><span className="text-primary">next step?</span></h3>
                                 <p className="text-blue-100/70 text-lg max-w-md font-medium">Join 20,000+ businesses who secured their future via Ewolyn expert guidance.</p>
                             </div>
                             <div className="flex flex-col items-center gap-6">
@@ -456,7 +456,7 @@ function ResultsContent() {
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="bg-accent-green hover:bg-white hover:text-accent-green text-white px-12 py-5 rounded-2xl font-black text-lg shadow-2xl transition-all duration-300"
+                                        className="bg-primary hover:bg-white hover:text-primary text-white px-12 py-5 rounded-2xl font-black text-lg shadow-2xl transition-all duration-300"
                                     >
                                         Get Priority Consultation
                                     </motion.button>
@@ -468,7 +468,7 @@ function ResultsContent() {
                                         ))}
                                     </div>
                                     <div className="text-left">
-                                        <div className="text-[10px] text-accent-green font-black uppercase tracking-widest">Trusted MSMEs</div>
+                                        <div className="text-[10px] text-primary font-black uppercase tracking-widest">Trusted MSMEs</div>
                                         <div className="text-[9px] text-white/75 font-bold uppercase tracking-tight">Across 28+ Industries</div>
                                     </div>
                                 </div>
@@ -528,7 +528,7 @@ function ResultsContent() {
                                                             name="name"
                                                             type="text"
                                                             placeholder="Enter your name"
-                                                            className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent-green focus:ring-1 focus:ring-accent-green transition-all outline-none text-brand-navy"
+                                                            className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-brand-navy"
                                                         />
                                                     </div>
                                                     <div className="space-y-1.5">
@@ -539,7 +539,7 @@ function ResultsContent() {
                                                             type="tel"
                                                             pattern="[0-9]{10}"
                                                             placeholder="10-digit number"
-                                                            className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent-green focus:ring-1 focus:ring-accent-green transition-all outline-none text-brand-navy"
+                                                            className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-brand-navy"
                                                         />
                                                     </div>
                                                 </div>
@@ -551,7 +551,7 @@ function ResultsContent() {
                                                         name="email"
                                                         type="email"
                                                         placeholder="your@email.com"
-                                                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent-green focus:ring-1 focus:ring-accent-green transition-all outline-none text-brand-navy"
+                                                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-brand-navy"
                                                     />
                                                 </div>
 
@@ -561,7 +561,7 @@ function ResultsContent() {
                                                         name="company"
                                                         type="text"
                                                         placeholder="Your business name (optional)"
-                                                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent-green focus:ring-1 focus:ring-accent-green transition-all outline-none text-brand-navy"
+                                                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none text-brand-navy"
                                                     />
                                                 </div>
 
@@ -571,7 +571,7 @@ function ResultsContent() {
                                                         name="requirements"
                                                         rows={3}
                                                         placeholder="Any specific requirements or questions?"
-                                                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-accent-green focus:ring-1 focus:ring-accent-green transition-all outline-none resize-none text-brand-navy"
+                                                        className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none resize-none text-brand-navy"
                                                     />
                                                 </div>
 
@@ -579,7 +579,7 @@ function ResultsContent() {
                                                     disabled={isSubmitting}
                                                     whileHover={{ scale: 1.02 }}
                                                     whileTap={{ scale: 0.98 }}
-                                                    className={`w-full ${isSubmitting ? 'bg-accent-green/50 cursor-not-allowed' : 'bg-brand-navy hover:bg-accent-green'} text-white py-4 rounded-xl font-black text-sm shadow-xl flex items-center justify-center gap-3 transition-all mt-6`}
+                                                    className={`w-full ${isSubmitting ? 'bg-primary/50 cursor-not-allowed' : 'bg-brand-navy hover:bg-primary'} text-white py-4 rounded-xl font-black text-sm shadow-xl flex items-center justify-center gap-3 transition-all mt-6`}
                                                 >
                                                     {isSubmitting ? (
                                                         <>
@@ -598,7 +598,7 @@ function ResultsContent() {
 
                                                 <div className="text-center pt-2">
                                                     <p className="text-[10px] text-slate-400 font-medium flex items-center justify-center gap-2">
-                                                        <svg className="w-3 h-3 text-accent-green" fill="currentColor" viewBox="0 0 20 20">
+                                                        <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
                                                             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                                                         </svg>
                                                         Your information is 100% secure and encrypted
@@ -613,12 +613,12 @@ function ResultsContent() {
                                             animate={{ opacity: 1, scale: 1 }}
                                             className="text-center py-10"
                                         >
-                                            <div className="w-20 h-20 bg-accent-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                                            <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                                                 <motion.svg
                                                     initial={{ pathLength: 0 }}
                                                     animate={{ pathLength: 1 }}
                                                     transition={{ duration: 0.5, delay: 0.2 }}
-                                                    className="w-10 h-10 text-accent-green"
+                                                    className="w-10 h-10 text-primary"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                     stroke="currentColor"
@@ -632,7 +632,7 @@ function ResultsContent() {
                                             </p>
                                             <button
                                                 onClick={closeModal}
-                                                className="mt-8 text-accent-green font-bold text-sm hover:underline"
+                                                className="mt-8 text-primary font-bold text-sm hover:underline"
                                             >
                                                 Close Window
                                             </button>
@@ -688,7 +688,7 @@ export default function EligibilityResults() {
             <div className="min-h-screen bg-brand-navy flex flex-col items-center justify-center relative overflow-hidden">
                 <div className="relative w-20 h-20 mx-auto mb-8">
                     <div className="absolute inset-0 border-4 border-white/10 rounded-full"></div>
-                    <div className="absolute inset-0 border-4 border-accent-green border-t-transparent rounded-full animate-spin"></div>
+                    <div className="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
                 </div>
                 <h2 className="text-white font-bold text-2xl mb-2 tracking-tight">Initializing Engine...</h2>
             </div>

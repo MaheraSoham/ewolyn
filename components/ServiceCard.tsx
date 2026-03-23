@@ -11,7 +11,7 @@ type Props = {
 export default function ServiceCard({ title, items, image }: Props) {
   const { openEligibilityPopup } = usePopup();
   return (
-    <div className="group h-full bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl hover:border-accent-green/30 transition-all duration-500 flex flex-col">
+    <div className="group h-full bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-500 flex flex-col">
       <div className="relative h-48 overflow-hidden">
         <Image
           src={image}
@@ -26,13 +26,13 @@ export default function ServiceCard({ title, items, image }: Props) {
         <ul className="space-y-3 flex-1">
           {items.map((i) => (
             <li key={i} className="flex items-start gap-3 text-sm text-slate-600">
-              <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-accent-green" />
+              <span className="mt-1 flex h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
               <span className="leading-relaxed">{i}</span>
             </li>
           ))}
         </ul>
         <div className="mt-8 pt-6 border-t border-slate-100">
-          <button onClick={() => openEligibilityPopup(title)} className="text-sm font-bold text-accent-green flex items-center gap-1 group/btn">
+          <button onClick={() => openEligibilityPopup(title)} className="text-sm font-bold text-primary flex items-center gap-1 group/btn">
             Inquire Details
             <svg className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

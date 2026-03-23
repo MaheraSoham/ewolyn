@@ -53,13 +53,13 @@ export default function EligibilityCard({
             className="relative z-10 w-full max-w-[450px] mx-auto group"
         >
             {/* Ultra-Premium Glow Backdrop */}
-            <div className="absolute -inset-1 bg-gradient-to-tr from-accent-green/30 via-cyan/20 to-brand-navy/30 rounded-[2.5rem] blur-2xl -z-10 group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
+            <div className="absolute -inset-1 bg-gradient-to-tr from-primary/30 via-cyan/20 to-brand-navy/30 rounded-[2.5rem] blur-2xl -z-10 group-hover:opacity-100 opacity-60 transition-opacity duration-700"></div>
 
             {/* Glassmorphic Container */}
             <div className="relative overflow-hidden rounded-[2rem] border border-white/40 bg-white/95 backdrop-blur-xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)]">
 
                 {/* Visual Accent Top Bar */}
-                <div className="h-1.5 w-full bg-gradient-to-r from-brand-navy via-accent-green to-cyan"></div>
+                <div className="h-1.5 w-full bg-gradient-to-r from-brand-navy via-primary to-cyan"></div>
 
                 {/* Header Section */}
                 <div className="px-8 pt-8 pb-6 text-center">
@@ -68,7 +68,7 @@ export default function EligibilityCard({
                         animate={{ opacity: 1, y: 0 }}
                         className="text-2xl font-black text-brand-navy tracking-tight leading-tight"
                     >
-                        Check <span className="text-accent-green">Eligibility</span>
+                        Check <span className="text-primary">Eligibility</span>
                     </motion.h3>
                     <p className="mt-2 text-[10px] font-black text-slate-400 uppercase tracking-[0.25em]">Instant Funding Analysis</p>
                 </div>
@@ -83,14 +83,14 @@ export default function EligibilityCard({
                             <select
                                 name="entityType"
                                 defaultValue={defaultEntityType}
-                                className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-accent-green focus:ring-4 focus:ring-accent-green/5 focus:outline-none transition-all cursor-pointer"
+                                className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-primary focus:ring-4 focus:ring-primary/5 focus:outline-none transition-all cursor-pointer"
                             >
                                 <option value="Private Limited">Private Limited Company</option>
                                 <option value="Proprietorship">Proprietorship Firm</option>
                                 <option value="LLP">LLP / Partnership</option>
                                 <option value="NGO">Trust / NGO</option>
                             </select>
-                            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-accent-green">
+                            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-primary">
                                 <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>
                             </div>
                         </div>
@@ -103,7 +103,7 @@ export default function EligibilityCard({
                             <select
                                 name="amount"
                                 defaultValue={defaultAmount}
-                                className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-accent-green focus:ring-4 focus:ring-accent-green/5 focus:outline-none transition-all cursor-pointer"
+                                className="w-full appearance-none rounded-2xl border border-slate-100 bg-slate-50/50 px-5 py-3.5 text-sm text-brand-navy font-bold focus:border-primary focus:ring-4 focus:ring-primary/5 focus:outline-none transition-all cursor-pointer"
                             >
                                 <option value="10L">Below ₹10 Lakhs</option>
                                 <option value="50L">₹10L - ₹50L</option>
@@ -111,7 +111,7 @@ export default function EligibilityCard({
                                 <option value="10Cr">₹2Cr - ₹10Cr</option>
                                 <option value="Above 10Cr">Above ₹10 Crores</option>
                             </select>
-                            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-accent-green">
+                            <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-primary">
                                 <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>
                             </div>
                         </div>
@@ -142,7 +142,7 @@ export default function EligibilityCard({
                         <button
                             type="submit"
                             disabled={loading}
-                            className={`w-full group relative py-4 rounded-2xl font-black text-white transition-all overflow-hidden shadow-[0_12px_24px_-8px_rgba(34,197,94,0.5)] active:scale-95 ${loading ? 'bg-slate-300' : 'bg-accent-green hover:shadow-[0_16px_32px_-8px_rgba(34,197,94,0.6)]'}`}
+                            className={`w-full group relative py-4 rounded-2xl font-black text-white transition-all overflow-hidden shadow-[0_12px_24px_-8px_rgba(34,197,94,0.5)] active:scale-95 ${loading ? 'bg-slate-300' : 'bg-primary hover:shadow-[0_16px_32px_-8px_rgba(34,197,94,0.6)]'}`}
                         >
                             <span className="relative z-10 flex items-center justify-center gap-2 text-sm uppercase tracking-widest">
                                 {loading ? (
@@ -175,7 +175,7 @@ export default function EligibilityCard({
                 </form>
 
                 {/* Bottom Decorative Circle */}
-                <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-accent-green/5 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-3xl -z-10"></div>
             </div>
         </motion.div>
     );

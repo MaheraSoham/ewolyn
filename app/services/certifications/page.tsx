@@ -182,7 +182,7 @@ export default function CertificationsPage() {
         <div className="container-max grid lg:grid-cols-2 gap-12 items-center">
           {/* text */}
           <FadeIn>
-            <span className="inline-block bg-accent-green/10 text-accent-green text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+            <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
               ✅ Certifications &amp; IP Protection
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -198,7 +198,7 @@ export default function CertificationsPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
               {heroStats.map((s) => (
                 <div key={s.label}>
-                  <p className="text-2xl font-bold text-accent-green">
+                  <p className="text-2xl font-bold text-primary">
                     {s.value}
                   </p>
                   <p className="text-sm text-slate-400">{s.label}</p>
@@ -268,7 +268,7 @@ export default function CertificationsPage() {
                           key={f}
                           className="flex items-start gap-2 text-sm text-slate-700"
                         >
-                          <span className="text-accent-green mt-0.5">✓</span>
+                          <span className="text-primary mt-0.5">✓</span>
                           {f}
                         </li>
                       ))}
@@ -276,7 +276,7 @@ export default function CertificationsPage() {
                     <div className="pt-4 border-t border-slate-100">
                       <span className="text-xs font-medium text-slate-500">
                         Timeline:{" "}
-                        <span className="text-accent-green font-semibold">
+                        <span className="text-primary font-semibold">
                           {svc.timeline}
                         </span>
                       </span>
@@ -299,7 +299,7 @@ export default function CertificationsPage() {
             <div className="grid sm:grid-cols-2 gap-4">
               {whyChooseUs.map((item) => (
                 <div key={item} className="flex items-start gap-3">
-                  <span className="text-accent-green text-lg mt-0.5">✓</span>
+                  <span className="text-primary text-lg mt-0.5">✓</span>
                   <span className="text-slate-700">{item}</span>
                 </div>
               ))}
@@ -322,7 +322,7 @@ export default function CertificationsPage() {
                 >
                   <span className="text-4xl block mb-3">{cert.icon}</span>
                   <p className="font-bold text-slate-800 text-sm">{cert.name}</p>
-                  <p className="text-[10px] text-accent-green font-semibold uppercase tracking-wider mt-1">Certified</p>
+                  <p className="text-[10px] text-primary font-semibold uppercase tracking-wider mt-1">Certified</p>
                 </div>
               ))}
             </div>
@@ -349,7 +349,7 @@ export default function CertificationsPage() {
             {processSteps.map((ps) => (
               <SlideUp key={ps.step}>
                 <div className="bg-slate-50 rounded-2xl p-8 text-center hover:shadow-md transition-shadow">
-                  <span className="text-5xl font-extrabold text-accent-green/20 block mb-3">
+                  <span className="text-5xl font-extrabold text-primary/20 block mb-3">
                     {ps.step}
                   </span>
                   <h3 className="text-lg font-semibold text-slate-900 mb-2">
@@ -388,7 +388,7 @@ export default function CertificationsPage() {
                         {faq.question}
                       </span>
                       <span
-                        className={`text-accent-green text-xl transition-transform ${
+                        className={`text-primary text-xl transition-transform ${
                           isOpen ? "rotate-45" : ""
                         }`}
                       >

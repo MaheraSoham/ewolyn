@@ -171,12 +171,12 @@ export default function NBFCFinancingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideIn direction="left">
               <div>
-                <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green font-semibold text-sm mb-6">
+                <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-6">
                   🏦 NBFC Financing
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                   Flexible NBFC Financing for{" "}
-                  <span className="text-accent-green">Faster Business Growth</span>
+                  <span className="text-primary">Faster Business Growth</span>
                 </h1>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
                   When banks say no, NBFCs say yes. Access quick-approval loans,
@@ -191,7 +191,7 @@ export default function NBFCFinancingPage() {
                     { value: "90%", label: "Approval Rate" },
                   ].map((stat, i) => (
                     <div key={i} className="text-center">
-                      <div className="text-2xl font-bold text-accent-green">
+                      <div className="text-2xl font-bold text-primary">
                         {stat.value}
                       </div>
                       <div className="text-sm text-gray-400">{stat.label}</div>
@@ -232,7 +232,7 @@ export default function NBFCFinancingPage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green font-semibold text-sm mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
                 Our Services
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -263,14 +263,14 @@ export default function NBFCFinancingPage() {
                             key={j}
                             className="flex items-start gap-2 text-gray-700"
                           >
-                            <span className="text-accent-green mt-1">✓</span>
+                            <span className="text-primary mt-1">✓</span>
                             <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
                       <div className="pt-4 border-t border-gray-100 mt-auto">
                         <span className="text-sm text-gray-500">Timeline: </span>
-                        <span className="text-sm font-semibold text-accent-green">
+                        <span className="text-sm font-semibold text-primary">
                           {service.timeline}
                         </span>
                       </div>
@@ -300,24 +300,24 @@ export default function NBFCFinancingPage() {
                   <p className="text-xs text-slate-400 mt-2">CIBIL 650+ required • Heavy documentation • Collateral mandatory</p>
                 </div>
                 <div className="text-center text-slate-300 font-bold text-sm">VS</div>
-                <div className="bg-gradient-to-br from-[#0a1628] to-[#1B4F8C] rounded-2xl p-6 shadow-xl border border-accent-green/20">
-                  <p className="text-xs font-bold text-accent-green uppercase tracking-widest mb-3">⚡ NBFC (via Ewolyn)</p>
+                <div className="bg-gradient-to-br from-[rgba(115,150,121,0.92)] to-[#1B4F8C] rounded-2xl p-6 shadow-xl border border-primary/20">
+                  <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ NBFC (via Ewolyn)</p>
                   <div className="flex items-center gap-4">
-                    <span className="text-2xl font-black text-accent-green">24-72 Hours</span>
+                    <span className="text-2xl font-black text-primary">24-72 Hours</span>
                     <div className="flex-1 h-3 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full w-[25%] bg-gradient-to-r from-accent-green to-emerald-400 rounded-full"></div>
+                      <div className="h-full w-[25%] bg-gradient-to-r from-primary to-emerald-400 rounded-full"></div>
                     </div>
                   </div>
                   <p className="text-xs text-gray-400 mt-2">CIBIL 550+ accepted • Minimal docs • Collateral-free options</p>
                 </div>
-                <div className="bg-accent-green/10 rounded-xl p-4 text-center">
-                  <p className="text-sm font-bold text-accent-green">Up to 10x faster processing with NBFC partners</p>
+                <div className="bg-primary/10 rounded-xl p-4 text-center">
+                  <p className="text-sm font-bold text-primary">Up to 10x faster processing with NBFC partners</p>
                 </div>
               </div>
             </SlideIn>
             <SlideIn direction="right">
               <div>
-                <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green font-semibold text-sm mb-4">
+                <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
                   Why Choose Us
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -326,7 +326,7 @@ export default function NBFCFinancingPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {whyChooseUs.map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="text-accent-green text-lg mt-0.5">✓</span>
+                      <span className="text-primary text-lg mt-0.5">✓</span>
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
@@ -342,7 +342,7 @@ export default function NBFCFinancingPage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green font-semibold text-sm mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
                 Our Process
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -359,7 +359,7 @@ export default function NBFCFinancingPage() {
               {processSteps.map((step, i) => (
                 <StaggerItem key={i}>
                   <div className="relative bg-white rounded-2xl p-8 shadow-sm text-center">
-                    <div className="text-5xl font-black text-accent-green/20 mb-4">
+                    <div className="text-5xl font-black text-primary/20 mb-4">
                       {step.step}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -381,7 +381,7 @@ export default function NBFCFinancingPage() {
         <div className="container-max max-w-3xl">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green font-semibold text-sm mb-4">
+              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4">
                 FAQs
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -401,7 +401,7 @@ export default function NBFCFinancingPage() {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-accent-green text-2xl transition-transform duration-300 ${
+                      className={`text-primary text-2xl transition-transform duration-300 ${
                         openFAQ === i ? "rotate-45" : ""
                       }`}
                     >

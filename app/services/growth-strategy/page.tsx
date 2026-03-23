@@ -173,12 +173,12 @@ export default function GrowthStrategyPage() {
             {/* Left: Text */}
             <FadeIn>
               <div>
-                <span className="inline-block px-4 py-2 rounded-full bg-accent-green/10 text-accent-green text-sm font-semibold mb-6">
+                <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
                   📈 Growth Strategy
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Scale Your Business{" "}
-                  <span className="text-accent-green">Strategically</span>
+                  <span className="text-primary">Strategically</span>
                 </h1>
                 <p className="text-lg text-gray-300 mb-8 max-w-xl">
                   Accelerate your growth with data-driven strategies in digital
@@ -195,7 +195,7 @@ export default function GrowthStrategyPage() {
                     { value: "15+", label: "Industries Served" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-accent-green">
+                      <div className="text-2xl md:text-3xl font-bold text-primary">
                         {stat.value}
                       </div>
                       <div className="text-sm text-gray-400">{stat.label}</div>
@@ -269,7 +269,7 @@ export default function GrowthStrategyPage() {
                             key={feature}
                             className="flex items-start gap-2 text-sm text-gray-700"
                           >
-                            <span className="text-accent-green mt-0.5">✓</span>
+                            <span className="text-primary mt-0.5">✓</span>
                             {feature}
                           </li>
                         ))}
@@ -315,7 +315,7 @@ export default function GrowthStrategyPage() {
                     key={item}
                     className="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm"
                   >
-                    <span className="text-accent-green text-lg mt-0.5">✓</span>
+                    <span className="text-primary text-lg mt-0.5">✓</span>
                     <span className="text-gray-700 font-medium">{item}</span>
                   </div>
                 ))}
@@ -335,10 +335,10 @@ export default function GrowthStrategyPage() {
                   <div key={metric.label} className="mb-5 last:mb-0">
                     <div className="flex justify-between mb-2">
                       <span className="text-sm font-semibold text-slate-700">{metric.label}</span>
-                      <span className="text-sm font-black text-accent-green">{metric.value}</span>
+                      <span className="text-sm font-black text-primary">{metric.value}</span>
                     </div>
                     <div className="h-3 bg-slate-100 rounded-full overflow-hidden">
-                      <div className={`h-full ${metric.width} bg-gradient-to-r from-accent-green to-emerald-400 rounded-full`}></div>
+                      <div className={`h-full ${metric.width} bg-gradient-to-r from-primary to-emerald-400 rounded-full`}></div>
                     </div>
                   </div>
                 ))}
@@ -366,7 +366,7 @@ export default function GrowthStrategyPage() {
             {processSteps.map((step) => (
               <SlideUp key={step.step}>
                 <div className="relative bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="text-5xl font-bold text-accent-green/20 mb-4">
+                  <div className="text-5xl font-bold text-primary/20 mb-4">
                     {step.step}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -409,7 +409,7 @@ export default function GrowthStrategyPage() {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-accent-green text-xl transition-transform duration-300 ${
+                      className={`text-primary text-xl transition-transform duration-300 ${
                         openFaq === index ? "rotate-45" : ""
                       }`}
                     >

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -162,7 +162,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                             <>
                                 <div className="mb-6">
                                     <span className="inline-block text-xs font-bold text-[#2eb85c] bg-[#2eb85c]/10 rounded-full px-3 py-1 mb-3">Free Consultation</span>
-                                    <h2 className="text-2xl font-black text-[#0a1628] mb-1">Check Your Eligibility</h2>
+                                    <h2 className="text-2xl font-black text-[#1B4F8C] mb-1">Check Your Eligibility</h2>
                                     <p className="text-sm text-slate-400">Our expert will contact you within 2 hours.</p>
                                     {service && (
                                         <div className="mt-3 flex items-center gap-2 text-xs text-slate-500 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5">
@@ -208,7 +208,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                                 <div className="w-20 h-20 bg-[#2eb85c]/10 rounded-full flex items-center justify-center mb-6 border border-[#2eb85c]/30">
                                     <IconCheck size={40} className="text-[#2eb85c]" />
                                 </div>
-                                <h3 className="text-2xl font-black text-[#0a1628] mb-2">You&apos;re Connected!</h3>
+                                <h3 className="text-2xl font-black text-[#1B4F8C] mb-2">You&apos;re Connected!</h3>
                                 <p className="text-slate-500 text-sm">Opening WhatsApp to connect you with our experts.</p>
                             </div>
                         )}
@@ -307,7 +307,7 @@ export default function ConsultationPopup() {
 
                                 {/* Card Text */}
                                 <div className="p-2.5 pb-3">
-                                    <h4 className="text-[11px] font-black text-[#0a1628] leading-tight mb-0.5 group-hover:text-[#1B4F8C] transition-colors">
+                                    <h4 className="text-[11px] font-black text-[#1B4F8C] leading-tight mb-0.5 group-hover:text-[#1B4F8C] transition-colors">
                                         {card.title}
                                     </h4>
                                     <p className="text-[9px] text-slate-400 leading-tight line-clamp-2">{card.desc}</p>
@@ -326,7 +326,7 @@ export default function ConsultationPopup() {
                         <div className="flex items-center gap-2">
                             <span className="text-xl">🚀</span>
                             <div>
-                                <p className="text-[11px] font-black text-[#0a1628]">Not sure where to start?</p>
+                                <p className="text-[11px] font-black text-[#1B4F8C]">Not sure where to start?</p>
                                 <p className="text-[10px] text-slate-400">Talk to an expert for free</p>
                             </div>
                         </div>

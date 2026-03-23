@@ -49,7 +49,7 @@ export default function Hero() {
       <section
         className="relative min-h-[88vh] flex items-center overflow-hidden pt-20 sm:pt-28 pb-10 sm:pb-16"
         style={{
-          background: "linear-gradient(135deg, #0d2f57 0%, #1B4F8C 45%, #2eb85c 100%)",
+          background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)",
           backgroundSize: "200% 200%",
           animation: "gradientShift 12s ease infinite",
         }}
@@ -106,7 +106,7 @@ export default function Hero() {
                 className="text-[11px] font-black uppercase tracking-[0.35em] mb-3"
                 style={{ color: "rgba(167,243,208,0.70)" }}
               >
-                EWOLYN PRIVATE LIMITED
+                Ewolyn Services Pvt Ltd
               </motion.p>
 
               {/* Main Heading */}
@@ -117,7 +117,7 @@ export default function Hero() {
                 variants={fadeUp}
                 className="text-4xl font-black leading-tight text-white md:text-5xl lg:text-[3.5rem]"
               >
-                Your Success Partner<br />
+                Evolving Indian<br />
                 <span
                   className="leading-tight"
                   style={{
@@ -127,7 +127,7 @@ export default function Hero() {
                     backgroundClip: "text",
                   }}
                 >
-                  MSME Funding Made Easy
+                  StartUps & MSMEs
                 </span>
               </motion.h1>
 
@@ -268,7 +268,7 @@ export default function Hero() {
                   {/* ── Right Panel – Form ── */}
                   <div className="w-[58%] bg-white p-7 flex flex-col justify-center">
                     <span className="inline-block text-xs font-bold text-[#2eb85c] bg-[#2eb85c]/10 rounded-full px-3 py-1 mb-3 w-fit">Free Consultation</span>
-                    <h3 className="text-xl font-black text-[#0a1628] mb-1">Check Your Eligibility</h3>
+                    <h3 className="text-xl font-black text-[#1B4F8C] mb-1">Check Your Eligibility</h3>
                     <p className="text-xs text-slate-400 mb-5">Our expert will contact you within 2 hours.</p>
 
                     {!heroSubmitted ? (
@@ -312,7 +312,7 @@ export default function Hero() {
                         <div className="w-16 h-16 bg-[#2eb85c]/10 rounded-full flex items-center justify-center mb-4 border border-[#2eb85c]/30">
                           <svg className="w-8 h-8 text-[#2eb85c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                         </div>
-                        <h4 className="text-lg font-black text-[#0a1628] mb-1">You&apos;re Connected!</h4>
+                        <h4 className="text-lg font-black text-[#1B4F8C] mb-1">You&apos;re Connected!</h4>
                         <p className="text-slate-500 text-sm">Opening WhatsApp to connect you with our experts.</p>
                       </div>
                     )}
@@ -339,7 +339,7 @@ export default function Hero() {
 
       {/* ── STATS BAR ── */}
       <section
-        style={{ background: "linear-gradient(135deg, #0d2f57 0%, #1B4F8C 100%)" }}
+        style={{ background: "linear-gradient(135deg, #83a08fff 0%, #1b7544ff 100%)" }}
         className="pb-10 pt-0"
       >
         <div className="container-max">
@@ -374,7 +374,7 @@ export default function Hero() {
               MSME Funding and Business Registration Services
             </p>
             <p className="text-[10px] uppercase tracking-widest mt-1" style={{ color: "rgba(255,255,255,0.35)" }}>
-              EWOLYN PRIVATE LIMITED
+              Ewolyn Services Pvt Ltd
             </p>
             <div
               className="mt-4 inline-flex flex-wrap justify-center items-center gap-0 rounded-full overflow-hidden mx-auto"

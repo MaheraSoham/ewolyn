@@ -66,7 +66,7 @@ export default function BlogsPage() {
       {/* ═══════════════ HERO ═══════════════ */}
       <section className="relative pt-32 pb-24 hero-navy-gradient text-white overflow-hidden">
         {/* Floating decorative icons */}
-        <div className="absolute top-24 right-[10%] w-14 h-14 bg-accent-green/10 rounded-xl rotate-12 flex items-center justify-center text-accent-green/30 animate-float">
+        <div className="absolute top-24 right-[10%] w-14 h-14 bg-primary/10 rounded-xl rotate-12 flex items-center justify-center text-primary/30 animate-float">
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
         </div>
         <div className="absolute top-44 left-[6%] w-12 h-12 bg-blue-500/10 rounded-lg -rotate-6 flex items-center justify-center text-blue-400/30 animate-float" style={{ animationDelay: "1s" }}>
@@ -75,19 +75,19 @@ export default function BlogsPage() {
         <div className="absolute bottom-24 right-[18%] w-10 h-10 bg-amber-500/10 rounded-lg rotate-6 flex items-center justify-center text-amber-400/30 animate-float" style={{ animationDelay: "2s" }}>
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
         </div>
-        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px]" />
+        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-10 left-[-5%] w-72 h-72 bg-blue-500/10 rounded-full blur-[100px]" />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
 
         <div className="container-max relative z-10">
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-green/15 backdrop-blur-sm rounded-full text-sm font-bold mb-8 border border-accent-green/25">
-                <svg className="w-4 h-4 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
-                <span className="text-accent-green">MSME Insights &amp; Business Guides</span>
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-8 border border-primary/25">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                <span className="text-primary">MSME Insights &amp; Business Guides</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-[1.1]">
-                Expert Insights for <span className="text-accent-green">Business Growth</span>
+                Expert Insights for <span className="text-primary">Business Growth</span>
               </h1>
               <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
                 Actionable guides on government schemes, funding strategies,
@@ -102,7 +102,7 @@ export default function BlogsPage() {
                   { value: "Weekly", label: "New Content", icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg> },
                 ].map((s) => (
                   <div key={s.label} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
-                    <div className="text-accent-green mb-2 flex justify-center">{s.icon}</div>
+                    <div className="text-primary mb-2 flex justify-center">{s.icon}</div>
                     <p className="text-2xl font-bold text-white">{s.value}</p>
                     <p className="text-[10px] text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
                   </div>
@@ -118,7 +118,7 @@ export default function BlogsPage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-14">
-              <span className="inline-block text-accent-green font-bold text-xs uppercase tracking-widest mb-2">Editors Pick</span>
+              <span className="inline-block text-primary font-bold text-xs uppercase tracking-widest mb-2">Editors Pick</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Featured Articles</h2>
             </div>
           </FadeIn>
@@ -126,22 +126,22 @@ export default function BlogsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {featured.map((post) => (
               <SlideUp key={post.slug}>
-                <Link href={`/blogs/${post.slug}`} className="group block bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-accent-green/30 hover:shadow-xl transition-all duration-300 relative">
+                <Link href={`/blogs/${post.slug}`} className="group block bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-primary/30 hover:shadow-xl transition-all duration-300 relative">
                   {/* Featured ribbon */}
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center gap-1 bg-accent-green text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg shadow-green-500/20">
+                    <span className="inline-flex items-center gap-1 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg shadow-green-500/20">
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
                       Featured
                     </span>
                   </div>
-                  <div className="p-8 border-l-4 border-l-accent-green">
+                  <div className="p-8 border-l-4 border-l-primary">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${categoryIconColors[post.category] || "bg-gray-500 text-white"}`}>
                         {categoryIcons[post.category] || categoryIcons.All}
                       </div>
                       <span className={`text-xs font-bold px-3 py-1 rounded-full ${categoryColors[post.category] || "bg-gray-100 text-gray-600"}`}>{post.category}</span>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 group-hover:text-accent-green transition-colors leading-tight">{post.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors leading-tight">{post.title}</h3>
                     <p className="text-slate-500 leading-relaxed mb-6 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4 text-xs text-slate-400">
@@ -154,7 +154,7 @@ export default function BlogsPage() {
                           {post.readTime} read
                         </span>
                       </div>
-                      <span className="text-accent-green font-bold text-sm group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                      <span className="text-primary font-bold text-sm group-hover:translate-x-1 transition-transform flex items-center gap-1">
                         Read More
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                       </span>
@@ -172,7 +172,7 @@ export default function BlogsPage() {
         <div className="container-max">
           <FadeIn>
             <div className="text-center mb-10">
-              <span className="inline-block text-accent-green font-bold text-xs uppercase tracking-widest mb-2">Browse</span>
+              <span className="inline-block text-primary font-bold text-xs uppercase tracking-widest mb-2">Browse</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">All Articles</h2>
               <p className="text-slate-500">{filtered.length} article{filtered.length !== 1 && "s"}</p>
             </div>
@@ -186,8 +186,8 @@ export default function BlogsPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 flex items-center gap-1.5 ${
                   activeCategory === cat
-                    ? "bg-accent-green text-white shadow-md shadow-green-500/20"
-                    : "bg-white text-slate-600 border border-slate-200 hover:border-accent-green/30 hover:text-accent-green"
+                    ? "bg-primary text-white shadow-md shadow-green-500/20"
+                    : "bg-white text-slate-600 border border-slate-200 hover:border-primary/30 hover:text-primary"
                 }`}
               >
                 {categoryIcons[cat] || categoryIcons.All}
@@ -201,7 +201,7 @@ export default function BlogsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filtered.map((post) => (
                 <StaggerItem key={post.slug}>
-                  <Link href={`/blogs/${post.slug}`} className="group block bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-accent-green/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
+                  <Link href={`/blogs/${post.slug}`} className="group block bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full">
                     <div className="p-6 flex flex-col h-full">
                       <div className="flex items-center gap-3 mb-4">
                         <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${categoryIconColors[post.category] || "bg-gray-500 text-white"}`}>
@@ -209,7 +209,7 @@ export default function BlogsPage() {
                         </div>
                         <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${categoryColors[post.category] || "bg-gray-100 text-gray-600"}`}>{post.category}</span>
                       </div>
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-accent-green transition-colors leading-snug">{post.title}</h3>
+                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug">{post.title}</h3>
                       <p className="text-sm text-slate-500 leading-relaxed mb-5 flex-1 line-clamp-3">{post.excerpt}</p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags.slice(0, 3).map((tag) => (
@@ -227,7 +227,7 @@ export default function BlogsPage() {
                             {post.readTime}
                           </span>
                         </div>
-                        <span className="text-accent-green font-semibold text-xs flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        <span className="text-primary font-semibold text-xs flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                           Read
                           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </span>
@@ -246,11 +246,11 @@ export default function BlogsPage() {
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="container-max text-center relative z-10">
           <FadeIn>
-            <div className="w-16 h-16 mx-auto bg-accent-green/15 rounded-2xl flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <div className="w-16 h-16 mx-auto bg-primary/15 rounded-2xl flex items-center justify-center mb-6">
+              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Stay Updated with <span className="text-accent-green">Latest Insights</span>
+              Stay Updated with <span className="text-primary">Latest Insights</span>
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Get expert tips on government schemes, funding opportunities, and business growth strategies delivered straight to your inbox.

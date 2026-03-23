@@ -65,7 +65,7 @@ export default function MAAdvisoryPage() {
                 Transaction Advisory
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
-                <span className="text-accent-green">Master the</span> <br />
+                <span className="text-primary">Master the</span> <br />
                 <span className="text-white">Art of the Deal</span>
               </h1>
               <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl font-light">

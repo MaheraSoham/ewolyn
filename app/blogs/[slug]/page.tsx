@@ -82,19 +82,19 @@ export default function BlogDetailPage({ params }: Props) {
       {/* ═══════════════ HERO / HEADER ═══════════════ */}
       <section className="relative pt-32 pb-20 hero-navy-gradient text-white overflow-hidden">
         {/* decorative blurs */}
-        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-accent-green/10 rounded-full blur-[120px]" />
+        <div className="absolute top-20 right-[-10%] w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-10 left-[-5%] w-72 h-72 bg-blue-500/10 rounded-full blur-[100px]" />
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
 
         <div className="container-max relative z-10">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-sm text-gray-300 mb-8">
-            <Link href="/" className="hover:text-accent-green transition-colors flex items-center gap-1">
+            <Link href="/" className="hover:text-primary transition-colors flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
               Home
             </Link>
             <svg className="w-3.5 h-3.5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <Link href="/blogs" className="hover:text-accent-green transition-colors">Blog</Link>
+            <Link href="/blogs" className="hover:text-primary transition-colors">Blog</Link>
             <svg className="w-3.5 h-3.5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             <span className="text-gray-300 truncate max-w-xs">{post.title}</span>
           </nav>
@@ -128,14 +128,14 @@ export default function BlogDetailPage({ params }: Props) {
             {/* Table of Contents sidebar (desktop) */}
             {post.content.length > 2 && (
               <div className="hidden lg:block w-64 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-5 sticky top-32">
-                <p className="text-xs font-bold text-accent-green uppercase tracking-widest mb-4 flex items-center gap-2">
+                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4 flex items-center gap-2">
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" /></svg>
                   In This Article
                 </p>
                 <ul className="space-y-2.5">
                   {post.content.map((section, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-accent-green/60 mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="text-[10px] font-bold text-primary/60 mt-0.5">{String(i + 1).padStart(2, "0")}</span>
                       <span className="text-sm text-gray-300 leading-snug line-clamp-2 hover:text-white transition-colors cursor-default">{section.heading}</span>
                     </li>
                   ))}
@@ -154,11 +154,11 @@ export default function BlogDetailPage({ params }: Props) {
               <div key={i} className="mb-14 last:mb-0 group">
                 <div className="flex items-start gap-4 mb-5">
                   {/* Section number badge */}
-                  <div className="hidden md:flex items-center justify-center min-w-[42px] h-[42px] rounded-xl bg-slate-100 text-accent-green group-hover:bg-accent-green group-hover:text-white transition-colors duration-300">
+                  <div className="hidden md:flex items-center justify-center min-w-[42px] h-[42px] rounded-xl bg-slate-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {sectionIcons[i % sectionIcons.length]}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">Section {String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Section {String(i + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-snug">{section.heading}</h2>
                   </div>
                 </div>
@@ -167,11 +167,11 @@ export default function BlogDetailPage({ params }: Props) {
                     <p key={j} className="text-slate-600 leading-relaxed mb-4 last:mb-0">{para}</p>
                   ))}
                   {section.keyTakeaway && (
-                    <div className="mt-6 bg-gradient-to-r from-accent-green/5 to-transparent border-l-4 border-accent-green rounded-r-2xl p-6 relative overflow-hidden">
-                      <div className="absolute top-3 right-4 text-accent-green/10">
+                    <div className="mt-6 bg-gradient-to-r from-primary/5 to-transparent border-l-4 border-primary rounded-r-2xl p-6 relative overflow-hidden">
+                      <div className="absolute top-3 right-4 text-primary/10">
                         <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
                       </div>
-                      <p className="text-xs font-bold text-accent-green uppercase tracking-widest mb-2 flex items-center gap-1.5">
+                      <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-1.5">
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
                         Key Takeaway
                       </p>
@@ -190,7 +190,7 @@ export default function BlogDetailPage({ params }: Props) {
         <section className="py-20 bg-slate-50">
           <div className="container-max">
             <div className="text-center mb-12">
-              <span className="inline-block text-accent-green font-bold text-xs uppercase tracking-widest mb-2">Keep Reading</span>
+              <span className="inline-block text-primary font-bold text-xs uppercase tracking-widest mb-2">Keep Reading</span>
               <h2 className="text-2xl md:text-3xl font-bold text-slate-900">Related Articles</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -198,7 +198,7 @@ export default function BlogDetailPage({ params }: Props) {
                 <Link
                   key={r.slug}
                   href={`/blogs/${r.slug}`}
-                  className="group block bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-accent-green/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  className="group block bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
@@ -207,14 +207,14 @@ export default function BlogDetailPage({ params }: Props) {
                       </div>
                       <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${categoryColors[r.category] || "bg-gray-100 text-gray-600"}`}>{r.category}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-accent-green transition-colors leading-snug line-clamp-2">{r.title}</h3>
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">{r.title}</h3>
                     <p className="text-sm text-slate-500 line-clamp-2 mb-4">{r.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-slate-400 flex items-center gap-1">
                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                         {r.readTime}
                       </span>
-                      <span className="text-accent-green text-sm font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      <span className="text-primary text-sm font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                         Read
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                       </span>
@@ -231,11 +231,11 @@ export default function BlogDetailPage({ params }: Props) {
       <section className="py-20 hero-navy-gradient text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="container-max text-center relative z-10">
-          <div className="w-14 h-14 mx-auto bg-accent-green/15 rounded-2xl flex items-center justify-center mb-6">
-            <svg className="w-7 h-7 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+          <div className="w-14 h-14 mx-auto bg-primary/15 rounded-2xl flex items-center justify-center mb-6">
+            <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Need Expert <span className="text-accent-green">Guidance?</span>
+            Need Expert <span className="text-primary">Guidance?</span>
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Our team helps MSMEs and startups navigate government schemes, funding, and compliance. Get a free consultation today.

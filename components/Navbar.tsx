@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -173,12 +173,13 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.jpg"
-                alt="Ewolyn - Evolving Indian StartUps & MSMEs"
-                width={isScrolled ? 140 : 180}
-                height={isScrolled ? 40 : 56}
-                className={`transition-all duration-300 ${isScrolled ? 'h-9 sm:h-10' : 'h-9 sm:h-14'} w-auto rounded-2xl`}
+                src="/logo.png"
+                alt="Ewolyn Services Pvt Ltd - Evolving Indian StartUps & MSMEs"
+                width={200}
+                height={70}
+                className={`transition-all duration-300 ${isScrolled ? 'h-9 sm:h-11' : 'h-11 sm:h-16'} w-auto`}
                 priority
+                unoptimized
               />
             </Link>
 
@@ -187,7 +188,7 @@ export default function Navbar() {
               {/* Home Link */}
               <Link
                 href="/"
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === "/" ? "text-[#2eb85c]" : "text-white hover:text-[#2eb85c]"}`}
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === "/" ? "text-[#1B4F8C]" : "text-white hover:text-[#1B4F8C]"}`}
               >
                 Home
               </Link>
@@ -199,7 +200,7 @@ export default function Navbar() {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-[#2eb85c]" : "text-white hover:text-[#2eb85c]"}`}
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-[#1B4F8C]" : "text-white hover:text-[#1B4F8C]"}`}
                 >
                   Services
                   <svg className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,7 +224,7 @@ export default function Navbar() {
                               <span>{services[0].icon}</span>
                               {services[0].title}
                             </h3>
-                            <p className="text-gray-400 text-sm">{services[0].description}</p>
+                            <p className="text-white/70 text-sm">{services[0].description}</p>
                           </div>
                           <div className="grid grid-cols-3 gap-4">
                             {services[0].subItems?.map((subItem, idx) => (
@@ -235,8 +236,8 @@ export default function Navbar() {
                                 <div className={`w-10 h-10 rounded-xl ${subItem.iconBg} flex items-center justify-center text-xl mb-3 group-hover/item:scale-110 transition-transform`}>
                                   {subItem.icon}
                                 </div>
-                                <div className="font-semibold text-white text-sm mb-1 group-hover/item:text-accent-green transition-colors">{subItem.title}</div>
-                                <div className="text-gray-400 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
+                                <div className="font-semibold text-white text-sm mb-1 group-hover/item:text-[#1B4F8C] transition-colors">{subItem.title}</div>
+                                <div className="text-white/70 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
                               </Link>
                             ))}
                           </div>
@@ -256,8 +257,8 @@ export default function Navbar() {
                                   {service.icon}
                                 </div>
                                 <div>
-                                  <div className="text-white text-sm font-medium group-hover/link:text-accent-green transition-colors">{service.title}</div>
-                                  <div className="text-gray-400 text-[10px] line-clamp-1">{service.description}</div>
+                                  <div className="text-white text-sm font-medium group-hover/link:text-[#1B4F8C] transition-colors">{service.title}</div>
+                                  <div className="text-white/70 text-[10px] line-clamp-1">{service.description}</div>
                                 </div>
                               </Link>
                             ))}
@@ -274,7 +275,7 @@ export default function Navbar() {
                 <Link
                   key={n.href}
                   href={n.href}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === n.href ? "text-[#2eb85c]" : "text-white hover:text-[#2eb85c]"}`}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === n.href ? "text-[#1B4F8C]" : "text-white hover:text-[#1B4F8C]"}`}
                 >
                   {n.label}
                 </Link>
@@ -285,8 +286,8 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-4">
               {/* Business Hours */}
               <div className="text-white text-xs mr-2">
-                <div className="font-semibold text-[#2eb85c]">9:30 AM - 6:00 PM</div>
-                <div className="text-gray-400">Monday - Saturday</div>
+                <div className="font-semibold text-[#1B4F8C]">9:30 AM - 6:00 PM</div>
+                <div className="text-white/70">Monday - Saturday</div>
               </div>
 
               {/* WhatsApp Icon */}
@@ -346,11 +347,11 @@ export default function Navbar() {
           {mobileMenuOpen && (
             <div className="lg:hidden mt-2 glass-navbar p-5 rounded-2xl animate-in slide-in-from-top-4 duration-300 max-h-[80vh] overflow-y-auto">
               <div className="flex flex-col gap-1">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)} className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === "/" ? "text-[#2eb85c] bg-white/5" : "text-white hover:bg-white/5"}`}>
+                <Link href="/" onClick={() => setMobileMenuOpen(false)} className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === "/" ? "text-[#1B4F8C] bg-white/5" : "text-white hover:bg-white/5"}`}>
                   🏠 Home
                 </Link>
 
-                <div className="mt-3 mb-2 px-4 text-[#2eb85c] text-xs font-bold uppercase tracking-widest">Our Services</div>
+                <div className="mt-3 mb-2 px-4 text-[#1B4F8C] text-xs font-bold uppercase tracking-widest">Our Services</div>
 
                 {services.map((service, index) => (
                   <div key={index} className="flex flex-col">
@@ -370,7 +371,7 @@ export default function Navbar() {
                             key={sIdx}
                             href={sub.href}
                             onClick={() => setMobileMenuOpen(false)}
-                            className="py-2 text-sm text-gray-400 hover:text-[#2eb85c] transition-colors"
+                            className="py-2 text-sm text-white/70 hover:text-[#1B4F8C] transition-colors"
                           >
                             {sub.title}
                           </Link>
@@ -387,7 +388,7 @@ export default function Navbar() {
                     key={n.href}
                     href={n.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === n.href ? "text-[#2eb85c] bg-white/5" : "text-white hover:bg-white/5"}`}
+                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === n.href ? "text-[#1B4F8C] bg-white/5" : "text-white hover:bg-white/5"}`}
                   >
                     {n.icon} {n.label}
                   </Link>
@@ -395,8 +396,8 @@ export default function Navbar() {
 
                 <div className="h-px bg-white/10 my-3"></div>
 
-                <div className="px-4 py-2 text-xs text-gray-400">
-                  <div className="font-semibold text-[#2eb85c] mb-1">9:30 AM – 6:00 PM · Mon–Sat</div>
+                <div className="px-4 py-2 text-xs text-white/70">
+                  <div className="font-semibold text-[#1B4F8C] mb-1">9:30 AM – 6:00 PM · Mon–Sat</div>
                   <div>+91 98765 43210 &nbsp;|&nbsp; info@ewolyn.co.in</div>
                 </div>
               </div>

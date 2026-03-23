@@ -34,7 +34,7 @@ export default function FundingPage() {
       <section className="relative pt-32 pb-24 bg-brand-navy overflow-hidden min-h-[75vh] flex items-center">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-green/10 rounded-full blur-[150px] animate-pulse"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px] animate-pulse"></div>
         <div className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-cyan/10 rounded-full blur-[120px] animate-float"></div>
 
         <div className="container-max relative z-10 w-full">
@@ -46,15 +46,15 @@ export default function FundingPage() {
           >
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full text-blue-100 text-[10px] font-black uppercase tracking-[0.2em] mb-10 shadow-2xl">
               <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-green"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
               Capital Empowerment Portal
             </motion.div>
 
             <motion.h1 variants={itemVariants} className="text-6xl md:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tight">
               Funding & <br />
-              <span className="text-accent-green underline decoration-white/10 decoration-8 underline-offset-8">Schemes</span>
+              <span className="text-primary underline decoration-white/10 decoration-8 underline-offset-8">Schemes</span>
             </motion.h1>
 
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-blue-100/70 leading-relaxed max-w-2xl font-medium mb-12">
@@ -84,7 +84,7 @@ export default function FundingPage() {
           <motion.div variants={itemVariants} className="group relative overflow-hidden bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-100 transition-all duration-500 hover:-translate-y-2">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-[5rem] -z-10 transition-all duration-500 group-hover:w-40 group-hover:h-40"></div>
             <div className="text-4xl mb-6">💸</div>
-            <h3 className="text-2xl font-black text-accent-green mb-4">Loan Assistance</h3>
+            <h3 className="text-2xl font-black text-primary mb-4">Loan Assistance</h3>
             <p className="text-slate-500 leading-relaxed font-medium mb-8">
               Securing low-interest capital through banking partners and specialized MSME lending institutions. We handle the entire dossier preparation for seamless bank approvals.
             </p>
@@ -99,15 +99,15 @@ export default function FundingPage() {
           <motion.div variants={itemVariants} className="group relative overflow-hidden bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-100 transition-all duration-500 hover:-translate-y-2">
             <div className="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-bl-[5rem] -z-10 transition-all duration-500 group-hover:w-40 group-hover:h-40"></div>
             <div className="text-4xl mb-6">🏆</div>
-            <h3 className="text-2xl font-black text-accent-green mb-4">Grant Assistance</h3>
+            <h3 className="text-2xl font-black text-primary mb-4">Grant Assistance</h3>
             <p className="text-slate-500 leading-relaxed font-medium mb-8">
               Accessing non-repayable government grants (PMEGP, Startup India Seed Fund, etc.). Our teams specialize in complex eligibility mapping and high-compliance filings.
             </p>
             <div className="flex items-center gap-3">
-              <span className="px-5 py-2 bg-accent-green text-brand-navy rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-green-200">
+              <span className="px-5 py-2 bg-primary text-brand-navy rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-green-200">
                 45–60 Day Cycle
               </span>
-              <span className="text-xs font-bold text-accent-green-dark/50">Compliance Expert</span>
+              <span className="text-xs font-bold text-primary-dark/50">Compliance Expert</span>
             </div>
           </motion.div>
         </motion.div>
@@ -120,12 +120,12 @@ export default function FundingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-accent-green font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">Central Initiatives</span>
+            <span className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">Central Initiatives</span>
             <h2 className="text-4xl md:text-5xl font-black text-brand-navy mb-6 tracking-tight">
-              Powerful <span className="text-accent-green">Government Schemes</span>
+              Powerful <span className="text-primary">Government Schemes</span>
             </h2>
-            <div className="w-24 h-1.5 bg-accent-green/20 mx-auto rounded-full relative overflow-hidden">
-              <div className="absolute inset-0 bg-accent-green w-1/2 rounded-full animate-scroll-rtl"></div>
+            <div className="w-24 h-1.5 bg-primary/20 mx-auto rounded-full relative overflow-hidden">
+              <div className="absolute inset-0 bg-primary w-1/2 rounded-full animate-scroll-rtl"></div>
             </div>
           </motion.div>
 
@@ -142,7 +142,7 @@ export default function FundingPage() {
                   href={`/services/${scheme.slug}`}
                   className="group relative bg-white rounded-[2rem] p-6 border border-slate-100 shadow-xl hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 block h-full flex flex-col overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-20 h-20 bg-slate-50/50 rounded-bl-[2.5rem] -z-10 group-hover:bg-accent-green/5 transition-colors"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-slate-50/50 rounded-bl-[2.5rem] -z-10 group-hover:bg-primary/5 transition-colors"></div>
 
                   {/* Icon */}
                   <div className={`flex h-12 w-12 items-center justify-center rounded-xl text-2xl ${scheme.iconBg} text-white mb-6 shadow-2xl shadow-slate-200 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500`}>
@@ -151,12 +151,12 @@ export default function FundingPage() {
 
                   {/* Highlights */}
                   <div className="mb-4 space-y-0.5">
-                    <span className="text-[9px] font-black text-accent-green uppercase tracking-widest">{scheme.highlightLabel}</span>
+                    <span className="text-[9px] font-black text-primary uppercase tracking-widest">{scheme.highlightLabel}</span>
                     <div className="text-2xl font-black text-brand-navy tracking-tighter">{scheme.highlight}</div>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-base font-bold text-accent-green group-hover:text-brand-navy transition-colors mb-2 pr-4 line-clamp-1">{scheme.title}</h3>
+                  <h3 className="text-base font-bold text-primary group-hover:text-brand-navy transition-colors mb-2 pr-4 line-clamp-1">{scheme.title}</h3>
                   <p className="text-slate-500 text-[11px] leading-relaxed mb-6 flex-1 font-medium line-clamp-3">{scheme.shortDesc}</p>
 
                   {/* Bottom Bar */}
@@ -165,7 +165,7 @@ export default function FundingPage() {
                       {scheme.category}
                     </span>
                     <span className="text-[11px] font-black text-brand-navy flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      View <span className="text-accent-green">→</span>
+                      View <span className="text-primary">→</span>
                     </span>
                   </div>
                 </Link>
@@ -209,10 +209,10 @@ export default function FundingPage() {
                 transition={{ delay: idx * 0.15 }}
                 className="relative z-10 group"
               >
-                <div className="w-16 h-16 bg-white border-4 border-slate-50 rounded-2xl flex items-center justify-center text-xl font-black text-accent-green shadow-xl mb-8 group-hover:bg-accent-green group-hover:text-white transition-all duration-300">
+                <div className="w-16 h-16 bg-white border-4 border-slate-50 rounded-2xl flex items-center justify-center text-xl font-black text-primary shadow-xl mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   {step.n}
                 </div>
-                <h3 className="text-xl font-black text-accent-green mb-4">{step.t}</h3>
+                <h3 className="text-xl font-black text-primary mb-4">{step.t}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed font-medium">{step.d}</p>
               </motion.div>
             ))}
@@ -232,7 +232,7 @@ export default function FundingPage() {
             >
               <div className="absolute -right-10 -bottom-10 text-[12rem] text-white/5 font-black group-hover:scale-110 transition-transform">0{i + 1}</div>
               <div className="relative z-10">
-                <div className="h-1.5 w-12 bg-accent-green rounded-full mb-8"></div>
+                <div className="h-1.5 w-12 bg-primary rounded-full mb-8"></div>
                 <h3 className="text-2xl font-black mb-6 leading-tight text-white">{b}</h3>
                 <p className="text-slate-100 text-base leading-relaxed font-medium">
                   Our funding specialists act as your outsourced finance desk, ensuring zero compliance gaps and optimized subsidy collection timelines.

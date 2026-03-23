@@ -92,7 +92,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-brand': 'linear-gradient(135deg, #1B4F8C 0%, #2eb85c 100%)',
         'gradient-green': 'linear-gradient(135deg, #2eb85c 0%, #4cd17a 100%)',
-        'gradient-hero': 'linear-gradient(135deg, #0d2f57 0%, #1B4F8C 50%, #2eb85c 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)',
         'gradient-section': 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
         'gradient-dark': 'linear-gradient(135deg, #0d2f57 0%, #1B4F8C 100%)',
         'gradient-glow': 'radial-gradient(ellipse at top, rgba(46,184,92,0.15) 0%, transparent 60%)',

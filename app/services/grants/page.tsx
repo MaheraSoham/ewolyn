@@ -171,7 +171,7 @@ export default function GrantsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SlideIn direction="left">
               <div>
-                <span className="inline-block bg-accent-green/10 text-accent-green text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+                <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
                   🏛️ Government Grants
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -191,7 +191,7 @@ export default function GrantsPage() {
                     { value: "30+", label: "Schemes Covered" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
-                      <p className="text-2xl font-bold text-accent-green">
+                      <p className="text-2xl font-bold text-primary">
                         {stat.value}
                       </p>
                       <p className="text-sm text-gray-400">{stat.label}</p>
@@ -260,13 +260,13 @@ export default function GrantsPage() {
                           key={feature}
                           className="flex items-start gap-2 text-sm text-gray-700"
                         >
-                          <span className="text-accent-green mt-0.5">✓</span>
+                          <span className="text-primary mt-0.5">✓</span>
                           {feature}
                         </li>
                       ))}
                     </ul>
                     <div className="pt-4 border-t border-gray-100">
-                      <span className="text-sm font-medium text-accent-green">
+                      <span className="text-sm font-medium text-primary">
                         Timeline: {service.timeline}
                       </span>
                     </div>
@@ -284,7 +284,7 @@ export default function GrantsPage() {
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <SlideIn direction="left">
               <div className="bg-white rounded-3xl p-8 shadow-lg border border-slate-200">
-                <p className="text-sm font-bold text-accent-green uppercase tracking-widest mb-6">✅ Our Grant Track Record</p>
+                <p className="text-sm font-bold text-primary uppercase tracking-widest mb-6">✅ Our Grant Track Record</p>
                 {[
                   { label: "Total Grants Secured", value: "₹50Cr+", pct: "95%" },
                   { label: "Applications Filed", value: "200+", pct: "80%" },
@@ -294,15 +294,15 @@ export default function GrantsPage() {
                   <div key={item.label} className="mb-5 last:mb-0">
                     <div className="flex justify-between items-baseline mb-2">
                       <span className="text-sm text-slate-600 font-medium">{item.label}</span>
-                      <span className="text-lg font-black text-accent-green">{item.value}</span>
+                      <span className="text-lg font-black text-primary">{item.value}</span>
                     </div>
                     <div className="h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-accent-green to-emerald-400 rounded-full" style={{ width: item.pct }}></div>
+                      <div className="h-full bg-gradient-to-r from-primary to-emerald-400 rounded-full" style={{ width: item.pct }}></div>
                     </div>
                   </div>
                 ))}
                 <div className="mt-6 pt-5 border-t border-slate-100 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-accent-green rounded-full animate-pulse"></span>
+                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
                   <span className="text-xs text-slate-500">Actively securing grants across 30+ schemes</span>
                 </div>
               </div>
@@ -317,7 +317,7 @@ export default function GrantsPage() {
                   {whyChooseUs.map((item) => (
                     <StaggerItem key={item}>
                       <div className="flex items-start gap-3">
-                        <span className="text-accent-green text-lg mt-0.5">
+                        <span className="text-primary text-lg mt-0.5">
                           ✓
                         </span>
                         <span className="text-gray-700">{item}</span>
@@ -350,8 +350,8 @@ export default function GrantsPage() {
             {processSteps.map((step) => (
               <StaggerItem key={step.step}>
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-accent-green/10 flex items-center justify-center mx-auto mb-5">
-                    <span className="text-2xl font-bold text-accent-green">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                    <span className="text-2xl font-bold text-primary">
                       {step.step}
                     </span>
                   </div>
@@ -393,7 +393,7 @@ export default function GrantsPage() {
                     <span className="font-semibold text-gray-900 pr-4">
                       {faq.question}
                     </span>
-                    <span className="text-accent-green text-xl flex-shrink-0">
+                    <span className="text-primary text-xl flex-shrink-0">
                       {openFaq === index ? "−" : "+"}
                     </span>
                   </button>

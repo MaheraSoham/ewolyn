@@ -153,18 +153,18 @@ export default function LoansPage() {
     <main className="min-h-screen bg-slate-50 overflow-x-hidden">
       {/* ───────────── Hero Section ───────────── */}
       <section className="relative min-h-[85vh] flex items-center pt-24 pb-20 hero-navy-gradient text-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-green-600/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px]"></div>
 
         <div className="container-max relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeIn>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent-green/10 rounded-full text-green-100 text-sm font-bold mb-6 border border-green-500/30">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-green-100 text-sm font-bold mb-6 border border-green-500/30">
                 <span>💰</span> Business Loans
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1]">
-                <span className="text-accent-green">Fast & Affordable</span>
+                <span className="text-primary">Fast & Affordable</span>
                 <br />
                 <span className="text-white">Business Loans for MSMEs & Startups</span>
               </h1>
@@ -229,7 +229,7 @@ export default function LoansPage() {
         <div className="container-max">
           <div className="text-center mb-20">
             <FadeIn>
-              <span className="text-accent-green font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
+              <span className="text-primary font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
                 Our Loan Products
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
@@ -254,7 +254,7 @@ export default function LoansPage() {
                     <ul className="space-y-2 mb-6 flex-1">
                       {service.features.map((feat, fi) => (
                         <li key={fi} className="flex items-start gap-2 text-sm text-slate-700">
-                          <span className="text-accent-green mt-0.5">✓</span>
+                          <span className="text-primary mt-0.5">✓</span>
                           {feat}
                         </li>
                       ))}
@@ -264,7 +264,7 @@ export default function LoansPage() {
                       <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
                         Timeline
                       </span>
-                      <span className="text-sm font-bold text-accent-green">{service.timeline}</span>
+                      <span className="text-sm font-bold text-primary">{service.timeline}</span>
                     </div>
                   </div>
                 </ScaleOnHover>
@@ -279,9 +279,9 @@ export default function LoansPage() {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <SlideIn direction="left">
-              <div className="bg-gradient-to-br from-[#0a1628] to-[#1B4F8C] rounded-3xl p-10 text-center shadow-2xl border border-white/10">
-                <p className="text-sm font-bold text-accent-green uppercase tracking-widest mb-4">Total Loans Facilitated</p>
-                <p className="text-7xl md:text-8xl font-black text-accent-green leading-none">₹103Cr<span className="text-4xl">+</span></p>
+              <div className="bg-gradient-to-br from-[rgba(115,150,121,0.92)] to-[#1B4F8C] rounded-3xl p-10 text-center shadow-2xl border border-white/10">
+                <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Total Loans Facilitated</p>
+                <p className="text-7xl md:text-8xl font-black text-primary leading-none">₹103Cr<span className="text-4xl">+</span></p>
                 <div className="mt-8 grid grid-cols-3 gap-4">
                   {[
                     { value: "2000+", label: "Loans" },
@@ -295,14 +295,14 @@ export default function LoansPage() {
                   ))}
                 </div>
                 <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-accent-green rounded-full animate-pulse"></span>
+                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
                   <span className="text-xs text-gray-400">Live disbursement tracking</span>
                 </div>
               </div>
             </SlideIn>
 
             <FadeIn>
-              <span className="text-accent-green font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
+              <span className="text-primary font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
                 Why Choose Us
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-slate-900 leading-tight">
@@ -319,7 +319,7 @@ export default function LoansPage() {
                     key={idx}
                     className="flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-100 hover:border-green-500/30 transition-colors"
                   >
-                    <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-accent-green/10 text-accent-green text-sm font-bold">
+                    <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 text-primary text-sm font-bold">
                       ✓
                     </span>
                     <span className="text-sm font-medium text-slate-700">{item}</span>
@@ -352,7 +352,7 @@ export default function LoansPage() {
             {processSteps.map((step) => (
               <StaggerItem key={step.step}>
                 <div className="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 h-full">
-                  <div className="text-5xl font-black text-accent-green/30 mb-4">{step.step}</div>
+                  <div className="text-5xl font-black text-primary/30 mb-4">{step.step}</div>
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-gray-300 leading-relaxed text-sm">{step.desc}</p>
                 </div>
@@ -367,7 +367,7 @@ export default function LoansPage() {
         <div className="container-max max-w-4xl">
           <div className="text-center mb-16">
             <FadeIn>
-              <span className="text-accent-green font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
+              <span className="text-primary font-bold text-sm uppercase tracking-[0.2em] mb-4 block">
                 FAQ
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
@@ -392,7 +392,7 @@ export default function LoansPage() {
                   >
                     <span className="font-bold text-slate-900 pr-4">{faq.q}</span>
                     <span
-                      className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-accent-green/10 text-accent-green font-bold text-lg transition-transform duration-300 ${
+                      className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-primary/10 text-primary font-bold text-lg transition-transform duration-300 ${
                         openFaq === idx ? "rotate-45" : ""
                       }`}
                     >
