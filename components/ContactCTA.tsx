@@ -49,7 +49,7 @@ export default function ContactCTA() {
                                     </svg>
                                 </div>
                                 <div className="flex-grow flex flex-col justify-center">
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-blue-200 mb-2 mt-1">CALL NOW</p>
+                                    <p className="text-xs font-black uppercase tracking-widest text-blue-200 mb-2 mt-1">CALL NOW</p>
                                     <a href="tel:+919876543210" className="flex items-center justify-between group py-1 border-b border-white/10 mb-2 pb-2">
                                         <span className="text-lg font-black text-white">+91 98765 43210</span>
                                         <svg className="w-4 h-4 text-blue-300 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -73,7 +73,7 @@ export default function ContactCTA() {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-blue-200/60 mb-0.5">WHATSAPP</p>
+                                    <p className="text-xs font-black uppercase tracking-widest text-blue-200/60 mb-0.5">WHATSAPP</p>
                                     <p className="text-xl font-black text-white">Chat with Experts</p>
                                 </div>
                             </a>
@@ -87,9 +87,9 @@ export default function ContactCTA() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                 </div>
-                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">EMAIL US</p>
+                                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">EMAIL US</p>
                                 <p className="text-xs font-black text-[#113670] mb-0.5">info@ewolyn.co.in</p>
-                                <p className="text-[10px] text-slate-500 font-medium">Detailed Inquiry</p>
+                                <p className="text-xs text-slate-500 font-medium">Detailed Inquiry</p>
                             </div>
                             <div className="bg-white rounded-[1.25rem] p-5 shadow-lg">
                                 <div className="bg-[#113670] text-white w-10 h-10 rounded-lg flex items-center justify-center mb-4">
@@ -98,9 +98,9 @@ export default function ContactCTA() {
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
-                                <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 mb-1">LOCATION</p>
+                                <p className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">LOCATION</p>
                                 <p className="text-xs font-black text-[#113670] mb-0.5">Ahmedabad, Gujarat</p>
-                                <p className="text-[10px] text-slate-500 font-medium">Serving Pan India</p>
+                                <p className="text-xs text-slate-500 font-medium">Serving Pan India</p>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function ContactCTA() {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
-                                        <label className="text-[11px] font-black uppercase tracking-widest text-[#113670] mb-2 block">YOUR FULL NAME</label>
+                                        <label className="text-xs font-black uppercase tracking-widest text-[#113670] mb-2 block">YOUR FULL NAME</label>
                                         <input
                                             type="text"
                                             placeholder="Jane Doe"
@@ -127,7 +127,7 @@ export default function ContactCTA() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="text-[11px] font-black uppercase tracking-widest text-[#113670] mb-2 block">MOBILE NUMBER</label>
+                                        <label className="text-xs font-black uppercase tracking-widest text-[#113670] mb-2 block">MOBILE NUMBER</label>
                                         <input
                                             type="tel"
                                             placeholder="+91 XXXXX XXXXX"
@@ -140,7 +140,7 @@ export default function ContactCTA() {
                                 </div>
 
                                 <div>
-                                    <label className="text-[11px] font-black uppercase tracking-widest text-[#113670] mb-2 block">CHOOSE SERVICE CATEGORY</label>
+                                    <label className="text-xs font-black uppercase tracking-widest text-[#113670] mb-2 block">CHOOSE SERVICE CATEGORY</label>
                                     <select
                                         value={formData.service}
                                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
@@ -169,7 +169,7 @@ export default function ContactCTA() {
                         </div>
 
                         {/* Bottom trust indicators */}
-                        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-[11px] font-black text-slate-500 mt-10 tracking-widest uppercase">
+                        <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-xs font-black text-slate-500 mt-10 tracking-widest uppercase">
                             <span className="flex items-center gap-1.5">
                                 <svg className="w-4 h-4 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />

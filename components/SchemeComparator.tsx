@@ -15,7 +15,7 @@ const compareSchemes = [
         interest: "8–12%",
         processing: "Quick process",
         education: "Not Required",
-        collateral: "No liability",
+
         eligibility: ["Age: 18+ years", "Education: Not Required", "Type: Non-farm sector"],
         bestFor: "Small businesses and shops needing working capital",
         successRate: 91,
@@ -33,7 +33,7 @@ const compareSchemes = [
         interest: "Up to ₹20L Grant",
         processing: "Detailed review",
         education: "Not Required",
-        collateral: "Equity/Grant",
+
         eligibility: ["Age: Any", "Education: Not Required", "Type: Innovative Startups"],
         bestFor: "Tech startups and innovation-driven businesses",
         successRate: 75,
@@ -50,7 +50,7 @@ const compareSchemes = [
         interest: "Special benefits",
         processing: "Priority process",
         education: "Flexible",
-        collateral: "Base Rate + 3%",
+
         eligibility: ["Age: 21+ years", "Education: Not Required", "Type: Diverse India Projects"],
         bestFor: "Women, SC/ST entrepreneurs starting new ventures",
         successRate: 78,
@@ -67,7 +67,7 @@ const compareSchemes = [
         interest: "ROI Focused",
         processing: "Quick start",
         education: "Not Required",
-        collateral: "N/A",
+
         eligibility: ["Age: Any", "Education: Not Required", "Type: All Businesses"],
         bestFor: "Businesses looking to grow online presence and sales",
         successRate: 95,
@@ -83,7 +83,7 @@ function QuickCompare() {
         { label: "Interest", key: "interest" },
         { label: "Processing", key: "processing" },
         { label: "Education", key: "education" },
-        { label: "Collateral", key: "collateral" },
+
     ] as const;
 
     return (
@@ -169,12 +169,12 @@ function DetailedView() {
                     {/* Card Header */}
                     <div className="p-5 text-white" style={{ background: s.color }}>
                         {s.badge && (
-                            <span className="text-[10px] font-black uppercase tracking-widest bg-white/20 rounded-full px-3 py-1 mb-3 inline-block">
+                            <span className="text-xs font-black uppercase tracking-widest bg-white/20 rounded-full px-3 py-1 mb-3 inline-block">
                                 {s.badge}
                             </span>
                         )}
                         <h3 className="text-xl font-black leading-tight">{s.name}</h3>
-                      <p className="text-[11px] opacity-90 mt-0.5 leading-tight">{s.full}</p>
+                      <p className="text-xs opacity-90 mt-0.5 leading-tight">{s.full}</p>
                         <p className="text-2xl font-black mt-3">{s.range}</p>
                     </div>
 
@@ -183,7 +183,7 @@ function DetailedView() {
                         {/* Stats */}
                         <div className="space-y-2">
                             {[
-                                { label: "Scheme Feature", value: s.collateral },
+
                                 { label: "Interest", value: s.interest },
                                 { label: "Processing", value: s.processing },
                                 { label: "Education", value: s.education },
@@ -199,7 +199,7 @@ function DetailedView() {
 
                         {/* Eligibility */}
                         <div>
-                            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Eligibility</p>
+                            <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">Eligibility</p>
                             <ul className="space-y-1">
                                 {s.eligibility.map((e) => (
                                     <li key={e} className="flex items-center gap-1.5 text-xs text-slate-600 font-medium">
@@ -214,7 +214,7 @@ function DetailedView() {
 
                         {/* Best For */}
                         <div>
-                            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Best For</p>
+                            <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1">Best For</p>
                             <p className="text-xs text-slate-600 font-medium italic leading-relaxed">
                                 &ldquo;{s.bestFor}&rdquo;
                             </p>
@@ -222,7 +222,7 @@ function DetailedView() {
 
                         {/* Success Rate */}
                         <div className="flex items-center justify-between mt-auto">
-                            <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Success Rate</p>
+                            <p className="text-xs font-black uppercase tracking-widest text-slate-400">Success Rate</p>
                             <p className="text-2xl font-black" style={{ color: s.color }}>
                                 {s.successRate}%
                             </p>
@@ -248,7 +248,7 @@ export default function SchemeComparator() {
     const [view, setView] = useState<"quick" | "detailed">("quick");
 
     return (
-        <section className="py-20" style={{ background: "rgba(115, 150, 121, 0.92)" }}>
+        <section className="py-20" style={{ background: "rgba(55, 175, 225, 0.95)" }}>
             <div className="container-max">
                 {/* Header */}
                 <div className="text-center mb-10">

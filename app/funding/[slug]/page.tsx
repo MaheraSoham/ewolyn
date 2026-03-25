@@ -94,7 +94,7 @@ export default function SchemeDetailPage({ params }: Props) {
                 <div key={stat.label} className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm text-center">
                   <div className={`${stat.color} flex justify-center mb-2`}>{stat.icon}</div>
                   <div className="text-lg font-black text-slate-900">{stat.value}</div>
-                  <div className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold mt-1">{stat.label}</div>
+                  <div className="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -165,7 +165,7 @@ export default function SchemeDetailPage({ params }: Props) {
                       <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white text-sm font-black group-hover:bg-primary transition-colors shadow-lg">{idx + 1}</div>
                     </div>
                     <div className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex-1 group-hover:shadow-md group-hover:border-primary/20 transition-all">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-primary">Step {idx + 1}</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-primary">Step {idx + 1}</span>
                       <p className="text-slate-600 leading-relaxed mt-1">{step}</p>
                     </div>
                   </div>
@@ -179,10 +179,10 @@ export default function SchemeDetailPage({ params }: Props) {
             <div className="bg-slate-900 rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl">
               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
               <div className="relative z-10">
-                <span className={`inline-block text-[10px] font-bold px-2.5 py-1 rounded-full border mb-5 ${catColor}`}>{scheme.category}</span>
+                <span className={`inline-block text-xs font-bold px-2.5 py-1 rounded-full border mb-5 ${catColor}`}>{scheme.category}</span>
                 <h3 className="text-2xl font-bold mb-3">Ready to Apply?</h3>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6">Let our experts guide you through the application process and maximize your chances of approval.</p>
-                <Link href="/contact" className="inline-block w-full rounded-xl bg-primary px-6 py-4 text-center font-bold text-slate-900 hover:bg-white hover:scale-[1.02] transition-all shadow-xl shadow-primary/20">Start Application →</Link>
+                <Link href="/contact" className="inline-block w-full rounded-xl bg-primary px-6 py-4 text-center font-bold text-white hover:bg-white hover:text-slate-900 hover:scale-[1.02] transition-all shadow-xl shadow-primary/20">Start Application →</Link>
                 <a href="tel:18005710607" className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white hover:bg-white/10 transition-all">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   1800-571-0607

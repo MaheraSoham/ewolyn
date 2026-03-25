@@ -135,7 +135,7 @@ export default function BlogDetailPage({ params }: Props) {
                 <ul className="space-y-2.5">
                   {post.content.map((section, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-primary/60 mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="text-xs font-bold text-primary/60 mt-0.5">{String(i + 1).padStart(2, "0")}</span>
                       <span className="text-sm text-gray-300 leading-snug line-clamp-2 hover:text-white transition-colors cursor-default">{section.heading}</span>
                     </li>
                   ))}
@@ -158,7 +158,7 @@ export default function BlogDetailPage({ params }: Props) {
                     {sectionIcons[i % sectionIcons.length]}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Section {String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Section {String(i + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-snug">{section.heading}</h2>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function BlogDetailPage({ params }: Props) {
                       <div className={`w-7 h-7 rounded-lg ${categoryIconColors[r.category] || "bg-gray-500"} text-white flex items-center justify-center`}>
                         <span className="scale-75">{categoryIcons[r.category] || categoryIcons["Business Growth"]}</span>
                       </div>
-                      <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${categoryColors[r.category] || "bg-gray-100 text-gray-600"}`}>{r.category}</span>
+                      <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${categoryColors[r.category] || "bg-gray-100 text-gray-600"}`}>{r.category}</span>
                     </div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">{r.title}</h3>
                     <p className="text-sm text-slate-500 line-clamp-2 mb-4">{r.excerpt}</p>

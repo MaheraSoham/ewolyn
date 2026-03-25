@@ -322,7 +322,7 @@ export default function CertificationsPage() {
                 >
                   <span className="text-4xl block mb-3">{cert.icon}</span>
                   <p className="font-bold text-slate-800 text-sm">{cert.name}</p>
-                  <p className="text-[10px] text-primary font-semibold uppercase tracking-wider mt-1">Certified</p>
+                  <p className="text-xs text-primary font-semibold uppercase tracking-wider mt-1">Certified</p>
                 </div>
               ))}
             </div>

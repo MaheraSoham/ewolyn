@@ -26,7 +26,7 @@ export default function CTASection() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-primary text-[10px] font-black uppercase tracking-[0.3em] mb-6"
+                  className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-white text-xs font-black uppercase tracking-[0.3em] mb-6"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
                   Exclusive MSME Access
@@ -50,7 +50,7 @@ export default function CTASection() {
                   onClick={() => openEligibilityPopup()}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-10 py-5 bg-primary text-brand-navy font-black rounded-2xl hover:bg-white transition-all shadow-xl shadow-primary/20 text-center uppercase tracking-widest text-xs"
+                  className="px-10 py-5 bg-primary text-white font-black rounded-2xl hover:bg-white hover:text-brand-navy transition-all shadow-xl shadow-primary/20 text-center uppercase tracking-widest text-xs"
                 >
                   Check Eligibility Free
                 </motion.button>

@@ -402,7 +402,7 @@ export default function CibilAssistancePage() {
                   ].map((s) => (
                     <div key={s.label} className="bg-slate-100 rounded-xl p-4 text-center">
                       <p className="text-xl font-bold text-primary">{s.value}</p>
-                      <p className="text-[10px] text-slate-500 uppercase tracking-wider mt-1">{s.label}</p>
+                      <p className="text-xs text-slate-500 uppercase tracking-wider mt-1">{s.label}</p>
                     </div>
                   ))}
                 </div>

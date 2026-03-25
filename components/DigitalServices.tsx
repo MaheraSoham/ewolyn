@@ -197,11 +197,11 @@ const cardVariants = {
 export default function DigitalServices() {
     const { openEligibilityPopup } = usePopup();
     return (
-        <section className="bg-[rgba(115,150,121,0.92)] py-20 pb-24">
+        <section className="bg-[rgba(55,175,225,0.95)] py-20 pb-24">
             <div className="container-max">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[9px] font-bold text-white uppercase tracking-widest mb-4">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-bold text-white uppercase tracking-widest mb-4">
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
@@ -237,7 +237,7 @@ export default function DigitalServices() {
                                 </div>
                                 <div className="text-right">
                                     <p className={`text-2xl font-black tracking-tighter ${svc.statColor} leading-none mb-1`}>{svc.stat}</p>
-                                    <p className="text-[8px] font-black text-slate-500 uppercase tracking-widest">{svc.statLabel}</p>
+                                    <p className="text-xs font-black text-slate-500 uppercase tracking-widest">{svc.statLabel}</p>
                                 </div>
                             </div>
 
@@ -245,7 +245,7 @@ export default function DigitalServices() {
                             <h3 className="text-xl font-black text-[#1B4F8C] leading-tight mb-1">
                                 {svc.title}
                             </h3>
-                            <p className="text-[9px] font-bold uppercase tracking-widest text-slate-500 mb-4">
+                            <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">
                                 {svc.subtitle}
                             </p>
 
@@ -267,7 +267,7 @@ export default function DigitalServices() {
                                         >
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                         </svg>
-                                        <span className="text-[11px] font-black text-[#1B4F8C] leading-tight">{f}</span>
+                                        <span className="text-xs font-black text-[#1B4F8C] leading-tight">{f}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -280,7 +280,7 @@ export default function DigitalServices() {
                                 {svc.tags.map((t, i) => (
                                     <span
                                         key={i}
-                                        className={`text-[8.5px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md ${svc.iconColor.replace('text-', 'bg-').replace(']', '/10]')}`}
+                                        className={`text-xs font-black uppercase tracking-widest px-2.5 py-1 rounded-md ${svc.iconColor.replace('text-', 'bg-').replace(']', '/10]')}`}
                                         style={{ backgroundColor: `${svc.buttonColor.replace('bg-[', '').replace(']', '')}15` }}
                                     >
                                         {t}
@@ -291,7 +291,7 @@ export default function DigitalServices() {
                             {/* Button */}
                             <button
                                 onClick={() => openEligibilityPopup(svc.title)}
-                                className={`w-full flex items-center justify-center gap-2 rounded-xl ${svc.buttonColor} text-white py-3.5 text-[11px] font-black hover:opacity-90 transition-opacity`}
+                                className={`w-full flex items-center justify-center gap-2 rounded-xl ${svc.buttonColor} text-white py-3.5 text-xs font-black hover:opacity-90 transition-opacity`}
                             >
                                 LEARN MORE
                                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>

@@ -72,13 +72,13 @@ const whyChooseUs = [
     title: "Government Insights",
     desc: "Deep expertise in government schemes, subsidies, and policy frameworks for MSMEs.",
     icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>,
-    color: "bg-[rgba(115,150,121,0.92)]/20 text-blue-300",
+    color: "bg-[rgba(55,175,225,0.95)]/20 text-white",
   },
   {
     title: "Flexible Help",
     desc: "Adaptable support that scales with your business needs — on your terms.",
     icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>,
-    color: "bg-[rgba(115,150,121,0.92)]/20 text-blue-300",
+    color: "bg-[rgba(55,175,225,0.95)]/20 text-white",
   },
   {
     title: "Tailored Fixes",
@@ -90,13 +90,13 @@ const whyChooseUs = [
     title: "Expert Team",
     desc: "Experienced professionals across finance, legal, and strategy domains.",
     icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
-    color: "bg-[rgba(115,150,121,0.92)]/20 text-blue-300",
+    color: "bg-[rgba(55,175,225,0.95)]/20 text-white",
   },
   {
     title: "Quick Results",
     desc: "Streamlined processes deliver faster turnarounds so you can act swiftly.",
     icon: <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
-    color: "bg-primary/15 text-primary",
+    color: "bg-primary/15 text-white",
   },
 ];
 
@@ -127,8 +127,8 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-8 border border-primary/25"
             >
-              <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              <span className="text-primary">About Ewolyn</span>
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              <span className="text-white">About Ewolyn</span>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -161,7 +161,7 @@ export default function AboutPage() {
               ].map((s) => (
                 <div key={s.label} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 text-center">
                   <p className="text-2xl font-bold text-primary">{s.value}</p>
-                  <p className="text-[10px] text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
+                  <p className="text-xs text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -192,14 +192,14 @@ export default function AboutPage() {
                 />
               </div>
               {/* Floating stat badge */}
-              <div className="absolute -bottom-6 -right-6 bg-[rgba(115,150,121,0.92)] p-6 rounded-2xl shadow-2xl text-white">
+              <div className="absolute -bottom-6 -right-6 bg-[rgba(55,175,225,0.95)] p-6 rounded-2xl shadow-2xl text-white">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center">
                     <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-primary">10+</p>
-                    <p className="text-[10px] text-gray-300 uppercase tracking-wider">Years Combined Expertise</p>
+                    <p className="text-xs text-gray-300 uppercase tracking-wider">Years Combined Expertise</p>
                   </div>
                 </div>
               </div>
@@ -288,15 +288,15 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-[rgba(115,150,121,0.92)] p-10 rounded-3xl shadow-lg border border-white/5 group hover:border-primary/30 transition-all duration-300 relative overflow-hidden"
+              className="bg-[rgba(55,175,225,0.95)] p-10 rounded-3xl shadow-lg border border-white/5 group hover:border-primary/30 transition-all duration-300 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
-                <div className="w-14 h-14 bg-primary/15 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-white/15 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-white leading-relaxed">
                   To become India's most trusted partner for MSME growth, creating an ecosystem where "Made in India" businesses launch effortlessly and scale globally.
                 </p>
               </div>

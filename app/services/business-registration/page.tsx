@@ -356,7 +356,7 @@ export default function BusinessRegistrationPage() {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-gradient-to-br from-[rgba(115,150,121,0.92)] to-[#1B4F8C] rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/5"
+                    className="bg-gradient-to-br from-[rgba(55,175,225,0.95)] to-[#1B4F8C] rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/5"
                   >
                     <span className="text-3xl mb-3 block">{stat.icon}</span>
                     <p className="text-3xl font-black text-primary mb-1">{stat.value}</p>

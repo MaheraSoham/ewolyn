@@ -100,7 +100,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">01</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">01</span>
                   <h2 className="text-2xl font-bold text-slate-900">Nature of Our Services</h2>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">02</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">02</span>
                   <h2 className="text-2xl font-bold text-slate-900">When Refunds Apply</h2>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">03</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">03</span>
                   <h2 className="text-2xl font-bold text-slate-900">Non-Refundable Cases</h2>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">04</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">04</span>
                   <h2 className="text-2xl font-bold text-slate-900">Cancellation Policy</h2>
                 </div>
               </div>
@@ -270,7 +270,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">05</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">05</span>
                   <h2 className="text-2xl font-bold text-slate-900">Refund Process</h2>
                 </div>
               </div>
@@ -321,7 +321,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">06</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">06</span>
                   <h2 className="text-2xl font-bold text-slate-900">Dispute Resolution</h2>
                 </div>
               </div>

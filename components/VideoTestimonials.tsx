@@ -107,7 +107,7 @@ function VideoCard({
                         </button>
 
                         {/* Tag badge */}
-                        <span className="absolute top-3 left-3 rounded-full bg-cyan-bright/90 px-3 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white shadow">
+                        <span className="absolute top-3 left-3 rounded-full bg-cyan-bright/90 px-3 py-0.5 text-xs font-semibold uppercase tracking-wider text-white shadow">
                             {tag}
                         </span>
                     </>
@@ -121,12 +121,12 @@ function VideoCard({
                 </p>
                 <div className="mt-2 flex items-center gap-2">
                     {/* Avatar circle */}
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-[11px] font-bold text-white">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-xs font-bold text-white">
                         {client[0]}
                     </span>
                     <div>
                         <p className="text-xs font-semibold text-evolyn-blue">{client}</p>
-                        <p className="text-[10px] text-muted">{business}</p>
+                        <p className="text-xs text-muted">{business}</p>
                     </div>
                 </div>
             </div>

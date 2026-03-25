@@ -121,21 +121,20 @@ export default function SchemesPage() {
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-8 border border-primary/25">
-                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                <span className="text-primary">{governmentSchemes.length}+ Government Schemes Available</span>
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                <span className="text-white">50+ Government Schemes Available</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-[1.1]">
                 Government <span className="text-primary">Schemes</span>
               </h1>
               <p className="text-2xl md:text-3xl font-medium text-gray-300 mb-6">for MSMEs &amp; Startups</p>
               <p className="text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Comprehensive guide to PMEGP, CGTMSE, MUDRA, Startup India and{" "}
-                {governmentSchemes.length - 4}+ government schemes. Access
+                Comprehensive guide to PMEGP, CGTMSE, MUDRA, Startup India and 46+ government schemes. Access
                 funding from ₹10K to ₹5Cr with expert guidance.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
                 {[
-                  { value: `${governmentSchemes.length}+`, label: "Schemes", icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg> },
+                  { value: "50+", label: "Schemes", icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg> },
                   { value: "₹10K-₹5Cr", label: "Funding Range", icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> },
                   { value: "7-90 Days", label: "Process Time", icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> },
                   { value: "95%", label: "Success Rate", icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> },
@@ -143,7 +142,7 @@ export default function SchemesPage() {
                   <div key={s.label} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
                     <div className="text-primary mb-2 flex justify-center">{s.icon}</div>
                     <p className="text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[10px] text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
+                    <p className="text-xs text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -220,7 +219,7 @@ export default function SchemesPage() {
                           <div className="absolute bottom-4 right-4 text-6xl opacity-[0.04] pointer-events-none select-none">{scheme.icon}</div>
                           <div className="flex items-center justify-between mb-4">
                             <div className={`w-12 h-12 rounded-xl ${scheme.iconBg} bg-opacity-20 flex items-center justify-center text-2xl shadow-sm`}>{scheme.icon}</div>
-                            <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full border flex items-center gap-1 ${meta?.color || "bg-gray-100 text-gray-600 border-gray-200"}`}>
+                            <span className={`text-xs font-bold px-2.5 py-1 rounded-full border flex items-center gap-1 ${meta?.color || "bg-gray-100 text-gray-600 border-gray-200"}`}>
                               {meta?.icon}
                               {scheme.category}
                             </span>
@@ -230,11 +229,11 @@ export default function SchemesPage() {
                           <div className="bg-slate-50 rounded-xl p-4 mb-4">
                             <div className="flex items-center justify-between">
                               <div>
-                                <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">{scheme.highlightLabel}</p>
+                                <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold">{scheme.highlightLabel}</p>
                                 <p className="text-xl font-black text-primary">{scheme.highlight}</p>
                               </div>
                               <div className="text-right">
-                                <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Timeline</p>
+                                <p className="text-xs text-slate-400 uppercase tracking-wider font-semibold">Timeline</p>
                                 <p className="text-sm font-bold text-slate-700 flex items-center gap-1 justify-end">
                                   <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                   {scheme.timeline}

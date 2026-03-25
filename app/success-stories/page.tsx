@@ -17,7 +17,7 @@ const stories = [
     category: "Manufacturing",
     scheme: "PMEGP",
     amount: "₹35 Lakhs",
-    amountColor: "#2eb85c",
+    amountColor: "#37AFE1",
     result: "35% Capital Subsidy + Full Loan Disbursed",
     story:
       "Mahesh struggled to get bank approval for 3 years. Ewolyn's team prepared his PMEGP application, arranged the DPR, and secured ₹35L disbursement within 40 days.",
@@ -125,7 +125,7 @@ const stories = [
     category: "Services",
     scheme: "PMEGP",
     amount: "₹25 Lakhs",
-    amountColor: "#2eb85c",
+    amountColor: "#37AFE1",
     result: "25% Subsidy + MSME Registration",
     story:
       "Karan's vocational training institute qualified for PMEGP under service sector. Ewolyn secured ₹25L with 25% subsidy and full MSME Udyam registration in one month.",
@@ -197,7 +197,7 @@ const stories = [
     category: "Manufacturing",
     scheme: "NSIC + PMEGP",
     amount: "₹45 Lakhs",
-    amountColor: "#2eb85c",
+    amountColor: "#37AFE1",
     result: "Tender Priority + 35% Subsidy",
     story:
       "Sanjay's construction firm needed NSIC certification to bid for government tenders. Ewolyn got NSIC done in 20 days + ₹45L PMEGP subsidy, transforming his B2G business.",
@@ -233,7 +233,7 @@ const stories = [
     category: "Manufacturing",
     scheme: "PMEGP + ISO Certification",
     amount: "₹60 Lakhs",
-    amountColor: "#2eb85c",
+    amountColor: "#37AFE1",
     result: "ISO 9001 + GMP Compliance + Full Funding",
     story:
       "Dr. Suresh needed ISO certification and funding to set up his pharma manufacturing unit. Ewolyn delivered ISO 9001, GMP compliance support, and ₹60L PMEGP disbursement.",
@@ -277,16 +277,16 @@ export default function SuccessStoriesPage() {
       {/* Hero */}
       <section
         className="relative pt-36 pb-20 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)" }}
+        style={{ background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #37AFE1 100%)" }}
       >
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(46,184,92,0.15) 0%, transparent 70%)" }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(55,175,225,0.15) 0%, transparent 70%)" }} />
         <div className="container-max text-center relative z-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-black text-white uppercase tracking-widest mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2eb85c] animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-xs font-black text-white uppercase tracking-widest mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#37AFE1] animate-pulse" />
             Real Results. Real Founders.
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-5">
-            Success <span className="text-[#2eb85c]">Stories</span>
+            Success <span className="text-[#37AFE1]">Stories</span>
           </h1>
           <p className="text-base md:text-lg text-blue-100/70 max-w-2xl mx-auto font-medium">
             Over 1000 Indian MSMEs and startups have transformed their businesses with Ewolyn&apos;s expert guidance in funding, registration, and digital growth.
@@ -301,7 +301,7 @@ export default function SuccessStoriesPage() {
                 key={s.label}
                 className="rounded-2xl bg-white/[0.06] border border-white/10 p-6 text-center backdrop-blur-sm"
               >
-                <p className="text-3xl font-black text-[#2eb85c]">{s.value}</p>
+                <p className="text-3xl font-black text-[#37AFE1]">{s.value}</p>
                 <p className="text-xs font-semibold text-white/80 uppercase tracking-wider mt-1">{s.label}</p>
               </div>
             ))}
@@ -335,7 +335,7 @@ export default function SuccessStoriesPage() {
             {stories.map((s) => (
               <div
                 key={s.id}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#2eb85c]/30 transition-all duration-300 flex flex-col"
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#37AFE1]/30 transition-all duration-300 flex flex-col"
               >
                 {/* Video Placeholder */}
                 <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 h-40 flex items-center justify-center">
@@ -346,7 +346,7 @@ export default function SuccessStoriesPage() {
                   </div>
                   <div className="absolute top-3 left-3">
                     <span
-                      className="text-[9px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full text-white"
+                      className="text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-full text-white"
                       style={{ background: s.badgeColor }}
                     >
                       {s.badge}
@@ -361,31 +361,31 @@ export default function SuccessStoriesPage() {
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-grow">
                   <h3 className="text-base font-black text-[#1B4F8C] leading-tight">{s.company}</h3>
-                  <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5 mb-3">
+                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-0.5 mb-3">
                     {s.founder} · {s.industry}
                   </p>
 
                   {/* Funding Amount */}
                   <div className="flex items-baseline gap-1.5 mb-2">
                     <span className="text-2xl font-black" style={{ color: s.amountColor }}>{s.amount}</span>
-                    <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">via {s.scheme}</span>
+                    <span className="text-xs text-slate-400 uppercase font-bold tracking-wider">via {s.scheme}</span>
                   </div>
 
                   {/* Result */}
                   <div className="flex items-start gap-1.5 mb-3">
-                    <svg className="w-3.5 h-3.5 text-[#2eb85c] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <svg className="w-3.5 h-3.5 text-[#37AFE1] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <p className="text-[11px] text-slate-600 font-semibold">{s.result}</p>
+                    <p className="text-xs text-slate-600 font-semibold">{s.result}</p>
                   </div>
 
                   {/* Story */}
-                  <p className="text-[11px] text-slate-500 leading-relaxed flex-grow">{s.story}</p>
+                  <p className="text-xs text-slate-500 leading-relaxed flex-grow">{s.story}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mt-4">
                     {s.tags.map((tag) => (
-                      <span key={tag} className="text-[9px] font-black uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-0.5 rounded">
+                      <span key={tag} className="text-xs font-black uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-0.5 rounded">
                         {tag}
                       </span>
                     ))}
@@ -398,14 +398,14 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[rgba(115,150,121,0.92)] py-16">
+      <section className="bg-[rgba(55,175,225,0.95)] py-16">
         <div className="container-max text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[10px] font-black uppercase tracking-widest text-[#2eb85c] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2eb85c] animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs font-black uppercase tracking-widest text-white mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             Your Story Could Be Next
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Ready to Write Your <span className="text-[#2eb85c]">Success Story?</span>
+            Ready to Write Your <span className="text-white/80">Success Story?</span>
           </h2>
           <p className="text-base text-white/80 max-w-xl mx-auto mb-10">
             Join 1000+ Indian entrepreneurs who transformed their businesses with Ewolyn&apos;s expert guidance.
@@ -415,7 +415,7 @@ export default function SuccessStoriesPage() {
               href={`https://wa.me/919876543210?text=${encodeURIComponent("Hello Ewolyn! I want to check my eligibility for government funding. Please guide me.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-2xl bg-white text-[#2eb85c] font-black px-8 py-4 hover:bg-[#1B4F8C] hover:text-white transition-all shadow-xl shadow-[#2eb85c]/30 text-sm"
+              className="inline-flex items-center gap-3 rounded-2xl bg-white text-[#37AFE1] font-black px-8 py-4 hover:bg-[#1B4F8C] hover:text-white transition-all shadow-xl shadow-[#37AFE1]/30 text-sm"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />

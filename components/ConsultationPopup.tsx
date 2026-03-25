@@ -113,14 +113,14 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                         {/* Dot grid */}
                         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "18px 18px" }} />
                         {/* Glow */}
-                        <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-[#2eb85c]/25 rounded-full blur-[90px]" />
+                        <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-[#37AFE1]/25 rounded-full blur-[90px]" />
                         <div className="absolute -top-16 -left-16 w-56 h-56 bg-blue-500/15 rounded-full blur-[80px]" />
 
                         <div className="relative z-10 flex flex-col justify-between h-full p-8">
                             {/* Header */}
                             <div>
                                 <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1.5 border border-white/20 mb-4 backdrop-blur-sm">
-                                    <span className="w-2 h-2 rounded-full bg-[#2eb85c] animate-pulse" />
+                                    <span className="w-2 h-2 rounded-full bg-[#37AFE1] animate-pulse" />
                                     <span className="text-white/90 text-xs font-bold">Ewolyn · Active Now</span>
                                 </div>
                                 <h3 className="text-2xl font-black text-white mb-1">Talk to an Expert</h3>
@@ -137,7 +137,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                                                 {item.icon}
                                             </div>
                                             <div>
-                                                <p className="text-white/40 text-[10px] uppercase tracking-wider font-bold">{item.label}</p>
+                                                <p className="text-white/40 text-xs uppercase tracking-wider font-bold">{item.label}</p>
                                                 <p className="text-white text-sm font-semibold mt-0.5">{item.value}</p>
                                             </div>
                                         </div>
@@ -148,7 +148,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                             {/* Trust badges */}
                             <div className="mt-8 flex flex-wrap gap-2">
                                 {["500+ Clients", "Pan India", "10+ Years"].map((badge) => (
-                                    <span key={badge} className="text-[11px] text-white/70 bg-white/10 border border-white/15 rounded-full px-3 py-1 font-medium">
+                                    <span key={badge} className="text-xs text-white/70 bg-white/10 border border-white/15 rounded-full px-3 py-1 font-medium">
                                         ✓ {badge}
                                     </span>
                                 ))}
@@ -161,12 +161,12 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                         {!isSubmitted ? (
                             <>
                                 <div className="mb-6">
-                                    <span className="inline-block text-xs font-bold text-[#2eb85c] bg-[#2eb85c]/10 rounded-full px-3 py-1 mb-3">Free Consultation</span>
+                                    <span className="inline-block text-xs font-bold text-[#37AFE1] bg-[#37AFE1]/10 rounded-full px-3 py-1 mb-3">Free Consultation</span>
                                     <h2 className="text-2xl font-black text-[#1B4F8C] mb-1">Check Your Eligibility</h2>
                                     <p className="text-sm text-slate-500 font-medium">Our expert will contact you within 2 hours.</p>
                                     {service && (
                                         <div className="mt-3 flex items-center gap-2 text-xs text-slate-500 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5">
-                                            <span className="w-2 h-2 rounded-full bg-[#2eb85c]" />
+                                            <span className="w-2 h-2 rounded-full bg-[#37AFE1]" />
                                             Service: <span className="font-bold text-[#1B4F8C]">{service}</span>
                                         </div>
                                     )}
@@ -185,19 +185,19 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                                                     type={type}
                                                     required
                                                     placeholder={placeholder}
-                                                    className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 font-medium focus:outline-none focus:border-[#2eb85c] focus:ring-2 focus:ring-[#2eb85c]/20 transition-all placeholder:text-slate-300"
+                                                    className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 font-medium focus:outline-none focus:border-[#37AFE1] focus:ring-2 focus:ring-[#37AFE1]/20 transition-all placeholder:text-slate-300"
                                                     value={formData[key as keyof typeof formData]}
                                                     onChange={(e) => setFormData({ ...formData, [key]: e.target.value })}
                                                 />
                                             </div>
                                         </div>
                                     ))}
-                                    <button type="submit" disabled={isSubmitting} className="w-full py-3.5 rounded-xl font-black text-sm tracking-wide transition-all mt-2 text-white" style={{ background: "linear-gradient(135deg, #2eb85c 0%, #1da045 100%)", boxShadow: "0 4px 20px rgba(46,184,92,0.35)" }}>
+                                    <button type="submit" disabled={isSubmitting} className="w-full py-3.5 rounded-xl font-black text-sm tracking-wide transition-all mt-2 text-white" style={{ background: "linear-gradient(135deg, #37AFE1 0%, #1da045 100%)", boxShadow: "0 4px 20px rgba(55,175,225,0.35)" }}>
                                         {isSubmitting
                                             ? <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto" />
                                             : "Get Free Consultation →"}
                                     </button>
-                                    <p className="text-center text-[11px] text-slate-500 font-medium flex items-center justify-center gap-1.5 mt-1">
+                                    <p className="text-center text-xs text-slate-500 font-medium flex items-center justify-center gap-1.5 mt-1">
                                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                                         100% Private. No spam guaranteed.
                                     </p>
@@ -205,8 +205,8 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                             </>
                         ) : (
                             <div className="flex flex-col items-center justify-center text-center py-10">
-                                <div className="w-20 h-20 bg-[#2eb85c]/10 rounded-full flex items-center justify-center mb-6 border border-[#2eb85c]/30">
-                                    <IconCheck size={40} className="text-[#2eb85c]" />
+                                <div className="w-20 h-20 bg-[#37AFE1]/10 rounded-full flex items-center justify-center mb-6 border border-[#37AFE1]/30">
+                                    <IconCheck size={40} className="text-[#37AFE1]" />
                                 </div>
                                 <h3 className="text-2xl font-black text-[#1B4F8C] mb-2">You&apos;re Connected!</h3>
                                 <p className="text-slate-500 text-sm">Opening WhatsApp to connect you with our experts.</p>
@@ -260,19 +260,19 @@ export default function ConsultationPopup() {
                     {/* Dot grid */}
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "16px 16px" }} />
                     {/* Glow blobs */}
-                    <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#2eb85c]/30 rounded-full blur-[60px]" />
+                    <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#37AFE1]/30 rounded-full blur-[60px]" />
                     <div className="absolute -top-10 -left-10 w-48 h-48 bg-blue-500/20 rounded-full blur-[60px]" />
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-6">
                         <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-3.5 py-1.5 border border-white/20 mb-2 backdrop-blur-sm">
-                            <span className="w-2 h-2 rounded-full bg-[#2eb85c] animate-pulse" />
+                            <span className="w-2 h-2 rounded-full bg-[#37AFE1] animate-pulse" />
                             <span className="text-white text-xs font-bold tracking-wide">EWOLYN · Free Consultation Available</span>
                         </div>
                         <h2 className="text-[22px] font-black text-white text-center leading-tight">
-                            Grow Your Business with <span className="text-[#2eb85c]">Expert Support</span>
+                            Grow Your Business with <span className="text-[#37AFE1]">Expert Support</span>
                         </h2>
-                        <p className="text-white/60 text-[11px] mt-1">Choose a service to check your eligibility instantly</p>
+                        <p className="text-white/60 text-xs mt-1">Choose a service to check your eligibility instantly</p>
                     </div>
                 </div>
 
@@ -283,11 +283,11 @@ export default function ConsultationPopup() {
                             <button
                                 key={card.id}
                                 onClick={() => openEligibilityPopup(card.title)}
-                                className="group relative text-left rounded-2xl overflow-hidden border border-slate-200 hover:border-[#2eb85c]/50 hover:shadow-lg transition-all duration-300 bg-white shadow-sm"
+                                className="group relative text-left rounded-2xl overflow-hidden border border-slate-200 hover:border-[#37AFE1]/50 hover:shadow-lg transition-all duration-300 bg-white shadow-sm"
                                 style={{ transform: "translateZ(0)" }}
                             >
                                 {/* Tag */}
-                                <span className={`absolute top-2 right-2 z-10 text-[9px] font-black text-white rounded-full px-1.5 py-0.5 ${card.tagColor}`}>
+                                <span className={`absolute top-2 right-2 z-10 text-xs font-black text-white rounded-full px-1.5 py-0.5 ${card.tagColor}`}>
                                     {card.tag}
                                 </span>
 
@@ -307,14 +307,14 @@ export default function ConsultationPopup() {
 
                                 {/* Card Text */}
                                 <div className="p-2.5 pb-3">
-                                    <h4 className="text-[11px] font-black text-[#1B4F8C] leading-tight mb-0.5 group-hover:text-[#1B4F8C] transition-colors">
+                                    <h4 className="text-xs font-black text-[#1B4F8C] leading-tight mb-0.5 group-hover:text-[#1B4F8C] transition-colors">
                                         {card.title}
                                     </h4>
-                                    <p className="text-[9px] text-slate-500 font-medium leading-tight line-clamp-2">{card.desc}</p>
+                                    <p className="text-xs text-slate-500 font-medium leading-tight line-clamp-2">{card.desc}</p>
                                 </div>
 
                                 {/* Arrow on hover */}
-                                <div className="absolute bottom-2.5 right-2.5 w-5 h-5 rounded-full bg-[#2eb85c] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 text-white">
+                                <div className="absolute bottom-2.5 right-2.5 w-5 h-5 rounded-full bg-[#37AFE1] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100 text-white">
                                     <IconArrow />
                                 </div>
                             </button>
@@ -326,14 +326,14 @@ export default function ConsultationPopup() {
                         <div className="flex items-center gap-2">
                             <span className="text-xl">🚀</span>
                             <div>
-                                <p className="text-[11px] font-black text-[#1B4F8C]">Not sure where to start?</p>
-                                <p className="text-[10px] text-slate-500 font-medium">Talk to an expert for free</p>
+                                <p className="text-xs font-black text-[#1B4F8C]">Not sure where to start?</p>
+                                <p className="text-xs text-slate-500 font-medium">Talk to an expert for free</p>
                             </div>
                         </div>
                         <button
                             onClick={() => openEligibilityPopup("General Enquiry")}
-                            className="flex items-center gap-1.5 text-[11px] font-black text-white rounded-full px-3 py-1.5 transition-all hover:shadow-md"
-                            style={{ background: "linear-gradient(135deg, #2eb85c 0%, #1da045 100%)" }}
+                            className="flex items-center gap-1.5 text-xs font-black text-white rounded-full px-3 py-1.5 transition-all hover:shadow-md"
+                            style={{ background: "linear-gradient(135deg, #37AFE1 0%, #1da045 100%)" }}
                         >
                             Get Help <IconArrow />
                         </button>
@@ -347,9 +347,9 @@ export default function ConsultationPopup() {
                     </p>
                     <div className="flex gap-1.5">
                         {["⭐", "⭐", "⭐", "⭐", "⭐"].map((s, i) => (
-                            <span key={i} className="text-[10px]">{s}</span>
+                            <span key={i} className="text-xs">{s}</span>
                         ))}
-                        <span className="text-white/50 text-[10px] ml-1">500+ Reviews</span>
+                        <span className="text-white/50 text-xs ml-1">500+ Reviews</span>
                     </div>
                 </div>
             </div>

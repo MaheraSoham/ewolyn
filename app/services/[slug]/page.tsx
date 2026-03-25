@@ -78,7 +78,7 @@ export default function SchemeDetailPage({ params }: Props) {
                 <div className="text-3xl md:text-4xl font-black text-primary group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
-                <div className="text-[10px] uppercase tracking-widest text-slate-400 mt-2 font-bold">
+                <div className="text-xs uppercase tracking-widest text-slate-400 mt-2 font-bold">
                   {stat.label}
                 </div>
               </div>

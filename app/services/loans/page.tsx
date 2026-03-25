@@ -279,7 +279,7 @@ export default function LoansPage() {
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <SlideIn direction="left">
-              <div className="bg-gradient-to-br from-[rgba(115,150,121,0.92)] to-[#1B4F8C] rounded-3xl p-10 text-center shadow-2xl border border-white/10">
+              <div className="bg-gradient-to-br from-[rgba(55,175,225,0.95)] to-[#1B4F8C] rounded-3xl p-10 text-center shadow-2xl border border-white/10">
                 <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Total Loans Facilitated</p>
                 <p className="text-7xl md:text-8xl font-black text-primary leading-none">₹103Cr<span className="text-4xl">+</span></p>
                 <div className="mt-8 grid grid-cols-3 gap-4">
@@ -290,7 +290,7 @@ export default function LoansPage() {
                   ].map((s) => (
                     <div key={s.label} className="bg-white/5 rounded-xl py-3 px-2">
                       <p className="text-lg font-bold text-white">{s.value}</p>
-                      <p className="text-[10px] text-gray-400 uppercase tracking-wider">{s.label}</p>
+                      <p className="text-xs text-gray-400 uppercase tracking-wider">{s.label}</p>
                     </div>
                   ))}
                 </div>

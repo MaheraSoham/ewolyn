@@ -43,7 +43,7 @@ export default function ImpactStats() {
                   {s.value}
                 </div>
                 <div className="mt-2 font-black text-white text-base md:text-lg uppercase tracking-wider">{s.label}</div>
-                <div className="text-[10px] md:text-xs font-bold text-slate-200 uppercase tracking-widest">{s.sublabel}</div>
+                <div className="text-xs md:text-xs font-bold text-slate-200 uppercase tracking-widest">{s.sublabel}</div>
               </motion.div>
             ))}
           </div>
@@ -181,19 +181,19 @@ export default function ImpactStats() {
                 <div className="grid grid-cols-1 gap-3">
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-primary text-lg">✓</span>
-                    <span className="text-slate-100">₹4.14L Cr MUDRA loans disbursed</span>
+                    <span className="text-white">₹4.14L Cr MUDRA loans disbursed</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-primary text-lg">✓</span>
-                    <span className="text-slate-100">₹7,593 Cr SRI Fund invested</span>
+                    <span className="text-white">₹7,593 Cr SRI Fund invested</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-primary text-lg">✓</span>
-                    <span className="text-slate-100">200+ RAMP proposals approved</span>
+                    <span className="text-white">200+ RAMP proposals approved</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-primary text-lg">✓</span>
-                    <span className="text-slate-100">20.5% Women-owned MSMEs</span>
+                    <span className="text-white">20.5% Women-owned MSMEs</span>
                   </div>
                 </div>
               </div>

@@ -322,7 +322,7 @@ export default function LegalServicesPage() {
                 ].map((pillar) => (
                   <div
                     key={pillar.label}
-                    className="flex items-center gap-5 bg-gradient-to-r from-[rgba(115,150,121,0.92)] to-[#0d2f57] rounded-2xl p-6 shadow-lg border border-white/5"
+                    className="flex items-center gap-5 bg-gradient-to-r from-[rgba(55,175,225,0.95)] to-[#0d2f57] rounded-2xl p-6 shadow-lg border border-white/5"
                   >
                     <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center text-2xl shrink-0">
                       {pillar.icon}

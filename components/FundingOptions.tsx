@@ -115,7 +115,7 @@ export default function FundingOptions() {
   const { openEligibilityPopup } = usePopup();
 
   return (
-    <section className="bg-[rgba(115,150,121,0.92)] py-16">
+    <section className="bg-[rgba(55,175,225,0.95)] py-16">
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-8">
@@ -174,12 +174,12 @@ export default function FundingOptions() {
                   {/* Card Header */}
                   <div className="p-5 text-white" style={{ background: s.color }}>
                     {s.badge && (
-                      <span className="text-[10px] font-black uppercase tracking-widest bg-white/20 rounded-full px-3 py-1 mb-3 inline-block">
+                      <span className="text-xs font-black uppercase tracking-widest bg-white/20 rounded-full px-3 py-1 mb-3 inline-block">
                         {s.badge}
                       </span>
                     )}
                     <h3 className="text-xl font-black leading-tight">{s.name}</h3>
-                    <p className="text-[11px] opacity-90 mt-0.5 leading-tight">{s.full}</p>
+                    <p className="text-xs opacity-90 mt-0.5 leading-tight">{s.full}</p>
                     <p className="text-2xl font-black mt-3">{s.range}</p>
                   </div>
 
@@ -204,7 +204,7 @@ export default function FundingOptions() {
 
                     {/* Eligibility */}
                     <div>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Eligibility</p>
+                      <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-2">Eligibility</p>
                       <ul className="space-y-1">
                         {s.eligibility.map((e) => (
                           <li key={e} className="flex items-center gap-1.5 text-xs text-slate-600 font-medium">
@@ -219,7 +219,7 @@ export default function FundingOptions() {
 
                     {/* Best For */}
                     <div>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Best For</p>
+                      <p className="text-xs font-black uppercase tracking-widest text-slate-400 mb-1">Best For</p>
                       <p className="text-xs text-slate-600 font-medium italic leading-relaxed">
                         &ldquo;{s.bestFor}&rdquo;
                       </p>
@@ -227,7 +227,7 @@ export default function FundingOptions() {
 
                     {/* Success Rate */}
                     <div className="flex items-center justify-between mt-auto">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Success Rate</p>
+                      <p className="text-xs font-black uppercase tracking-widest text-slate-400">Success Rate</p>
                       <p className="text-2xl font-black" style={{ color: s.color }}>
                         {s.successRate}%
                       </p>
@@ -298,7 +298,7 @@ export default function FundingOptions() {
                           <h4 className="font-black text-lg text-[#1B4F8C] leading-tight mb-1">
                             {row.scheme}
                           </h4>
-                          <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
+                          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
                             {row.subtitle}
                           </p>
                         </td>
@@ -313,7 +313,7 @@ export default function FundingOptions() {
                         {/* Benefit Shape */}
                         <td className="px-4 py-8 text-center align-middle">
                           <div className="inline-flex justify-center items-center rounded-tl-2xl rounded-tr-md rounded-br-2xl rounded-bl-md bg-green-50/80 border border-green-100 px-4 py-2">
-                            <span className="text-[10px] font-black text-primary tracking-wider text-center leading-tight">
+                            <span className="text-xs font-black text-primary tracking-wider text-center leading-tight">
                               {row.benefit.includes(" ") ? (
                                 <>
                                   {row.benefit.split(" ")[0]} <br />{" "}

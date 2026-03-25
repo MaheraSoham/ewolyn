@@ -293,7 +293,7 @@ export default function PrivacyPolicyPage() {
                     {section.icon}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
                   </div>
                 </div>

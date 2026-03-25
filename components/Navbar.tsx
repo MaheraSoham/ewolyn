@@ -116,7 +116,6 @@ const nav = [
   { href: "/", label: "Home", icon: "🏠" },
   { href: "/blogs", label: "Blogs", icon: "📝" },
   { href: "/schemes", label: "Schemes", icon: "📜" },
-  { href: "/brochure", label: "Brochure", icon: "📄" },
   { href: "/success-stories", label: "Success Stories", icon: "🏆" },
   { href: "/about", label: "About Us", icon: "👥" },
   { href: "/contact", label: "Contact", icon: "✉️" },
@@ -188,7 +187,7 @@ export default function Navbar() {
               {/* Home Link */}
               <Link
                 href="/"
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === "/" ? "text-[#1B4F8C]" : "text-white hover:text-[#1B4F8C]"}`}
+                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === "/" ? "text-[#37AFE1]" : "text-slate-700 hover:text-[#37AFE1]"}`}
               >
                 Home
               </Link>
@@ -200,7 +199,7 @@ export default function Navbar() {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-[#1B4F8C]" : "text-white hover:text-[#1B4F8C]"}`}
+                  className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname.startsWith("/services") || pathname === "/funding" ? "text-[#37AFE1]" : "text-slate-700 hover:text-[#37AFE1]"}`}
                 >
                   Services
                   <svg className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,37 +214,37 @@ export default function Navbar() {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="glass-navbar p-8 rounded-3xl shadow-2xl border border-white/20 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden">
+                    <div className="glass-navbar p-8 rounded-3xl shadow-2xl border border-[#37AFE1]/20 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden">
                       <div className="grid grid-cols-12 gap-8 relative z-10">
                         {/* Featured Section: Funding & Consultancy */}
                         <div className="col-span-8">
                           <div className="mb-6">
-                            <h3 className="text-white font-bold text-xl mb-1 flex items-center gap-2">
+                            <h3 className="text-slate-800 font-bold text-xl mb-1 flex items-center gap-2">
                               <span>{services[0].icon}</span>
                               {services[0].title}
                             </h3>
-                            <p className="text-white/70 text-sm">{services[0].description}</p>
+                            <p className="text-slate-500 text-sm">{services[0].description}</p>
                           </div>
                           <div className="grid grid-cols-3 gap-4">
                             {services[0].subItems?.map((subItem, idx) => (
                               <Link
                                 key={idx}
                                 href={subItem.href}
-                                className="group/item flex flex-col p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-accent-green/50 hover:bg-white/10 transition-all duration-300"
+                                className="group/item flex flex-col p-4 rounded-2xl bg-white/60 border border-slate-200 hover:border-[#37AFE1]/50 hover:bg-white transition-all duration-300"
                               >
                                 <div className={`w-10 h-10 rounded-xl ${subItem.iconBg} flex items-center justify-center text-xl mb-3 group-hover/item:scale-110 transition-transform`}>
                                   {subItem.icon}
                                 </div>
-                                <div className="font-semibold text-white text-sm mb-1 group-hover/item:text-[#1B4F8C] transition-colors">{subItem.title}</div>
-                                <div className="text-white/70 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
+                                <div className="font-semibold text-slate-700 text-sm mb-1 group-hover/item:text-[#1B4F8C] transition-colors">{subItem.title}</div>
+                                <div className="text-slate-400 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
                               </Link>
                             ))}
                           </div>
                         </div>
 
                         {/* Other Services Section */}
-                        <div className="col-span-4 border-l border-white/10 pl-8">
-                          <h3 className="text-white font-bold text-lg mb-4">Our Services</h3>
+                        <div className="col-span-4 border-l border-slate-200 pl-8">
+                          <h3 className="text-slate-800 font-bold text-lg mb-4">Our Services</h3>
                           <div className="flex flex-col gap-2">
                             {services.slice(1).map((service, idx) => (
                               <Link
@@ -257,8 +256,8 @@ export default function Navbar() {
                                   {service.icon}
                                 </div>
                                 <div>
-                                  <div className="text-white text-sm font-medium group-hover/link:text-[#1B4F8C] transition-colors">{service.title}</div>
-                                  <div className="text-white/70 text-[10px] line-clamp-1">{service.description}</div>
+                                  <div className="text-slate-700 text-sm font-medium group-hover/link:text-[#1B4F8C] transition-colors">{service.title}</div>
+                                  <div className="text-slate-400 text-xs line-clamp-1">{service.description}</div>
                                 </div>
                               </Link>
                             ))}
@@ -275,7 +274,7 @@ export default function Navbar() {
                 <Link
                   key={n.href}
                   href={n.href}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === n.href ? "text-[#1B4F8C]" : "text-white hover:text-[#1B4F8C]"}`}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${pathname === n.href ? "text-[#37AFE1]" : "text-slate-700 hover:text-[#37AFE1]"}`}
                 >
                   {n.label}
                 </Link>
@@ -285,9 +284,9 @@ export default function Navbar() {
             {/* Right Side Icons & Info */}
             <div className="hidden lg:flex items-center gap-4">
               {/* Business Hours */}
-              <div className="text-white text-xs mr-2">
+              <div className="text-slate-600 text-xs mr-2">
                 <div className="font-semibold text-[#1B4F8C]">9:30 AM - 6:00 PM</div>
-                <div className="text-white/70">Monday - Saturday</div>
+                <div className="text-slate-500">Monday - Saturday</div>
               </div>
 
               {/* WhatsApp Icon */}
@@ -305,9 +304,9 @@ export default function Navbar() {
               {/* Phone Icon */}
               <a
                 href="tel:+919876543210"
-                className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-brand transition-all duration-300"
+                className="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center hover:bg-[#37AFE1] hover:text-white transition-all duration-300"
               >
-                <svg className="w-4.5 h-4.5 text-white hover:text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4.5 h-4.5 text-slate-600 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </a>
@@ -327,7 +326,7 @@ export default function Navbar() {
               </a>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+                className="text-slate-700 p-2 hover:bg-[#37AFE1]/10 rounded-lg transition-colors"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? (
@@ -347,7 +346,7 @@ export default function Navbar() {
           {mobileMenuOpen && (
             <div className="lg:hidden mt-2 glass-navbar p-5 rounded-2xl animate-in slide-in-from-top-4 duration-300 max-h-[80vh] overflow-y-auto">
               <div className="flex flex-col gap-1">
-                <Link href="/" onClick={() => setMobileMenuOpen(false)} className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === "/" ? "text-[#1B4F8C] bg-white/5" : "text-white hover:bg-white/5"}`}>
+                <Link href="/" onClick={() => setMobileMenuOpen(false)} className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === "/" ? "text-[#37AFE1] bg-[#37AFE1]/10 font-bold" : "text-slate-700 hover:bg-[#37AFE1]/10"}`}>
                   🏠 Home
                 </Link>
 
@@ -358,20 +357,20 @@ export default function Navbar() {
                     <Link
                       href={service.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-white hover:bg-white/5 transition-colors"
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-[#37AFE1]/10 transition-colors"
                     >
                       <span>{service.icon}</span>
                       <span className="font-medium text-sm">{service.title}</span>
                     </Link>
 
                     {service.subItems && (
-                      <div className="ml-8 flex flex-col gap-1 border-l border-white/10 pl-4 py-1">
+                      <div className="ml-8 flex flex-col gap-1 border-l border-slate-200 pl-4 py-1">
                         {service.subItems.map((sub, sIdx) => (
                           <Link
                             key={sIdx}
                             href={sub.href}
                             onClick={() => setMobileMenuOpen(false)}
-                            className="py-2 text-sm text-white/70 hover:text-[#1B4F8C] transition-colors"
+                            className="py-2 text-sm text-slate-500 hover:text-[#37AFE1] transition-colors"
                           >
                             {sub.title}
                           </Link>
@@ -381,22 +380,22 @@ export default function Navbar() {
                   </div>
                 ))}
 
-                <div className="h-px bg-white/10 my-3"></div>
+                <div className="h-px bg-slate-200 my-3"></div>
 
                 {nav.slice(1).map((n) => (
                   <Link
                     key={n.href}
                     href={n.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === n.href ? "text-[#1B4F8C] bg-white/5" : "text-white hover:bg-white/5"}`}
+                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === n.href ? "text-[#37AFE1] bg-[#37AFE1]/10 font-bold" : "text-slate-700 hover:bg-[#37AFE1]/10"}`}
                   >
                     {n.icon} {n.label}
                   </Link>
                 ))}
 
-                <div className="h-px bg-white/10 my-3"></div>
+                <div className="h-px bg-slate-200 my-3"></div>
 
-                <div className="px-4 py-2 text-xs text-white/70">
+                <div className="px-4 py-2 text-xs text-slate-500">
                   <div className="font-semibold text-[#1B4F8C] mb-1">9:30 AM – 6:00 PM · Mon–Sat</div>
                   <div>+91 98765 43210 &nbsp;|&nbsp; info@ewolyn.co.in</div>
                 </div>
