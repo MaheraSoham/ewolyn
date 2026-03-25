@@ -10,265 +10,139 @@ export const metadata: Metadata = {
 const stories = [
   {
     id: 1,
-    company: "Shri Ganesh Textiles",
-    founder: "Mahesh Patel",
-    location: "Surat, Gujarat",
-    industry: "Textile",
-    category: "Manufacturing",
-    scheme: "PMEGP",
-    amount: "₹35 Lakhs",
-    amountColor: "#37AFE1",
-    result: "35% Capital Subsidy + Full Loan Disbursed",
+    company: "Aeroette Skyways LLP",
+    founder: "Mr. Sandeep Rathod",
+    location: "Ahmedabad, Gujarat",
+    industry: "Aviation Services",
+    category: "Trademark",
+    scheme: "Trademark Registration (TM)",
+    amount: "TM Filed",
+    amountColor: "#1B4F8C",
+    result: "Completed on 24-11-2025",
     story:
-      "Mahesh struggled to get bank approval for 3 years. Ewolyn's team prepared his PMEGP application, arranged the DPR, and secured ₹35L disbursement within 40 days.",
-    badge: "PMEGP",
+      "Ewolyn supported Aeroette Skyways LLP with end-to-end trademark registration, including filing guidance and documentation support for a smooth TM process.",
+    badge: "TM",
     badgeColor: "#1B4F8C",
-    tags: ["PMEGP", "Textile", "Gujarat"],
-    icon: "🧵",
+    tags: ["Trademark", "Ahmedabad", "Gujarat"],
+    icon: "🛡️",
   },
   {
     id: 2,
-    company: "FreshMart Agro Foods",
-    founder: "Sunita Sharma",
-    location: "Pune, Maharashtra",
-    industry: "Food Processing",
-    category: "Food",
-    scheme: "MUDRA - Tarun",
-    amount: "₹10 Lakhs",
-    amountColor: "#f97316",
-    result: "No Collateral, Disbursed in 18 Days",
+    company: "Scion Renewable Private Limited",
+    founder: "Vaibhav Savaliya",
+    location: "Rajkot, Gujarat",
+    industry: "Renewable Energy",
+    category: "Startup Funding",
+    scheme: "Startup Seed",
+    amount: "Seed Support",
+    amountColor: "#2eb85c",
+    result: "Completed on 05-09-2025",
     story:
-      "Sunita's food processing unit needed working capital. With MUDRA Tarun, Ewolyn helped her get ₹10L without any collateral in under 3 weeks.",
-    badge: "MUDRA",
-    badgeColor: "#f97316",
-    tags: ["MUDRA", "Food Processing", "Women"],
-    icon: "🥗",
+      "Scion Renewable received Ewolyn's startup seed support with structured guidance for documentation and application flow tailored to their growth stage.",
+    badge: "SEED",
+    badgeColor: "#2eb85c",
+    tags: ["Startup Seed", "Rajkot", "Renewable"],
+    icon: "🌿",
   },
   {
     id: 3,
-    company: "GreenTech Innovations",
-    founder: "Arjun Mehta",
-    location: "Bengaluru, Karnataka",
-    industry: "Tech Startup",
-    category: "Tech",
-    scheme: "Startup India Seed Fund",
-    amount: "₹50 Lakhs",
-    amountColor: "#6366f1",
-    result: "DPIIT Recognized + ₹20L Grant + ₹30L Debt",
+    company: "Pruthveek Raval Production Private Limited",
+    founder: "Pravinbhai Raval",
+    location: "Gandhidham, Gujarat",
+    industry: "Media Production",
+    category: "Startup Funding",
+    scheme: "Start Up & Seed Fund",
+    amount: "Seed Support",
+    amountColor: "#2eb85c",
+    result: "Completed on 18-09-2025",
     story:
-      "Arjun's clean-tech startup needed DPIIT recognition before approaching investors. Ewolyn fast-tracked the process and helped them receive ₹50L in combined funding.",
-    badge: "STARTUP INDIA",
-    badgeColor: "#6366f1",
-    tags: ["Startup India", "Tech", "Green Energy"],
-    icon: "🚀",
+      "Ewolyn assisted Pruthveek Raval Production Private Limited with startup and seed fund service support, helping streamline submissions and readiness.",
+    badge: "SEED",
+    badgeColor: "#2eb85c",
+    tags: ["Seed Fund", "Gandhidham", "Startup"],
+    icon: "🎬",
   },
   {
     id: 4,
-    company: "Rani Crafts Pvt Ltd",
-    founder: "Priya Verma",
-    location: "Jaipur, Rajasthan",
-    industry: "Handicraft",
-    category: "Women Entrepreneur",
-    scheme: "Stand-Up India",
-    amount: "₹80 Lakhs",
-    amountColor: "#ec4899",
-    result: "Priority Processing + Lower Interest Rate",
+    company: "Acticon Life Sciences Pvt Ltd",
+    founder: "Gourav Patel",
+    location: "Gandhinagar, Gujarat",
+    industry: "Life Sciences",
+    category: "Startup Funding",
+    scheme: "Startup, Seed Fund",
+    amount: "Seed Support",
+    amountColor: "#2eb85c",
+    result: "Completed on 07-10-2025",
     story:
-      "As an SC/ST woman entrepreneur, Priya qualified for Stand-Up India. Ewolyn helped her set up a Pvt Ltd, apply for the scheme, and expand her handicraft export business.",
-    badge: "STAND-UP INDIA",
-    badgeColor: "#ec4899",
-    tags: ["Stand-Up India", "Women", "SC/ST", "Export"],
-    icon: "👩‍💼",
+      "Acticon Life Sciences benefited from Ewolyn's startup and seed fund consultancy, with practical guidance on process steps and required documents.",
+    badge: "SEED",
+    badgeColor: "#2eb85c",
+    tags: ["Seed Fund", "Gandhinagar", "Life Sciences"],
+    icon: "🧪",
   },
   {
     id: 5,
-    company: "Annapurna Agri Hub",
-    founder: "Ramesh Yadav",
-    location: "Indore, Madhya Pradesh",
-    industry: "Agriculture",
-    category: "Food",
-    scheme: "NAIF Scheme",
-    amount: "₹2 Crores",
-    amountColor: "#22c55e",
-    result: "3% Interest Subvention + Cold Storage Setup",
+    company: "Storypitaara Private Limited",
+    founder: "Ishan Behl",
+    location: "Dewas, Madhya Pradesh",
+    industry: "Content & Media",
+    category: "Startup Funding",
+    scheme: "Start Up & Seed Fund",
+    amount: "Seed Support",
+    amountColor: "#2eb85c",
+    result: "Completed on 03-10-2025",
     story:
-      "Ramesh wanted to build cold-chain infrastructure for farmers. With NAIF, Ewolyn helped him access ₹2Cr at 3% effective interest, creating 60+ farmer livelihoods.",
-    badge: "NAIF",
-    badgeColor: "#22c55e",
-    tags: ["NAIF", "Agriculture", "Cold Chain"],
-    icon: "🌾",
-  },
-  {
-    id: 6,
-    company: "SwiftCare Clinics",
-    founder: "Dr. Neha Gupta",
-    location: "Hyderabad, Telangana",
-    industry: "Healthcare",
-    category: "Services",
-    scheme: "CGTMSE",
-    amount: "₹1.5 Crores",
-    amountColor: "#14b8a6",
-    result: "100% Collateral-free Guarantee",
-    story:
-      "Dr. Neha needed funds to open 3 more clinics but had no collateral. CGTMSE guarantee enabled the full ₹1.5Cr loan. Ewolyn handled the entire banker presentation.",
-    badge: "CGTMSE",
-    badgeColor: "#14b8a6",
-    tags: ["CGTMSE", "Healthcare", "Collateral-free"],
-    icon: "🏥",
-  },
-  {
-    id: 7,
-    company: "EduRise Institute",
-    founder: "Karan Singh",
-    location: "Chandigarh, Punjab",
-    industry: "Education",
-    category: "Services",
-    scheme: "PMEGP",
-    amount: "₹25 Lakhs",
-    amountColor: "#37AFE1",
-    result: "25% Subsidy + MSME Registration",
-    story:
-      "Karan's vocational training institute qualified for PMEGP under service sector. Ewolyn secured ₹25L with 25% subsidy and full MSME Udyam registration in one month.",
-    badge: "PMEGP",
-    badgeColor: "#1B4F8C",
-    tags: ["PMEGP", "Education", "Vocational Training"],
+      "Storypitaara worked with Ewolyn for startup and seed fund assistance, receiving structured support throughout the submission lifecycle.",
+    badge: "SEED",
+    badgeColor: "#2eb85c",
+    tags: ["Seed Fund", "Dewas", "Media"],
     icon: "📚",
   },
   {
-    id: 8,
-    company: "Nexus Retail Chain",
-    founder: "Santosh Kumar",
-    location: "Lucknow, Uttar Pradesh",
-    industry: "Retail",
-    category: "Services",
-    scheme: "MUDRA - Kishor",
-    amount: "₹7 Lakhs",
-    amountColor: "#f97316",
-    result: "Quick Disbursal + GeM Registration",
+    id: 6,
+    company: "Saroj Jagdish Forensic LLP",
+    founder: "Jay Dave",
+    location: "Surat, Gujarat",
+    industry: "Forensic Services",
+    category: "Startup Funding",
+    scheme: "Startup, Seed Fund",
+    amount: "Seed Support",
+    amountColor: "#2eb85c",
+    result: "Completed on 25-09-2025",
     story:
-      "Santosh wanted to expand his retail chain and sell to government buyers. Ewolyn secured MUDRA Kishor funding and completed his GeM registration for ₹3L+ Cr market access.",
-    badge: "MUDRA + GeM",
-    badgeColor: "#f97316",
-    tags: ["MUDRA", "GeM", "Retail"],
-    icon: "🛒",
+      "Saroj Jagdish Forensic LLP engaged Ewolyn for startup seed support and received clear handholding from initial preparation to final application steps.",
+    badge: "SEED",
+    badgeColor: "#2eb85c",
+    tags: ["Seed Fund", "Surat", "Forensic"],
+    icon: "🔬",
   },
   {
-    id: 9,
-    company: "SunPower Energy",
-    founder: "Vikram Reddy",
-    location: "Chennai, Tamil Nadu",
-    industry: "Renewable Energy",
-    category: "Manufacturing",
-    scheme: "Startup India + CGTMSE",
-    amount: "₹1.2 Crores",
-    amountColor: "#eab308",
-    result: "DPIIT + 80-IAC Tax Exemption + Funding",
+    id: 7,
+    company: "Ravni Farmers Producer Company",
+    founder: "Bhautik Gajera",
+    location: "Junagadh, Gujarat",
+    industry: "Agriculture",
+    category: "Startup Funding",
+    scheme: "Startup, Seed Fund",
+    amount: "Seed Support",
+    amountColor: "#2eb85c",
+    result: "Completed on 14-10-2025",
     story:
-      "Vikram's solar panel startup needed DPIIT registration for 3-year tax benefits. Ewolyn secured DPIIT recognition, 80-IAC tax exemption, and ₹1.2Cr funding in 60 days.",
-    badge: "STARTUP INDIA",
-    badgeColor: "#6366f1",
-    tags: ["Startup India", "Renewable", "Tax Exemption"],
-    icon: "☀️",
-  },
-  {
-    id: 10,
-    company: "QuickShip Logistics",
-    founder: "Anil Kapoor",
-    location: "Mumbai, Maharashtra",
-    industry: "Logistics",
-    category: "Services",
-    scheme: "CGTMSE",
-    amount: "₹3 Crores",
-    amountColor: "#14b8a6",
-    result: "Fleet Expansion + 45% Revenue Growth",
-    story:
-      "Anil needed ₹3Cr to expand his fleet of trucks. CGTMSE guarantee removed the collateral barrier. Ewolyn's expert team prepared the banker-ready DPR and project feasibility report.",
-    badge: "CGTMSE",
-    badgeColor: "#14b8a6",
-    tags: ["CGTMSE", "Logistics", "Fleet"],
-    icon: "🚚",
-  },
-  {
-    id: 11,
-    company: "BuildRight Construction",
-    founder: "Sanjay Mishra",
-    location: "Patna, Bihar",
-    industry: "Construction",
-    category: "Manufacturing",
-    scheme: "NSIC + PMEGP",
-    amount: "₹45 Lakhs",
-    amountColor: "#37AFE1",
-    result: "Tender Priority + 35% Subsidy",
-    story:
-      "Sanjay's construction firm needed NSIC certification to bid for government tenders. Ewolyn got NSIC done in 20 days + ₹45L PMEGP subsidy, transforming his B2G business.",
-    badge: "NSIC + PMEGP",
-    badgeColor: "#1B4F8C",
-    tags: ["NSIC", "PMEGP", "Construction", "Tender"],
-    icon: "🏗️",
-  },
-  {
-    id: 12,
-    company: "TrendKart E-Commerce",
-    founder: "Riya Shah",
-    location: "Ahmedabad, Gujarat",
-    industry: "E-Commerce",
-    category: "Tech",
-    scheme: "Digital Growth + MUDRA",
-    amount: "₹15 Lakhs",
-    amountColor: "#a855f7",
-    result: "300% Online Revenue Growth in 6 Months",
-    story:
-      "Riya's fashion e-commerce startup struggled with digital marketing. Ewolyn handled MUDRA funding, CRM setup, and full digital marketing — revenues jumped 300% in 6 months.",
-    badge: "DIGITAL + MUDRA",
-    badgeColor: "#a855f7",
-    tags: ["MUDRA", "Digital", "E-Commerce", "Women"],
-    icon: "🛍️",
-  },
-  {
-    id: 13,
-    company: "Dhruv Pharma Labs",
-    founder: "Dr. Suresh Mehta",
-    location: "Vadodara, Gujarat",
-    industry: "Pharmaceutical",
-    category: "Manufacturing",
-    scheme: "PMEGP + ISO Certification",
-    amount: "₹60 Lakhs",
-    amountColor: "#37AFE1",
-    result: "ISO 9001 + GMP Compliance + Full Funding",
-    story:
-      "Dr. Suresh needed ISO certification and funding to set up his pharma manufacturing unit. Ewolyn delivered ISO 9001, GMP compliance support, and ₹60L PMEGP disbursement.",
-    badge: "PMEGP",
-    badgeColor: "#1B4F8C",
-    tags: ["PMEGP", "ISO", "Pharma", "Manufacturing"],
-    icon: "💊",
-  },
-  {
-    id: 14,
-    company: "GreenGrow Farms",
-    founder: "Lakshmi Devi",
-    location: "Coimbatore, Tamil Nadu",
-    industry: "Agri-Processing",
-    category: "Women Entrepreneur",
-    scheme: "Stand-Up India + NAIF",
-    amount: "₹1.2 Crores",
-    amountColor: "#22c55e",
-    result: "₹50L Stand-Up India + ₹70L NAIF",
-    story:
-      "Lakshmi, an SC category woman entrepreneur, wanted to set up an organic processing unit. Ewolyn orchestrated a dual-scheme approach — Stand-Up India for startup capital, NAIF for infrastructure.",
-    badge: "STAND-UP + NAIF",
-    badgeColor: "#ec4899",
-    tags: ["Stand-Up India", "NAIF", "Women", "Organic"],
-    icon: "🌱",
+      "Ravni Farmers Producer Company partnered with Ewolyn for startup and seed fund support, enabling a guided and compliant application process.",
+    badge: "SEED",
+    badgeColor: "#2eb85c",
+    tags: ["Seed Fund", "Junagadh", "Agriculture"],
+    icon: "🌾",
   },
 ];
 
-const categories = ["All", "Manufacturing", "Tech", "Food", "Services", "Women Entrepreneur"];
+const categories = ["All", "Startup Funding", "Trademark", "Agriculture", "Renewable", "Life Sciences"];
 
 const stats = [
-  { value: "₹48Cr+", label: "Total Funding Secured" },
-  { value: "1000+", label: "Clients Served" },
-  { value: "28+", label: "States Covered" },
-  { value: "95%", label: "Success Rate" },
+  { value: "7", label: "Verified Client Stories" },
+  { value: "2025", label: "Service Year" },
+  { value: "6", label: "Cities Covered" },
+  { value: "2", label: "Core Services" },
 ];
 
 export default function SuccessStoriesPage() {
@@ -277,16 +151,16 @@ export default function SuccessStoriesPage() {
       {/* Hero */}
       <section
         className="relative pt-36 pb-20 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #37AFE1 100%)" }}
+        style={{ background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)" }}
       >
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(55,175,225,0.15) 0%, transparent 70%)" }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(46,184,92,0.15) 0%, transparent 70%)" }} />
         <div className="container-max text-center relative z-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-xs font-black text-white uppercase tracking-widest mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#37AFE1] animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-black text-white uppercase tracking-widest mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2eb85c] animate-pulse" />
             Real Results. Real Founders.
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-5">
-            Success <span className="text-[#37AFE1]">Stories</span>
+            Success <span className="text-[#2eb85c]">Stories</span>
           </h1>
           <p className="text-base md:text-lg text-blue-100/70 max-w-2xl mx-auto font-medium">
             Over 1000 Indian MSMEs and startups have transformed their businesses with Ewolyn&apos;s expert guidance in funding, registration, and digital growth.
@@ -301,7 +175,7 @@ export default function SuccessStoriesPage() {
                 key={s.label}
                 className="rounded-2xl bg-white/[0.06] border border-white/10 p-6 text-center backdrop-blur-sm"
               >
-                <p className="text-3xl font-black text-[#37AFE1]">{s.value}</p>
+                <p className="text-3xl font-black text-[#2eb85c]">{s.value}</p>
                 <p className="text-xs font-semibold text-white/80 uppercase tracking-wider mt-1">{s.label}</p>
               </div>
             ))}
@@ -335,7 +209,7 @@ export default function SuccessStoriesPage() {
             {stories.map((s) => (
               <div
                 key={s.id}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#37AFE1]/30 transition-all duration-300 flex flex-col"
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#2eb85c]/30 transition-all duration-300 flex flex-col"
               >
                 {/* Video Placeholder */}
                 <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 h-40 flex items-center justify-center">
@@ -373,10 +247,10 @@ export default function SuccessStoriesPage() {
 
                   {/* Result */}
                   <div className="flex items-start gap-1.5 mb-3">
-                    <svg className="w-3.5 h-3.5 text-[#37AFE1] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <svg className="w-3.5 h-3.5 text-[#2eb85c] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <p className="text-xs text-slate-600 font-semibold">{s.result}</p>
+                    <p className="text-[11px] text-slate-600 font-semibold">{s.result}</p>
                   </div>
 
                   {/* Story */}
@@ -398,24 +272,24 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[rgba(55,175,225,0.95)] py-16">
+      <section className="bg-[rgba(115,150,121,0.92)] py-16">
         <div className="container-max text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs font-black uppercase tracking-widest text-white mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[10px] font-black uppercase tracking-widest text-[#2eb85c] mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2eb85c] animate-pulse" />
             Your Story Could Be Next
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Ready to Write Your <span className="text-white/80">Success Story?</span>
+            Ready to Write Your <span className="text-[#2eb85c]">Success Story?</span>
           </h2>
           <p className="text-base text-white/80 max-w-xl mx-auto mb-10">
             Join 1000+ Indian entrepreneurs who transformed their businesses with Ewolyn&apos;s expert guidance.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href={`https://wa.me/919737799937?text=${encodeURIComponent("Hello Ewolyn! I want to check my eligibility for government funding. Please guide me.")}`}
+              href={`https://wa.me/919876543210?text=${encodeURIComponent("Hello Ewolyn! I want to check my eligibility for government funding. Please guide me.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-2xl bg-white text-[#37AFE1] font-black px-8 py-4 hover:bg-[#1B4F8C] hover:text-white transition-all shadow-xl shadow-[#37AFE1]/30 text-sm"
+              className="inline-flex items-center gap-3 rounded-2xl bg-white text-[#2eb85c] font-black px-8 py-4 hover:bg-[#1B4F8C] hover:text-white transition-all shadow-xl shadow-[#2eb85c]/30 text-sm"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
