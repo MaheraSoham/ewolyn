@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 
+const googleMapsLink = "https://maps.app.goo.gl/q8kKzNMVwuFQAUAC8";
+
 // ─── Google Icon ─────────────────────────────────────────────────────────────
 const GoogleIcon = () => (
     <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
@@ -27,48 +29,48 @@ const Stars = ({ count = 5 }: { count?: number }) => (
 const reviews = [
     {
         id: 1,
-        name: "Prashant M.",
-        business: "E-commerce Startup, Ahmedabad",
-        initials: "PM",
-        text: "Absolutely outstanding service! Ewolyn helped us secure our MSME registration and DPIIT certification in record time. The team was incredibly professional and guided us through every step.",
-        full: "Absolutely outstanding service! Ewolyn helped us secure our MSME registration and DPIIT certification in record time. The team was incredibly professional and guided us through every step. Highly recommend for any startup founder.",
-        date: "2 weeks ago",
+        name: "RAGHU PATEL",
+        business: "",
+        initials: "RP",
+        text: "Amazing guys , Quick work , not a second wasted , was very satisfied with the pace and clarity they work with.",
+        full: "Amazing guys , Quick work , not a second wasted , was very satisfied with the pace and clarity they work with.",
+        date: "2 days ago",
     },
     {
         id: 2,
-        name: "Roshan Mehta",
-        business: "Manufacturing MSME, Surat",
+        name: "Raj Modhavadiya",
+        business: "",
         initials: "RM",
-        text: "I had a great experience working with Ewolyn. They helped us prepare our pitch deck and MSME documentation. The team is highly professional and very responsive.",
-        full: "I had a great experience working with Ewolyn. They helped us prepare our pitch deck and MSME documentation. The team is highly professional and very responsive. Next-Gen Business Consultant was prompt and explained everything clearly.",
-        date: "1 month ago",
+        text: "I had a great experience working with Ewolyn. They were very patient and cooperative, even when I requested multiple edits. Their team made sure every detail was correct and presented in the right way. The final pitch deck looked clean, attractive, and business-ready. I am thankful for their efforts and would gladly recommend them to others.",
+        full: "I had a great experience working with Ewolyn. They were very patient and cooperative, even when I requested multiple edits. Their team made sure every detail was correct and presented in the right way. The final pitch deck looked clean, attractive, and business-ready. I am thankful for their efforts and would gladly recommend them to others.",
+        date: "2 months ago",
     },
     {
         id: 3,
-        name: "RCPK Jewellers",
-        business: "Retail Business, Rajkot",
-        initials: "RJ",
-        text: "Next Gen Business Consultant offers top-notch service! Krishna Kathiriya was incredibly professional and made the entire process seamless and hassle-free.",
-        full: "Next Gen Business Consultant offers top-notch service! Krishna Kathiriya was incredibly professional and made the entire process seamless and hassle-free. They took care of our GST registration and compliance with zero stress on our end.",
-        date: "3 weeks ago",
+        name: "Vhora Juned",
+        business: "Filter Manufacturing Unit",
+        initials: "VJ",
+        text: "We are a filter manufacturing unit, and we recently had the pleasure of working with Raj from Seed Fund Services Ewolyn on a project report. Raj's approach was professional and efficient, as he gathered crisp, relevant information from us and transformed it into a comprehensive and well-structured project report. His attention to detail and understanding of our needs were evident throughout the process. We highly recommend Raj and Seed Fund Services for their exceptional work and dedication.",
+        full: "We are a filter manufacturing unit, and we recently had the pleasure of working with Raj from Seed Fund Services Ewolyn on a project report. Raj's approach was professional and efficient, as he gathered crisp, relevant information from us and transformed it into a comprehensive and well-structured project report. His attention to detail and understanding of our needs were evident throughout the process. We highly recommend Raj and Seed Fund Services for their exceptional work and dedication.",
+        date: "5 months ago",
     },
     {
         id: 4,
-        name: "Ankit Shah",
-        business: "Tech Startup, Bangalore",
-        initials: "AS",
-        text: "Excellent support throughout the entire funding journey. They helped us navigate PMEGP scheme and got us ₹75 Lakhs in funding. The process was transparent and efficient.",
-        full: "Excellent support throughout the entire funding journey. They helped us navigate PMEGP scheme and got us ₹75 Lakhs in funding. The process was transparent and efficient. Would 100% recommend to any MSME owner.",
-        date: "1 month ago",
+        name: "Isha Pattani",
+        business: "",
+        initials: "IP",
+        text: "I had a wonderful experience working with Ewolyn. I would like to express my sincere gratitude to the entire team, especially Ms. Mansi Savaliya, for her guidance and support throughout the Universal Grant program process. Her professionalism, politeness, and in-depth knowledge made the entire process smooth and efficient. I truly appreciate her dedication and the excellent service provided by the team. I would highly recommend Ewolyn to anyone looking for reliable and professional assistance. They did an outstanding job.",
+        full: "I had a wonderful experience working with Ewolyn. I would like to express my sincere gratitude to the entire team, especially Ms. Mansi Savaliya, for her guidance and support throughout the Universal Grant program process. Her professionalism, politeness, and in-depth knowledge made the entire process smooth and efficient. I truly appreciate her dedication and the excellent service provided by the team. I would highly recommend Ewolyn to anyone looking for reliable and professional assistance. They did an outstanding job.",
+        date: "5 months ago",
     },
     {
         id: 5,
-        name: "Kavita Patel",
-        business: "Food & Beverage, Vadodara",
-        initials: "KP",
-        text: "Ewolyn transformed our business! From FSSAI certification to Udyam registration, they handled everything professionally. The team is knowledgeable and always available to help.",
-        full: "Ewolyn transformed our business! From FSSAI certification to Udyam registration, they handled everything professionally. The team is knowledgeable and always available to help. Our business scaling has been smoother than ever before.",
-        date: "2 months ago",
+        name: "Ishan Primehub",
+        business: "Private Limited Company",
+        initials: "IP",
+        text: "We received seamless service and excellent support from their team for getting ISO Certificate of our private limited company. Thank you Mr. devraj desai for your lead on this effort, being kind and supportive. We really appreciate and will definitely recommend to friends.",
+        full: "We received seamless service and excellent support from their team for getting ISO Certificate of our private limited company. Thank you Mr. devraj desai for your lead on this effort, being kind and supportive. We really appreciate and will definitely recommend to friends.",
+        date: "8 months ago",
     },
 ];
 
@@ -158,7 +160,7 @@ function ReviewCard({ review, position, onClick }: CardProps) {
                     </div>
                     <div>
                         <p className="text-white font-black text-sm">{review.name}</p>
-                        <p className="text-white/45 text-xs font-medium">{review.business}</p>
+                        {review.business && <p className="text-white/45 text-xs font-medium">{review.business}</p>}
                     </div>
                     <span className="ml-auto text-white/30 text-xs">{review.date}</span>
                 </div>
@@ -170,7 +172,7 @@ function ReviewCard({ review, position, onClick }: CardProps) {
 
                 {/* Read More */}
                 <a
-                    href="https://www.google.com/maps/place/Ewolyn"
+                    href={googleMapsLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
@@ -219,7 +221,7 @@ export default function GoogleReviews() {
 
                         // Only override if we get enough reviews to populate the carousel
                         if (formatted.length >= 3) {
-                            setDisplayReviews(formatted);
+                            // setDisplayReviews(formatted);
                             if (data.rating) setOverallRating(data.rating.toString());
                             if (data.totalRatings) setTotalRatings(data.totalRatings.toString());
                         }
@@ -343,7 +345,7 @@ export default function GoogleReviews() {
                         </div>
                     </div>
                     <a
-                        href="https://www.google.com/maps/place/Ewolyn"
+                        href={googleMapsLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-bold text-[#1B4F8C] border-2 border-[#1B4F8C] rounded-xl px-6 py-2.5 hover:bg-[#1B4F8C] hover:text-white transition-all duration-200"

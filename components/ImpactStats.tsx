@@ -3,7 +3,7 @@ import IndiaMap from "./IndiaMap";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "₹10L–₹5Cr", label: "Funding Range", sublabel: "Government Schemes" },
+  { value: "₹10L–₹10Cr", label: "Funding Range", sublabel: "Government Schemes" },
   { value: "7–45 Days", label: "Processing Time", sublabel: "Scheme Dependent" },
   { value: "85%", label: "CGTMSE Coverage", sublabel: "Collateral Guarantee" },
   { value: "15–35%", label: "PMEGP Subsidy", sublabel: "Category Based" },

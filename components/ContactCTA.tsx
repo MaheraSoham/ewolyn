@@ -56,8 +56,8 @@ export default function ContactCTA() {
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                         </svg>
                                     </a>
-                                    <a href="tel:+919737799937" className="flex items-center justify-between group py-1">
-                                        <span className="text-lg font-black text-white">+91 97377 99937</span>
+                                    <a href="tel:+919737799978" className="flex items-center justify-between group py-1">
+                                        <span className="text-lg font-black text-white">+91 97377 99978</span>
                                         <svg className="w-4 h-4 text-blue-300 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                                         </svg>
@@ -119,7 +119,7 @@ export default function ContactCTA() {
                                         <label className="text-xs font-black uppercase tracking-widest text-[#113670] mb-2 block">YOUR FULL NAME</label>
                                         <input
                                             type="text"
-                                            placeholder="Jane Doe"
+                                            placeholder="Jay Rana"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             className="w-full rounded-xl bg-slate-50 border-none px-5 py-4 text-sm font-bold text-[#113670] placeholder-slate-400 focus:ring-2 focus:ring-[#ef6c00] outline-none transition-all shadow-inner"

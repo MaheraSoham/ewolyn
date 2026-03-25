@@ -25,7 +25,7 @@ type Service = {
 const services: Service[] = [
   {
     title: "MSME & Startup Funding Support",
-    description: "Access grants, loans, and NBFC solutions",
+    description: "Access grants and loans",
     icon: "💰",
     iconBg: "bg-red-50",
     iconColor: "text-red-500",
@@ -203,57 +203,82 @@ export default function Navbar() {
                 {/* Desktop Mega Menu Dropdown */}
                 {servicesOpen && (
                   <div
-                    className="absolute top-full -left-64 w-[900px] pt-4"
+                    className="absolute top-full -left-48 w-[950px] pt-4"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="glass-navbar p-8 rounded-3xl shadow-2xl border border-[#37AFE1]/20 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden">
-                      <div className="grid grid-cols-12 gap-8 relative z-10">
+                    <div className="glass-navbar p-6 rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15)] border border-[#37AFE1]/20 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden bg-white/95 backdrop-blur-xl">
+                      <div className="flex gap-8 relative z-10">
                         {/* Featured Section: Funding & Consultancy */}
-                        <div className="col-span-8">
+                        <div className="w-[35%] shrink-0 flex flex-col pt-2">
                           <div className="mb-6">
-                            <h3 className="text-slate-800 font-bold text-xl mb-1 flex items-center gap-2">
-                              <span>{services[0].icon}</span>
+                            <span className="inline-block px-3 py-1 bg-[#1B4F8C]/10 text-[#1B4F8C] text-xs font-bold uppercase tracking-wider rounded-lg mb-3">
+                              Featured Focus
+                            </span>
+                            <h3 className="text-slate-900 font-bold text-xl mb-2 flex items-start gap-2 leading-tight">
+                              <span className="mt-1">{services[0].icon}</span>
                               {services[0].title}
                             </h3>
-                            <p className="text-slate-500 text-sm">{services[0].description}</p>
+                            <p className="text-slate-500 text-sm leading-relaxed">{services[0].description}</p>
                           </div>
-                          <div className="grid grid-cols-3 gap-4">
+                          <div className="flex flex-col gap-3">
                             {services[0].subItems?.map((subItem, idx) => (
                               <Link
                                 key={idx}
                                 href={subItem.href}
-                                className="group/item flex flex-col p-4 rounded-2xl bg-white/60 border border-slate-200 hover:border-[#37AFE1]/50 hover:bg-white transition-all duration-300"
+                                className="group/item flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-[#37AFE1]/40 hover:bg-white hover:shadow-lg hover:shadow-[#37AFE1]/5 transition-all duration-300"
                               >
-                                <div className={`w-10 h-10 rounded-xl ${subItem.iconBg} flex items-center justify-center text-xl mb-3 group-hover/item:scale-110 transition-transform`}>
+                                <div className={`w-12 h-12 shrink-0 rounded-xl ${subItem.iconBg} flex items-center justify-center text-2xl group-hover/item:scale-110 transition-transform`}>
                                   {subItem.icon}
                                 </div>
-                                <div className="font-semibold text-slate-700 text-sm mb-1 group-hover/item:text-[#1B4F8C] transition-colors">{subItem.title}</div>
-                                <div className="text-slate-400 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
+                                <div className="flex flex-col">
+                                  <div className="font-bold text-slate-800 text-sm mb-1 group-hover/item:text-[#1B4F8C] transition-colors">{subItem.title}</div>
+                                  <div className="text-slate-500 text-xs leading-relaxed line-clamp-2">{subItem.description}</div>
+                                </div>
                               </Link>
                             ))}
                           </div>
                         </div>
 
                         {/* Other Services Section */}
-                        <div className="col-span-4 border-l border-slate-200 pl-8">
-                          <h3 className="text-slate-800 font-bold text-lg mb-4">Our Services</h3>
-                          <div className="flex flex-col gap-2">
+                        <div className="w-[65%] border-l border-slate-100 pl-8 pt-2">
+                          <div className="flex items-center justify-between mb-6">
+                            <h3 className="text-slate-900 font-bold text-lg">Comprehensive Services</h3>
+                            <Link href="/services" className="text-[#37AFE1] text-xs font-bold hover:underline">View All →</Link>
+                          </div>
+                          
+                          <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                             {services.slice(1).map((service, idx) => (
                               <Link
                                 key={idx}
                                 href={service.href}
-                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors group/link"
+                                className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition-all duration-200 group/link"
                               >
-                                <div className={`w-8 h-8 rounded-lg ${service.iconBg} flex items-center justify-center text-lg shrink-0 group-hover/link:scale-110 transition-transform`}>
+                                <div className={`w-10 h-10 rounded-lg ${service.iconBg} flex items-center justify-center text-xl shrink-0 group-hover/link:scale-110 group-hover/link:rotate-3 transition-transform`}>
                                   {service.icon}
                                 </div>
-                                <div>
-                                  <div className="text-slate-700 text-sm font-medium group-hover/link:text-[#1B4F8C] transition-colors">{service.title}</div>
-                                  <div className="text-slate-400 text-xs line-clamp-1">{service.description}</div>
+                                <div className="pt-0.5">
+                                  <div className="text-slate-800 text-sm font-bold group-hover/link:text-[#1B4F8C] transition-colors mb-0.5">{service.title}</div>
+                                  <div className="text-slate-500 text-xs line-clamp-2 leading-relaxed pr-2">{service.description}</div>
                                 </div>
                               </Link>
                             ))}
+                          </div>
+
+                          {/* Action callout */}
+                          <div className="mt-8 rounded-xl bg-gradient-to-r from-[#1B4F8C] to-[#0d2f57] p-4 flex items-center justify-between text-white shadow-md">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                              </div>
+                              <div>
+                                <p className="font-bold text-sm">Need quick guidance?</p>
+                                <p className="text-white/70 text-xs">Request a callback from our experts</p>
+                              </div>
+                            </div>
+                            <Link href="/contact" className="px-4 py-2 bg-white text-[#1B4F8C] text-xs font-bold rounded-lg hover:bg-slate-50 transition-colors shadow-sm">
+                              Get Started
+                            </Link>
                           </div>
                         </div>
                       </div>

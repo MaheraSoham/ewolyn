@@ -32,12 +32,15 @@ const faqData = [
       "Our initial funding eligibility check and basic consultation are free. We charge a service fee only for detailed project reports (DPR) and application processing.",
   },
 ];
+const googleMapsLink = "https://maps.app.goo.gl/q8kKzNMVwuFQAUAC8";
+const googleMapsEmbedLink = "https://www.google.com/maps?q=EWOLYN%20SERVICES%20PRIVATE%20LIMITED%2C%20Ahmedabad&z=17&output=embed";
 
 const contactCards = [
   {
     title: "Call Us",
-    sub: "Mon–Sat from 9 am to 6 pm",
+    sub: "Mon–Sat from 9:30 am to 6:00 pm",
     val: "+91 97377 99937",
+    val2: "+91 97377 99978",
     link: "tel:+919737799937",
     btn: "Call Now",
     icon: (
@@ -64,7 +67,7 @@ const contactCards = [
     title: "Visit Office",
     sub: "Headquarters in Ahmedabad",
     val: "B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad",
-    link: "https://maps.google.com",
+    link: googleMapsLink,
     btn: "Get Directions",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,7 +200,10 @@ export default function ContactContent() {
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-1">{card.title}</h3>
               <p className="text-xs text-slate-500 font-bold uppercase tracking-wider mb-3">{card.sub}</p>
-              <p className="text-sm font-bold text-slate-700 mb-4">{card.val}</p>
+              <div className="mb-4 space-y-1">
+                <p className="text-sm font-bold text-slate-700">{card.val}</p>
+                {"val2" in card ? <p className="text-sm font-bold text-slate-700">{card.val2}</p> : null}
+              </div>
               <span className="inline-flex items-center gap-1 text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
                 {card.btn}
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -317,7 +323,7 @@ export default function ContactContent() {
             {/* Map */}
             <div className="bg-white rounded-2xl shadow-lg p-3 border border-slate-100 h-[300px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.944983084364!2d72.53568777507914!3d23.025793679173256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84c62c355555%3A0x6b0f0b0b0b0b0b0b!2sNehru%20Nagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709737799937!5m2!1sen!2sin"
+                src={googleMapsEmbedLink}
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "0.75rem" }}

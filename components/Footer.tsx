@@ -102,13 +102,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-200">
-        <div className="container-max py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-slate-400">© {new Date().getFullYear()} Ewolyn Services Private Limited. All rights reserved.</p>
-          <div className="flex items-center gap-5">
-            <Link href="/privacy-policy" className="text-xs text-slate-400 hover:text-slate-700 transition">Privacy Policy</Link>
-            <Link href="/terms-conditions" className="text-xs text-slate-400 hover:text-slate-700 transition">Terms & Conditions</Link>
-            <Link href="/refund-policy" className="text-xs text-slate-400 hover:text-slate-700 transition">Refund Policy</Link>
+      <div className="bg-primary border-t border-primary/20">
+        <div className="container-max py-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm font-medium text-white/90">© {new Date().getFullYear()} Ewolyn Services Private Limited. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy-policy" className="text-sm font-medium text-white/90 hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-conditions" className="text-sm font-medium text-white/90 hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link href="/refund-policy" className="text-sm font-medium text-white/90 hover:text-white transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

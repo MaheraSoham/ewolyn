@@ -155,9 +155,9 @@ export default function AboutPage() {
               className="grid grid-cols-3 gap-4 max-w-lg"
             >
               {[
-                { value: "10+", label: "Years Expertise" },
-                { value: "20,000+", label: "Lives Impacted" },
-                { value: "₹500Cr+", label: "Funding Enabled" },
+                { value: "7+", label: "Years Expertise" },
+                { value: "10,000+", label: "Lives Impacted" },
+                { value: "₹110Cr+", label: "Funding Enabled" },
               ].map((s) => (
                 <div key={s.label} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 text-center">
                   <p className="text-2xl font-bold text-white">{s.value}</p>
@@ -198,7 +198,7 @@ export default function AboutPage() {
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">10+</p>
+                    <p className="text-2xl font-bold text-white">7+</p>
                     <p className="text-xs text-white/80 uppercase tracking-wider">Years Combined Expertise</p>
                   </div>
                 </div>
@@ -225,8 +225,8 @@ export default function AboutPage() {
               </motion.p>
               <motion.div variants={fadeUp} custom={4} className="grid grid-cols-2 gap-6 pt-6">
                 {[
-                  { icon: <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, val: "20,000+", label: "Lives Impacted" },
-                  { icon: <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, val: "₹500Cr+", label: "Funding Enabled" },
+                  { icon: <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, val: "10,000+", label: "Lives Impacted" },
+                  { icon: <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, val: "₹110Cr+", label: "Funding Enabled" },
                 ].map((s) => (
                   <div key={s.label} className="flex items-center gap-3">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">{s.icon}</div>
