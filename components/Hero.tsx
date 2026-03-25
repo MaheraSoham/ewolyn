@@ -40,7 +40,7 @@ export default function Hero() {
     await new Promise((r) => setTimeout(r, 700));
     setHeroSubmitting(false);
     setHeroSubmitted(true);
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/919737799937?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   return (
@@ -49,7 +49,7 @@ export default function Hero() {
       <section
         className="relative min-h-[88vh] flex items-center overflow-hidden pt-20 sm:pt-28 pb-10 sm:pb-16"
         style={{
-          background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)",
+          background: "linear-gradient(135deg, #37AFE1 0%, #1A6B8A 45%, #37AFE1 100%)",
           backgroundSize: "200% 200%",
           animation: "gradientShift 12s ease infinite",
         }}
@@ -58,7 +58,7 @@ export default function Hero() {
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            background: "radial-gradient(ellipse 80% 60% at 60% 50%, rgba(46,184,92,0.18) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse 80% 60% at 60% 50%, rgba(55,175,225,0.18) 0%, transparent 70%)",
           }}
         />
         {/* Grid dots pattern */}
@@ -75,27 +75,7 @@ export default function Hero() {
 
             {/* ── LEFT CONTENT ── */}
             <div className="flex flex-col">
-              {/* Live notification badge */}
-              <motion.div
-                custom={0}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-                className="mb-6 inline-flex w-fit items-center gap-2.5 rounded-full px-4 py-2.5 shadow-lg"
-                style={{
-                  background: "rgba(46,184,92,0.15)",
-                  border: "1px solid rgba(46,184,92,0.40)",
-                  backdropFilter: "blur(8px)",
-                }}
-              >
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-75" style={{ background: "#2eb85c" }} />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full" style={{ background: "#2eb85c" }} />
-                </span>
-                <span className="text-xs font-bold" style={{ color: "#a7f3d0" }}>
-                  TechVision Solutions got ₹45L PMEGP approval ✓
-                </span>
-              </motion.div>
+
 
               {/* Company name */}
               <motion.p
@@ -103,9 +83,9 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="text-[11px] font-black uppercase tracking-[0.35em] mb-3 text-emerald-300"
+                className="text-xs font-black uppercase tracking-[0.35em] mb-3 text-cyan-200"
               >
-                Ewolyn Services Pvt Ltd
+                Ewolyn Services Private Limited
               </motion.p>
 
               {/* Main Heading */}
@@ -114,13 +94,13 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
-                className="text-4xl font-black leading-tight text-white md:text-5xl lg:text-[3.5rem]"
+                className="text-[32px] font-black leading-tight text-white md:text-[36px] lg:text-[40px]"
               >
                 Evolving Indian<br />
                 <span
                   className="leading-tight"
                   style={{
-                    background: "linear-gradient(135deg, #4cd17a 0%, #a7f3d0 100%)",
+                    background: "linear-gradient(135deg, #7DD4F0 0%, #B8EAF7 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -166,10 +146,10 @@ export default function Hero() {
                 variants={fadeUp}
                 className="mt-6"
               >
-                <p className="text-base font-medium" style={{ color: "rgba(167,243,208,0.85)" }}>
+                <p className="text-lg font-medium" style={{ color: "rgba(184,207,255,0.85)" }}>
                   Government schemes, company registration & business certifications.
                 </p>
-                <p className="mt-1 text-sm italic" style={{ color: "rgba(255,255,255,0.50)" }}>
+                <p className="mt-1 text-base italic" style={{ color: "rgba(255,255,255,0.50)" }}>
                   Expert guidance • Fast approvals • Transparent process
                 </p>
               </motion.div>
@@ -187,9 +167,9 @@ export default function Hero() {
                     key={chip}
                     className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold"
                     style={{
-                      background: "rgba(46,184,92,0.12)",
-                      border: "1px solid rgba(46,184,92,0.35)",
-                      color: "#a7f3d0",
+                      background: "rgba(55,175,225,0.12)",
+                      border: "1px solid rgba(55,175,225,0.35)",
+                      color: "#B8EAF7",
                     }}
                   >
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -210,7 +190,7 @@ export default function Hero() {
             >
               <div
                 className="relative rounded-[2rem] overflow-hidden shadow-2xl"
-                style={{ border: "1px solid rgba(46,184,92,0.30)" }}
+                style={{ border: "1px solid rgba(55,175,225,0.30)" }}
               >
                 <div className="flex min-h-[500px]">
 
@@ -223,22 +203,22 @@ export default function Hero() {
                     {/* Dot grid */}
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "18px 18px" }} />
                     {/* Glow blobs */}
-                    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#2eb85c]/25 rounded-full blur-[80px]" />
+                    <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#37AFE1]/25 rounded-full blur-[80px]" />
                     <div className="absolute -top-12 -left-12 w-48 h-48 bg-blue-500/15 rounded-full blur-[70px]" />
 
                     {/* Content */}
                     <div className="relative z-10">
                       <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1.5 border border-white/20 mb-4 backdrop-blur-sm">
-                        <span className="w-2 h-2 rounded-full bg-[#2eb85c] animate-pulse" />
-                        <span className="text-white/90 text-[11px] font-bold">Ewolyn · Active Now</span>
+                        <span className="w-2 h-2 rounded-full bg-[#37AFE1] animate-pulse" />
+                        <span className="text-white/90 text-xs font-bold">Ewolyn · Active Now</span>
                       </div>
                       <h3 className="text-xl font-black text-white mb-1">Talk to an Expert</h3>
                       <p className="text-white/50 text-xs mb-6">Free consultation for your business</p>
 
                       <div className="space-y-4">
                         {[
-                          { icon: "📍", label: "Location", value: "Nehru Nagar, Ahmedabad – 380015" },
-                          { icon: "📞", label: "Phone", value: "+91 98765 43210" },
+                          { icon: "📍", label: "Location", value: "Nehru Nagar, Ahmedabad-380015 Gujarat" },
+                          { icon: "📞", label: "Phone", value: "+91 97377 99937" },
                           { icon: "✉️", label: "Email", value: "info@ewolyn.co.in" },
                         ].map((item) => (
                           <div key={item.label} className="flex items-start gap-3">
@@ -246,7 +226,7 @@ export default function Hero() {
                               {item.icon}
                             </div>
                             <div>
-                              <p className="text-white/40 text-[9px] uppercase tracking-wider font-bold">{item.label}</p>
+                              <p className="text-white/40 text-xs uppercase tracking-wider font-bold">{item.label}</p>
                               <p className="text-white text-xs font-semibold mt-0.5 leading-tight">{item.value}</p>
                             </div>
                           </div>
@@ -257,7 +237,7 @@ export default function Hero() {
                     {/* Trust badges */}
                     <div className="relative z-10 mt-6 flex flex-wrap gap-1.5">
                       {["500+ Clients", "Pan India", "10+ Years"].map((badge) => (
-                        <span key={badge} className="text-[10px] text-white/70 bg-white/10 border border-white/15 rounded-full px-2.5 py-1 font-medium">
+                        <span key={badge} className="text-xs text-white/70 bg-white/10 border border-white/15 rounded-full px-2.5 py-1 font-medium">
                           ✓ {badge}
                         </span>
                       ))}
@@ -266,50 +246,50 @@ export default function Hero() {
 
                   {/* ── Right Panel – Form ── */}
                   <div className="w-[58%] bg-white p-7 flex flex-col justify-center">
-                    <span className="inline-block text-xs font-bold text-[#2eb85c] bg-[#2eb85c]/10 rounded-full px-3 py-1 mb-3 w-fit">Free Consultation</span>
+                    <span className="inline-block text-xs font-bold text-[#37AFE1] bg-[#37AFE1]/10 rounded-full px-3 py-1 mb-3 w-fit">Free Consultation</span>
                     <h3 className="text-xl font-black text-[#1B4F8C] mb-1">Check Your Eligibility</h3>
                     <p className="text-xs text-slate-500 mb-5 font-medium">Our expert will contact you within 2 hours.</p>
 
                     {!heroSubmitted ? (
                       <form onSubmit={handleHeroSubmit} className="space-y-3.5">
                         <div>
-                          <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">Full Name <span className="text-red-400">*</span></label>
+                          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">Full Name <span className="text-red-400">*</span></label>
                           <div className="relative">
                             <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300">
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                             </div>
                             <input type="text" required placeholder="Enter your name"
-                              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 font-medium focus:outline-none focus:border-[#2eb85c] focus:ring-2 focus:ring-[#2eb85c]/20 transition-all placeholder:text-slate-300"
+                              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 font-medium focus:outline-none focus:border-[#37AFE1] focus:ring-2 focus:ring-[#37AFE1]/20 transition-all placeholder:text-slate-300"
                               value={heroForm.name} onChange={(e) => setHeroForm({ ...heroForm, name: e.target.value })} />
                           </div>
                         </div>
                         <div>
-                          <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">Phone Number <span className="text-red-400">*</span></label>
+                          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1.5 block">Phone Number <span className="text-red-400">*</span></label>
                           <div className="relative">
                             <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300">
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                             </div>
                             <input type="tel" required placeholder="10-digit mobile"
-                              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 font-medium focus:outline-none focus:border-[#2eb85c] focus:ring-2 focus:ring-[#2eb85c]/20 transition-all placeholder:text-slate-300"
+                              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 font-medium focus:outline-none focus:border-[#37AFE1] focus:ring-2 focus:ring-[#37AFE1]/20 transition-all placeholder:text-slate-300"
                               value={heroForm.phone} onChange={(e) => setHeroForm({ ...heroForm, phone: e.target.value })} />
                           </div>
                         </div>
                         <button type="submit" disabled={heroSubmitting}
-                          className="w-full py-3.5 rounded-xl text-white font-black text-sm tracking-wide transition-all hover:shadow-lg hover:shadow-[#2eb85c]/30 disabled:opacity-70 mt-1"
-                          style={{ background: "linear-gradient(135deg, #2eb85c 0%, #1da045 100%)", boxShadow: "0 4px 16px rgba(46,184,92,0.30)" }}>
+                          className="w-full py-3.5 rounded-xl text-white font-black text-sm tracking-wide transition-all hover:shadow-lg hover:shadow-[#37AFE1]/30 disabled:opacity-70 mt-1"
+                          style={{ background: "linear-gradient(135deg, #37AFE1 0%, #2B8DB5 100%)", boxShadow: "0 4px 16px rgba(55,175,225,0.30)" }}>
                           {heroSubmitting ? (
                             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mx-auto" />
                           ) : "Get Free Consultation →"}
                         </button>
-                        <p className="text-center text-[10px] text-slate-500 font-medium flex items-center justify-center gap-1">
+                        <p className="text-center text-xs text-slate-500 font-medium flex items-center justify-center gap-1">
                           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                           100% Private. No spam guaranteed.
                         </p>
                       </form>
                     ) : (
                       <div className="flex flex-col items-center justify-center text-center py-8">
-                        <div className="w-16 h-16 bg-[#2eb85c]/10 rounded-full flex items-center justify-center mb-4 border border-[#2eb85c]/30">
-                          <svg className="w-8 h-8 text-[#2eb85c]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                        <div className="w-16 h-16 bg-[#37AFE1]/10 rounded-full flex items-center justify-center mb-4 border border-[#37AFE1]/30">
+                          <svg className="w-8 h-8 text-[#37AFE1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                         </div>
                         <h4 className="text-lg font-black text-[#1B4F8C] mb-1">You&apos;re Connected!</h4>
                         <p className="text-slate-500 text-sm">Opening WhatsApp to connect you with our experts.</p>
@@ -321,7 +301,7 @@ export default function Hero() {
                       {[["1000+", "Funded"], ["95%", "Success"], ["24hr", "Response"]].map(([val, label]) => (
                         <div key={label}>
                           <p className="text-sm font-black text-[#1B4F8C]">{val}</p>
-                          <p className="text-[10px] text-slate-400 uppercase tracking-wider">{label}</p>
+                          <p className="text-xs text-slate-400 uppercase tracking-wider">{label}</p>
                         </div>
                       ))}
                     </div>
@@ -338,29 +318,29 @@ export default function Hero() {
 
       {/* ── STATS BAR ── */}
       <section
-        style={{ background: "linear-gradient(135deg, #83a08fff 0%, #1b7544ff 100%)" }}
+        style={{ background: "linear-gradient(135deg, #2B8DB5 0%, #1A6B8A 100%)" }}
         className="pb-10 pt-0"
       >
         <div className="container-max">
           <div
             className="rounded-2xl p-6"
             style={{
-              background: "rgba(46,184,92,0.08)",
-              border: "1px solid rgba(46,184,92,0.20)",
+              background: "rgba(55,175,225,0.08)",
+              border: "1px solid rgba(55,175,225,0.20)",
             }}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-center">
               {heroStats.map((s) => (
                 <div key={s.label} className="flex items-center gap-3 justify-center">
                   <div
                     className="w-11 h-11 rounded-full flex items-center justify-center text-lg font-black shrink-0"
-                    style={{ background: "rgba(46,184,92,0.18)", color: "#4cd17a" }}
+                    style={{ background: "rgba(55,175,225,0.18)", color: "#7DD4F0" }}
                   >
                     {s.icon}
                   </div>
                   <div className="text-left">
                     <p className="text-lg font-black text-white">{s.value}</p>
-                    <p className="text-xs font-semibold" style={{ color: "#4cd17a" }}>{s.label}</p>
+                    <p className="text-xs font-semibold" style={{ color: "#7DD4F0" }}>{s.label}</p>
                   </div>
                 </div>
               ))}
@@ -369,15 +349,15 @@ export default function Hero() {
 
           {/* Strip */}
           <div className="mt-8 text-center">
-            <p className="text-sm font-semibold text-emerald-300/90">
+            <p className="text-sm font-semibold text-cyan-200/90">
               MSME Funding and Business Registration Services
             </p>
-            <p className="text-[10px] uppercase tracking-widest mt-1 text-white/60">
+            <p className="text-xs uppercase tracking-widest mt-1 text-white/60">
               Ewolyn Services Pvt Ltd
             </p>
             <div
               className="mt-4 inline-flex flex-wrap justify-center items-center gap-0 rounded-full overflow-hidden mx-auto"
-              style={{ border: "1px solid rgba(46,184,92,0.30)" }}
+              style={{ border: "1px solid rgba(55,175,225,0.30)" }}
             >
               <span
                 className="px-4 sm:px-5 py-2 text-xs sm:text-sm font-bold text-white"
@@ -387,7 +367,7 @@ export default function Hero() {
               </span>
               <span
                 className="px-4 sm:px-5 py-2 text-xs sm:text-sm font-black"
-                style={{ background: "#2eb85c", color: "#0d2f57" }}
+                style={{ background: "#37AFE1", color: "#ffffff" }}
               >
                 1000+ MSMEs funded successfully
               </span>

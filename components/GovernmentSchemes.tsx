@@ -134,7 +134,7 @@ export default function GovernmentSchemes() {
   return (
     <>
       {/* Section 1: Dark BG with heading + stat cards */}
-      <section className="bg-[rgba(115,150,121,0.92)] py-16">
+      <section className="bg-[rgba(55,175,225,0.95)] py-16">
         <div className="container-max">
           {/* Header */}
           <div className="text-center mb-10">
@@ -160,7 +160,7 @@ export default function GovernmentSchemes() {
                 </div>
                 <p className="text-2xl font-black text-white">{s.value}</p>
                 <p className="text-xs font-semibold text-white/80 mt-1">{s.label}</p>
-                <p className="text-[10px] text-slate-300 italic">{s.sub}</p>
+                <p className="text-xs text-slate-300 italic">{s.sub}</p>
               </div>
             ))}
           </div>
@@ -195,7 +195,7 @@ export default function GovernmentSchemes() {
                 </div>
 
                 {/* Stat label + big value */}
-                <p className="text-[10px] font-black uppercase tracking-widest text-primary mb-1">
+                <p className="text-xs font-black uppercase tracking-widest text-primary mb-1">
                   {sc.loanLabel}
                 </p>
                 <p className="text-3xl font-black text-[#1B4F8C] mb-1">{sc.loanAmount}</p>
@@ -208,7 +208,7 @@ export default function GovernmentSchemes() {
 
                 {/* Footer: type + view link */}
                 <div className="flex items-center justify-between pt-3 border-t border-slate-100">
-                  <span className="text-[9px] font-black uppercase tracking-widest text-slate-400">
+                  <span className="text-xs font-black uppercase tracking-widest text-slate-400">
                     {sc.type}
                   </span>
                   <button

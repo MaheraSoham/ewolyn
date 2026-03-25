@@ -109,7 +109,7 @@ export default function BusinessSolutions() {
                     {/* Disbursed badge */}
                     <div className="mt-4 inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-5 py-2">
                         <span className="text-xl font-black text-primary">₹45Cr+</span>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">DISBURSED</span>
+                        <span className="text-xs font-bold uppercase tracking-widest text-slate-500">DISBURSED</span>
                     </div>
                 </div>
 
@@ -135,18 +135,18 @@ export default function BusinessSolutions() {
                                 </div>
                                 <div className="text-right flex flex-col items-end gap-1">
                                     {"badge" in sol && sol.badge && (
-                                        <span className="text-[9px] font-black uppercase tracking-widest bg-orange-500 text-white px-2.5 py-0.5 rounded-full">
+                                        <span className="text-xs font-black uppercase tracking-widest bg-orange-500 text-white px-2.5 py-0.5 rounded-full">
                                             {sol.badge}
                                         </span>
                                     )}
                                     <p className="text-lg font-black text-[#1B4F8C] leading-tight">{sol.stat}</p>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">{sol.statLabel}</p>
+                                    <p className="text-xs text-slate-500 font-bold uppercase tracking-wider">{sol.statLabel}</p>
                                 </div>
                             </div>
 
                             {/* Title */}
                             <h3 className="text-lg font-black text-[#1B4F8C]">{sol.title}</h3>
-                            <p className="text-[10px] font-bold uppercase tracking-wider text-orange-500 mb-2">{sol.subtitle}</p>
+                            <p className="text-xs font-bold uppercase tracking-wider text-orange-500 mb-2">{sol.subtitle}</p>
 
                             {/* Description */}
                             <p className="text-xs text-slate-500 leading-relaxed mb-4">{sol.desc}</p>
@@ -166,7 +166,7 @@ export default function BusinessSolutions() {
                             {/* Tags */}
                             <div className="flex flex-wrap gap-1.5 mb-4">
                                 {sol.tags.map((tag) => (
-                                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
+                                    <span key={tag} className="text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-600 px-2 py-0.5 rounded">
                                         {tag}
                                     </span>
                                 ))}
@@ -175,7 +175,7 @@ export default function BusinessSolutions() {
                             {/* Learn More */}
                             <button
                                 onClick={() => openEligibilityPopup(sol.title)}
-                                className="inline-flex items-center gap-1 rounded-lg bg-[rgba(115,150,121,0.92)] text-white px-5 py-2.5 text-xs font-bold hover:bg-primary hover:text-[#1B4F8C] transition-all w-fit"
+                                className="inline-flex items-center gap-1 rounded-lg bg-[rgba(55,175,225,0.95)] text-white px-5 py-2.5 text-xs font-bold hover:bg-[#2B8DB5] hover:text-white transition-all w-fit"
                             >
                                 LEARN MORE →
                             </button>
@@ -184,7 +184,7 @@ export default function BusinessSolutions() {
                 </motion.div>
 
                 {/* Need Help Bar */}
-                <div className="mt-10 rounded-2xl bg-gradient-to-r from-[rgba(115,150,121,0.92)] to-[#162240] p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="mt-10 rounded-2xl bg-gradient-to-r from-[rgba(55,175,225,0.95)] to-[#162240] p-6 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
                         <h3 className="text-lg font-black text-white">Need Help Choosing?</h3>
                         <p className="text-xs text-white/80 mt-1">Our experts will guide you to the best solution for your business.</p>
@@ -201,7 +201,7 @@ export default function BusinessSolutions() {
                 <div className="mt-6 text-center">
                     <Link
                         href="/services"
-                        className="inline-flex items-center gap-2 border-2 border-slate-300 text-slate-600 font-semibold py-2.5 px-6 rounded-lg hover:border-[rgba(115,150,121,0.92)] hover:text-[#1B4F8C] transition-all text-sm"
+                        className="inline-flex items-center gap-2 border-2 border-slate-300 text-slate-600 font-semibold py-2.5 px-6 rounded-lg hover:border-[rgba(55,175,225,0.95)] hover:text-[#1B4F8C] transition-all text-sm"
                     >
                         View All Professional Services →
                     </Link>

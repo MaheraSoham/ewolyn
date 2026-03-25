@@ -300,7 +300,7 @@ export default function NBFCFinancingPage() {
                   <p className="text-xs text-slate-400 mt-2">CIBIL 650+ required • Heavy documentation • Collateral mandatory</p>
                 </div>
                 <div className="text-center text-slate-300 font-bold text-sm">VS</div>
-                <div className="bg-gradient-to-br from-[rgba(115,150,121,0.92)] to-[#1B4F8C] rounded-2xl p-6 shadow-xl border border-primary/20">
+                <div className="bg-gradient-to-br from-[rgba(55,175,225,0.95)] to-[#1B4F8C] rounded-2xl p-6 shadow-xl border border-primary/20">
                   <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">⚡ NBFC (via Ewolyn)</p>
                   <div className="flex items-center gap-4">
                     <span className="text-2xl font-black text-primary">24-72 Hours</span>
@@ -438,7 +438,7 @@ export default function NBFCFinancingPage() {
                 </Link>
               </ButtonHover>
               <ButtonHover>
-                <a href="tel:18005710607" className="btn-hero-outline">
+                <a href="tel:9737799937" className="btn-hero-outline">
                   Call Now: 1800-571-0607
                 </a>
               </ButtonHover>

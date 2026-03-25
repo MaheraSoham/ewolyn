@@ -8,13 +8,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // ── PRIMARY: Ewolyn Green (from logo checkmark)
+        // ── PRIMARY: Ewolyn Cyan Blue
         primary: {
-          DEFAULT: '#2eb85c',   // vibrant leaf green
-          light: '#4cd17a',
-          dark: '#1e9647',
-          subtle: '#f0fdf4',   // near-white green tint
-          muted: '#d1fae5',
+          DEFAULT: '#37AFE1',   // cyan blue
+          light: '#7DD4F0',
+          dark: '#2B8DB5',
+          subtle: '#e8f7fc',   // near-white blue tint
+          muted: '#c7ecf7',
         },
         // ── SECONDARY: Ewolyn Navy (from logo letters)
         secondary: {
@@ -27,21 +27,21 @@ const config: Config = {
         surface: {
           DEFAULT: '#ffffff',
           muted: '#f8fafc',
-          card: '#f0fdf4',   // green-tinted card bg
-          border: '#e2f5ea',
+          card: '#e8f7fc',   // blue-tinted card bg
+          border: '#c7ecf7',
         },
         // ── ACCENT / EMOTIONS
         accent: {
-          green: '#2eb85c',
-          'green-light': '#4cd17a',
-          'green-dark': '#1e9647',
+          green: '#37AFE1',
+          'green-light': '#7DD4F0',
+          'green-dark': '#2B8DB5',
           orange: '#f47c20',
           teal: '#0d9488',
           blue: '#1B4F8C',
         },
         // ── TEXT
-        ink: '#0f1f10',   // very dark green-black
-        muted: '#5a7060',   // muted green-grey
+        ink: '#0f1a20',   // dark blue-black
+        muted: '#5a6d7a',   // muted blue-grey
 
         // ── LEGACY aliases (keep to not break old code)
         brand: {
@@ -49,11 +49,11 @@ const config: Config = {
           dark: '#0f172a',
           light: '#2563A3',
           navy: '#1B4F8C',
-          secondary: '#f0fdf4',
+          secondary: '#e8f7fc',
         },
         'brand-navy': '#1B4F8C',
-        'accent-green': '#2eb85c',
-        'accent-green-dark': '#1e9647',
+        'accent-green': '#37AFE1',
+        'accent-green-dark': '#2B8DB5',
         cyan: {
           DEFAULT: '#0BA5D8',
           dark: '#0891B2',
@@ -62,9 +62,9 @@ const config: Config = {
         },
         evolyn: {
           blue: '#1B4F8C',
-          teal: '#2eb85c',
+          teal: '#37AFE1',
           cyan: '#0BA5D8',
-          green: '#2eb85c',
+          green: '#37AFE1',
           charcoal: '#334155',
         },
         dark: {
@@ -77,25 +77,25 @@ const config: Config = {
       // ── SHADOWS
       boxShadow: {
         soft: '0 10px 30px rgba(2, 6, 23, 0.06)',
-        'soft-green': '0 10px 30px rgba(46, 184, 92, 0.12)',
-        glow: '0 0 24px rgba(46, 184, 92, 0.35)',
-        'glow-lg': '0 0 40px rgba(46, 184, 92, 0.45)',
+        'soft-green': '0 10px 30px rgba(55, 175, 225, 0.12)',
+        glow: '0 0 24px rgba(55, 175, 225, 0.35)',
+        'glow-lg': '0 0 40px rgba(55, 175, 225, 0.45)',
         'brand-glow': '0 0 20px rgba(27, 79, 140, 0.30)',
-        'green-glow': '0 0 24px rgba(46, 184, 92, 0.40)',
+        'green-glow': '0 0 24px rgba(55, 175, 225, 0.40)',
         'cyan-glow': '0 0 20px rgba(11, 165, 216, 0.35)',
-        card: '0 4px 24px rgba(46, 184, 92, 0.08)',
-        'card-hover': '0 12px 40px rgba(46, 184, 92, 0.18)',
+        card: '0 4px 24px rgba(55, 175, 225, 0.08)',
+        'card-hover': '0 12px 40px rgba(55, 175, 225, 0.18)',
       },
 
       // ── GRADIENTS
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-brand': 'linear-gradient(135deg, #1B4F8C 0%, #2eb85c 100%)',
-        'gradient-green': 'linear-gradient(135deg, #2eb85c 0%, #4cd17a 100%)',
-        'gradient-hero': 'linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)',
-        'gradient-section': 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
+        'gradient-brand': 'linear-gradient(135deg, #1B4F8C 0%, #37AFE1 100%)',
+        'gradient-green': 'linear-gradient(135deg, #37AFE1 0%, #7DD4F0 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #37AFE1 0%, #1A6B8A 45%, #37AFE1 100%)',
+        'gradient-section': 'linear-gradient(135deg, #e8f7fc 0%, #c7ecf7 100%)',
         'gradient-dark': 'linear-gradient(135deg, #0d2f57 0%, #1B4F8C 100%)',
-        'gradient-glow': 'radial-gradient(ellipse at top, rgba(46,184,92,0.15) 0%, transparent 60%)',
+        'gradient-glow': 'radial-gradient(ellipse at top, rgba(55,175,225,0.15) 0%, transparent 60%)',
       },
 
       // ── FONT FAMILIES

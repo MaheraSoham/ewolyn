@@ -103,7 +103,7 @@ export default function ProcessSteps() {
               </div>
 
               {/* Step label */}
-              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-200 mb-1">STEP {s.step}</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-200 mb-1">STEP {s.step}</p>
 
               {/* Title */}
               <h3 className="text-sm font-black text-[#1B4F8C] mb-2 max-w-[160px]">{s.title}</h3>
@@ -124,7 +124,7 @@ export default function ProcessSteps() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary text-[#1B4F8C] px-8 py-3 text-sm font-bold hover:bg-[rgba(115,150,121,0.92)] hover:text-white transition-all"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary text-[#1B4F8C] px-8 py-3 text-sm font-bold hover:bg-[rgba(55,175,225,0.95)] hover:text-white transition-all"
           >
             Start Your Application →
           </Link>

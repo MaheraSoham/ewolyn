@@ -175,7 +175,7 @@ function ResultsContent() {
         const company = formData.get("company") as string;
         const requirements = formData.get("requirements") as string;
 
-        const whatsappNumber = "919876543210";
+        const whatsappNumber = "919737799937";
         const message = `Hello Ewolyn Team, I would like to apply for *${selectedScheme.title}*.\n\n*My Details:*\n👤 *Name:* ${name}\n📱 *Mobile:* ${phone}\n📧 *Email:* ${email}\n🏢 *Company:* ${company || 'N/A'}\n📝 *Requirements:* ${requirements || 'N/A'}\n\nPlease guide me with the further process.`;
 
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -217,7 +217,7 @@ function ResultsContent() {
                         ></motion.div>
                     </div>
                     <h2 className="text-white font-bold text-2xl mb-2 tracking-tight">Processing Excellence</h2>
-                    <p className="text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">Ewolyn AI Mapping Active</p>
+                    <p className="text-slate-400 text-xs uppercase font-bold tracking-[0.2em]">Ewolyn AI Mapping Active</p>
                 </div>
             </div>
         );
@@ -240,7 +240,7 @@ function ResultsContent() {
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest border border-primary/20"
+                                    className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-lg text-xs font-black uppercase tracking-widest border border-primary/20"
                                 >
                                     <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />
                                     Eligibility Analysis Active ✓
@@ -252,14 +252,14 @@ function ResultsContent() {
                                 </h1>
 
                                 <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
-                                    <p className="text-white/80 text-[10px] font-black uppercase tracking-[0.2em] mb-4">AI Analysis For Current Profile:</p>
+                                    <p className="text-white/80 text-xs font-black uppercase tracking-[0.2em] mb-4">AI Analysis For Current Profile:</p>
                                     <div className="flex flex-wrap gap-2">
                                         {[
                                             { label: "Stage", val: searchParams.get("stage") || "Early" },
                                             { label: "Entity", val: searchParams.get("entityType") || "Private Limited" },
                                             { label: "Amount", val: searchParams.get("amount") || "10L" }
                                         ].map((p, i) => (
-                                            <div key={i} className="px-3 py-1.5 bg-white/10 rounded-lg border border-white/5 text-[11px] font-bold">
+                                            <div key={i} className="px-3 py-1.5 bg-white/10 rounded-lg border border-white/5 text-xs font-bold">
                                                 <span className="text-white/75 mr-2">{p.label}:</span>
                                                 <span className="text-primary">{p.val}</span>
                                             </div>
@@ -272,7 +272,7 @@ function ResultsContent() {
 
                                 <div className="flex flex-wrap gap-3">
                                     {["Bank Linkage", "Subsidy Focus", "Zero Upfront Fee"].map(tag => (
-                                        <span key={tag} className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg text-[11px] font-bold text-blue-100/70 border border-white/10">
+                                        <span key={tag} className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-lg text-xs font-bold text-blue-100/70 border border-white/10">
                                             <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
                                             {tag}
                                         </span>
@@ -319,7 +319,7 @@ function ResultsContent() {
                                         >
                                             <div className="text-2xl mb-2">{stat.icon}</div>
                                             <div className="text-2xl font-bold mb-1 text-white">{stat.val}</div>
-                                            <div className="text-[10px] text-white/75 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
+                                            <div className="text-xs text-white/75 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
                                         </motion.div>
                                     ))}
                                 </div>
@@ -352,7 +352,7 @@ function ResultsContent() {
                                     </h2>
                                     <p className="text-gray-600 text-lg">Detailed analysis of matched government initiatives</p>
                                 </div>
-                                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 bg-white/5 px-4 py-2 rounded-full border border-white/10">
                                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" /> Live Analysis
                                 </div>
                             </div>
@@ -381,7 +381,7 @@ function ResultsContent() {
                                             </div>
                                             <div className="flex-1">
                                                 <h3 className="text-lg font-bold mb-1 leading-tight text-brand-navy">{scheme.title}</h3>
-                                                <div className={`inline-flex items-center gap-2 ${scheme.matchScore >= 90 ? 'bg-primary/10 text-primary border-primary/20' : 'bg-orange-500/10 text-orange-600 border-orange-500/20'} text-[8px] font-black px-2 py-0.5 rounded-md border`}>
+                                                <div className={`inline-flex items-center gap-2 ${scheme.matchScore >= 90 ? 'bg-primary/10 text-primary border-primary/20' : 'bg-orange-500/10 text-orange-600 border-orange-500/20'} text-xs font-black px-2 py-0.5 rounded-md border`}>
                                                     {scheme.matchScore}% MATCH
                                                 </div>
                                             </div>
@@ -389,36 +389,36 @@ function ResultsContent() {
 
                                         <div className="grid grid-cols-2 gap-x-3 gap-y-4 mb-6 bg-slate-50 p-4 rounded-2xl border border-slate-100">
                                             <div>
-                                                <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest mb-1">Max Amount</div>
+                                                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Max Amount</div>
                                                 <div className="text-sm font-black text-brand-navy">{scheme.amount}</div>
                                             </div>
                                             <div>
-                                                <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest mb-1">{scheme.subsidy ? 'Subsidy' : scheme.stage ? 'Stage' : 'ROI'}</div>
+                                                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">{scheme.subsidy ? 'Subsidy' : scheme.stage ? 'Stage' : 'ROI'}</div>
                                                 <div className="text-sm font-black text-brand-navy">{scheme.subsidy || scheme.stage || scheme.interest}</div>
                                             </div>
                                             <div>
-                                                <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest mb-1">Tenure</div>
+                                                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Tenure</div>
                                                 <div className="text-sm font-black text-brand-navy">{scheme.tenure}</div>
                                             </div>
                                             <div>
-                                                <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest mb-1">Advantage</div>
+                                                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Advantage</div>
                                                 <div className="text-sm font-black text-primary">{scheme.special}</div>
                                             </div>
                                         </div>
 
                                         <div className="mb-6 flex-1">
                                             <div className="mb-4 p-3 bg-slate-50 border border-slate-100 rounded-xl">
-                                                <p className="text-[10px] font-black text-brand-navy uppercase tracking-widest mb-1 flex items-center gap-1.5">
+                                                <p className="text-xs font-black text-brand-navy uppercase tracking-widest mb-1 flex items-center gap-1.5">
                                                     <span className="w-1.5 h-1.5 bg-primary rounded-full shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
                                                     Why this match?
                                                 </p>
-                                                <p className="text-[11px] text-slate-600 font-medium leading-relaxed italic">
+                                                <p className="text-xs text-slate-600 font-medium leading-relaxed italic">
                                                     "{scheme.matchReason}"
                                                 </p>
                                             </div>
                                             <ul className="space-y-2">
                                                 {scheme.benefits.map((benefit: string, bidx: number) => (
-                                                    <li key={bidx} className="flex items-start gap-2 text-[11px] text-slate-600 leading-tight font-semibold">
+                                                    <li key={bidx} className="flex items-start gap-2 text-xs text-slate-600 leading-tight font-semibold">
                                                         <div className="mt-1 w-1 h-1 rounded-full bg-primary" />
                                                         {benefit}
                                                     </li>
@@ -468,8 +468,8 @@ function ResultsContent() {
                                         ))}
                                     </div>
                                     <div className="text-left">
-                                        <div className="text-[10px] text-primary font-black uppercase tracking-widest">Trusted MSMEs</div>
-                                        <div className="text-[9px] text-white/75 font-bold uppercase tracking-tight">Across 28+ Industries</div>
+                                        <div className="text-xs text-primary font-black uppercase tracking-widest">Trusted MSMEs</div>
+                                        <div className="text-xs text-white/75 font-bold uppercase tracking-tight">Across 28+ Industries</div>
                                     </div>
                                 </div>
                             </div>
@@ -522,7 +522,7 @@ function ResultsContent() {
                                             <form className="space-y-4" onSubmit={handleSubmit}>
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div className="space-y-1.5">
-                                                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Full Name</label>
+                                                        <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Full Name</label>
                                                         <input
                                                             required
                                                             name="name"
@@ -532,7 +532,7 @@ function ResultsContent() {
                                                         />
                                                     </div>
                                                     <div className="space-y-1.5">
-                                                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Mobile Number</label>
+                                                        <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Mobile Number</label>
                                                         <input
                                                             required
                                                             name="phone"
@@ -545,7 +545,7 @@ function ResultsContent() {
                                                 </div>
 
                                                 <div className="space-y-1.5">
-                                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Email Address</label>
+                                                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Email Address</label>
                                                     <input
                                                         required
                                                         name="email"
@@ -556,7 +556,7 @@ function ResultsContent() {
                                                 </div>
 
                                                 <div className="space-y-1.5">
-                                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Company Name</label>
+                                                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Company Name</label>
                                                     <input
                                                         name="company"
                                                         type="text"
@@ -566,7 +566,7 @@ function ResultsContent() {
                                                 </div>
 
                                                 <div className="space-y-1.5">
-                                                    <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-1">Additional Requirements</label>
+                                                    <label className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Additional Requirements</label>
                                                     <textarea
                                                         name="requirements"
                                                         rows={3}
@@ -597,7 +597,7 @@ function ResultsContent() {
                                                 </motion.button>
 
                                                 <div className="text-center pt-2">
-                                                    <p className="text-[10px] text-slate-400 font-medium flex items-center justify-center gap-2">
+                                                    <p className="text-xs text-slate-400 font-medium flex items-center justify-center gap-2">
                                                         <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20">
                                                             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                                                         </svg>

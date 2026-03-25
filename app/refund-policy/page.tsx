@@ -100,7 +100,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">01</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">01</span>
                   <h2 className="text-2xl font-bold text-slate-900">Nature of Our Services</h2>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">02</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">02</span>
                   <h2 className="text-2xl font-bold text-slate-900">When Refunds Apply</h2>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">03</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">03</span>
                   <h2 className="text-2xl font-bold text-slate-900">Non-Refundable Cases</h2>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">04</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">04</span>
                   <h2 className="text-2xl font-bold text-slate-900">Cancellation Policy</h2>
                 </div>
               </div>
@@ -270,7 +270,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">05</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">05</span>
                   <h2 className="text-2xl font-bold text-slate-900">Refund Process</h2>
                 </div>
               </div>
@@ -321,7 +321,7 @@ export default function RefundPolicyPage() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-primary uppercase tracking-widest">06</span>
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">06</span>
                   <h2 className="text-2xl font-bold text-slate-900">Dispute Resolution</h2>
                 </div>
               </div>
@@ -348,11 +348,11 @@ export default function RefundPolicyPage() {
                   </svg>
                   info@ewolyn.co.in
                 </a>
-                <a href="tel:+919876543210" className="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline">
+                <a href="tel:+919737799937" className="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  +91 98765 43210
+                  +91 97377 99937
                 </a>
               </div>
             </div>

@@ -133,9 +133,9 @@ function ReviewCard({ review, position, onClick }: CardProps) {
                     background: position === "center"
                         ? "linear-gradient(145deg, #1B4F8C 0%, #0d2f57 100%)"
                         : "linear-gradient(145deg, #1e3a5f 0%, #152844 100%)",
-                    borderColor: position === "center" ? "rgba(46,184,92,0.3)" : "rgba(255,255,255,0.08)",
+                    borderColor: position === "center" ? "rgba(55,175,225,0.3)" : "rgba(255,255,255,0.08)",
                     boxShadow: position === "center"
-                        ? "0 20px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(46,184,92,0.2)"
+                        ? "0 20px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(55,175,225,0.2)"
                         : "0 8px 30px rgba(0,0,0,0.2)",
                 }}
             >
@@ -152,15 +152,15 @@ function ReviewCard({ review, position, onClick }: CardProps) {
                 <div className="flex items-center gap-3 mb-4">
                     <div
                         className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-xs shrink-0"
-                        style={{ background: "linear-gradient(135deg, #2eb85c 0%, #1B4F8C 100%)" }}
+                        style={{ background: "linear-gradient(135deg, #37AFE1 0%, #1B4F8C 100%)" }}
                     >
                         {review.initials}
                     </div>
                     <div>
                         <p className="text-white font-black text-sm">{review.name}</p>
-                        <p className="text-white/45 text-[10px] font-medium">{review.business}</p>
+                        <p className="text-white/45 text-xs font-medium">{review.business}</p>
                     </div>
-                    <span className="ml-auto text-white/30 text-[10px]">{review.date}</span>
+                    <span className="ml-auto text-white/30 text-xs">{review.date}</span>
                 </div>
 
                 {/* Review text */}
@@ -174,7 +174,7 @@ function ReviewCard({ review, position, onClick }: CardProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 mt-4 text-[#2eb85c] text-xs font-bold hover:underline"
+                    className="inline-flex items-center gap-1 mt-4 text-[#37AFE1] text-xs font-bold hover:underline"
                 >
                     Read More
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,7 +271,7 @@ export default function GoogleReviews() {
                     </span>
                     <h2 className="text-3xl font-bold text-[#1B4F8C] sm:text-4xl">
                         What Our Clients{" "}
-                        <span className="text-[#2eb85c]">Say</span>
+                        <span className="text-[#37AFE1]">Say</span>
                     </h2>
                     <p className="mt-3 mx-auto max-w-xl text-sm text-slate-500">
                         Discover how our clients describe their experience with us — their trust
@@ -324,7 +324,7 @@ export default function GoogleReviews() {
                             style={{
                                 width: i === current ? "24px" : "8px",
                                 height: "8px",
-                                background: i === current ? "#2eb85c" : "#cbd5e1",
+                                background: i === current ? "#37AFE1" : "#cbd5e1",
                             }}
                         />
                     ))}
@@ -339,7 +339,7 @@ export default function GoogleReviews() {
                                 <span className="text-2xl font-black text-[#1B4F8C]">{overallRating}</span>
                                 <Stars />
                             </div>
-                            <p className="text-[10px] text-slate-500 font-semibold mt-0.5">Based on {totalRatings} Google Reviews</p>
+                            <p className="text-xs text-slate-500 font-semibold mt-0.5">Based on {totalRatings} Google Reviews</p>
                         </div>
                     </div>
                     <a

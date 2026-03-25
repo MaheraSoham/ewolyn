@@ -44,7 +44,7 @@ export default function FundingPage() {
             variants={containerVariants}
             className="max-w-4xl"
           >
-            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full text-blue-100 text-[10px] font-black uppercase tracking-[0.2em] mb-10 shadow-2xl">
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-full text-blue-100 text-xs font-black uppercase tracking-[0.2em] mb-10 shadow-2xl">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -63,7 +63,7 @@ export default function FundingPage() {
 
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
               {["₹750Cr+ Facilitated", "95% Application Success", "25+ Active Schemes"].map((tag) => (
-                <span key={tag} className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-[10px] font-bold text-white/80 uppercase tracking-widest">
+                <span key={tag} className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-white/80 uppercase tracking-widest">
                   {tag}
                 </span>
               ))}
@@ -89,7 +89,7 @@ export default function FundingPage() {
               Securing low-interest capital through banking partners and specialized MSME lending institutions. We handle the entire dossier preparation for seamless bank approvals.
             </p>
             <div className="flex items-center gap-3">
-              <span className="px-5 py-2 bg-blue-600 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-blue-200">
+              <span className="px-5 py-2 bg-blue-600 text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-lg shadow-blue-200">
                 15–25 Day Cycle
               </span>
               <span className="text-xs font-bold text-blue-600/50">End-to-end Support</span>
@@ -104,7 +104,7 @@ export default function FundingPage() {
               Accessing non-repayable government grants (PMEGP, Startup India Seed Fund, etc.). Our teams specialize in complex eligibility mapping and high-compliance filings.
             </p>
             <div className="flex items-center gap-3">
-              <span className="px-5 py-2 bg-primary text-brand-navy rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg shadow-green-200">
+              <span className="px-5 py-2 bg-primary text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-lg shadow-green-200">
                 45–60 Day Cycle
               </span>
               <span className="text-xs font-bold text-primary-dark/50">Compliance Expert</span>
@@ -120,7 +120,7 @@ export default function FundingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-primary font-black uppercase tracking-[0.3em] text-[10px] mb-4 block">Central Initiatives</span>
+            <span className="text-primary font-black uppercase tracking-[0.3em] text-xs mb-4 block">Central Initiatives</span>
             <h2 className="text-4xl md:text-5xl font-black text-brand-navy mb-6 tracking-tight">
               Powerful <span className="text-primary">Government Schemes</span>
             </h2>
@@ -151,20 +151,20 @@ export default function FundingPage() {
 
                   {/* Highlights */}
                   <div className="mb-4 space-y-0.5">
-                    <span className="text-[9px] font-black text-primary uppercase tracking-widest">{scheme.highlightLabel}</span>
+                    <span className="text-xs font-black text-primary uppercase tracking-widest">{scheme.highlightLabel}</span>
                     <div className="text-2xl font-black text-brand-navy tracking-tighter">{scheme.highlight}</div>
                   </div>
 
                   {/* Title & Description */}
                   <h3 className="text-base font-bold text-primary group-hover:text-brand-navy transition-colors mb-2 pr-4 line-clamp-1">{scheme.title}</h3>
-                  <p className="text-slate-500 text-[11px] leading-relaxed mb-6 flex-1 font-medium line-clamp-3">{scheme.shortDesc}</p>
+                  <p className="text-slate-500 text-xs leading-relaxed mb-6 flex-1 font-medium line-clamp-3">{scheme.shortDesc}</p>
 
                   {/* Bottom Bar */}
                   <div className="flex items-center justify-between pt-4 border-t border-slate-50">
-                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 bg-slate-50 px-2 py-0.5 rounded-lg">
+                    <span className="text-xs font-black uppercase tracking-widest text-slate-400 bg-slate-50 px-2 py-0.5 rounded-lg">
                       {scheme.category}
                     </span>
-                    <span className="text-[11px] font-black text-brand-navy flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    <span className="text-xs font-black text-brand-navy flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       View <span className="text-primary">→</span>
                     </span>
                   </div>

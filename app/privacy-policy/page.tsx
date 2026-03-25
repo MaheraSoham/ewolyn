@@ -166,7 +166,7 @@ const sections = [
       },
       {
         subtitle: "Grievance Redressal",
-        body: "In accordance with the Information Technology Act, 2000, and the rules made thereunder, you may contact our Grievance Officer: Name: Legal & Compliance Team, Ewolyn | Email: info@ewolyn.co.in | Address: B-304/2 Gopal Palace, Near Shiromani Complex, Nehru Nagar, Ahmedabad – 380015.",
+        body: "In accordance with the Information Technology Act, 2000, and the rules made thereunder, you may contact our Grievance Officer: Name: Legal & Compliance Team, Ewolyn | Email: info@ewolyn.co.in | Address: B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015.",
       },
     ],
   },
@@ -281,7 +281,7 @@ export default function PrivacyPolicyPage() {
                 Overview
               </p>
               <p className="text-slate-700 text-sm leading-relaxed">
-                This Privacy Policy ("Policy") applies to <strong>Ewolyn</strong> ("Company", "we", "us", "our"), a business consultancy operating from B-304/2 Gopal Palace, Near Shiromani Complex, Nehru Nagar, Ahmedabad – 380015, Gujarat, India. This Policy governs the collection, use, storage, and disclosure of information of all users ("you", "your", "client") who access our website at <strong>ewolyn.co.in</strong> or engage with our services. By using our website or services, you consent to the practices described in this Policy.
+                This Privacy Policy ("Policy") applies to <strong>Ewolyn</strong> ("Company", "we", "us", "our"), a business consultancy operating from B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015, Gujarat, India. This Policy governs the collection, use, storage, and disclosure of information of all users ("you", "your", "client") who access our website at <strong>ewolyn.co.in</strong> or engage with our services. By using our website or services, you consent to the practices described in this Policy.
               </p>
             </div>
 
@@ -293,7 +293,7 @@ export default function PrivacyPolicyPage() {
                     {section.icon}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
                   </div>
                 </div>
@@ -325,7 +325,7 @@ export default function PrivacyPolicyPage() {
             Questions About Your <span className="text-primary">Privacy?</span>
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-            Write to us at <a href="mailto:info@ewolyn.co.in" className="text-primary hover:underline">info@ewolyn.co.in</a> or call us at <a href="tel:+919876543210" className="text-primary hover:underline">+91 98765 43210</a>.
+            Write to us at <a href="mailto:info@ewolyn.co.in" className="text-primary hover:underline">info@ewolyn.co.in</a> or call us at <a href="tel:+919737799937" className="text-primary hover:underline">+91 97377 99937</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-hero-green">Contact Us →</Link>

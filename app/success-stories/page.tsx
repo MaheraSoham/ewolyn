@@ -220,7 +220,7 @@ export default function SuccessStoriesPage() {
                   </div>
                   <div className="absolute top-3 left-3">
                     <span
-                      className="text-[9px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full text-white"
+                      className="text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-full text-white"
                       style={{ background: s.badgeColor }}
                     >
                       {s.badge}
@@ -235,14 +235,14 @@ export default function SuccessStoriesPage() {
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-grow">
                   <h3 className="text-base font-black text-[#1B4F8C] leading-tight">{s.company}</h3>
-                  <p className="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-0.5 mb-3">
+                  <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mt-0.5 mb-3">
                     {s.founder} · {s.industry}
                   </p>
 
                   {/* Funding Amount */}
                   <div className="flex items-baseline gap-1.5 mb-2">
                     <span className="text-2xl font-black" style={{ color: s.amountColor }}>{s.amount}</span>
-                    <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">via {s.scheme}</span>
+                    <span className="text-xs text-slate-400 uppercase font-bold tracking-wider">via {s.scheme}</span>
                   </div>
 
                   {/* Result */}
@@ -254,12 +254,12 @@ export default function SuccessStoriesPage() {
                   </div>
 
                   {/* Story */}
-                  <p className="text-[11px] text-slate-500 leading-relaxed flex-grow">{s.story}</p>
+                  <p className="text-xs text-slate-500 leading-relaxed flex-grow">{s.story}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-1 mt-4">
                     {s.tags.map((tag) => (
-                      <span key={tag} className="text-[9px] font-black uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-0.5 rounded">
+                      <span key={tag} className="text-xs font-black uppercase tracking-wider bg-slate-100 text-slate-500 px-2 py-0.5 rounded">
                         {tag}
                       </span>
                     ))}

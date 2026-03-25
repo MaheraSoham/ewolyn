@@ -135,7 +135,7 @@ export default function BlogDetailPage({ params }: Props) {
                 <ul className="space-y-2.5">
                   {post.content.map((section, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-[10px] font-bold text-primary/60 mt-0.5">{String(i + 1).padStart(2, "0")}</span>
+                      <span className="text-xs font-bold text-primary/60 mt-0.5">{String(i + 1).padStart(2, "0")}</span>
                       <span className="text-sm text-gray-300 leading-snug line-clamp-2 hover:text-white transition-colors cursor-default">{section.heading}</span>
                     </li>
                   ))}
@@ -158,7 +158,7 @@ export default function BlogDetailPage({ params }: Props) {
                     {sectionIcons[i % sectionIcons.length]}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">Section {String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">Section {String(i + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 leading-snug">{section.heading}</h2>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export default function BlogDetailPage({ params }: Props) {
                       <div className={`w-7 h-7 rounded-lg ${categoryIconColors[r.category] || "bg-gray-500"} text-white flex items-center justify-center`}>
                         <span className="scale-75">{categoryIcons[r.category] || categoryIcons["Business Growth"]}</span>
                       </div>
-                      <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${categoryColors[r.category] || "bg-gray-100 text-gray-600"}`}>{r.category}</span>
+                      <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${categoryColors[r.category] || "bg-gray-100 text-gray-600"}`}>{r.category}</span>
                     </div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">{r.title}</h3>
                     <p className="text-sm text-slate-500 line-clamp-2 mb-4">{r.excerpt}</p>
@@ -242,7 +242,7 @@ export default function BlogDetailPage({ params }: Props) {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-hero-green">Get Free Consultation →</Link>
-            <a href="tel:18005710607" className="btn-hero-outline">
+            <a href="tel:9737799937" className="btn-hero-outline">
               <svg className="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               Call: 1800-571-0607
             </a>

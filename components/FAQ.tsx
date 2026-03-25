@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "What makes Ewolyn different?",
-    a: "We offer end-to-end support from consultation to fund disbursement with a 85%+ success rate. Our expert team has facilitated ₹103Cr+ in funding for 500+ businesses across India.",
+    a: "We offer end-to-end support from consultation to fund disbursement with a 95%+ success rate. Our expert team has facilitated ₹110Cr+ in funding for 500+ businesses across India.",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function FAQ() {
           <p className="text-sm text-slate-500 mb-3">Still have questions? We&apos;re here to help!</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-[rgba(115,150,121,0.92)] text-white px-6 py-3 text-sm font-bold hover:bg-primary hover:text-[#1B4F8C] transition-all"
+            className="inline-flex items-center gap-2 rounded-lg bg-[rgba(55,175,225,0.95)] text-white px-6 py-3 text-sm font-bold hover:bg-primary hover:text-[#1B4F8C] transition-all"
           >
             Contact Support
           </Link>

@@ -25,8 +25,8 @@ const videos = [
 ];
 
 const bottomStats = [
-  { value: "₹103Cr+", label: "TOTAL FUNDED" },
-  { value: "85%", label: "SUCCESS RATE" },
+  { value: "₹110Cr+", label: "TOTAL FUNDED" },
+  { value: "95%", label: "SUCCESS RATE" },
   { value: "500+", label: "BUSINESSES" },
   { value: "24/7", label: "SUPPORT" },
 ];
@@ -104,11 +104,11 @@ export default function Testimonials() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-black text-white truncate">{v.name}</p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-200 truncate">
+                  <p className="text-xs font-bold uppercase tracking-widest text-slate-200 truncate">
                     {v.role}
                   </p>
                 </div>
-                <span className="text-[10px] font-black text-primary bg-primary/10 border border-primary/20 rounded-full px-2.5 py-1 shrink-0">
+                <span className="text-xs font-black text-primary bg-primary/10 border border-primary/20 rounded-full px-2.5 py-1 shrink-0">
                   {v.result}
                 </span>
               </div>
@@ -124,7 +124,7 @@ export default function Testimonials() {
               className="text-center rounded-xl bg-white/5 border border-white/10 py-4 px-3"
             >
               <p className="text-2xl font-black text-white">{s.value}</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-200 mt-1">
+              <p className="text-xs font-bold uppercase tracking-widest text-slate-200 mt-1">
                 {s.label}
               </p>
             </div>

@@ -37,8 +37,8 @@ const contactCards = [
   {
     title: "Call Us",
     sub: "Mon–Sat from 9 am to 6 pm",
-    val: "+91 98765 43210",
-    link: "tel:+919876543210",
+    val: "+91 97377 99937",
+    link: "tel:+919737799937",
     btn: "Call Now",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@ const contactCards = [
   {
     title: "Visit Office",
     sub: "Headquarters in Ahmedabad",
-    val: "Nehru Nagar, Ahmedabad",
+    val: "B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad",
     link: "https://maps.google.com",
     btn: "Get Directions",
     icon: (
@@ -77,8 +77,8 @@ const contactCards = [
   {
     title: "WhatsApp",
     sub: "Quick chat with our team",
-    val: "+91 98765 43210",
-    link: "https://wa.me/919876543210",
+    val: "+91 97377 99937",
+    link: "https://wa.me/919737799937",
     btn: "Message Now",
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default function ContactContent() {
     const email = fd.get("email") as string;
     const type = fd.get("type") as string;
     const messageVal = fd.get("message") as string;
-    const whatsappNumber = "919876543210";
+    const whatsappNumber = "919737799937";
     const message = `Hello Ewolyn Team, I have an inquiry regarding *${type}*.\n\n*My Details:*\n👤 *Name:* ${name}\n📱 *Mobile:* ${phone}\n📧 *Email:* ${email}\n\n*Message:* ${messageVal}\n\nPlease get back to me.`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     setTimeout(() => {
@@ -155,8 +155,8 @@ export default function ContactContent() {
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-8 border border-primary/25"
           >
-            <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-            <span className="text-primary">We respond within 24 hours</span>
+            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+            <span className="text-white">We respond within 24 hours</span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -165,7 +165,7 @@ export default function ContactContent() {
             className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
             Let&apos;s Start Your <br />
-            <span className="text-primary">Success Story</span>
+            <span className="text-white">Success Story</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -209,13 +209,13 @@ export default function ContactContent() {
 
       {/* ═══════════════ FORM + SIDEBAR ═══════════════ */}
       <div className="container-max pb-24">
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 items-stretch">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100"
+            className="lg:col-span-7 bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100 flex flex-col"
           >
             <div className="mb-10">
               <span className="inline-block text-primary font-bold text-xs uppercase tracking-widest mb-2">Message Us</span>
@@ -317,7 +317,7 @@ export default function ContactContent() {
             {/* Map */}
             <div className="bg-white rounded-2xl shadow-lg p-3 border border-slate-100 h-[300px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.944983084364!2d72.53568777507914!3d23.025793679173256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84c62c355555%3A0x6b0f0b0b0b0b0b0b!2sNehru%20Nagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709876543210!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.944983084364!2d72.53568777507914!3d23.025793679173256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84c62c355555%3A0x6b0f0b0b0b0b0b0b!2sNehru%20Nagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709737799937!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "0.75rem" }}
@@ -328,25 +328,24 @@ export default function ContactContent() {
             </div>
 
             {/* Address card */}
-            <div className="bg-[rgba(115,150,121,0.92)] rounded-2xl p-8 text-white relative overflow-hidden">
+            <div className="bg-[rgba(55,175,225,0.95)] rounded-2xl p-8 text-white relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
               <div className="relative z-10">
                 <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
                   <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   Local HQ
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  B-304/2 Gopal Palace,<br />
-                  Near Shiromani Complex,<br />
-                  Nehru Nagar, Ahmedabad-380015
+                <p className="text-white leading-relaxed mb-6">
+                  B-304/2, Nr - Shiromani Complex,<br />
+                  Nehru Nagar, Ahmedabad-380015 Gujarat
                 </p>
-                <div className="space-y-3 pt-6 border-t border-white/10">
-                  <div className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
-                    <span className="text-xs text-emerald-100/70">WhatsApp</span>
-                    <span className="text-sm font-bold text-white">+91 98765 43210</span>
+                <div className="space-y-3 pt-6 border-t border-white/20">
+                  <div className="flex justify-between items-center bg-white/10 p-3 rounded-xl border border-white/10">
+                    <span className="text-xs text-white/80">WhatsApp</span>
+                    <span className="text-sm font-bold text-white">+91 97377 99937</span>
                   </div>
-                  <div className="flex justify-between items-center bg-white/5 p-3 rounded-xl border border-white/5">
-                    <span className="text-xs text-emerald-100/70">Support</span>
+                  <div className="flex justify-between items-center bg-white/10 p-3 rounded-xl border border-white/10">
+                    <span className="text-xs text-white/80">Support</span>
                     <span className="text-sm font-bold text-white">info@ewolyn.co.in</span>
                   </div>
                 </div>

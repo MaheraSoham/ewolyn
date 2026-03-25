@@ -339,7 +339,7 @@ export default function TermsConditionsPage() {
                 Important Notice
               </p>
               <p className="text-slate-700 text-sm leading-relaxed">
-                These Terms & Conditions ("Terms") constitute a legally binding agreement between <strong>Ewolyn</strong> ("Company", "we", "us"), operating from B-304/2 Gopal Palace, Near Shiromani Complex, Nehru Nagar, Ahmedabad – 380015, Gujarat, India and you ("Client", "User"). These Terms are effective as of your first use of our website or services.
+                These Terms & Conditions ("Terms") constitute a legally binding agreement between <strong>Ewolyn</strong> ("Company", "we", "us"), operating from B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015, Gujarat, India and you ("Client", "User"). These Terms are effective as of your first use of our website or services.
               </p>
             </div>
 
@@ -352,7 +352,7 @@ export default function TermsConditionsPage() {
               ].map((item) => (
                 <div key={item.label} className="bg-slate-50 rounded-xl p-4 border border-slate-200">
                   <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">{item.label}</p>
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">{item.label}</p>
                   <p className="text-sm font-semibold text-slate-800">{item.value}</p>
                 </div>
               ))}
@@ -366,7 +366,7 @@ export default function TermsConditionsPage() {
                     {section.icon}
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="text-xs font-bold text-primary uppercase tracking-widest">{String(idx + 1).padStart(2, "0")}</span>
                     <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
                   </div>
                 </div>

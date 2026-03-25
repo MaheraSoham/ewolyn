@@ -322,7 +322,7 @@ export default function CertificationsPage() {
                 >
                   <span className="text-4xl block mb-3">{cert.icon}</span>
                   <p className="font-bold text-slate-800 text-sm">{cert.name}</p>
-                  <p className="text-[10px] text-primary font-semibold uppercase tracking-wider mt-1">Certified</p>
+                  <p className="text-xs text-primary font-semibold uppercase tracking-wider mt-1">Certified</p>
                 </div>
               ))}
             </div>
@@ -426,7 +426,7 @@ export default function CertificationsPage() {
                 </Link>
               </ButtonHover>
               <ButtonHover>
-                <a href="tel:18005710607" className="btn-hero-outline">
+                <a href="tel:9737799937" className="btn-hero-outline">
                   Call Now: 1800-571-0607
                 </a>
               </ButtonHover>

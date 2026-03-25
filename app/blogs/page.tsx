@@ -83,8 +83,8 @@ export default function BlogsPage() {
           <FadeIn>
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/15 backdrop-blur-sm rounded-full text-sm font-bold mb-8 border border-primary/25">
-                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
-                <span className="text-primary">MSME Insights &amp; Business Guides</span>
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                <span className="text-white">MSME Insights &amp; Business Guides</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-[1.1]">
                 Expert Insights for <span className="text-primary">Business Growth</span>
@@ -104,7 +104,7 @@ export default function BlogsPage() {
                   <div key={s.label} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
                     <div className="text-primary mb-2 flex justify-center">{s.icon}</div>
                     <p className="text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[10px] text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
+                    <p className="text-xs text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -129,7 +129,7 @@ export default function BlogsPage() {
                 <Link href={`/blogs/${post.slug}`} className="group block bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-primary/30 hover:shadow-xl transition-all duration-300 relative">
                   {/* Featured ribbon */}
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="inline-flex items-center gap-1 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg shadow-green-500/20">
+                    <span className="inline-flex items-center gap-1 bg-primary text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-lg shadow-green-500/20">
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
                       Featured
                     </span>
@@ -207,13 +207,13 @@ export default function BlogsPage() {
                         <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${categoryIconColors[post.category] || "bg-gray-500 text-white"}`}>
                           {categoryIcons[post.category] || categoryIcons.All}
                         </div>
-                        <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full ${categoryColors[post.category] || "bg-gray-100 text-gray-600"}`}>{post.category}</span>
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${categoryColors[post.category] || "bg-gray-100 text-gray-600"}`}>{post.category}</span>
                       </div>
                       <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors leading-snug">{post.title}</h3>
                       <p className="text-sm text-slate-500 leading-relaxed mb-5 flex-1 line-clamp-3">{post.excerpt}</p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="text-[10px] font-medium text-slate-400 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-100">{tag}</span>
+                          <span key={tag} className="text-xs font-medium text-slate-400 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-100">{tag}</span>
                         ))}
                       </div>
                       <div className="flex items-center justify-between pt-4 border-t border-slate-100">
