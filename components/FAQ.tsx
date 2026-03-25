@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "What makes Ewolyn different?",
-    a: "We offer end-to-end support from consultation to fund disbursement with a 85%+ success rate. Our expert team has facilitated ₹103Cr+ in funding for 500+ businesses across India.",
+    a: "We offer end-to-end support from consultation to fund disbursement with a 95%+ success rate. Our expert team has facilitated ₹110Cr+ in funding for 500+ businesses across India.",
   },
 ];
 

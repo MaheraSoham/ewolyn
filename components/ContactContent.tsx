@@ -37,8 +37,8 @@ const contactCards = [
   {
     title: "Call Us",
     sub: "Mon–Sat from 9 am to 6 pm",
-    val: "+91 98765 43210",
-    link: "tel:+919876543210",
+    val: "+91 97377 99937",
+    link: "tel:+919737799937",
     btn: "Call Now",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,7 +63,7 @@ const contactCards = [
   {
     title: "Visit Office",
     sub: "Headquarters in Ahmedabad",
-    val: "Nehru Nagar, Ahmedabad",
+    val: "B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad",
     link: "https://maps.google.com",
     btn: "Get Directions",
     icon: (
@@ -77,8 +77,8 @@ const contactCards = [
   {
     title: "WhatsApp",
     sub: "Quick chat with our team",
-    val: "+91 98765 43210",
-    link: "https://wa.me/919876543210",
+    val: "+91 97377 99937",
+    link: "https://wa.me/919737799937",
     btn: "Message Now",
     icon: (
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default function ContactContent() {
     const email = fd.get("email") as string;
     const type = fd.get("type") as string;
     const messageVal = fd.get("message") as string;
-    const whatsappNumber = "919876543210";
+    const whatsappNumber = "919737799937";
     const message = `Hello Ewolyn Team, I have an inquiry regarding *${type}*.\n\n*My Details:*\n👤 *Name:* ${name}\n📱 *Mobile:* ${phone}\n📧 *Email:* ${email}\n\n*Message:* ${messageVal}\n\nPlease get back to me.`;
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     setTimeout(() => {
@@ -317,7 +317,7 @@ export default function ContactContent() {
             {/* Map */}
             <div className="bg-white rounded-2xl shadow-lg p-3 border border-slate-100 h-[300px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.944983084364!2d72.53568777507914!3d23.025793679173256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84c62c355555%3A0x6b0f0b0b0b0b0b0b!2sNehru%20Nagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709876543210!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.944983084364!2d72.53568777507914!3d23.025793679173256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84c62c355555%3A0x6b0f0b0b0b0b0b0b!2sNehru%20Nagar%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1709737799937!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, borderRadius: "0.75rem" }}
@@ -336,14 +336,13 @@ export default function ContactContent() {
                   Local HQ
                 </h3>
                 <p className="text-white leading-relaxed mb-6">
-                  B-304/2 Gopal Palace,<br />
-                  Near Shiromani Complex,<br />
-                  Nehru Nagar, Ahmedabad-380015
+                  B-304/2, Nr - Shiromani Complex,<br />
+                  Nehru Nagar, Ahmedabad-380015 Gujarat
                 </p>
                 <div className="space-y-3 pt-6 border-t border-white/20">
                   <div className="flex justify-between items-center bg-white/10 p-3 rounded-xl border border-white/10">
                     <span className="text-xs text-white/80">WhatsApp</span>
-                    <span className="text-sm font-bold text-white">+91 98765 43210</span>
+                    <span className="text-sm font-bold text-white">+91 97377 99937</span>
                   </div>
                   <div className="flex justify-between items-center bg-white/10 p-3 rounded-xl border border-white/10">
                     <span className="text-xs text-white/80">Support</span>

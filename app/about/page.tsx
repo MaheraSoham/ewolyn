@@ -160,8 +160,8 @@ export default function AboutPage() {
                 { value: "₹500Cr+", label: "Funding Enabled" },
               ].map((s) => (
                 <div key={s.label} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 text-center">
-                  <p className="text-2xl font-bold text-primary">{s.value}</p>
-                  <p className="text-xs text-gray-300 uppercase tracking-wider mt-1">{s.label}</p>
+                  <p className="text-2xl font-bold text-white">{s.value}</p>
+                  <p className="text-xs text-white/70 uppercase tracking-wider mt-1">{s.label}</p>
                 </div>
               ))}
             </motion.div>
@@ -194,12 +194,12 @@ export default function AboutPage() {
               {/* Floating stat badge */}
               <div className="absolute -bottom-6 -right-6 bg-[rgba(55,175,225,0.95)] p-6 rounded-2xl shadow-2xl text-white">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                  <div className="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-primary">10+</p>
-                    <p className="text-xs text-gray-300 uppercase tracking-wider">Years Combined Expertise</p>
+                    <p className="text-2xl font-bold text-white">10+</p>
+                    <p className="text-xs text-white/80 uppercase tracking-wider">Years Combined Expertise</p>
                   </div>
                 </div>
               </div>

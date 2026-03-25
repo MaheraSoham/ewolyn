@@ -339,7 +339,7 @@ export default function TermsConditionsPage() {
                 Important Notice
               </p>
               <p className="text-slate-700 text-sm leading-relaxed">
-                These Terms & Conditions ("Terms") constitute a legally binding agreement between <strong>Ewolyn</strong> ("Company", "we", "us"), operating from B-304/2 Gopal Palace, Near Shiromani Complex, Nehru Nagar, Ahmedabad – 380015, Gujarat, India and you ("Client", "User"). These Terms are effective as of your first use of our website or services.
+                These Terms & Conditions ("Terms") constitute a legally binding agreement between <strong>Ewolyn</strong> ("Company", "we", "us"), operating from B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015, Gujarat, India and you ("Client", "User"). These Terms are effective as of your first use of our website or services.
               </p>
             </div>
 

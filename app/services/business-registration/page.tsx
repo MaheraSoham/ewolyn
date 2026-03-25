@@ -212,7 +212,7 @@ export default function BusinessRegistrationPage() {
                   </Link>
                 </ButtonHover>
                 <ButtonHover>
-                  <a href="tel:18005710607" className="btn-hero-outline">
+                  <a href="tel:9737799937" className="btn-hero-outline">
                     Talk to Expert
                   </a>
                 </ButtonHover>
@@ -491,7 +491,7 @@ export default function BusinessRegistrationPage() {
                 </Link>
               </ButtonHover>
               <ButtonHover>
-                <a href="tel:18005710607" className="btn-hero-outline">
+                <a href="tel:9737799937" className="btn-hero-outline">
                   Call Now: 1800-571-0607
                 </a>
               </ButtonHover>

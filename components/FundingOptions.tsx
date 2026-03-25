@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { usePopup } from "./PopupContext";
 
 /* ─── Detailed card data ──────────────────────────────────── */
@@ -111,7 +110,6 @@ const comparisonData = [
 ];
 
 export default function FundingOptions() {
-  const [activeTab, setActiveTab] = useState<"compare" | "analyze">("compare");
   const { openEligibilityPopup } = usePopup();
 
   return (
@@ -119,7 +117,7 @@ export default function FundingOptions() {
       <div className="container-max">
         {/* Section Header */}
         <div className="text-center mb-8">
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-orange-400 mb-2">COMPARE & CHOOSE</p>
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-white mb-2">COMPARE &amp; CHOOSE</p>
           <h2 className="text-3xl md:text-4xl font-black text-white">
             Find Your Perfect Funding Match
           </h2>
@@ -128,34 +126,9 @@ export default function FundingOptions() {
           </p>
         </div>
 
-        {/* Tab Buttons Container */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex items-center bg-white p-1.5 rounded-full shadow-lg">
-            <button
-              onClick={() => setActiveTab("compare")}
-              className={`px-8 py-3 rounded-full text-sm font-black transition-all ${activeTab === "compare"
-                ? "bg-[#f47c20] text-white shadow-md shadow-orange-500/30"
-                : "bg-transparent text-slate-500 hover:text-slate-800"
-                }`}
-            >
-              Quick Compare
-            </button>
-            <button
-              onClick={() => setActiveTab("analyze")}
-              className={`px-8 py-3 rounded-full text-sm font-black transition-all ${activeTab === "analyze"
-                ? "bg-[#f47c20] text-white shadow-md shadow-orange-500/30"
-                : "bg-transparent text-slate-500 hover:text-slate-800"
-                }`}
-            >
-              Detailed View
-            </button>
-          </div>
-        </div>
+        {/* Tab Buttons removed — Detailed View only */}
 
-        <AnimatePresence mode="wait">
-
-          {/* ── Detailed View Cards ── */}
-          {activeTab === "analyze" && (
+        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-white/15">
             <motion.div
               key="detailed"
               initial={{ opacity: 0, y: 14 }}
@@ -245,179 +218,7 @@ export default function FundingOptions() {
                 </motion.div>
               ))}
             </motion.div>
-          )}
-
-          {/* ── Quick Compare Table ── */}
-          {activeTab === "compare" && (
-            <motion.div
-              key="compare"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.35 }}
-              className="bg-white rounded-[2rem] shadow-2xl overflow-hidden"
-            >
-              <div className="overflow-x-auto w-full p-4 lg:p-10">
-                <table className="w-full min-w-[900px]">
-                  <thead>
-                    <tr className="text-left">
-                      <th className="py-4 text-xs font-black text-slate-400 uppercase tracking-widest pl-6">
-                        SCHEME
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center">
-                        ₹ AMOUNT
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center">
-                        ⚡ BENEFIT
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center">
-                        ⓘ INTEREST
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center">
-                        PROCESS
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center">
-                        COLLATERAL
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center">
-                        SUCCESS
-                      </th>
-                      <th className="px-4 py-4 text-xs font-black text-slate-400 uppercase tracking-widest text-center pr-6">
-                        ACTION
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {comparisonData.map((row, idx) => (
-                      <tr
-                        key={idx}
-                        className="border-t border-slate-100/60 hover:bg-slate-50/50 transition-colors"
-                      >
-                        {/* Scheme & Subtitle */}
-                        <td className="py-8 pl-6 max-w-[200px]">
-                          <h4 className="font-black text-lg text-[#1B4F8C] leading-tight mb-1">
-                            {row.scheme}
-                          </h4>
-                          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest leading-relaxed">
-                            {row.subtitle}
-                          </p>
-                        </td>
-
-                        {/* Amount */}
-                        <td className="px-4 py-8 text-center align-middle">
-                          <span className="font-black text-lg text-[#f47c20]">
-                            {row.amount}
-                          </span>
-                        </td>
-
-                        {/* Benefit Shape */}
-                        <td className="px-4 py-8 text-center align-middle">
-                          <div className="inline-flex justify-center items-center rounded-tl-2xl rounded-tr-md rounded-br-2xl rounded-bl-md bg-green-50/80 border border-green-100 px-4 py-2">
-                            <span className="text-xs font-black text-primary tracking-wider text-center leading-tight">
-                              {row.benefit.includes(" ") ? (
-                                <>
-                                  {row.benefit.split(" ")[0]} <br />{" "}
-                                  {row.benefit.split(" ").slice(1).join(" ")}
-                                </>
-                              ) : (
-                                row.benefit
-                              )}
-                            </span>
-                          </div>
-                        </td>
-
-                        {/* Interest */}
-                        <td className="px-4 py-8 text-center align-middle">
-                          <span className="font-black text-[#1B4F8C] text-base">
-                            {row.interest}
-                          </span>
-                        </td>
-
-                        {/* Process */}
-                        <td className="px-4 py-8 align-middle">
-                          <div className="flex items-center justify-center gap-2">
-                            <svg
-                              className="w-4 h-4 text-slate-300 shrink-0"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth={2}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                              />
-                            </svg>
-                            <span className="text-sm font-black text-slate-500 text-left leading-tight">
-                              {row.process.split("\n")[0]} <br />
-                              {row.process.split("\n")[1]}
-                            </span>
-                          </div>
-                        </td>
-
-                        {/* Collateral */}
-                        <td className="px-4 py-8 text-center align-middle">
-                          {row.collateral ? (
-                            <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-50 text-primary">
-                              <svg
-                                className="w-5 h-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={3}
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M5 13l4 4L19 7"
-                                />
-                              </svg>
-                            </div>
-                          ) : (
-                            <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-50 text-red-500">
-                              <svg
-                                className="w-5 h-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                strokeWidth={3}
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M6 18L18 6M6 6l12 12"
-                                />
-                              </svg>
-                            </div>
-                          )}
-                        </td>
-
-                        {/* Success */}
-                        <td className="px-4 py-8 text-center align-middle">
-                          <span className="font-black text-xl text-[#1B4F8C]">
-                            {row.success}
-                          </span>
-                        </td>
-
-                        {/* Action */}
-                        <td className="px-4 py-8 text-center pr-6 align-middle">
-                          <button
-                            onClick={() => openEligibilityPopup(row.scheme)}
-                            className="inline-flex items-center justify-center rounded-lg bg-[#f47c20] px-5 py-2.5 text-xs font-black text-white hover:bg-[#e06b16] transition-colors shadow-lg shadow-orange-500/20"
-                          >
-                            DETAILS
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </motion.div>
-          )}
-
-        </AnimatePresence>
+        </div>
 
         {/* Confused CTA Bar */}
         <div className="mt-10 rounded-2xl bg-white/[0.04] border border-white/10 p-6 flex flex-col md:flex-row items-center justify-between gap-4">

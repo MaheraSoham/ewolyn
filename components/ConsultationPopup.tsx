@@ -93,7 +93,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
         await new Promise((r) => setTimeout(r, 800));
         setIsSubmitting(false);
         setIsSubmitted(true);
-        window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, "_blank");
+        window.open(`https://wa.me/919737799937?text=${encodeURIComponent(message)}`, "_blank");
         setTimeout(onClose, 2000);
     };
 
@@ -128,8 +128,8 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
 
                                 <div className="mt-8 space-y-4">
                                     {[
-                                        { icon: "📍", label: "Location", value: "Nehru Nagar, Ahmedabad – 380015" },
-                                        { icon: "📞", label: "Phone", value: "+91 98765 43210" },
+                                        { icon: "📍", label: "Location", value: "Nehru Nagar, Ahmedabad-380015 Gujarat" },
+                                        { icon: "📞", label: "Phone", value: "+91 97377 99937" },
                                         { icon: "✉️", label: "Email", value: "info@ewolyn.co.in" },
                                     ].map((item) => (
                                         <div key={item.label} className="flex items-start gap-3">

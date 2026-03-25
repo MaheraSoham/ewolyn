@@ -80,9 +80,9 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-5">Get in Touch</h4>
             <div className="space-y-4">
               {[
-                { icon: "📍", text: "Nehru Nagar, Ahmedabad – 380015" },
+                { icon: "📍", text: "B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015 Gujarat" },
                 { icon: "📧", text: "info@ewolyn.co.in" },
-                { icon: "📞", text: "+91 98765 43210" },
+                { icon: "📞", text: "+91 97377 99937" },
                 { icon: "🕐", text: "Mon – Sat, 9:30 AM – 6:00 PM" },
               ].map((item) => (
                 <div key={item.icon} className="flex items-start gap-3">

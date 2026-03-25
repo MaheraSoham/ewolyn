@@ -182,7 +182,7 @@ export default function LoansPage() {
                   </Link>
                 </ButtonHover>
                 <ButtonHover>
-                  <a href="tel:18005710607" className="btn-hero-outline text-lg px-10">
+                  <a href="tel:9737799937" className="btn-hero-outline text-lg px-10">
                     Talk to Expert
                   </a>
                 </ButtonHover>
@@ -190,7 +190,7 @@ export default function LoansPage() {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-white/10">
                 {[
-                  { value: "₹103Cr+", label: "Disbursed" },
+                  { value: "₹110Cr+", label: "Disbursed" },
                   { value: "2000+", label: "Loans Processed" },
                   { value: "12-18%", label: "Interest Rates" },
                   { value: "48-Hour", label: "Approval" },
@@ -281,7 +281,7 @@ export default function LoansPage() {
             <SlideIn direction="left">
               <div className="bg-gradient-to-br from-[rgba(55,175,225,0.95)] to-[#1B4F8C] rounded-3xl p-10 text-center shadow-2xl border border-white/10">
                 <p className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Total Loans Facilitated</p>
-                <p className="text-7xl md:text-8xl font-black text-primary leading-none">₹103Cr<span className="text-4xl">+</span></p>
+                <p className="text-7xl md:text-8xl font-black text-primary leading-none">₹110Cr<span className="text-4xl">+</span></p>
                 <div className="mt-8 grid grid-cols-3 gap-4">
                   {[
                     { value: "2000+", label: "Loans" },
@@ -429,7 +429,7 @@ export default function LoansPage() {
                 </Link>
               </ButtonHover>
               <ButtonHover>
-                <a href="tel:18005710607" className="btn-hero-outline text-lg px-10">
+                <a href="tel:9737799937" className="btn-hero-outline text-lg px-10">
                   Call Now: 1800-571-0607
                 </a>
               </ButtonHover>

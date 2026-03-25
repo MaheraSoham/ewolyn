@@ -25,8 +25,8 @@ const videos = [
 ];
 
 const bottomStats = [
-  { value: "₹103Cr+", label: "TOTAL FUNDED" },
-  { value: "85%", label: "SUCCESS RATE" },
+  { value: "₹110Cr+", label: "TOTAL FUNDED" },
+  { value: "95%", label: "SUCCESS RATE" },
   { value: "500+", label: "BUSINESSES" },
   { value: "24/7", label: "SUPPORT" },
 ];

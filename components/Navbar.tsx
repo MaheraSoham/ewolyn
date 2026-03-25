@@ -284,7 +284,7 @@ export default function Navbar() {
 
               {/* WhatsApp Icon */}
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919737799937"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-[#25D366] flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg shadow-green-500/20"
@@ -296,7 +296,7 @@ export default function Navbar() {
 
               {/* Phone Icon */}
               <a
-                href="tel:+919876543210"
+                href="tel:+919737799937"
                 className="w-9 h-9 rounded-full border border-slate-300 flex items-center justify-center hover:bg-[#37AFE1] hover:text-white transition-all duration-300"
               >
                 <svg className="w-4.5 h-4.5 text-slate-600 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -308,7 +308,7 @@ export default function Navbar() {
             {/* Mobile: Quick WhatsApp + Hamburger */}
             <div className="flex lg:hidden items-center gap-2">
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919737799937"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg shadow-green-500/20"
@@ -390,7 +390,7 @@ export default function Navbar() {
 
                 <div className="px-4 py-2 text-xs text-slate-500">
                   <div className="font-semibold text-[#1B4F8C] mb-1">9:30 AM – 6:00 PM · Mon–Sat</div>
-                  <div>+91 98765 43210 &nbsp;|&nbsp; info@ewolyn.co.in</div>
+                  <div>+91 97377 99937 &nbsp;|&nbsp; info@ewolyn.co.in</div>
                 </div>
               </div>
             </div>
