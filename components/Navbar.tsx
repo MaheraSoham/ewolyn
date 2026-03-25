@@ -45,13 +45,6 @@ const services: Service[] = [
         iconBg: "bg-green-50",
         href: "/services/loans"
       },
-      {
-        title: "NBFC",
-        description: "Quick, flexible business funding. Unsecured, revenue-based, equipment & supply chain loans. 24-72hr disbursement.",
-        icon: "💳",
-        iconBg: "bg-teal-50",
-        href: "/services/nbfc"
-      },
     ]
   },
   {
