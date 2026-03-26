@@ -281,7 +281,7 @@ export default function PrivacyPolicyPage() {
                 Overview
               </p>
               <p className="text-slate-700 text-sm leading-relaxed">
-                This Privacy Policy ("Policy") applies to <strong>Ewolyn</strong> ("Company", "we", "us", "our"), a business consultancy operating from B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015, Gujarat, India. This Policy governs the collection, use, storage, and disclosure of information of all users ("you", "your", "client") who access our website at <strong>ewolyn.co.in</strong> or engage with our services. By using our website or services, you consent to the practices described in this Policy.
+                This Privacy Policy (&quot;Policy&quot;) applies to <strong>Ewolyn</strong> (&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;), a business consultancy operating from B-304/2, Nr - Shiromani Complex, Nehru Nagar, Ahmedabad-380015, Gujarat, India. This Policy governs the collection, use, storage, and disclosure of information of all users (&quot;you&quot;, &quot;your&quot;, &quot;client&quot;) who access our website at <strong>ewolyn.co.in</strong> or engage with our services. By using our website or services, you consent to the practices described in this Policy.
               </p>
             </div>
 

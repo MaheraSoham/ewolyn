@@ -248,7 +248,7 @@ function ResultsContent() {
 
                                 <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tighter">
                                     <span className="text-white">Congratulations!</span><br />
-                                    <span className="text-primary">You're Eligible</span>
+                                    <span className="text-primary">You&apos;re Eligible</span>
                                 </h1>
 
                                 <div className="p-6 bg-white/5 rounded-[2rem] border border-white/10 backdrop-blur-md">
@@ -413,7 +413,7 @@ function ResultsContent() {
                                                     Why this match?
                                                 </p>
                                                 <p className="text-xs text-slate-600 font-medium leading-relaxed italic">
-                                                    "{scheme.matchReason}"
+                                                    &quot;{scheme.matchReason}&quot;
                                                 </p>
                                             </div>
                                             <ul className="space-y-2">

@@ -113,7 +113,7 @@ export default function RefundPolicyPage() {
                 </p>
                 <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
                   <p className="text-blue-800 text-sm font-semibold mb-1">Important Clarification</p>
-                  <p className="text-blue-700 text-sm">Our service fee is separate from any government fees, certification body charges, stamp duties, filing fees, or other third-party costs. The refund policy below applies only to Ewolyn's service fee component.</p>
+                  <p className="text-blue-700 text-sm">Our service fee is separate from any government fees, certification body charges, stamp duties, filing fees, or other third-party costs. The refund policy below applies only to Ewolyn&apos;s service fee component.</p>
                 </div>
               </div>
             </div>
@@ -230,7 +230,7 @@ export default function RefundPolicyPage() {
                 <p className="text-slate-600 text-sm leading-relaxed">
                   To cancel an engagement, you must send a written cancellation request to{" "}
                   <a href="mailto:info@ewolyn.co.in" className="text-primary font-medium hover:underline">info@ewolyn.co.in</a>{" "}
-                  with the subject line <strong>"Cancellation Request — [Your Business Name]"</strong>. Please include your contact number, the service you wish to cancel, and the reason for cancellation.
+                  with the subject line <strong>&quot;Cancellation Request — [Your Business Name]&quot;</strong>. Please include your contact number, the service you wish to cancel, and the reason for cancellation.
                 </p>
 
                 <div className="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden">
@@ -327,7 +327,7 @@ export default function RefundPolicyPage() {
               </div>
               <div className="pl-[52px] space-y-4">
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  If you are not satisfied with Ewolyn's response to your refund request, you may escalate the matter by writing to our senior management at <a href="mailto:info@ewolyn.co.in" className="text-primary font-medium hover:underline">info@ewolyn.co.in</a> with the subject <strong>"Escalation — Refund Dispute"</strong>. We are committed to resolving all disputes within 15 business days.
+                  If you are not satisfied with Ewolyn&apos;s response to your refund request, you may escalate the matter by writing to our senior management at <a href="mailto:info@ewolyn.co.in" className="text-primary font-medium hover:underline">info@ewolyn.co.in</a> with the subject <strong>&quot;Escalation — Refund Dispute&quot;</strong>. We are committed to resolving all disputes within 15 business days.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   Any unresolved disputes shall be subject to the jurisdiction of courts in Ahmedabad, Gujarat, India, as per the governing law provisions in our Terms & Conditions. You also retain your rights under the Consumer Protection Act, 2019 and may approach the appropriate consumer forum.
@@ -339,7 +339,7 @@ export default function RefundPolicyPage() {
             <div className="bg-gradient-to-r from-primary/5 to-transparent border border-primary/20 rounded-2xl p-6">
               <h3 className="text-lg font-bold text-slate-900 mb-2">Questions About a Refund?</h3>
               <p className="text-slate-600 text-sm mb-4">
-                Our support team is available Monday to Saturday, 9 AM – 6 PM IST. Don't hesitate to reach out with any questions about this policy.
+                Our support team is available Monday to Saturday, 9 AM – 6 PM IST. Don&apos;t hesitate to reach out with any questions about this policy.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="mailto:info@ewolyn.co.in" className="inline-flex items-center gap-2 text-sm text-primary font-semibold hover:underline">
@@ -379,7 +379,7 @@ export default function RefundPolicyPage() {
             Need Help Before <span className="text-primary">You Start?</span>
           </h2>
           <p className="text-gray-300 mb-8 max-w-xl mx-auto">
-            Have a question about our services, pricing, or what to expect? Talk to our team before engaging — we're transparent about everything.
+            Have a question about our services, pricing, or what to expect? Talk to our team before engaging — we&apos;re transparent about everything.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="btn-hero-green">Contact Us →</Link>

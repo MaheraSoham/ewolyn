@@ -201,7 +201,7 @@ export default function MAAdvisoryPage() {
               <div className="max-w-3xl mx-auto relative z-10">
                 <h2 className="text-4xl md:text-6xl font-black mb-8 leading-tight">Ready for the Next Level?</h2>
                 <p className="text-xl text-gray-400 mb-12">
-                  Whether you're looking to exit or expand, our M&A advisory
+                  Whether you&apos;re looking to exit or expand, our M&A advisory
                   provides the leverage you need in the negotiation room.
                 </p>
                 <div className="flex flex-wrap justify-center gap-6">

@@ -36,7 +36,7 @@ export default function CTASection() {
                   <span className="text-primary">Business Infrastructure?</span>
                 </h3>
                 <p className="mt-6 text-xl text-blue-100 font-medium">
-                  Secure your roadmap from idea to IPO with India's most trusted MSME consultants.
+                  Secure your roadmap from idea to IPO with India&apos;s most trusted MSME consultants.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-6 text-xs font-bold uppercase tracking-widest text-slate-300">
                   <span className="flex items-center gap-2"><span className="text-primary text-lg">✓</span> No Collateral</span>

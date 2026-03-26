@@ -145,7 +145,7 @@ export default function AboutPage() {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-300 max-w-xl leading-relaxed mb-10"
             >
-              At Ewolyn, we don't just provide consulting; we engineer growth pathways for the next generation of Indian entrepreneurs.
+              At Ewolyn, we don&apos;t just provide consulting; we engineer growth pathways for the next generation of Indian entrepreneurs.
             </motion.p>
             {/* Hero mini stats */}
             <motion.div
@@ -221,7 +221,7 @@ export default function AboutPage() {
                 Ewolyn was founded on a simple realization: Indian MSMEs are the backbone of the economy, yet they face the most hurdles in compliance and funding access.
               </motion.p>
               <motion.p variants={fadeUp} custom={3} className="text-slate-500 leading-relaxed">
-                We bridge this gap by providing high-touch, end-to-end consulting that transforms complex government schemes and banking requirements into clear, actionable roadmaps. Our goal is to make every eligible business "Funding Ready."
+                We bridge this gap by providing high-touch, end-to-end consulting that transforms complex government schemes and banking requirements into clear, actionable roadmaps. Our goal is to make every eligible business &quot;Funding Ready.&quot;
               </motion.p>
               <motion.div variants={fadeUp} custom={4} className="grid grid-cols-2 gap-6 pt-6">
                 {[
@@ -297,7 +297,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                 <p className="text-white leading-relaxed">
-                  To become India's most trusted partner for MSME growth, creating an ecosystem where "Made in India" businesses launch effortlessly and scale globally.
+                  To become India&apos;s most trusted partner for MSME growth, creating an ecosystem where &quot;Made in India&quot; businesses launch effortlessly and scale globally.
                 </p>
               </div>
             </motion.div>
@@ -425,7 +425,7 @@ export default function AboutPage() {
               </motion.p>
               <motion.div variants={fadeUp} custom={3} className="bg-slate-50 rounded-2xl p-6 border-l-4 border-primary">
                 <p className="text-slate-700 italic leading-relaxed mb-3">
-                  "Our vision is simple — to make every MSME in India not just survive, but thrive with the right funding, compliance, and growth strategy."
+                  &quot;Our vision is simple — to make every MSME in India not just survive, but thrive with the right funding, compliance, and growth strategy.&quot;
                 </p>
                 <p className="text-sm text-primary font-bold">— Team Ewolyn</p>
               </motion.div>

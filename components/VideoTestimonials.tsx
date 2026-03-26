@@ -165,7 +165,7 @@ export default function VideoTestimonials() {
                     </h2>
                     <p className="mt-3 mx-auto max-w-xl text-sm text-slate-300">
                         Hear directly from founders and MSME owners who secured funding and
-                        scaled their businesses with Ewolyn's support.
+                        scaled their businesses with Ewolyn&apos;s support.
                     </p>
                 </div>
 

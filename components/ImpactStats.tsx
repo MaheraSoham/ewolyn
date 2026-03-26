@@ -68,7 +68,7 @@ export default function ImpactStats() {
               Driving MSME Success <span className="text-primary">Across India</span>
             </h2>
             <p className="text-muted mt-5 text-lg max-w-2xl mx-auto font-medium">
-              Join the 4.77 crore MSMEs registered on the Udyam portal. We're here to unlock your growth potential.
+              Join the 4.77 crore MSMEs registered on the Udyam portal. We&apos;re here to unlock your growth potential.
             </p>
           </motion.div>
 
