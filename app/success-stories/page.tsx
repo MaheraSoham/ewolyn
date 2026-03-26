@@ -35,12 +35,12 @@ const stories = [
     category: "Startup Funding",
     scheme: "Startup Seed",
     amount: "Seed Support",
-    amountColor: "#2eb85c",
+    amountColor: "#37afe1",
     result: "Completed on 05-09-2025",
     story:
       "Scion Renewable received Ewolyn's startup seed support with structured guidance for documentation and application flow tailored to their growth stage.",
     badge: "SEED",
-    badgeColor: "#2eb85c",
+    badgeColor: "#37afe1",
     tags: ["Startup Seed", "Rajkot", "Renewable"],
     icon: "🌿",
   },
@@ -53,12 +53,12 @@ const stories = [
     category: "Startup Funding",
     scheme: "Start Up & Seed Fund",
     amount: "Seed Support",
-    amountColor: "#2eb85c",
+    amountColor: "#37afe1",
     result: "Completed on 18-09-2025",
     story:
       "Ewolyn assisted Pruthveek Raval Production Private Limited with startup and seed fund service support, helping streamline submissions and readiness.",
     badge: "SEED",
-    badgeColor: "#2eb85c",
+    badgeColor: "#37afe1",
     tags: ["Seed Fund", "Gandhidham", "Startup"],
     icon: "🎬",
   },
@@ -71,12 +71,12 @@ const stories = [
     category: "Startup Funding",
     scheme: "Startup, Seed Fund",
     amount: "Seed Support",
-    amountColor: "#2eb85c",
+    amountColor: "#37afe1",
     result: "Completed on 07-10-2025",
     story:
       "Acticon Life Sciences benefited from Ewolyn's startup and seed fund consultancy, with practical guidance on process steps and required documents.",
     badge: "SEED",
-    badgeColor: "#2eb85c",
+    badgeColor: "#37afe1",
     tags: ["Seed Fund", "Gandhinagar", "Life Sciences"],
     icon: "🧪",
   },
@@ -89,12 +89,12 @@ const stories = [
     category: "Startup Funding",
     scheme: "Start Up & Seed Fund",
     amount: "Seed Support",
-    amountColor: "#2eb85c",
+    amountColor: "#37afe1",
     result: "Completed on 03-10-2025",
     story:
       "Storypitaara worked with Ewolyn for startup and seed fund assistance, receiving structured support throughout the submission lifecycle.",
     badge: "SEED",
-    badgeColor: "#2eb85c",
+    badgeColor: "#37afe1",
     tags: ["Seed Fund", "Dewas", "Media"],
     icon: "📚",
   },
@@ -107,12 +107,12 @@ const stories = [
     category: "Startup Funding",
     scheme: "Startup, Seed Fund",
     amount: "Seed Support",
-    amountColor: "#2eb85c",
+    amountColor: "#37afe1",
     result: "Completed on 25-09-2025",
     story:
       "Saroj Jagdish Forensic LLP engaged Ewolyn for startup seed support and received clear handholding from initial preparation to final application steps.",
     badge: "SEED",
-    badgeColor: "#2eb85c",
+    badgeColor: "#37afe1",
     tags: ["Seed Fund", "Surat", "Forensic"],
     icon: "🔬",
   },
@@ -125,12 +125,12 @@ const stories = [
     category: "Startup Funding",
     scheme: "Startup, Seed Fund",
     amount: "Seed Support",
-    amountColor: "#2eb85c",
+    amountColor: "#37afe1",
     result: "Completed on 14-10-2025",
     story:
       "Ravni Farmers Producer Company partnered with Ewolyn for startup and seed fund support, enabling a guided and compliant application process.",
     badge: "SEED",
-    badgeColor: "#2eb85c",
+    badgeColor: "#37afe1",
     tags: ["Seed Fund", "Junagadh", "Agriculture"],
     icon: "🌾",
   },
@@ -149,18 +149,15 @@ export default function SuccessStoriesPage() {
   return (
     <main>
       {/* Hero */}
-      <section
-        className="relative pt-36 pb-20 overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #9cd49fff 0%, #465f49ff 45%, #2eb85c 100%)" }}
-      >
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 50%, rgba(46,184,92,0.15) 0%, transparent 70%)" }} />
+      <section className="relative pt-36 pb-20 hero-navy-gradient text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="container-max text-center relative z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2 text-[10px] font-black text-white uppercase tracking-widest mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2eb85c] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             Real Results. Real Founders.
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-5">
-            Success <span className="text-[#2eb85c]">Stories</span>
+            Success <span className="text-primary">Stories</span>
           </h1>
           <p className="text-base md:text-lg text-blue-100/70 max-w-2xl mx-auto font-medium">
             Over 1000 Indian MSMEs and startups have transformed their businesses with Ewolyn&apos;s expert guidance in funding, registration, and digital growth.
@@ -175,7 +172,7 @@ export default function SuccessStoriesPage() {
                 key={s.label}
                 className="rounded-2xl bg-white/[0.06] border border-white/10 p-6 text-center backdrop-blur-sm"
               >
-                <p className="text-3xl font-black text-[#2eb85c]">{s.value}</p>
+                <p className="text-3xl font-black text-primary">{s.value}</p>
                 <p className="text-xs font-semibold text-white/80 uppercase tracking-wider mt-1">{s.label}</p>
               </div>
             ))}
@@ -191,8 +188,8 @@ export default function SuccessStoriesPage() {
               <span
                 key={cat}
                 className={`px-5 py-2 rounded-full text-xs font-black uppercase tracking-wider cursor-pointer transition-all ${i === 0
-                  ? "bg-[#1B4F8C] text-white shadow-lg shadow-[#1B4F8C]/30"
-                  : "bg-white border border-slate-200 text-slate-500 hover:border-[#1B4F8C] hover:text-[#1B4F8C]"
+                  ? "bg-primary text-white shadow-lg shadow-cyan-500/20"
+                  : "bg-white border border-slate-200 text-slate-500 hover:border-primary/30 hover:text-primary"
                   }`}
               >
                 {cat}
@@ -209,7 +206,7 @@ export default function SuccessStoriesPage() {
             {stories.map((s) => (
               <div
                 key={s.id}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#2eb85c]/30 transition-all duration-300 flex flex-col"
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 flex flex-col"
               >
                 {/* Video Placeholder */}
                 <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 h-40 flex items-center justify-center">
@@ -247,7 +244,7 @@ export default function SuccessStoriesPage() {
 
                   {/* Result */}
                   <div className="flex items-start gap-1.5 mb-3">
-                    <svg className="w-3.5 h-3.5 text-[#2eb85c] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <svg className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                     <p className="text-[11px] text-slate-600 font-semibold">{s.result}</p>
@@ -272,14 +269,15 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[rgba(115,150,121,0.92)] py-16">
-        <div className="container-max text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[10px] font-black uppercase tracking-widest text-[#2eb85c] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#2eb85c] animate-pulse" />
+      <section className="py-20 hero-navy-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="container-max text-center relative z-10">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-[10px] font-black uppercase tracking-widest text-primary mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             Your Story Could Be Next
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-4">
-            Ready to Write Your <span className="text-[#2eb85c]">Success Story?</span>
+            Ready to Write Your <span className="text-primary">Success Story?</span>
           </h2>
           <p className="text-base text-white/80 max-w-xl mx-auto mb-10">
             Join 1000+ Indian entrepreneurs who transformed their businesses with Ewolyn&apos;s expert guidance.
@@ -289,7 +287,7 @@ export default function SuccessStoriesPage() {
               href={`https://wa.me/919876543210?text=${encodeURIComponent("Hello Ewolyn! I want to check my eligibility for government funding. Please guide me.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 rounded-2xl bg-white text-[#2eb85c] font-black px-8 py-4 hover:bg-[#1B4F8C] hover:text-white transition-all shadow-xl shadow-[#2eb85c]/30 text-sm"
+              className="inline-flex items-center gap-3 rounded-2xl bg-white text-primary font-black px-8 py-4 hover:bg-[#1B4F8C] hover:text-white transition-all shadow-xl shadow-cyan-500/30 text-sm"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />

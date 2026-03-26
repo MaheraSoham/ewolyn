@@ -105,7 +105,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
                 </button>
                 <div className="flex flex-col md:flex-row min-h-[520px]">
                     {/* Left Panel */}
-                    <div className="w-full md:w-[42%] relative overflow-hidden" style={{ background: "linear-gradient(160deg, #1B4F8C 0%, #0d2f57 60%, #0a1f3d 100%)" }}>
+                    <div className="w-full md:w-[42%] relative overflow-hidden" style={{ background: "linear-gradient(160deg, #37AFE1 0%, #2B8DB5 60%, #1B4F8C 100%)" }}>
                         {/* Background image */}
                         <div className="absolute inset-0">
                             <Image src="/popup_hero_banner.png" alt="Ewolyn Team" fill className="object-cover opacity-20" />
@@ -147,7 +147,7 @@ function EligibilityForm({ service, onClose }: { service: string; onClose: () =>
 
                             {/* Trust badges */}
                             <div className="mt-8 flex flex-wrap gap-2">
-                                {["500+ Clients", "Pan India", "10+ Years"].map((badge) => (
+                                {["1000+ Clients", "Pan India", "7+ Years"].map((badge) => (
                                     <span key={badge} className="text-xs text-white/70 bg-white/10 border border-white/15 rounded-full px-3 py-1 font-medium">
                                         ✓ {badge}
                                     </span>
@@ -255,7 +255,7 @@ export default function ConsultationPopup() {
                 </button>
 
                 {/* ── Hero Banner ── */}
-                <div className="relative h-[130px] overflow-hidden" style={{ background: "linear-gradient(135deg, #0d2f57 0%, #1B4F8C 50%, #0d2f57 100%)" }}>
+                <div className="relative h-[130px] overflow-hidden" style={{ background: "linear-gradient(135deg, #37AFE1 0%, #1A6B8A 50%, #37AFE1 100%)" }}>
                     <Image src="/popup_hero_banner.png" alt="Ewolyn Business Consulting" fill className="object-cover opacity-30" />
                     {/* Dot grid */}
                     <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "16px 16px" }} />
@@ -341,7 +341,7 @@ export default function ConsultationPopup() {
                 </div>
 
                 {/* ── Footer ── */}
-                <div className="bg-[#0d2f57] flex items-center justify-between px-5 py-2.5">
+                <div className="bg-[#1B4F8C] flex items-center justify-between px-5 py-2.5">
                     <p className="text-white font-black text-[12px]">
                         Evolving Indian StartUps &amp; MSMEs
                     </p>

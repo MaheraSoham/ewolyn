@@ -266,7 +266,7 @@ export default function Navbar() {
                           </div>
 
                           {/* Action callout */}
-                          <div className="mt-8 rounded-xl bg-gradient-to-r from-[#1B4F8C] to-[#0d2f57] p-4 flex items-center justify-between text-white shadow-md">
+                          <div className="mt-8 rounded-xl bg-gradient-to-r from-[#37AFE1] to-[#1B4F8C] p-4 flex items-center justify-between text-white shadow-md">
                             <div className="flex items-center gap-3">
                               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
                                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>

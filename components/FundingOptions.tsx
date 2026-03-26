@@ -221,10 +221,10 @@ export default function FundingOptions() {
         </div>
 
         {/* Confused CTA Bar */}
-        <div className="mt-10 rounded-2xl bg-white/[0.04] border border-white/10 p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-10 rounded-2xl bg-gradient-to-r from-[#37afe1] to-[#142338] p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl border border-white/10">
           <div>
             <h3 className="text-lg font-black text-white">Confused About Which Scheme to Choose?</h3>
-            <p className="text-xs text-slate-400 mt-1">Our experts will analyze your business and recommend the best funding option</p>
+            <p className="text-xs text-white/80 mt-1">Our experts will analyze your business and recommend the best funding option</p>
           </div>
           <button
             onClick={() => openEligibilityPopup()}

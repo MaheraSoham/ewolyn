@@ -153,7 +153,7 @@ export default function GovernmentSchemes() {
             {statsRow.map((s) => (
               <div
                 key={s.label}
-                className="rounded-2xl bg-[#0d1f3c] border border-white/10 p-6 text-center"
+                className="rounded-2xl bg-[#1B4F8C] border border-white/10 p-6 text-center"
               >
                 <div className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center text-lg font-bold mx-auto mb-3">
                   {s.icon}

@@ -49,7 +49,7 @@ export default function Hero() {
       <section
         className="relative min-h-[88vh] flex items-center overflow-hidden pt-20 sm:pt-28 pb-10 sm:pb-16"
         style={{
-          background: "linear-gradient(135deg, #37AFE1 0%, #1A6B8A 45%, #37AFE1 100%)",
+          background: "linear-gradient(135deg, #37AFE1 0%, #2B8DB5 45%, #37AFE1 100%)",
           backgroundSize: "200% 200%",
           animation: "gradientShift 12s ease infinite",
         }}
@@ -236,7 +236,7 @@ export default function Hero() {
 
                     {/* Trust badges */}
                     <div className="relative z-10 mt-6 flex flex-wrap gap-1.5">
-                      {["500+ Clients", "Pan India", "10+ Years"].map((badge) => (
+                      {["1000+ Clients", "Pan India", "7+ Years"].map((badge) => (
                         <span key={badge} className="text-xs text-white/70 bg-white/10 border border-white/15 rounded-full px-2.5 py-1 font-medium">
                           ✓ {badge}
                         </span>
@@ -318,29 +318,29 @@ export default function Hero() {
 
       {/* ── STATS BAR ── */}
       <section
-        style={{ background: "linear-gradient(135deg, #2B8DB5 0%, #1A6B8A 100%)" }}
+        style={{ background: "linear-gradient(135deg, #37AFE1 0%, #2B8DB5 100%)" }}
         className="pb-10 pt-0"
       >
         <div className="container-max">
           <div
             className="rounded-2xl p-6"
             style={{
-              background: "rgba(55,175,225,0.08)",
-              border: "1px solid rgba(55,175,225,0.20)",
+              background: "rgba(87, 172, 221, 0.66)",
+              border: "1px solid rgba(100, 148, 168, 0.56)",
             }}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
               {heroStats.map((s) => (
                 <div key={s.label} className="flex items-center gap-3 justify-center">
                   <div
                     className="w-11 h-11 rounded-full flex items-center justify-center text-lg font-black shrink-0"
-                    style={{ background: "rgba(55,175,225,0.18)", color: "#7DD4F0" }}
+                    style={{ background: "rgba(15, 17, 18, 0.18)", color: "#1a1c1dff" }}
                   >
                     {s.icon}
                   </div>
                   <div className="text-left">
                     <p className="text-lg font-black text-white">{s.value}</p>
-                    <p className="text-xs font-semibold" style={{ color: "#7DD4F0" }}>{s.label}</p>
+                    <p className="text-xs font-semibold" style={{ color: "#ecedeeff" }}>{s.label}</p>
                   </div>
                 </div>
               ))}

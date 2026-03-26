@@ -759,7 +759,7 @@ export const governmentSchemes: Scheme[] = [
     shortDesc: "Zero customs duty on capital goods import for exporters with 6X export obligation",
     highlight: "0%",
     highlightLabel: "Customs Duty",
-    icon: "😢",
+    icon: "🚢",
     iconBg: "bg-blue-600",
     category: "Export Benefit",
     timeline: "3–10 days",

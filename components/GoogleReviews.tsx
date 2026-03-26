@@ -133,8 +133,8 @@ function ReviewCard({ review, position, onClick }: CardProps) {
                 className="rounded-2xl p-6 shadow-2xl border"
                 style={{
                     background: position === "center"
-                        ? "linear-gradient(145deg, #1B4F8C 0%, #0d2f57 100%)"
-                        : "linear-gradient(145deg, #1e3a5f 0%, #152844 100%)",
+                        ? "linear-gradient(145deg, #37AFE1 0%, #1B4F8C 100%)"
+                        : "linear-gradient(145deg, #2B8DB5 0%, #1B4F8C 100%)",
                     borderColor: position === "center" ? "rgba(55,175,225,0.3)" : "rgba(255,255,255,0.08)",
                     boxShadow: position === "center"
                         ? "0 20px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(55,175,225,0.2)"

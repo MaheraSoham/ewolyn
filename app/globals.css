@@ -97,7 +97,7 @@ a:hover { color: var(--green-600); }
 }
 
 .section-navy {
-  background: linear-gradient(135deg, #0d2f57 0%, #1B4F8C 100%);
+  background: linear-gradient(135deg, #1B4F8C 0%, #2B8DB5 100%);
   color: white;
 }
 
@@ -106,7 +106,7 @@ a:hover { color: var(--green-600); }
 }
 
 .bg-process-section {
-  background: linear-gradient(120deg, #1B4F8C 0%, #37AFE1 100%);
+  background: linear-gradient(120deg, #1B4F8C 0%, #2B8DB5 100%);
 }
 
 /* ── Buttons ─────────────────────────────────────────────────── */
@@ -231,7 +231,7 @@ a:hover { color: var(--green-600); }
 
 /* ── Animated Backgrounds ────────────────────────────────────── */
 .hero-navy-gradient {
-  background: linear-gradient(135deg, #37AFE1 0%, #1A6B8A 45%, #37AFE1 100%);
+  background: linear-gradient(135deg, #37AFE1 0%, #2B8DB5 45%, #37AFE1 100%);
   background-size: 200% 200%;
   animation: gradientShift 12s ease infinite;
 }
